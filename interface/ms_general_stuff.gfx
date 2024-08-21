@@ -1,0 +1,15 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_icon_hestridandi_subject"
+		texturefile = "gfx/interface/icon_hestridandi_subject.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_diplomacy_lead_hestridandi_subject"
+		texturefile = "gfx/interface/icon_diplomacy_lead_hestridandi_subject.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_diplomacy_am_hestridandi_subject"
+		texturefile = "gfx/interface/icon_diplomacy_am_hestridandi_subject.dds"
+	}
+}

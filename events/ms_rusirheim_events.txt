@@ -1,0 +1,1262 @@
+namespace = ms_rusirheim
+normal_or_historical_nations = yes
+
+province_event = {
+	id = ms_rusirheim.1
+	title = ms_rusirheim.1.t
+	desc = ms_rusirheim.1.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	trigger = { 
+		owner = {
+			OR = {
+				mission_completed = hlm_end_norseslavic_rivalry
+			}
+		}
+		OR = {
+			culture = ilmen
+			culture = krivich
+			culture = gardariki
+		}
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.1.a
+		change_culture = rus_gardariki
+	}
+}
+
+province_event = {
+	id = ms_rusirheim.2
+	title = ms_rusirheim.2.t
+	desc = ms_rusirheim.2.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = hlm_invite_norse_settlers
+			}
+		}
+		culture_group = pagan_baltic
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.2.a
+		change_culture = rus_logeymenn
+	}
+}
+
+province_event = {
+	id = ms_rusirheim.3
+	title = ms_rusirheim.3.t
+	desc = ms_rusirheim.3.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = hlm_vepsian_subjugation
+			}
+		}
+		OR = {
+			culture = vepsian
+			province_id = 1961
+		}
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.3.a
+		change_culture = rus_gardariki
+	}
+}
+province_event = {
+	id = ms_rusirheim.4
+	title = ms_rusirheim.4.t
+	desc = ms_rusirheim.4.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = hlm_free_the_slavs
+			}
+		}
+		culture = vyatih
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.4.a
+		change_culture = rus_gardariki
+	}
+}
+province_event = {
+	id = ms_rusirheim.5
+	title = ms_rusirheim.5.t
+	desc = ms_rusirheim.5.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	trigger = {
+		OR = {
+			overlord = {
+				OR = {
+					mission_completed = hlm_a_second_revolution
+				}
+			}
+			owner = {
+				OR = {
+					mission_completed = hlm_a_second_revolution
+				}
+			}
+		}
+		
+		OR = {
+			culture = drevylian
+			culture = ulich
+			culture = kievan
+			culture = radimich
+		}
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.5.a
+		change_culture = rus_kievan
+	}
+}
+province_event = {
+	id = ms_rusirheim.6
+	title = ms_rusirheim.6.t
+	desc = ms_rusirheim.6.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = hlm_a_second_revolution
+			}
+		}
+		OR = {
+			culture = tiverian
+			culture = polovtsy
+		}
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.6.a
+		change_culture = rus_bondi
+	}
+}
+province_event = {
+	id = ms_rusirheim.7
+	title = ms_rusirheim.7.t
+	desc = ms_rusirheim.7.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = hlm_end_karelian_domination
+			}
+		}
+		culture = karelian
+		NOT = { province_id = 1961 }
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.7.a
+		change_culture = rus_kvaenir
+	}
+}
+province_event = {
+	id = ms_rusirheim.8
+	title = ms_rusirheim.8.t
+	desc = ms_rusirheim.8.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = hlm_teach_the_fins
+			}
+		}
+		OR = {
+			culture = finnish
+			culture = sapmi
+		}
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.8.a
+		change_culture = rus_kvaenir
+	}
+}
+
+country_event = {	# Fate Of The Greeks
+	id = ms_rusirheim.9
+	title = ms_rusirheim.9.t 
+	desc = ms_rusirheim.9.d
+	picture = east_slavic_BATTLE_eventPicture
+
+    fire_only_once = yes
+
+    is_triggered_only = yes
+
+    option = {
+		name = "ms_rusirheim.9.a" # Show them mercy.
+        ai_chance = { 
+			factor = 50
+		}
+		add_accepted_culture = taurican
+		every_owned_province = {
+			limit = {
+				OR = {
+					culture = olbian
+					culture = loudaios
+					culture = tanaisian
+				}
+			}
+			change_culture = taurican
+		}
+	}
+
+	option = {
+		name = "ms_rusirheim.9.b" # No sympathy!
+        ai_chance = { 
+			factor = 50 
+		}
+		add_treasury = 1000
+        every_owned_province = {
+			limit = {
+				culture = olbian
+			}
+			change_culture = rus_bondi
+			change_religion = norse_pagan_reformed
+			add_devastation = 75
+			add_base_tax = -2
+			add_base_production = -2
+			add_base_manpower = -2
+		}
+		every_owned_province = {
+			limit = {
+				OR = {
+					culture = taurican
+					culture = loudaios
+					culture = tanaisian
+				}
+			}
+			change_culture = rus_hermenn
+			change_religion = norse_pagan_reformed
+			add_devastation = 75
+			add_base_tax = -3
+			add_base_production = -3
+			add_base_manpower = -3
+		}
+		if = {
+			limit = {
+				country_or_non_sovereign_subject_holds = 2447
+			}
+			2447 = {
+				add_devastation = 75
+				add_base_tax = -3
+				add_base_production = -3
+				add_base_manpower = -3
+			}
+		}
+	}
+}
+province_event = {
+	id = ms_rusirheim.10
+	title = ms_rusirheim.10.t
+	desc = ms_rusirheim.10.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = hlm_expel_the_mongols
+			}
+		}
+		OR = {
+			culture = yerlesik
+			culture = ciftci
+			culture = taciir
+		}
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.10.a
+		change_culture = rus_leysingr
+		if = {
+			limit = {
+				development = 20 
+			}
+			add_devastation = 75
+			add_base_tax = -4
+			add_base_production = -4
+			add_base_manpower = -4
+		}
+		else_if = {
+			limit = {
+				development = 15 
+			}
+			add_devastation = 75
+			add_base_tax = -3
+			add_base_production = -3
+			add_base_manpower = -3
+		}
+		else = {
+			add_devastation = 75
+			add_base_tax = -2
+			add_base_production = -2
+			add_base_manpower = -2
+		}
+	}
+}
+province_event = {
+	id = ms_rusirheim.11
+	title = ms_rusirheim.11.t
+	desc = ms_rusirheim.11.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = rsh_tame_the_east
+				tag = HE4
+			}
+		}
+		OR = {
+			culture = chuvash
+			culture = pf_nogai
+			culture = pf_bashkir
+			culture = bolghar
+		}
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.11.a
+		change_culture = rus_hesthamadr
+		if = {
+			limit = {
+				development = 20 
+			}
+			add_devastation = 75
+			add_base_tax = -4
+			add_base_production = -4
+			add_base_manpower = -4
+		}
+		else_if = {
+			limit = {
+				development = 15 
+			}
+			add_devastation = 75
+			add_base_tax = -3
+			add_base_production = -3
+			add_base_manpower = -3
+		}
+		else = {
+			add_devastation = 75
+			add_base_tax = -2
+			add_base_production = -2
+			add_base_manpower = -2
+		}
+	}
+}
+province_event = {
+	id = ms_rusirheim.12
+	title = ms_rusirheim.12.t
+	desc = ms_rusirheim.12.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = rsh_tame_the_east
+				tag = HE1
+				tag = HE2
+				tag = HE3
+			}
+		}
+		OR = {
+			culture = cuman
+			culture = kipchak
+			culture = khazar
+			culture = balkar
+		}
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.12.a
+		change_culture = rus_hermenn
+		if = {
+			limit = {
+				development = 20 
+			}
+			add_devastation = 75
+			add_base_tax = -4
+			add_base_production = -4
+			add_base_manpower = -4
+		}
+		else_if = {
+			limit = {
+				development = 15 
+			}
+			add_devastation = 75
+			add_base_tax = -3
+			add_base_production = -3
+			add_base_manpower = -3
+		}
+		else = {
+			add_devastation = 75
+			add_base_tax = -2
+			add_base_production = -2
+			add_base_manpower = -2
+		}
+	}
+}
+province_event = {
+	id = ms_rusirheim.13
+	title = ms_rusirheim.13.t
+	desc = ms_rusirheim.13.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = rsh_norseslavic_hegemony
+			}
+		}
+		OR = {
+			culture = podlachian
+			culture = mazovian
+			culture = pomorian
+			culture = polabian
+		}
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.13.a
+		change_culture = rus_valkyrjur
+	}
+}
+province_event = {
+	id = ms_rusirheim.14
+	title = ms_rusirheim.14.t
+	desc = ms_rusirheim.14.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = rsh_norseslavic_hegemony
+			}
+		}
+		OR = {
+			culture = dregovich
+			culture = volhynian
+			culture = drakovan
+		}
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.14.a
+		change_culture = rus_nagranni
+	}
+}
+province_event = {
+	id = ms_rusirheim.15
+	title = ms_rusirheim.15.t
+	desc = ms_rusirheim.15.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = rsh_bjarmian_integration
+			}
+		}
+		culture = bjarmian
+		region = white_sea_region
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.15.a
+		change_culture = rus_bjarmian
+	}
+}
+province_event = {
+	id = ms_rusirheim.16
+	title = ms_rusirheim.16.t
+	desc = ms_rusirheim.16.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = rsh_volga_assimilation
+			}
+		}
+		OR = {
+			culture_group = volgaic
+			culture = modynud
+		}
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.16.a
+		change_culture = rus_skogbuar
+	}
+}
+province_event = {
+	id = ms_rusirheim.17
+	title = ms_rusirheim.17.t
+	desc = ms_rusirheim.17.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = rsh_ugric_assimilation
+			}
+		}
+		OR = {
+			culture = permyak
+			culture = udmurt
+		}
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.17.a
+		change_culture = rus_raudr
+	}
+}
+province_event = {
+	id = ms_rusirheim.18
+	title = ms_rusirheim.18.t
+	desc = ms_rusirheim.18.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = rsh_ugric_assimilation
+			}
+		}
+		OR = {
+			culture = nenet
+			culture = komi
+		}
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.18.a
+		change_culture = rus_bjarmian
+	}
+}
+province_event = {
+	id = ms_rusirheim.19
+	title = ms_rusirheim.19.t
+	desc = ms_rusirheim.19.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = rsh_superior_ways
+			}
+		}
+		OR = {
+			culture = norwegian
+			culture = swedish
+			culture = danish
+			culture = angle
+			culture = norvegr
+		}
+		religion = norse_pagan_reformed
+	}
+	
+	option = {
+		name = ms_rusirheim.19.a
+		change_culture = rus_thorparar
+	}
+}
+province_event = {
+	id = ms_rusirheim.20
+	title = ms_rusirheim.20.t
+	desc = ms_rusirheim.20.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = rsh_pearl_of_the_east
+			}
+		}
+		OR = {
+			region = manchuria_region
+			area = xilin_gol_area
+			area = cicigar_area
+			area = eastern_mongolia
+			area = chahar_area
+		}
+		OR = {
+			culture = chahar
+			culture = manchu
+			culture = manchu_new
+			culture = khalkha
+			culture = mongol
+		}
+		NOT = { area = heilongjiang_area }
+		NOT = { culture = rus_samfelagsmenn }
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.20.a
+		change_culture = rus_samfelagsmenn
+		if = {
+			limit = {
+				development = 20 
+			}
+			add_devastation = 75
+			add_base_tax = -4
+			add_base_production = -4
+			add_base_manpower = -4
+		}
+		else_if = {
+			limit = {
+				development = 15 
+			}
+			add_devastation = 75
+			add_base_tax = -3
+			add_base_production = -3
+			add_base_manpower = -3
+		}
+		else = {
+			add_devastation = 75
+			add_base_tax = -2
+			add_base_production = -2
+			add_base_manpower = -2
+		}
+	}
+}
+province_event = {
+	id = ms_rusirheim.21
+	title = ms_rusirheim.21.t
+	desc = ms_rusirheim.21.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = rsh_go_east_young_man
+			}
+		}
+		OR = {
+			region = west_siberia_region
+			area = tannu_uriankhai_area
+		}
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.21.a
+		change_culture = rus_heidrar
+		if = { 
+			limit = {
+				culture_group = altaic 
+			}
+		add_devastation = 75
+		add_base_tax = -2
+		add_base_production = -2
+		add_base_manpower = -2
+		}
+	}
+}
+province_event = {
+	id = ms_rusirheim.22
+	title = ms_rusirheim.22.t
+	desc = ms_rusirheim.22.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = rsh_go_east_young_man
+			}
+		}
+		OR = {
+			region = east_siberia_region
+			area = heilongjiang_area
+			culture = evenk
+			culture = nivkh
+			culture = ainu
+		}
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.22.a
+		change_culture = rus_hrimthursar
+	}
+}
+province_event = {
+	id = ms_rusirheim.23
+	title = ms_rusirheim.23.t
+	desc = ms_rusirheim.23.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = rsh_go_east_young_man
+				tag = HE5
+				tag = HE6
+				tag = HE7
+				tag = HE8
+			}
+		}
+		OR = {
+			culture = khazak
+			culture = uyghur
+			culture = oirats
+		}
+		OR = {
+			region = central_asia_region
+			area = zungaria_area
+			area = north_zungaria
+			province_id = 461
+		}
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.23.a
+		change_culture = rus_tjaldmenn
+		if = {
+			limit = {
+				development = 20 
+			}
+			add_devastation = 75
+			add_base_tax = -4
+			add_base_production = -4
+			add_base_manpower = -4
+		}
+		else_if = {
+			limit = {
+				development = 15 
+			}
+			add_devastation = 75
+			add_base_tax = -3
+			add_base_production = -3
+			add_base_manpower = -3
+		}
+		else = {
+			add_devastation = 75
+			add_base_tax = -2
+			add_base_production = -2
+			add_base_manpower = -2
+		}
+	}
+}
+province_event = {
+	id = ms_rusirheim.24
+	title = ms_rusirheim.24.t
+	desc = ms_rusirheim.24.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = rsh_go_east_young_man
+				tag = HE5
+				tag = HE6
+				tag = HE7
+				tag = HE8
+			}
+		}
+		OR = {
+			culture = turkmeni
+			culture = uzbehk
+			culture = kirgiz
+		}
+		region = central_asia_region
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.24.a
+		change_culture = rus_jotnar
+		if = {
+			limit = {
+				development = 20 
+			}
+			add_devastation = 75
+			add_base_tax = -4
+			add_base_production = -4
+			add_base_manpower = -4
+		}
+		else_if = {
+			limit = {
+				development = 15 
+			}
+			add_devastation = 75
+			add_base_tax = -3
+			add_base_production = -3
+			add_base_manpower = -3
+		}
+		else = {
+			add_devastation = 75
+			add_base_tax = -2
+			add_base_production = -2
+			add_base_manpower = -2
+		}
+	}
+}
+province_event = {
+	id = ms_rusirheim.25
+	title = ms_rusirheim.25.t
+	desc = ms_rusirheim.25.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = rsh_pax_russica
+			}
+		}
+		OR = {
+			culture_group = nordgermanic
+			culture_group = ostgermanic
+		}
+		OR = {
+			region = low_countries_region
+			region = central_asia_region
+		}
+		NOT = {
+			culture_group = rus_norse
+		}
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.25.a
+		change_culture = rus_utlagar
+		add_devastation = 25
+		add_base_tax = -1
+		add_base_production = -1
+		add_base_manpower = -1
+	}
+}
+province_event = {
+	id = ms_rusirheim.26
+	title = ms_rusirheim.26.t
+	desc = ms_rusirheim.26.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = rsh_pax_russica
+			}
+		}
+		OR = {
+			culture_group = nordgermanic
+			culture_group = ostgermanic
+		}
+		OR = {
+			region = low_countries_region
+			region = north_german_region
+			region = south_german_region
+			region = carpathia_region
+		}
+		NOT = {
+			culture_group = rus_norse
+		}
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.26.a
+		change_culture = rus_utlagar
+		add_devastation = 25
+		add_base_tax = -1
+		add_base_production = -1
+		add_base_manpower = -1
+	}
+}
+
+province_event = {
+	id = ms_rusirheim.27
+	title = ms_rusirheim.27.t
+	desc = ms_rusirheim.27.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = rsh_go_east_young_man
+				tag = HE9
+			}
+		}
+		OR = {
+			culture = oirats
+			culture = khalkha
+		}
+		OR = {
+				province_id = 4678
+				province_id = 4222
+				province_id = 718
+				province_id = 4682
+				province_id = 4680
+				province_id = 719
+				province_id = 2117
+				province_id = 2193
+				province_id = 2190
+				province_id = 2189
+				province_id = 4668
+				province_id = 4220
+				province_id = 2116
+				province_id = 4221
+				province_id = 4677
+				province_id = 720
+				province_id = 4669
+				province_id = 717
+				province_id = 721
+			}
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.27.a
+		change_culture = rus_tjaldmenn
+		if = {
+			limit = {
+				development = 20 
+			}
+			add_devastation = 75
+			add_base_tax = -4
+			add_base_production = -4
+			add_base_manpower = -4
+		}
+		else_if = {
+			limit = {
+				development = 15
+			}
+			add_devastation = 75
+			add_base_tax = -3
+			add_base_production = -3
+			add_base_manpower = -3
+		}
+		else = {
+			add_devastation = 75
+			add_base_tax = -2
+			add_base_production = -2
+			add_base_manpower = -2
+		}
+	}
+}
+
+province_event = {
+	id = ms_rusirheim.28
+	title = ms_rusirheim.28.t
+	desc = ms_rusirheim.28.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		owner = {
+			mission_completed = hlm_end_norseslavic_rivalry
+		}
+		NOT = {
+			has_province_modifier = rsh_norseslavic_melting_pot
+		}
+		religion = slavic_religion
+	}
+	
+	option = {
+		name = ms_rusirheim.28.a
+		add_province_modifier = {
+			name = rsh_norseslavic_melting_pot
+			duration = -1
+		}
+	}
+}
+
+province_event = {
+	id = ms_rusirheim.29
+	title = ms_rusirheim.29.t
+	desc = ms_rusirheim.29.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = rsh_norseslavic_melting_pot
+		OR = {
+			religion = norse_pagan_reformed
+			NOT = { 
+				owner = {
+					mission_completed = hlm_end_norseslavic_rivalry
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = ms_rusirheim.29.a
+		remove_province_modifier = {
+			name = rsh_norseslavic_melting_pot
+			duration = -1
+		}
+	}
+}

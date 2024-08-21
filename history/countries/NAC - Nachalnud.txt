@@ -1,0 +1,8 @@
+government = tribal
+add_government_reform = ms_mogoslav_kingdom
+government_rank = 2
+technology_group = west_mongol_group
+religion = tengri_pagan_reformed
+capital = 300
+primary_culture = yerlesik
+

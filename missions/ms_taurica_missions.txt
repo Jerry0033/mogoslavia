@@ -1,0 +1,1621 @@
+taurica_1 = {
+	slot = 1
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		tag = BSB
+	}
+
+	bsb_down_the_danapris = {
+		icon = mission_handle_the_streltsy
+		position = 2
+		required_missions = { bsb_dawn_of_taurica }
+		provinces_to_highlight = { 
+			OR = {
+				area = yedisan_area 
+				area = podolia_volhynia_area
+				area = mayakia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			yedisan_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			podolia_volhynia_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			mayakia_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		}
+		effect = { 
+			yedisan_area = { add_base_production = 1 }
+			podolia_volhynia_area = { add_base_production = 1 }
+			mayakia_area = { add_base_production = 1 }
+			east_dniepr_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			west_dniepr_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			red_ruthenia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			volhynia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	bsb_the_hub_of_kievo = {
+		icon = mission_rule_ruthenia
+		position = 4
+		required_missions = { bsb_down_the_danapris }
+		provinces_to_highlight = {
+			province_id = 280
+		}
+		trigger = { 
+			280 = {
+				owned_by = ROOT
+				development = 25
+				has_trade_building_trigger = yes
+				has_production_building_trigger = yes
+				has_tax_building_trigger = yes
+			}
+		}
+		effect = { 
+			280 = {
+				add_province_modifier = {
+					name = bsb_slave_capital
+					duration = -1
+				}
+				add_base_production = 5
+				change_trade_goods = slaves
+			}
+		}
+	}
+	bsb_impose_taurican_law = {
+		icon = per_restore_the_avesta
+		position = 9
+		required_missions = { bsb_influence_the_poleis }
+		trigger = {
+			mercantilism = 25 
+			power_projection = 50 
+		}
+		effect = {
+			add_mercantilism = 3
+			add_country_modifier = {
+				name = bsb_geros_andras_modifier
+				duration = 9125 
+			}
+			custom_tooltip = hsa_every_league_member_gets_this_reward_tt
+			hidden_effect = {
+				every_country = {
+					limit = { is_in_trade_league_with = ROOT }
+					add_country_modifier = {
+						name = bsb_geros_andras_modifier
+						duration = 9125 
+					}
+				}
+			}
+			change_dip = 1 
+			change_adm = 1 
+		}
+	}
+	bsb_markets_of_kerkinitis = {
+		icon = mission_market_place_with_asian_traders
+		position = 10
+		required_missions = { bsb_impose_taurican_law }
+		provinces_to_highlight = {
+			province_id = 284
+		}
+		trigger = { 
+			284 = {
+				country_or_non_sovereign_subject_holds = ROOT 
+				development = 25
+				has_trade_building_trigger = yes
+				has_production_building_trigger = yes
+				has_tax_building_trigger = yes
+			}
+		}
+		effect = { 
+			add_mercantilism = 3
+			284 = {
+				add_province_modifier = {
+					name = bsb_kerkinitis_paper_markets
+					duration = -1
+				}
+			}
+		}
+	}
+	bsb_the_peninsula_of_riches = {
+		icon = mission_war_chest
+		position = 11
+		required_missions = { bsb_markets_of_kerkinitis }
+		provinces_to_highlight = {
+			area = crimea_area
+		}
+		trigger = { 
+			development_in_provinces = {
+				value = 100
+				area = crimea_area
+			}
+		}
+		effect = { 
+			custom_tooltip = bsb_modifiers_in_crimea_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						area= crimea_area
+					}
+					add_province_modifier = {
+						name = bsb_peninsula_of_riches_modifier
+						duration = 18250
+					}
+				}
+			}
+		}
+	}
+}
+
+taurica_2 = {
+	slot = 2
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		tag = BSB
+	}
+
+	bsb_an_inland_foothold = {
+		icon = spa_reform_tercios
+		position = 2
+		required_missions = { bsb_dawn_of_taurica }
+		provinces_to_highlight = { 
+			OR = {
+				province_id = 1974
+				province_id = 5071
+				area = mansur_area
+				area = azov_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			1974 = {
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			5071 = {
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			mansur_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			azov_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		}
+		effect = { 
+			kharkorin_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			lower_don_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			kipchakia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			khazaria_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	bsb_restore_tanais = {
+		icon = mission_colonial
+		position = 3
+		required_missions = { bsb_an_inland_foothold }
+		provinces_to_highlight = {
+			province_id = 286
+		}
+		trigger = { 
+			286 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = { 
+			286 = {
+				change_province_name = "Tanais"
+				rename_capital = "Tanais"
+				change_culture = tanaisian
+				change_religion = hellenic
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+				add_center_of_trade_level = 1
+			}
+		}
+	}
+	bsb_the_last_mongol = {
+		icon = qng_end_yuan
+		position = 5
+		required_missions = { bsb_the_hub_of_kievo bsb_restore_tanais }
+		provinces_to_highlight = {
+			OR = {
+				area = east_dniepr_area
+				area = kharkorin_area
+				area = lower_don_area
+				area = kipchakia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			east_dniepr_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			kharkorin_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			lower_don_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			kipchakia_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		}
+		effect = { 
+			crimea_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			chernigov_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			sloboda_ukraine_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	bsb_influence_the_poleis = {
+		icon = mission_alliances
+		position = 8
+		required_missions = { bsb_taurican_dominance }
+		provinces_to_highlight = {
+			owner = { 
+				NOT = { tag = ROOT }
+				is_in_trade_league_with = ROOT 
+				NOT = { 
+					has_opinion = { 
+						who = ROOT 
+						value = 100 
+					}
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				dip = 4 
+				ruler_has_personality = charismatic_negotiator_personality
+				ruler_has_personality = silver_tongue_personality
+			}
+			if = {
+				limit = { government = republic }
+				OR = {
+					reform_level = 3 
+					republican_tradition = 80
+				}
+			}
+			OR = {
+				diplomat = 1 
+				statesman = 1 
+			}
+			if = {
+				limit = { 
+					is_in_trade_league = yes
+				}
+				calc_true_if = {
+					all_country = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+						OR = {
+							is_in_trade_league_with = ROOT
+							is_subject_of = ROOT
+						}
+					}
+					amount = 3
+				}
+			}
+			else = {
+				calc_true_if = {
+					all_country = {
+						is_subject_of = ROOT
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+					amount = 2
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = { has_reform = frequent_elections_reform }
+				add_stability_or_adm_power = yes 
+				add_ruler_modifier = {
+					name = hsa_fresh_administration_modifier
+					duration = 10950 
+				}
+			}
+			else_if = {
+				limit = { 
+					OR = {
+						has_reform = consolidation_of_power_reform 
+						has_reform = consolidate_power_in_doge_reform
+					}
+				}
+				add_country_modifier = { 
+					name = hsa_longterm_admin_modifier 
+					duration = 9125 
+				}
+				if = { 
+					limit = {
+						adm = 5
+						NOT = { adm = 6 }
+					}
+					change_adm = 1 
+				}
+				else = { add_adm_power = 50 }
+				if = { 
+					limit = {
+						dip = 5
+						NOT = { dip = 6 }
+					}
+					change_dip = 1 
+				}
+				else = { add_dip_power = 50 }
+				if = { 
+					limit = {
+						mil = 5
+						NOT = { mil = 6 }
+					}
+					change_mil = 1 
+				}
+				else = { add_mil_power = 50 }
+			}
+			else_if = {
+				limit = { has_reform = consolidate_power_in_cities_reform }
+				custom_tooltip = hsa_every_league_member_and_subject_adm_power_and_50_opinion_tt 
+				hidden_effect = {
+					every_country = {
+						limit = {
+							OR = {
+								is_in_trade_league_with = ROOT 
+								is_subject_of = ROOT 
+							}
+						}
+						add_adm_power = 100
+						add_opinion = {
+							who = ROOT  
+							modifier = hsa_allowed_regional_admin_opinion_modifier 
+						}
+					}
+				}
+				change_government_reform_progress = 100 
+			}
+			else_if = {
+				limit = { has_reform = lottery_reform }
+				add_ruler_modifier = {
+					name = hsa_diplomatic_powerhouse 
+					duration = 10950 
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = bsb_omospondian_diets_modifier 
+					duration = 7300 
+				}
+				add_republican_tradition = 5
+				add_legitimacy = 10 
+				add_devotion = 10 
+			}
+			custom_tooltip = general_tooltip_dynamic_reward 
+		}
+	}
+	bsb_the_consuls_consulate = {
+		icon = mission_noble_council
+		position = 10
+		required_missions = { bsb_impose_taurican_law }
+		provinces_to_highlight = { 
+			province_id = 5063
+		}
+		trigger = {
+			OR = {
+				5063 = { num_of_times_improved = 10 }
+				monthly_adm = 10 
+			}
+			5063 = { 
+				OR = {
+					has_building = courthouse
+					has_building = town_hall
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = hsa_every_league_member_gets_prosperity_and_25_trust_towards_you_tt
+			hidden_effect = {
+				every_country = {
+					limit = { is_in_trade_league_with = ROOT }
+					capital_scope = { add_prosperity = 100 }
+					add_trust = {
+						who = ROOT 
+						value = 25 
+						mutual = yes 
+					}
+				}
+			}
+			country_event = { id = ms_bsb.6 }
+			5063 = {
+				add_province_modifier = {
+					name = bsb_the_grand_consulate
+					duration = 9125
+				}
+			}
+		}
+	}
+	bsb_tend_to_the_towns = {
+		icon = mission_novgorod_the_great
+		position = 11
+		required_missions = { bsb_a_new_trade_system }
+		provinces_to_highlight = {
+			owned_by = ROOT 
+			OR = {	
+				devastation = 1 
+				unrest = 1 
+				NOT = { development = 10 }
+			}
+			OR = {
+				area = crimea_area
+				area = mansur_area
+				area = azov_area
+				area = zaporizhia_area
+			}
+		}
+		trigger = { 
+			share_of_starting_income = 5
+			grown_by_development = 100
+			crimea_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+				religion = hellenic
+				development = 10
+				NOT = { unrest = 1 }
+				NOT = { devastation = 1 }
+			}
+			mansur_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+				religion = hellenic
+				development = 10
+				NOT = { unrest = 1 }
+				NOT = { devastation = 1 }
+			}
+			azov_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+				religion = hellenic
+				development = 10
+				NOT = { unrest = 1 }
+				NOT = { devastation = 1 }
+			}
+			zaporizhia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+				religion = hellenic
+				development = 10
+				NOT = { unrest = 1 }
+				NOT = { devastation = 1 }
+			}
+		}
+		effect = {
+			custom_tooltip = bsb_greek_settlement_tt
+			add_country_modifier = {
+				name = bsb_strong_mercantile_union_modifier
+				duration = 9125
+			}
+		}
+	}
+	bsb_develop_the_slave_trade = {
+		icon = mission_peasantry
+		position = 12
+		required_missions = { bsb_tend_to_the_towns }
+		provinces_to_highlight = {
+			owned_by = ROOT
+			trade_goods = slaves
+		}
+		trigger = { 
+			trade_goods_produced_amount = {
+				trade_goods = slaves
+				amount = 10
+			}
+		}
+		effect = { 
+			add_mercantilism = 3
+				change_price = {
+				trade_goods = slaves
+				key = bsb_slavic_slave_trade
+				value = 0.1
+				duration = -1
+			}
+		}
+	}
+}
+
+taurica_3 = {
+	slot = 3
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		tag = BSB
+	}
+
+	bsb_dawn_of_taurica = {
+		icon = develop_provence
+		position = 1
+		required_missions = {  }
+		trigger = { 
+			army_size_percentage = 0.8
+			manpower_percentage = 0.5
+		}
+		effect = { 
+			if = {
+				limit = {
+					is_trade_league_leader = yes 
+				}
+				custom_tooltip = bsb_reward_scales_with_number_of_members_tt
+			}
+			if = {
+				limit = { 
+					calc_true_if = {
+						all_country = {
+							is_in_trade_league_with = ROOT
+						}
+						amount = 5
+					}
+				}
+				add_country_modifier = {
+					name = bsb_recruiting_from_poleis_modifier3
+					duration = 7300 
+				}
+			}
+			else_if = {
+				limit = { 
+					calc_true_if = {
+						all_country = {
+							is_in_trade_league_with = ROOT
+						}
+						amount = 4
+					}
+				}
+				add_country_modifier = {
+					name = bsb_recruiting_from_poleis_modifier2
+					duration = 5475 
+				}
+			}
+			else_if = {
+				limit = {
+					calc_true_if = {
+						all_country = {
+							is_in_trade_league_with = ROOT
+						}
+						amount = 1
+					}
+				}
+				add_country_modifier = {
+					name = bsb_recruiting_from_poleis_modifier
+					duration = 3650 
+				}
+			}
+			else = { add_army_tradition = 20 }
+			mansur_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			zaporizhia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			azov_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			circassia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			tiveria_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			mayakia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			moldavia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			yedisan_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			podolia_volhynia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	bsb_the_chersonesian_coup = {
+		icon = mission_religious
+		position = 2
+		required_missions = { bsb_dawn_of_taurica }
+		provinces_to_highlight = {
+			province_id = 2410
+		}
+		trigger = { 
+			has_spy_network_in = {
+				who = CRS
+				value = 50
+			}
+			CRS = {
+				NOT = {
+					total_development = 25
+				}
+			}
+		}
+		effect = { 
+			country_event = { id = ms_bsb.1 }
+		}
+	}
+	bsb_bosporan_marine_corp = {
+		icon = ven_navy_mission_2
+		position = 4
+		required_missions = { bsb_by_sea_and_land }
+		trigger = { 
+			num_of_marines = 10
+		}
+		effect = { 
+			add_country_modifier = {
+				name = bsb_bosporan_marines
+				duration = -1
+			}
+		}
+	}
+	bsb_taurican_dominance = {
+		icon = spa_universal_monarchy
+		position = 7
+		required_missions = {  }
+		provinces_to_highlight = {
+			province_id = 5063
+			NOT = {
+				OR = {
+					has_building = marketplace 
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+				num_of_times_improved = 4 
+			}
+		}
+		trigger = {
+			5063 = {
+				OR = {
+					has_building = marketplace 
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+				num_of_times_improved = 4 
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = bsb_taurican_dominance
+				duration = 18250
+			}
+		}
+	}
+	bsb_centralize_the_omospondia = {
+		icon = mission_address_the_ethnic_situation
+		position = 9
+		required_missions = { bsb_taurican_dominance }
+		trigger = { 
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = bsb_owns_all_bosporan_poleis_tt
+					AND = {
+						HRP = {
+							exists = no
+						}
+						OLB = {
+							exists = no
+						}
+						BRY = {
+							exists = no
+						}
+						PHG = {
+							exists = no
+						}
+						2447 = {
+							owned_by = ROOT
+						}
+						5066 = {
+							owned_by = ROOT
+						}
+						5065 = {
+							owned_by = ROOT
+						}
+						5178 = {
+							owned_by = ROOT
+						}
+					}
+				}
+				AND = {
+					HRP = {
+						NOT = {
+							total_development = 25
+						}
+						has_opinion = { 
+							who = ROOT 
+							value = 200 
+						}
+					}
+					OLB = {
+						NOT = {
+							total_development = 25
+						}
+						has_opinion = { 
+							who = ROOT 
+							value = 200 
+						}
+					}
+					BRY = {
+						NOT = {
+							total_development = 25
+						}
+						has_opinion = { 
+							who = ROOT 
+							value = 200 
+						}
+					}
+					PHG = {
+						NOT = {
+							total_development = 25
+						}
+						has_opinion = { 
+							who = ROOT 
+							value = 200 
+						}
+					}
+				}
+			}
+		}
+		effect = { 
+			vassalize = HRP
+			vassalize = OLB
+			vassalize = BRY
+			vassalize = PHG
+			add_country_modifier = {
+				name = bsb_centralized_the_omospondia_modifier
+				duration = 7300
+			}
+		}
+	}
+	bsb_a_new_trade_system = {
+		icon = mission_market_place_with_asian_traders
+		position = 10
+		required_missions = { bsb_centralize_the_omospondia }
+		trigger = { 
+			stability = 1 
+			adm = 3 
+			dip = 3 
+			mil = 3 
+			OR = { 
+				faction_influence = {
+					faction = mr_traders 
+					influence = 80
+				}
+				faction_influence = {
+					faction = mr_aristocrats
+					influence = 80
+				}
+				faction_influence = {
+					faction = mr_guilds
+					influence = 80
+				}
+			}
+		}
+		effect = { 
+			add_mercantilism = 3
+			if = {
+				limit = {
+					faction_influence = {
+						faction = mr_traders 
+						influence = 80
+					}
+				}
+				capital_scope = {
+					add_province_modifier = {
+						name = hsa_mercantile_burgermeister_modifier
+						duration = 7300 
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = { is_in_trade_league_with = ROOT }
+						capital_scope = {
+							add_province_modifier = {
+								name = hsa_mercantile_burgermeister_modifier
+								duration = 7300 
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					faction_influence = {
+						faction = mr_guilds 
+						influence = 80
+					}
+				}
+				capital_scope = {
+					add_province_modifier = {
+						name = hsa_guild_burgermeister_modifier
+						duration = 7300 
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = { is_in_trade_league_with = ROOT }
+						capital_scope = {
+							add_province_modifier = {
+								name = hsa_guild_burgermeister_modifier
+								duration = 7300 
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					faction_influence = {
+						faction = mr_aristocrats 
+						influence = 80
+					}
+				}
+				capital_scope = {
+					add_province_modifier = {
+						name = hsa_aristocrat_burgermeister_modifier
+						duration = 7300 
+					}
+					add_base_manpower = 1 
+				}
+				hidden_effect = {
+					every_country = {
+						limit = { is_in_trade_league_with = ROOT }
+						capital_scope = {
+							add_province_modifier = {
+								name = hsa_aristocrat_burgermeister_modifier
+								duration = 7300 
+							}
+							add_base_manpower = 1
+						}
+					}
+				}
+			}
+			custom_tooltip = general_tooltip_dynamic_reward
+			custom_tooltip = hsa_every_league_member_gets_this_reward_tt
+		}
+	}
+	bsb_control_the_routes = {
+		icon = mission_dominate_home_trade_node
+		position = 11
+		required_missions = { bsb_a_new_trade_system }
+		trigger = { 
+			1322 = { is_strongest_trade_power = ROOT }
+			280 = { is_strongest_trade_power = ROOT }
+			464 = { is_strongest_trade_power = ROOT }
+		}
+		effect = { 
+			add_mercantilism = 3
+			add_country_modifier = {
+				name = bsb_controlling_the_routes
+				duration = 9125
+			}
+		}
+	}
+	bsb_mercantile_domination = {
+		icon = mission_rb_grow_the_channel
+		position = 12
+		required_missions = { bsb_control_the_routes }
+		trigger = { 
+			monthly_income = 100
+			trade_income_percentage = 0.5
+		}
+		effect = { 
+			add_mercantilism = 5
+			add_years_of_income = 0.5
+		}
+	}
+	bsb_unite_the_poleis = {
+		icon = mission_plc_golden_liberty
+		position = 13
+		required_missions = { bsb_develop_the_slave_trade bsb_mercantile_domination bsb_a_fleet_to_fear }
+		trigger = { 
+			mercantilism = 50
+			OR = {
+				is_great_power = yes 
+				total_development = 500 
+				AND = {
+					monthly_dip = 12
+					grown_by_development = 250
+					power_projection = 50 
+					republican_tradition = 85
+				}
+			}
+			1322 = { is_strongest_trade_power = ROOT }
+			280 = { is_strongest_trade_power = ROOT }
+			464 = { is_strongest_trade_power = ROOT }
+			328 = { is_strongest_trade_power = ROOT }
+			1319 = { is_strongest_trade_power = ROOT }
+			4994 = { is_strongest_trade_power = ROOT }
+		}
+		effect = { 
+			if = {
+				limit = {
+					is_trade_league_leader = yes 
+				}
+				custom_tooltip = hsa_vassalize_lib_desire_trade_league_tt
+				hidden_effect = {
+					every_country = {
+						limit = {
+							is_in_trade_league_with = ROOT 
+						}
+						ROOT = { vassalize = PREV }
+						add_liberty_desire = -50
+					}
+				}
+			}
+			custom_tooltip = hsa_diplomatic_upkeep_boost_tt
+			hidden_effect = {
+				if = { 
+					limit = { num_of_non_tributary_subjects = 6 }
+					add_country_modifier = {
+						name = bsb_omospondia_poleis6_modifier
+						duration = 10950 
+					}
+				}
+				else_if = {
+					limit = { num_of_non_tributary_subjects = 5 }
+					add_country_modifier = {
+						name = bsb_omospondia_poleis5_modifier
+						duration = 10950 
+					}
+				}
+				else_if = {
+					limit = { num_of_non_tributary_subjects = 4 }
+					add_country_modifier = {
+						name = bsb_omospondia_poleis4_modifier
+						duration = 10950 
+					}
+				}	
+				else_if = {
+					limit = { num_of_non_tributary_subjects = 3 }
+					add_country_modifier = {
+						name = bsb_omospondia_poleis3_modifier
+						duration = 10950 
+					}
+				}
+				else_if = {
+					limit = { num_of_non_tributary_subjects = 2 }
+					add_country_modifier = {
+						name = bsb_omospondia_poleis2_modifier
+						duration = 10950 
+					}
+				}
+				else = {
+					add_country_modifier = {
+						name = bsb_omospondia_poleis1_modifier
+						duration = 10950 
+					}
+				}
+			}
+		}
+	}
+}
+
+taurica_4 = {
+	slot = 4
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		tag = BSB
+	}
+
+	bsb_safeguard_the_trade_routes = {
+		icon = mission_growth_of_surat
+		position = 2
+		required_missions = { bsb_dawn_of_taurica }
+		provinces_to_highlight = {
+			province_id = 1322
+		}
+		trigger = { 
+			1322 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = bsb_taurican_protection
+				duration =  9125
+			}
+		}
+	}
+	bsb_by_sea_and_land = {
+		icon = mission_early_game_buildings
+		position = 3
+		required_missions = { bsb_safeguard_the_trade_routes }
+		trigger = { 
+			num_of_light_ship = 10
+			num_of_galley = 20
+		}
+		effect = { 
+			add_country_modifier = {
+				name = bsb_bosporan_marine_focus
+				duration = -1
+			}
+			hudavendigar_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			ankara_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	bsb_show_our_presence = {
+		icon = mission_conquer_romania
+		position = 4
+		required_missions = { bsb_by_sea_and_land }
+		provinces_to_highlight = {
+			OR = {
+				area = ankara_area
+				area = kastamonu_area
+				province_id = 330
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			ankara_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			kastamonu_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			330 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = { 
+			karaman_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			rum_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			erzurum_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			samtskhe_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			imereti_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	bsb_along_the_coast = {
+		icon = mission_pontic_reconquest
+		position = 5
+		required_missions = { bsb_show_our_presence }
+		provinces_to_highlight = {
+			OR = {
+				area = circassia_area
+				area = erzurum_area
+				area = samtskhe_area
+				area = imereti_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			circassia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			erzurum_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			samtskhe_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			imereti_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = { 
+			caucasia_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	bsb_regional_domination = {
+		icon = mission_control_the_black_sea
+		position = 6
+		required_missions = { bsb_the_last_mongol bsb_along_the_coast bsb_bypass_the_propontis }
+		trigger = { 
+			has_dip_advisor_3 = yes
+			total_development = 500
+		}
+		effect = { 
+				custom_tooltip = bsb_diplomat_tt
+				tooltip = {
+					add_country_modifier = {
+						name = bsb_diplomat_modifier
+						duration = -1 
+					}
+				}
+				custom_tooltip = bsb_naval_reformer_tt
+				tooltip = {
+					add_country_modifier = {
+						name = bsb_naval_reformer_modifier
+						duration = -1 
+					}
+				}
+				custom_tooltip = bsb_spymaster_tt
+				tooltip = {
+					add_country_modifier = {
+						name = bsb_spymaster_modifier
+						duration = -1 
+					}
+				}
+				custom_tooltip = bsb_statesman_tt
+				tooltip = {
+					add_country_modifier = {
+						name = bsb_statesman_modifier
+						duration = -1 
+					}
+				}
+				custom_tooltip = bsb_trader_tt
+				tooltip = {
+					add_country_modifier = {
+						name = bsb_trader_modifier
+						duration = -1 
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = { diplomat = 3 }
+						add_country_modifier = {
+							name = bsb_diplomat_modifier
+							duration = -1 
+						}
+					}
+					else_if = {
+						limit = { naval_reformer = 3 }
+						add_country_modifier = {
+							name = bsb_naval_reformer_modifier
+							duration = -1 
+						}
+					}
+					else_if = {
+						limit = { spymaster = 3 }
+						add_country_modifier = {
+							name = bsb_spymaster_modifier
+							duration = -1 
+						}
+					}
+					else_if = {
+						limit = { statesman = 3 }
+						add_country_modifier = {
+							name = bsb_statesman_modifier
+							duration = -1 
+						}
+					}
+					else_if = {
+						limit = { trader = 3 }
+						add_country_modifier = {
+							name = bsb_trader_modifier
+							duration = -1 
+						}
+					}
+				}
+		}
+	}
+	bsb_finance_the_emporoi = {
+		icon = mission_high_income
+		position = 8
+		required_missions = { bsb_taurican_dominance }
+		trigger = { 
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 70
+			}
+		}
+		effect = { 
+			capital_scope = {
+				add_province_modifier = {
+					name = bsb_emporoi_investments
+					duration = 3650 
+				}
+				add_base_production = 1
+			}
+			hidden_effect = {
+				every_country = {
+					limit = { is_in_trade_league_with = ROOT }
+					capital_scope = {
+						add_province_modifier = {
+							name = bsb_emporoi_investments
+							duration = 3650 
+						}
+						add_base_production = 1
+					}
+				}
+			}
+			custom_tooltip = hsa_every_league_member_gets_this_reward_tt
+		}
+	}
+	bsb_the_taurican_stolos = {
+		icon = mission_galleys_in_port
+		position = 10
+		required_missions = { bsb_centralize_the_omospondia bsb_finance_the_emporoi bsb_our_second_home }
+		trigger = { 
+			navy_size = 50
+			num_of_admirals = 1
+		}
+		effect = { 
+			add_navy_tradition = 15
+			country_event = { id = ms_bsb.4 }
+		}
+	}
+	bsb_a_fleet_to_fear = {
+		icon = mission_establish_high_seas_navy
+		position = 12
+		required_missions = { bsb_the_taurican_stolos }
+		trigger = { 
+			navy_size = 100
+			num_of_admirals = 2
+		}
+		effect = {
+			add_navy_tradition = 30
+			country_event = { id = ms_bsb.5 }
+		 }
+	}
+}
+
+taurica_5 = {
+	slot = 5
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		tag = BSB
+	}
+
+	bsb_rival_the_macedonians = {
+		icon = mission_pf_soldier
+		position = 1
+		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 151
+		}
+		trigger = { 
+			OR = {
+				is_rival = MAC
+				MAC = {
+					exists = no
+				}
+				has_spy_network_in = {
+					who = MAC
+					value = 50
+				}
+				151 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = { 
+			if = {
+				limit = {
+					navy_size = MAC
+				}
+				1322 = { #Taurica
+					add_trade_modifier = {
+						who = ROOT
+						duration = 9125
+						power = 25
+						key = bsb_black_sea_dominance
+					}
+				}
+				328 = { #Pontus
+					add_trade_modifier = {
+						who = ROOT
+						duration = 9125
+						power = 25
+						key = bsb_black_sea_dominance
+					}
+				}
+			}
+			thrace_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			bulgaria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			silistria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	bsb_ink_and_spear = {
+		icon = mission_asian_trader
+		position = 3
+		required_missions = { bsb_safeguard_the_trade_routes bsb_rival_the_macedonians }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 151
+				province_id = 316
+			}
+		}
+		trigger = { 
+			151 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			316 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			1322 = { #Taurica
+				add_trade_modifier = {
+					who = MAC
+					duration = 9125
+					power = -50
+					key = bsb_lost_black_sea_acces
+				}
+			}
+		}
+	}
+	bsb_bypass_the_propontis = {
+		icon = mission_the_bospborus
+		position = 5
+		required_missions = { bsb_ink_and_spear }
+		provinces_to_highlight = {
+			OR = {
+				area = hudavendigar_area
+				area = thrace_area
+			}
+		}
+		trigger = {
+			hudavendigar_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			thrace_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		 }
+		effect = { 
+			balkan_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			anatolia_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	bsb_our_second_home = {
+		icon = mission_russian_navy
+		position = 9
+		required_missions = { }
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 10
+				has_building = shipyard 
+			}
+		}
+		effect = { 
+			custom_tooltip = bsb_3_grand_shipyards_tt
+			random_owned_province = {
+				limit = {
+					has_port = yes
+						has_building = shipyard 
+						NOT = { has_building = grand_shipyard }
+				}
+				remove_building = shipyard 
+					add_building = grand_shipyard 
+			}
+			random_owned_province = {
+				limit = {
+					has_port = yes
+						has_building = shipyard 
+						NOT = { has_building = grand_shipyard }
+				}
+				remove_building = shipyard 
+					add_building = grand_shipyard 
+			}
+			random_owned_province = {
+				limit = {
+					has_port = yes
+						has_building = shipyard 
+						NOT = { has_building = grand_shipyard }
+				}
+				remove_building = shipyard 
+					add_building = grand_shipyard 
+			}
+			country_event = { id = ms_bsb.2 }
+		}
+	}
+	bsb_our_navaarchis = {
+		icon = byz_greek_fire
+		position = 11
+		required_missions = { bsb_our_second_home }
+		trigger = {
+			has_flagship = yes 
+			num_of_galley = 50
+		 }
+		 effect = { 
+			country_event = { id = ms_bsb.3 }
+		}
+	}
+}
+

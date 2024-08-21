@@ -1,0 +1,127 @@
+﻿l_english:
+
+ #---------------------------------------------------------
+ # Konugardr 1
+ #---------------------------------------------------------
+
+ knu_western_campaign_title: "Western Campaign"
+ knu_western_campaign_desc: ""
+ knu_rid_kashubian_influence_title: "Rid Kashubian Influence"
+ knu_rid_kashubian_influence_desc: ""
+ knu_slavic_submission_title: "Slavic Submission"
+ knu_slavic_submission_desc: ""
+
+ #---------------------------------------------------------
+ # Konugardr 2
+ #---------------------------------------------------------
+
+ knu_take_our_chances_title: "Take Our Chances"
+ knu_take_our_chances_desc: ""
+ knu_southern_campaign_title: "Southern Campaign"
+ knu_southern_campaign_desc: ""
+ knu_taurica_is_ours_title: "Taurica Is Ours"
+ knu_taurica_is_ours_desc: ""
+ knu_kick_out_the_germanics_title: "Kick Out The Germanics"
+ knu_kick_out_the_germanics_desc: ""
+ knu_regional_powerhouse_title: "Regional Powerhouse"
+ knu_regional_powerhouse_desc: ""
+
+ #---------------------------------------------------------
+ # Konugardr 3
+ #---------------------------------------------------------
+
+ knu_beat_them_while_we_can_title: "Beat Them While We Can"
+ knu_beat_them_while_we_can_desc: ""
+ knu_northern_campaign_title: "Northern Campaign"
+ knu_northern_campaign_desc: ""
+ knu_a_varangian_after_all_title: "A Varangian After All"
+ knu_a_varangian_after_all_desc: ""
+ knu_settle_the_river_title: "Settle The River"
+ knu_settle_the_river_desc: ""
+
+ #---------------------------------------------------------
+ # Konugardr 4
+ #---------------------------------------------------------
+
+ knu_a_question_of_faith_title: "A Question Of Faith"
+ knu_a_question_of_faith_desc: ""
+ knu_end_the_romuvans_title: "End The Romuvans"
+ knu_end_the_romuvans_desc: ""
+ knu_spread_the_wealth_title: "Spread The Wealth"
+ knu_spread_the_wealth_desc: ""
+
+ #---------------------------------------------------------
+ # Konugardr 5
+ #---------------------------------------------------------
+
+ knu_the_capital_of_the_east_title: "The Capital Of The East"
+ knu_the_capital_of_the_east_desc: ""
+ knu_a_worthy_city_title: "A Worthy City"
+ knu_a_worthy_city_desc: ""
+
+ #---------------------------------------------------------
+ # Konugardr Branch 1
+ #---------------------------------------------------------
+
+ knu_branch_expand_faith_title: "Branching Mission"
+ knu_branch_expand_faith_desc: "This mission is a §YBranching Mission§!. Through events or through other missions, this mission will be replaced with a new, final version."
+
+ #---------------------------------------------------------
+ # Konugardr Branch 2
+ #---------------------------------------------------------
+
+ knu_branch_culture_swap_title: "Branching Mission"
+ knu_branch_culture_swap_desc: "This mission is a §YBranching Mission§!. Through events or through other missions, this mission will be replaced with a new, final version."
+ knu_branch_formable_title: "Branching Mission"
+ knu_branch_formable_desc: "This mission is a §YBranching Mission§!. Through events or through other missions, this mission will be replaced with a new, final version."
+
+ #---------------------------------------------------------
+ # Konugardr Slavic Branch
+ #---------------------------------------------------------
+ knu_slavic_expand_faith_title: "For Perun"
+ knu_slavic_expand_faith_desc: ""
+
+ knu_slavic_culture_swap_title: "Adopt Local Ways"
+ knu_slavic_culture_swap_desc: ""
+
+ knu_slavic_formable_title: "Rise Of Slavia"
+ knu_slavic_formable_desc: ""
+
+ #---------------------------------------------------------
+ # Konugardr Norse Branch
+ #---------------------------------------------------------
+
+ knu_norse_expand_faith_title: "For Odin"
+ knu_norse_expand_faith_desc: ""
+
+ knu_norse_culture_swap_title: "The Melting Pot"
+ knu_norse_culture_swap_desc: ""
+
+ knu_norse_formable_title: "Rusirheim The Right Way"
+ knu_norse_formable_desc: ""
+
+ #---------------------------------------------------------
+ # Konugardr Tengri Branch
+ #---------------------------------------------------------
+
+ knu_tengri_expand_faith_title: "For Kök Tengri"
+ knu_tengri_expand_faith_desc: ""
+
+ knu_tengri_culture_swap_title: "Adopt Mongol Ways"
+ knu_tengri_culture_swap_desc: ""
+
+ knu_tengri_formable_title: "The New Khanate"
+ knu_tengri_formable_desc: ""
+
+ #---------------------------------------------------------
+ # Konugardr Hellenic Branch
+ #---------------------------------------------------------
+
+ knu_hellenic_expand_faith_title: "For Zeus"
+ knu_hellenic_expand_faith_desc: ""
+
+ knu_hellenic_culture_swap_title: "Greek Ties"
+ knu_hellenic_culture_swap_desc: ""
+
+ knu_hellenic_formable_title: "Greek Rhosia"
+ knu_hellenic_formable_desc: "We are the Rhos People, that is what we are called by the Greek world."

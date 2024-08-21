@@ -1,0 +1,29 @@
+government = tribal
+add_government_reform = feudal_tribe
+government_rank = 1
+primary_culture = tiverian
+religion = hellenic
+technology_group = euro_pagan_tech
+capital = 5049
+1444.11.11 = { 
+	monarch = { 
+		name = "Budimir"
+		dynasty = "Vukanovic"
+		adm = 3
+		dip = 2
+		mil = 6
+		birth_date = 1426.03.28
+		death_date = 1445.01.01
+	}
+}
+1444.11.11 = { 
+	heir = { 
+		name = "Toma"
+		dynasty = "Vukanovic"
+		adm = 6
+		dip = 3
+		mil = 3
+		birth_date = 1443.01.24
+		death_date = 1445.01.01
+	}
+}

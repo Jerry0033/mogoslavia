@@ -1,0 +1,101 @@
+# Bjarmian republic?
+
+# Bosporan City State?
+
+# Bosporan republic?
+
+ms_bosporan_republic = {
+	icon = "serene_republic"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		tag = BSB
+	}
+	modifiers = {
+		trade_steering = 0.10
+		center_of_trade_upgrade_cost = -0.10
+		prestige_decay = -0.01
+	}
+	boost_income = yes
+	duration = 6
+	factions = {
+		mr_aristocrats
+		mr_traders
+		mr_guilds
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		is_merchant_republic = yes
+		elections_increase_factions_influence = yes
+		bonus_stats_for_elected_ruler = yes
+	}
+	government_abilities = {
+		serenity_mechanic
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+
+ms_rsh_hestridandi = {
+	icon = "rsh_hestridandi"
+	allow_normal_conversion = no
+	fixed_rank = 1
+	potential = {
+		OR = {
+			tag = HE1
+			tag = HE2
+			tag = HE3
+			tag = HE4
+			tag = HE5
+			tag = HE6
+			tag = HE7
+			tag = HE8
+		}
+	}
+	modifiers = {
+		num_accepted_cultures = -10
+		development_cost_modifier = 0.5
+		global_institution_spread = -0.5
+		global_manpower_modifier = 0.25
+		land_forcelimit_modifier = 0.25
+		reinforce_cost_modifier = -0.5
+		cav_to_inf_ratio = 0.5
+		movement_speed = 0.2
+		years_of_nationalism = -5
+	}
+	ai = {
+		factor = 1000
+	}
+	custom_attributes = {
+		locked_government_type = yes
+		cannot_become_dictatorship = yes
+		disables_estate_burghers = yes
+	}
+	duration = 5
+}

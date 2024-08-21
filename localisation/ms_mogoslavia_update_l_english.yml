@@ -1,0 +1,16 @@
+﻿l_english:
+# Culture Spread (tbd)
+MOG_CULTURE_CHUVASH:0 "\n§YMogoslavic§! culture will §Gnaturally spread§! amongst our §YChuvash§! provinces!"
+MOG_CULTURE_CUMAN:0 "\n§YMogoslavic§! culture will §Gnaturally spread§! amongst our §YCuman§! provinces!"
+MOG_CULTURE_MORDMESCH:0 "\n§YMogoslavic§! culture will §Gnaturally spread§! amongst our §YMordvin§! and §YMeschera§! provinces!"
+MOG_CULTURE_VEPSIAN:0 "\n§YMogoslavic§! culture will §Gnaturally spread§! amongst our §YVepsian§! provinces!"
+MOG_CULTURE_SLAVS:0 "\n§YMogoslavic§! culture will §Gnaturally spread§! amongst our §YEastern Slavic§! provinces!"
+MOG_CULTURE_SOUTHTATAR:0 "\n§YMogoslavic§! culture will §Gnaturally spread§! amongst our §YKipchak§!, §YKhazar§! and §YBalkar§! provinces!"
+MOG_CULTURE_EASTTATAR:0 "\n§YMogoslavic§! culture will §Gnaturally spread§! amongst our §YBolghar§!, §YBashkir§! and §YNogai§! provinces!"
+# Missions
+ up_to_10_province_that_meet_trigger_tt:0 "Up to §Y10§! random owned provinces that fullfill the mission trigger will receive:"
+ sisters_war_is_over_tt:0 "The §YSisters War§! conflict is §Yover§!"
+ sisters_war_started_tt:0 "The §YSisters War§! conflict has §Ystarted§!"
+ mog_prospecting_mission_tt:0 "5 provinces fulfilling the mission's requisites will change their production to §YIron§!, §YCopper§!, §YGlass§!, §YGems§! and §YCloth§!."
+ mog_pax_mongolica_tt:0 "Gives §Yclaims§! on the continents of §YEurope§! and §YAsia§!."
+# Modifiers

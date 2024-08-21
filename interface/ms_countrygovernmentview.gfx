@@ -1,0 +1,20 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_ruslander_government_power_bar_frame"
+		texturefile = "gfx//interface//ruslander_government_power_bar_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	progressbartype = {
+		name = "GFX_ruslander_government_power_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx\\interface\\ruslander_progressbar_green.dds"
+		textureFile2 = "gfx\\interface\\ruslander_progressbar_black.dds"
+		size = { x = 74 y = 17 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+}

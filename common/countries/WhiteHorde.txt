@@ -1,0 +1,83 @@
+#Country Name: Please see filename.
+graphical_culture = asiangfx
+color = { 173 168 169 }
+revolutionary_colors = { 122 118 119 }
+historical_idea_groups = { 
+	offensive_ideas
+	administrative_ideas
+	expansion_ideas
+	trade_ideas
+	economic_ideas
+	defensive_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+}
+monarch_names = { 
+	"Jochi #0" = 6
+	"Genghis #0" = 6
+	"Kublai #0" = 6
+	"�gedei #0" = 6
+	"Tem�jin #0" = 6
+	"Batbold #0" = 6
+	"Erdene #0" = 6
+	"Nergui #0" = 6
+	"Altan #0" = 6
+	"Tuguldur #0" = 6
+	"Batu #0" = 6
+	"Kadan #0" = 6
+	"Subotai #0" = 6
+	"Jebe #0" = 6
+	"Arghun #0" = 6
+	"B�rte #0" = 6
+	"Jebel #0" = 5
+	"Khorchin #0" = 5
+	"Tolui #0" = 5
+	"Khasar #0" = 5
+	"Orda #0" = 5
+	"Targutai #0" = 5
+	"Urtan #0" = 5
+	"Jarchi #0" = 5
+	"Alaqush #0" = 5
+	"Baiju #0" = 5
+	"Bukhara #0" = 5
+	"Delger #0" = 5
+	"Elbeg #0" = 5
+	"G�y�k #0" = 5
+	"Hasar #0" = 5
+	"Karakorum #0" = 4
+	"M�ngke #0" = 4
+	"Oghul #0" = 4
+	"Qaidu #0" = 4
+	"Shibakhan #0" = 4
+	"Toghrul #0" = 4
+	"Ulagchi #0" = 4
+	"Yel� #0" = 4
+	"Zayir #0" = 4
+	"Khoja #0" = 4
+	"Shiragi #0" = 4
+	"Temuge #0" = 4
+	"Yeke #0" = 4
+	"Zevri #0" = 4
+
+	"Khatun #0" = -1
+	"Almashi #0" = -1
+	"Kokachin #0" = -1
+	"Orkhan #0" = -1
+	"Toregene #0" = -1
+}
+leader_names = { 
+	Batbayar Borte Chinggis Delger Erdene Genghis Hasar Jamukha Jochi Kublai Mongke Noyon Ogedei Subotai Temujin Tolui Yesugei Altan Arslan Bagatur Bogd Borjigin Dorji Enkhtuya Ganbaatar Khagan Khasar
+	 Mergen Nergui Orlok Sainbayar Sholoi Toghrul Tsagaan Ulan Zevseg Davaadorj Erkhembayar Gadarpurev Jamsran Khishigbat Naidan 
+	 Oyuntsetseg Shagdar Tsolmonbayar Ulziikhutag Vandanbold Zorigbat Amarbayasgalan
+}
+ship_names = { 
+	Batbayar Borte Chinggis Delger Erdene Genghis Hasar Jamukha Jochi Kublai Mongke Noyon Ogedei Subotai Temujin Tolui Yesugei Altan Arslan Bagatur Bogd Borjigin Dorji Enkhtuya Ganbaatar Khagan Khasar
+	Mergen Nergui Orlok Sainbayar Sholoi Toghrul Tsagaan Ulan Zevseg Davaadorj Erkhembayar Gadarpurev Jamsran 
+	Khishigbat Naidan Oyuntsetseg Shagdar Tsolmonbayar Ulziikhutag Vandanbold Zorigbat Amarbayasgalan
+}
+fleet_names = { 
+	"Tavan Tesiin $PROVINCE$"
+}
+army_names = { 
+	"Tsergiin $PROVINCE$"
+}

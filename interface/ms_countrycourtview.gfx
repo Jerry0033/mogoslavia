@@ -1,0 +1,8 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_ruslander_jarldom_bg"
+		texturefile = "gfx//interface/government_view/ruslander_jarldom_bg.dds"
+		noOfFrames = 2
+	}
+}

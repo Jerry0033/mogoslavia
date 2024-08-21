@@ -1,0 +1,35 @@
+government = tribal
+add_government_reform = steppe_horde
+government_rank = 2
+technology_group = west_mongol_group
+religion = tengri_pagan_reformed
+primary_culture = taciir
+capital = 464
+add_accepted_culture = kipchak
+add_accepted_culture = pf_nogai
+add_historical_rival = MOG
+1444.11.11 = {
+	monarch = {
+		name = "Kopek"
+		dynasty = "Borjigin"
+		adm = 1
+		dip = 2
+		mil = 0
+		birth_date = 1424.09.04
+		death_date = 1445.01.01
+	}
+}
+add_country_modifier = {
+	name = ilk_khan_modifier
+	duration = -1
+}
+set_variable = {
+	which = mongol_legitimacy
+	value = 25
+}
+set_variable = {
+	which = mongol_claim
+	value = 25
+}
+save_global_event_target_as = ilk_khan
+set_country_flag = ilk_khan_country

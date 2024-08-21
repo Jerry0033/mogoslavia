@@ -1,0 +1,21 @@
+government = tribal
+add_government_reform = ms_mogoslav_kingdom
+government_rank = 1
+technology_group = west_mongol_group
+religion = tengri_pagan_reformed
+capital = 5094
+primary_culture = yerlesik
+add_accepted_culture = rusnok
+1444.11.11 = { 
+	monarch = { 
+		female = yes
+		name = "Yisu"
+		dynasty = "Borjigin"
+		adm = 5
+		dip = 4
+		mil = 5
+		birth_date = 1421.01.07
+		death_date = 1445.01.01
+	}
+}
+

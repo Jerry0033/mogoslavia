@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = autocracy_reform
+government_rank = 1
+technology_group = eastern
+religion = hellenic
+primary_culture = balkar
+capital = 4306
+1444.11.11 = {
+	monarch = {
+		name = "Kara"
+		dynasty = "Balka"
+		adm = 2
+		dip = 1
+		mil = 2
+		birth_date = 1414.09.04
+		death_date = 1445.01.01
+	}
+}
+

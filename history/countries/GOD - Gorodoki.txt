@@ -1,0 +1,31 @@
+government = tribal
+add_government_reform = feudal_tribe
+government_rank = 1
+technology_group = euro_pagan_tech
+religion = slavic_religion
+primary_culture = krivich
+capital = 5056
+1444.11.11 = { 
+	monarch = { 
+		name = "Zvezdelin"
+		dynasty = "Homolka"
+		adm = 3
+		dip = 4
+		mil = 1
+		birth_date = 1392.04.23
+		death_date = 1445.01.01
+	}
+}
+
+1444.11.11 = {
+	heir = {
+		name = "Radik"
+		dynasty = "Homolka"
+		birth_date = 1420.01.01
+		death_date = 1445.01.01
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}

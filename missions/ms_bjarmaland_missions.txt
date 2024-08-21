@@ -1,0 +1,1229 @@
+bjarmaland_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = BJA
+	}
+
+	bja_to_protect_whats_ours = {
+		icon = mission_bja_to_protect_whats_ours
+		position = 1
+		required_missions = { }
+		trigger = { 
+			army_size_percentage = 1
+			manpower_percentage = 0.5
+			num_of_generals = 1
+		}
+		effect = { 
+			pomor_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			west_ezjva_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			north_karelia = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			laponia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	bja_prevention_measures = {
+		icon = mission_bja_prevention_measures
+		position = 2
+		required_missions = { bja_to_protect_whats_ours }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1958
+				province_id = 1755
+			}
+		}
+		trigger = {
+			1958 = {
+				fort_level = 2
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1755 = {
+				fort_level = 2
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			1958 = {
+				add_province_modifier = {
+					name = bja_fortified_stronghold
+					duration = -1
+				}
+			}
+			1755 = {
+				add_province_modifier = {
+					name = bja_fortified_stronghold
+					duration = -1
+				}
+			}
+		}
+	}
+	bja_eliminate_competition = {
+		icon = mission_hlm_a_second_revolution
+		position = 4
+		required_missions = {  }
+		provinces_to_highlight = {
+			OR = {
+				area = karelia_area
+				area = south_karelia_area
+				area = finland_area
+				area = bothnia_area
+				area = laponia_area
+			}
+		}
+		trigger = { 
+			karelia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			south_karelia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			finland_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			bothnia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			laponia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = {
+			ruthenia_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			scandinavia_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			ural_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	bja_finnic_submission = {
+		icon = mission_bja_finnic_submission
+		position = 5
+		required_missions = { bja_eliminate_competition }
+		provinces_to_highlight = {
+			OR = {
+				culture_group = finnic
+				culture_group = volgaic
+			}
+			
+		}
+		trigger = { 
+			owns_all_provinces = {
+				culture_group = volgaic
+			}
+			owns_all_provinces = {
+				culture_group = finnic
+			}
+		}
+		effect = { 
+			custom_tooltip_tt = bja_assimilate_into_finnic
+			country_event = { id = ms_bja.1 }
+		}
+	}
+}
+
+bjarmaland_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = BJA
+	}
+
+	bja_we_need_more_people = {
+		icon = mission_bja_we_need_more_people
+		position = 2
+		required_missions = { bja_explore_the_unknown }
+		trigger = { 
+			manpower = 7.5
+		}
+		effect = {
+			add_manpower = -7.5
+			1955 = {
+				add_base_manpower = 2
+			}
+		}
+	}
+	bja_gather_the_men = {
+		icon = mission_bja_gather_the_men
+		position = 3
+		required_missions = { bja_we_need_more_people }
+		trigger = { 
+			1955 = {
+				base_manpower = 6
+			}
+		}
+		effect = { 
+			custom_tooltip = bja_upgrade_expedition_tier_tt
+			if = {
+				limit = {
+					has_country_modifier = bja_expeditions_tier_3
+				}
+				remove_country_modifier = bja_expeditions_tier_3
+				add_country_modifier = {
+					name = bja_expeditions_tier_4
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					has_country_modifier = bja_expeditions_tier_2
+				}
+				remove_country_modifier = bja_expeditions_tier_2
+				add_country_modifier = {
+					name = bja_expeditions_tier_3
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					has_country_modifier = bja_expeditions_tier_1
+				}
+				remove_country_modifier = bja_expeditions_tier_1
+				add_country_modifier = {
+					name = bja_expeditions_tier_2
+					duration = -1
+				}
+			}
+		}
+	}
+	bja_go_inwards = {
+		icon = mission_bja_go_inwards
+		position = 5
+		required_missions = { bja_baby_steps }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5136
+				province_id = 4122
+				province_id = 5166
+				province_id = 5170
+				province_id = 5174
+				province_id = 5175
+			}
+		}
+		trigger = { 
+			5135 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5134 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5166 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5170 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5174 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5175 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = { 
+			5170 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+			}
+			custom_tooltip = bja_upgrade_expedition_tier_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_5
+					}
+					remove_country_modifier = bja_expeditions_tier_5
+					add_country_modifier = {
+						name = bja_expeditions_tier_6
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_6
+					}
+					remove_country_modifier = bja_expeditions_tier_6
+					add_country_modifier = {
+						name = bja_expeditions_tier_7
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_7
+					}
+					remove_country_modifier = bja_expeditions_tier_7
+					add_country_modifier = {
+						name = bja_expeditions_tier_8
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_8
+					}
+					remove_country_modifier = bja_expeditions_tier_8
+					add_country_modifier = {
+						name = bja_expeditions_tier_9
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_9
+					}
+					remove_country_modifier = bja_expeditions_tier_9
+					add_country_modifier = {
+						name = bja_expeditions_tier_10
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_10
+					}
+					remove_country_modifier = bja_expeditions_tier_10
+					add_country_modifier = {
+						name = bja_expeditions_tier_11
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	bja_our_vast_tundra = {
+		icon = mission_bja_our_vast_tundra
+		position = 6
+		required_missions = { bja_go_inwards }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5134
+				province_id = 5135
+				province_id = 4256
+				province_id = 4129
+				province_id = 5133
+				province_id = 5137
+			}
+		}
+		trigger = { 
+			5134 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5135 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4256 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4129 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5133 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5137 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			5135 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+			}
+			custom_tooltip = bja_upgrade_expedition_tier_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_5
+					}
+					remove_country_modifier = bja_expeditions_tier_5
+					add_country_modifier = {
+						name = bja_expeditions_tier_6
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_6
+					}
+					remove_country_modifier = bja_expeditions_tier_6
+					add_country_modifier = {
+						name = bja_expeditions_tier_7
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_7
+					}
+					remove_country_modifier = bja_expeditions_tier_7
+					add_country_modifier = {
+						name = bja_expeditions_tier_8
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_8
+					}
+					remove_country_modifier = bja_expeditions_tier_8
+					add_country_modifier = {
+						name = bja_expeditions_tier_9
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_9
+					}
+					remove_country_modifier = bja_expeditions_tier_9
+					add_country_modifier = {
+						name = bja_expeditions_tier_10
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_10
+					}
+					remove_country_modifier = bja_expeditions_tier_10
+					add_country_modifier = {
+						name = bja_expeditions_tier_11
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+bjarmaland_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = BJA
+	}
+
+	bja_explore_the_unknown = {
+		icon = mission_bja_explore_the_unknown
+		position = 1
+		required_missions = {  }
+		trigger = { 
+			stability = 1
+		}
+		effect = { 
+			add_country_modifier = {
+				name = bja_expeditions_tier_1
+				duration = -1
+			}
+		}
+	}
+	bja_to_fight_the_cold = {
+		icon = mission_bja_to_fight_the_cold
+		position = 2
+		required_missions = { bja_explore_the_unknown }
+		
+		provinces_to_highlight = {
+			owned_by = ROOT
+			trade_goods = fur
+		}
+		trigger = { 
+			trade_goods_produced_amount = {
+				trade_goods = fur
+				amount = 1
+			}
+		}
+		effect = { 
+			add_prestige = 25
+		}
+	}
+	bja_prepare_the_coats = {
+		icon = mission_bja_prepare_the_coats
+		position = 3
+		required_missions = { bja_to_fight_the_cold }
+		trigger = { 
+			treasury = 100
+		}
+		effect = { 
+			custom_tooltip = bja_upgrade_expedition_tier_tt
+			add_treasury = -100
+			if = {
+				limit = {
+					has_country_modifier = bja_expeditions_tier_3
+				}
+				remove_country_modifier = bja_expeditions_tier_3
+				add_country_modifier = {
+					name = bja_expeditions_tier_4
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					has_country_modifier = bja_expeditions_tier_2
+				}
+				remove_country_modifier = bja_expeditions_tier_2
+				add_country_modifier = {
+					name = bja_expeditions_tier_3
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					has_country_modifier = bja_expeditions_tier_1
+				}
+				remove_country_modifier = bja_expeditions_tier_1
+				add_country_modifier = {
+					name = bja_expeditions_tier_2
+					duration = -1
+				}
+			}
+		}
+	}
+	bja_baby_steps = {
+		icon = mission_bja_baby_steps
+		position = 4
+		required_missions = { bja_gather_the_men bja_prepare_the_coats bja_call_on_the_assembly }
+		trigger = { 
+			total_development = 50
+		}
+		effect = { 
+			remove_country_modifier = bja_expeditions_tier_4
+			add_country_modifier = {
+				name = bja_expeditions_tier_5
+				duration = -1
+			}
+			if = {
+				limit = {
+					4122 = {
+						is_empty = yes
+					}
+				}
+				4122 = {
+					create_colony = 500
+				}
+			}
+			if = {
+				limit = {
+					5136 = {
+						is_empty = yes
+					}
+				}
+				5136 = {
+					create_colony = 500
+					
+				}
+			}
+		}
+	}
+	bja_prioritize_the_coast = {
+		icon = mission_bja_prioritize_the_coast
+		position = 5
+		required_missions = { bja_baby_steps }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5169
+				province_id = 5167
+				province_id = 5168
+				province_id = 5171
+				province_id = 5173
+				province_id = 5176
+			}
+		}
+		trigger = { 
+			5169 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5167 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5168 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5171 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5173 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5176 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = { 
+			5171 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+			}
+			custom_tooltip = bja_upgrade_expedition_tier_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_5
+					}
+					remove_country_modifier = bja_expeditions_tier_5
+					add_country_modifier = {
+						name = bja_expeditions_tier_6
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_6
+					}
+					remove_country_modifier = bja_expeditions_tier_6
+					add_country_modifier = {
+						name = bja_expeditions_tier_7
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_7
+					}
+					remove_country_modifier = bja_expeditions_tier_7
+					add_country_modifier = {
+						name = bja_expeditions_tier_8
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_8
+					}
+					remove_country_modifier = bja_expeditions_tier_8
+					add_country_modifier = {
+						name = bja_expeditions_tier_9
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_9
+					}
+					remove_country_modifier = bja_expeditions_tier_9
+					add_country_modifier = {
+						name = bja_expeditions_tier_10
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_10
+					}
+					remove_country_modifier = bja_expeditions_tier_10
+					add_country_modifier = {
+						name = bja_expeditions_tier_11
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	bja_coastal_dominance = {
+		icon = mission_bja_coastal_dominance
+		position = 6
+		required_missions = { bja_prioritize_the_coast }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5155
+				province_id = 5152
+				province_id = 5151
+				province_id = 5150
+				province_id = 5149
+			}
+		}
+		trigger = { 
+			5155 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5152 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5151 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5150 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5149 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			5152 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+			}
+			custom_tooltip = bja_upgrade_expedition_tier_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_5
+					}
+					remove_country_modifier = bja_expeditions_tier_5
+					add_country_modifier = {
+						name = bja_expeditions_tier_6
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_6
+					}
+					remove_country_modifier = bja_expeditions_tier_6
+					add_country_modifier = {
+						name = bja_expeditions_tier_7
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_7
+					}
+					remove_country_modifier = bja_expeditions_tier_7
+					add_country_modifier = {
+						name = bja_expeditions_tier_8
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_8
+					}
+					remove_country_modifier = bja_expeditions_tier_8
+					add_country_modifier = {
+						name = bja_expeditions_tier_9
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_9
+					}
+					remove_country_modifier = bja_expeditions_tier_9
+					add_country_modifier = {
+						name = bja_expeditions_tier_10
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_10
+					}
+					remove_country_modifier = bja_expeditions_tier_10
+					add_country_modifier = {
+						name = bja_expeditions_tier_11
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	bja_our_own_little_niflheim = {
+		icon = mission_bja_our_own_little_niflheim
+		position = 7
+		required_missions = { bja_our_vast_tundra bja_coastal_dominance bja_down_the_river }
+		provinces_to_highlight = {
+			region = white_sea_region
+		}
+		trigger = { 
+			white_sea_region = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = { 
+			custom_tooltip = bja_can_form_early_nif_tt
+			hidden_effect = {
+			set_country_flag = bja_early_nif
+			}
+		}
+	}
+}
+
+bjarmaland_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = BJA
+	}
+
+	bja_plan_out_the_expedition = {
+		icon = mission_bja_plan_out_the_expedition
+		position = 2
+		required_missions = { bja_explore_the_unknown }
+		trigger = { 
+			adm_tech = 4
+		}
+		effect = { 
+			add_prestige = 25
+		}
+	}
+	bja_call_on_the_assembly = {
+		icon = mission_hlm_multicultural_court
+		position = 3
+		required_missions = { bja_plan_out_the_expedition }
+		trigger = {
+			adm_power = 200
+		}
+		effect = { 
+			custom_tooltip = bja_upgrade_expedition_tier_tt
+			add_adm_power = -200
+			if = {
+				limit = {
+					has_country_modifier = bja_expeditions_tier_3
+				}
+				remove_country_modifier = bja_expeditions_tier_3
+				add_country_modifier = {
+					name = bja_expeditions_tier_4
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					has_country_modifier = bja_expeditions_tier_2
+				}
+				remove_country_modifier = bja_expeditions_tier_2
+				add_country_modifier = {
+					name = bja_expeditions_tier_3
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					has_country_modifier = bja_expeditions_tier_1
+				}
+				remove_country_modifier = bja_expeditions_tier_1
+				add_country_modifier = {
+					name = bja_expeditions_tier_2
+					duration = -1
+				}
+			}
+		}
+	}
+	bja_pechuras_riches = {
+		icon = mission_rsh_the_land_of_furs
+		position = 5
+		required_missions = { bja_baby_steps }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5162
+				province_id = 5161
+				province_id = 5160
+				province_id = 5159
+				province_id = 5158
+				province_id = 5157
+			}
+		}
+		trigger = { 
+			5162 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5161 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5160 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5159 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5158 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5157 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			5162 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+			}
+			custom_tooltip = bja_upgrade_expedition_tier_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_5
+					}
+					remove_country_modifier = bja_expeditions_tier_5
+					add_country_modifier = {
+						name = bja_expeditions_tier_6
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_6
+					}
+					remove_country_modifier = bja_expeditions_tier_6
+					add_country_modifier = {
+						name = bja_expeditions_tier_7
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_7
+					}
+					remove_country_modifier = bja_expeditions_tier_7
+					add_country_modifier = {
+						name = bja_expeditions_tier_8
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_8
+					}
+					remove_country_modifier = bja_expeditions_tier_8
+					add_country_modifier = {
+						name = bja_expeditions_tier_9
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_9
+					}
+					remove_country_modifier = bja_expeditions_tier_9
+					add_country_modifier = {
+						name = bja_expeditions_tier_10
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_10
+					}
+					remove_country_modifier = bja_expeditions_tier_10
+					add_country_modifier = {
+						name = bja_expeditions_tier_11
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	bja_down_the_river = {
+		icon = mission_rsh_volga_campaign
+		position = 6
+		required_missions = { bja_pechuras_riches }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5147
+				province_id = 5148
+				province_id = 5146
+				province_id = 5145
+				province_id = 5138
+				province_id = 5139
+			}
+		}
+		trigger = { 
+			5147 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5148 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5146 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5145 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5138 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5139 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			5147 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+			}
+			custom_tooltip = bja_upgrade_expedition_tier_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_5
+					}
+					remove_country_modifier = bja_expeditions_tier_5
+					add_country_modifier = {
+						name = bja_expeditions_tier_6
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_6
+					}
+					remove_country_modifier = bja_expeditions_tier_6
+					add_country_modifier = {
+						name = bja_expeditions_tier_7
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_7
+					}
+					remove_country_modifier = bja_expeditions_tier_7
+					add_country_modifier = {
+						name = bja_expeditions_tier_8
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_8
+					}
+					remove_country_modifier = bja_expeditions_tier_8
+					add_country_modifier = {
+						name = bja_expeditions_tier_9
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_9
+					}
+					remove_country_modifier = bja_expeditions_tier_9
+					add_country_modifier = {
+						name = bja_expeditions_tier_10
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_modifier = bja_expeditions_tier_10
+					}
+					remove_country_modifier = bja_expeditions_tier_10
+					add_country_modifier = {
+						name = bja_expeditions_tier_11
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+bjarmaland_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = BJA
+	}
+
+	bja_bjarmian_self_sufficiency = {
+		icon = mission_bja_bjarmian_self_sufficiency
+		position = 1
+		required_missions = { }
+		trigger = { 
+			monthly_income = 10
+		}
+		effect = { 
+			custom_tooltip = bja_10randomproduction_tt
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						has_owner_accepted_culture = yes
+					}
+					add_base_production = 1
+				}
+				random_owned_province = {
+					limit = {
+						has_owner_accepted_culture = yes
+					}
+					add_base_production = 1
+				}
+				random_owned_province = {
+					limit = {
+						has_owner_accepted_culture = yes
+					}
+					add_base_production = 1
+				}
+				random_owned_province = {
+					limit = {
+						has_owner_accepted_culture = yes
+					}
+					add_base_production = 1
+				}
+				random_owned_province = {
+					limit = {
+						has_owner_accepted_culture = yes
+					}
+					add_base_production = 1
+				}
+				random_owned_province = {
+					limit = {
+						has_owner_accepted_culture = yes
+					}
+					add_base_production = 1
+				}
+				random_owned_province = {
+					limit = {
+						has_owner_accepted_culture = yes
+					}
+					add_base_production = 1
+				}
+				random_owned_province = {
+					limit = {
+						has_owner_accepted_culture = yes
+					}
+					add_base_production = 1
+				}
+				random_owned_province = {
+					limit = {
+						has_owner_accepted_culture = yes
+					}
+					add_base_production = 1
+				}
+				random_owned_province = {
+					limit = {
+						has_owner_accepted_culture = yes
+					}
+					add_base_production = 1
+				}
+			}
+		}
+	}
+	bja_the_master_of_icy_seas = {
+		icon = mission_bja_the_master_of_icy_seas
+		position = 2
+		required_missions = { bja_bjarmian_self_sufficiency }
+		provinces_to_highlight = {
+			province_id = 1652
+		}
+		trigger = { 
+			1652 = {
+				is_strongest_trade_power = ROOT
+			}
+			1955 = {
+				is_state_core = ROOT
+			}
+		}
+		effect = {
+			1955 = {
+				add_province_modifier = {
+					name = bja_center_of_the_white_sea
+					duration = -1
+				}
+			}
+			add_mercantilism = 5
+		}
+	}
+	bja_where_the_world_ends = {
+		icon = mission_bja_where_the_world_ends
+		position = 4
+		required_missions = {  }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5148
+				province_id = 1780
+				province_id = 5149
+			}
+		}
+		trigger = { 
+			5148 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1780 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5149 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = bja_the_rush_eastward
+				duration = 18250
+			}
+		}
+	}
+	bja_we_were_fooled = {
+		icon = mission_bja_we_were_fooled
+		position = 5
+		required_missions = { bja_where_the_world_ends }
+		provinces_to_highlight = {
+			OR = {
+				region = west_siberia_region
+				region = east_siberia_region
+			}
+		}
+		trigger = { 
+			west_siberia_region = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			east_siberia_region = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = bja_this_cant_be_it
+				duration = 18250
+			}
+		}
+	}
+}
+

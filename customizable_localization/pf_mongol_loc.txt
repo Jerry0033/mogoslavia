@@ -1,0 +1,422 @@
+
+defined_text = {
+	name = MongolLegitimacyGainGetPlusMinus
+
+	text = {
+		localisation_key = Mongol_Legitimacy_Positive
+		trigger = {
+			check_variable = {
+				which = mongol_legitimacy_growth
+				value = 0
+			}
+		}
+	}
+	text = {
+		localisation_key = Mongol_Legitimacy_Negative
+		trigger = {
+			always = yes
+		}
+	}
+
+}
+defined_text = {
+	name = MongolLegitimacyColor
+
+	text = {
+		localisation_key = Mongol_Legitimacy_Less_Than_25
+		trigger = {
+			NOT = {
+				check_variable = {
+					which = mongol_legitimacy
+					value = 25
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = Mongol_Legitimacy_Less_Than_50
+		trigger = {
+			check_variable = {
+				which = mongol_legitimacy
+				value = 25
+			}
+			NOT = {
+				check_variable = {
+					which = mongol_legitimacy
+					value = 50
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = Mongol_Legitimacy_More_Than_50
+		trigger = {
+			always = yes
+		}
+	}
+
+}
+
+defined_text = {
+	name = MongolLegitimacyModifierTooltip
+
+	text = {
+		localisation_key = Mongol_Legitimacy_Less_Than_25_MODIFIER
+		trigger = {
+			NOT = {
+				check_variable = {
+					which = mongol_legitimacy
+					value = 25
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = Mongol_Legitimacy_Less_Than_50_MODIFIER
+		trigger = {
+			check_variable = {
+				which = mongol_legitimacy
+				value = 25
+			}
+			NOT = {
+				check_variable = {
+					which = mongol_legitimacy
+					value = 50
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = Mongol_Legitimacy_More_Than_50_MODIFIER
+		trigger = {
+			always = yes
+		}
+	}
+
+}
+
+defined_text = {
+	name = MongolLegitimacyTributary
+
+	text = {
+		localisation_key = Has_Tributaries
+		trigger = {
+			has_saved_global_event_target = ilk_khan
+			event_target:ilk_khan = {
+				num_of_subjects = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = No_Tributaries
+		trigger = {
+			always = yes
+		}
+	}
+
+}
+
+defined_text = {
+	name = MongolLegitimacyWarExhaustion
+
+	text = {
+		localisation_key = Has_War_Exhaustion
+		trigger = {
+			has_saved_global_event_target = ilk_khan
+			event_target:ilk_khan = {			
+				war_exhaustion = 0.01
+			}
+		}
+	}
+	text = {
+		localisation_key = No_War_Exhaustion
+		trigger = {
+			always = yes
+		}
+	}
+
+}
+
+defined_text = {
+	name = MongolLegitimacyStability
+
+	text = {
+		localisation_key = Has_Negative_Stability
+		trigger = {
+			has_saved_global_event_target = ilk_khan
+			event_target:ilk_khan = {
+				NOT = { stability = 0 }
+			}
+		}
+	}
+	text = {
+		localisation_key = No_Negative_Stability
+		trigger = {
+			always = yes
+		}
+	}
+
+}
+
+defined_text = {
+	name = MonthlyMongolClaim
+
+	text = {
+		localisation_key = Has_Mongol_Claim_Modifier
+		trigger = {
+			is_NOT_ilk_khan = yes
+			check_variable = {
+				which = monthly_mongol_claim_from_modifier
+				value = 0.001
+			}
+		}
+	}
+	text = {
+		localisation_key = ""
+		trigger = {
+			always = yes
+		}
+	}
+
+}
+
+defined_text = {
+	name = MonthlyMongolLegitimacy
+
+	text = {
+		localisation_key = Has_Mongol_Legitimacy_Modifier
+		trigger = {
+			event_target:ilk_khan = {
+				check_variable = {
+					which = monthly_mongol_legitimacy_from_modifier
+					value = 0.001
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = ""
+		trigger = {
+			always = yes
+		}
+	}
+
+}
+
+defined_text = {
+	name = MongolLegitimacyHordeUnity
+
+	text = {
+		localisation_key = Postive_Horde_Unity
+		trigger = {
+			has_saved_global_event_target = ilk_khan
+			event_target:ilk_khan = {
+				horde_unity = 50
+			}
+		}
+	}
+	text = {
+		localisation_key = Negative_Horde_Unity
+		trigger = {
+			always = yes
+		}
+	}
+
+}
+
+
+defined_text = {
+	name = MongolClaimTributary
+
+	text = {
+		localisation_key = Claim_Has_Tributaries
+		trigger = {
+			num_of_subjects = 1
+			is_eligible_for_ilk_khan = yes
+		}
+	}
+	text = {
+		localisation_key = Claim_No_Tributaries
+		trigger = {
+			always = yes
+		}
+	}
+
+}
+
+defined_text = {
+	name = MongolClaimWarExhaustion
+
+	text = {
+		localisation_key = Claim_Has_War_Exhaustion
+		trigger = {
+			war_exhaustion = 0.01
+			is_eligible_for_ilk_khan = yes
+		}
+	}
+	text = {
+		localisation_key = Claim_No_War_Exhaustion
+		trigger = {
+			always = yes
+		}
+	}
+
+}
+
+defined_text = {
+	name = MongolClaimStability
+
+	text = {
+		localisation_key = Claim_Has_Negative_Stability
+		trigger = {
+			NOT = { stability = 0 }
+			is_eligible_for_ilk_khan = yes
+		}
+	}
+	text = {
+		localisation_key = Claim_No_Negative_Stability
+		trigger = {
+			always = yes
+		}
+	}
+
+}
+
+defined_text = {
+	name = MongolClaimHordeUnity
+
+	text = {
+		localisation_key = Claim_Postive_Horde_Unity
+		trigger = {
+			 horde_unity = 50
+			 is_eligible_for_ilk_khan = yes
+		}
+	}
+	text = {
+		localisation_key = Claim_Negative_Horde_Unity
+		trigger = {
+			NOT = {
+				horde_unity = 50			
+			}
+			is_eligible_for_ilk_khan = yes
+		}
+	}
+	text = {
+		localisation_key = Claim_Negative_Horde_Unity_NOT_ELIGIBLE
+		trigger = {
+			always = yes
+		}
+	}
+
+}
+
+defined_text = {
+	name = MongolClaimGrowth
+
+	text = {
+		localisation_key = mongol_claim_increases_by_x_monthly
+		trigger = {
+			is_eligible_for_ilk_khan = yes
+		}
+	}
+	text = {
+		localisation_key = mongol_claim_increases_by_x_monthly_trib
+		trigger = {
+			OR = {
+				culture_group = western_turkic 
+				culture_group = west_mongol
+			}
+			has_reform = steppe_horde
+			is_subject = yes
+		}
+	}
+	text = {
+		localisation_key = mongol_claim_increases_by_x_monthly_none
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = GetClaimGrowthPlusMinus
+
+	text = {
+		localisation_key = MongolClaimGrowthPositive
+		trigger = {
+			check_variable = {
+				which = mongol_claim_growth
+				value = 0.001
+			}
+		}
+	}
+	text = {
+		localisation_key = MongolClaimGrowthNeutral
+		trigger = {
+			NOT = {
+				check_variable = {
+					which = mongol_claim_growth
+					value = 0.001
+				}
+			}
+			check_variable = {
+				which = mongol_claim_growth
+				value = 0
+			}
+		}
+	}
+	text = {
+		localisation_key = MongolClaimGrowthNegative
+		trigger = {
+			always = yes
+		}
+	}
+
+}
+
+defined_text = {
+	name = GetLegitimacyGrowthFromSize
+
+	text = {
+		localisation_key = MongolLegitimacyFromSizeNegative
+		trigger = {
+			has_saved_global_event_target = ilk_khan
+			event_target:ilk_khan = {
+				NOT = {
+					check_variable = {
+						which = mongol_claim_size
+						value = 0
+					}
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = ""
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = GetClaimGrowthFromSize
+
+	text = {
+		localisation_key = MongolClaimFromSizeNegative
+		trigger = {
+			NOT = {
+				check_variable = {
+					which = mongol_claim_size
+					value = 0
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = ""
+		trigger = {
+			always = yes
+		}
+	}
+}

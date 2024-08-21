@@ -1,0 +1,21 @@
+﻿l_english:
+ # Missions
+ bja_10randomproduction_tt:0 "10 random provinces will get §Y1 Production Development§!"
+ bja_can_form_early_nif_tt:0 "Removes the §YAdministrative Technology§! requirement for the decision §YA Cold Place To Call Home§!"
+ bja_upgrade_expedition_tier_tt:0 "Our §YExpedition Modifier§! will be §Gslightly upgraded§!"
+ # Events
+ ms_bja.1.t:0 "The Future of Our Identity"
+ ms_bja.1.d:0 "Isolated by the unforgiving White Sea, our people grapple with their identity. Centuries removed from their homeland, the old ways falter under the weight of a harsh, unfamiliar world. The gods of yore whisper faintly, their power eclipsed by the biting winds and endless twilight. To survive, they must adapt. Will they cling to the fading echoes of their past, or forge a new path, embracing the strange customs and beliefs of this frozen land? A choice hangs heavy in the air, one that will shape the destiny of an entire people."
+ ms_bja.1.a:0 "By Odin and Our Forefathers!"
+ ms_bja.1.b:0 "By Ukko and Our Forefathers"
+ ms_bja.1.c:0 "By Odin and The Finnic People"
+ ms_bja.1.e:0 "By Ukko and The Finnic People"
+ ms_bja.1.f:0 "By Odin and The Volga People"
+ ms_bja.1.g:0 "By Ukko and The Volga People"
+ bja_chose_scandi_norse_tt:0 "Stay §BNorse§! culture and religion"
+ bja_chose_scandi_suo_tt:0 "Stay §BNorse§! culture but convert to §OSuomenusko§! religion"
+ bja_chose_finnic_norse_tt:0 "Adopt §GFinnish§! ways but keep The §BNorse§! religion"
+ bja_chose_finnic_suo_tt:0 "Adopt §GFinnish§! ways but convert to §OSuomenusko§! religion"
+ bja_chose_volgaic_norse_tt:0 "Adopt §OVolgaic§! ways but keep The §BNorse§! religion"
+ bja_chose_volgaic_suo_tt:0 "Adopt §OVolgaic§! ways but convert to §OSuomenusko§! religion"
+ 

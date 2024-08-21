@@ -1,0 +1,212 @@
+namespace = ms_knu
+
+
+country_event = { # Sisters war
+	id = ms_knu.1
+	title = ms_knu.1.t 
+	desc = ms_knu.1.d
+	picture = wihgfx_FEMALES_eventPicture
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ms_knu.1.a # Slavic
+		ai_chance = {
+			factor = 0
+		}
+		custom_tooltip = knu_unlock_slavic_missions_tt
+		set_country_flag = knu_chose_slavic_missions
+		hidden_effect = {
+		swap_non_generic_missions = yes
+		}
+		KNU = { 
+			change_religion = slavic_religion
+		}
+		280 = {
+			change_religion = slavic_religion
+		}
+	}
+
+	option = {
+		name = ms_knu.1.b # Norse
+		ai_chance = { 
+			factor = 1
+		}
+		custom_tooltip = knu_unlock_norse_missions_tt
+		set_country_flag = knu_chose_norse_missions
+		hidden_effect = {
+		swap_non_generic_missions = yes
+		}
+		add_country_modifier = {
+			name = knu_spread_the_faith
+			duration = 18250
+		}
+	}
+
+	option = {
+		name = ms_knu.1.c # Tengri
+		ai_chance = { 
+			factor = 0
+		}
+		custom_tooltip = knu_unlock_tengri_missions_tt
+		set_country_flag = knu_chose_tengri_missions
+		hidden_effect = {
+		swap_non_generic_missions = yes
+		}
+		KNU = { 
+			change_religion = tengri_pagan_reformed
+		}
+		280 = {
+			change_religion = tengri_pagan_reformed
+		}
+	}
+
+    option = {
+		name = ms_knu.1.e # Hellenic
+        ai_chance = { 
+			factor = 0
+		}
+		custom_tooltip = knu_unlock_hellenic_missions_tt
+		set_country_flag = knu_chose_hellenic_missions
+		hidden_effect = {
+		swap_non_generic_missions = yes
+		}
+		KNU = { 
+			change_religion = hellenic
+		}
+		280 = {
+			change_religion = hellenic
+		}
+	}
+}
+
+province_event = {
+	id = ms_knu.2
+	title = ms_knu.2.t
+	desc = ms_knu.2.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ms_knu.2.a
+		every_owned_province = {
+			limit = {
+				culture = dregovich
+			}
+			change_culture = east_dregovich
+			change_original_culture = east_dregovich
+		}
+		every_owned_province = {
+			limit = {
+				culture = volhynian
+			}
+			change_culture = east_volhynian
+			change_original_culture = east_volhynian
+		}
+		PNS = {
+			change_primary_culture = east_dregovich
+		}
+		VOL = {
+			change_primary_culture = east_volhynian
+		}
+		CHR = {
+			change_primary_culture = east_volhynian
+		}
+
+	}
+}
+
+province_event = {
+	id = ms_knu.3
+	title = ms_knu.3.t
+	desc = ms_knu.3.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ms_knu.3.a
+		284 = {
+			create_flagship = {
+				name = "Theodosia"
+				type = galley
+			}
+		}
+		284 = {
+			galley = KNU
+		}
+		284 = {
+			galley = KNU
+		}
+		284 = {
+			galley = KNU
+		}
+		284 = {
+			galley = KNU
+		}
+		284 = {
+			galley = KNU
+		}
+		284 = {
+			galley = KNU
+		}
+		284 = {
+			galley = KNU
+		}
+		284 = {
+			galley = KNU
+		}
+		284 = {
+			galley = KNU
+		}
+	}
+}
+
+province_event = {
+	id = ms_knu.3
+	title = ms_knu.3.t
+	desc = ms_knu.3.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = knu_norse_culture_swap
+			}
+		}
+		OR = {
+			culture = vyatih
+			culture = drevylian
+			culture = ulich
+			culture = kievan
+			culture = radimich
+			culture = kievan
+		}
+		religion = norse_pagan_reformed
+		any_neighbor_province = {
+			culture_group = rus_norse
+		}
+	}
+	
+	option = {
+		name = ms_knu.3.a
+		change_culture = rus_kievan
+	}
+}

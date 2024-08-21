@@ -1,0 +1,8 @@
+government = republic
+add_government_reform = ms_rsh_hestridandi
+government_rank = 1
+technology_group = ottoman
+unit_type = ottoman
+primary_culture = rus_tjaldmenn
+religion = norse_pagan_reformed
+capital = 476

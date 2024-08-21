@@ -1,0 +1,147 @@
+graphical_culture = westerngfx
+color = { 136 150 141 }
+revolutionary_colors = { 9 77 111 } #Fictional
+historical_idea_groups = { 
+	administrative_ideas
+	offensive_ideas
+	maritime_ideas
+	quality_ideas
+	innovativeness_ideas
+	defensive_ideas
+	expansion_ideas
+	trade_ideas
+}
+monarch_names = {
+	"Bogdan #0" = 7
+	"Miroslav #0" = 7
+	"Sviatoslav #0" = 7
+	"Vladimir #0" = 7
+	"Radovan #0" = 7
+	"Dragan #0" = 7
+	"Radoslav #0" = 7
+	"Zoran #0" = 7
+	"Viktor #0" = 7
+	"Mikhail #0" = 7
+	"Stanimir #0" = 7
+	"Ratimir #0" = 7
+	"Boris #0" = 7
+	"Jaroslav #0" = 7
+	"Zlatan #0" = 7
+	"Damir #0" = 7
+	"Igor #0" = 7
+	"Dobroslav #0" = 7
+	"Boleslav #0" = 7
+	"Vsevolod #0" = 7
+    "Ragnar #0" = 6
+    "Aerbjorn #0" = 6
+    "Haraldur #0" = 6
+    "Sigurdr #0" = 6
+    "Bjorn #0" = 6
+    "Ivar #0" = 6
+    "Aelfir #0" = 6
+    "Regnvaldr #0" = 6
+    "Eirikr #0" = 6
+    "Leifur #0" = 6
+    "Thorsteinn #0" = 6
+    "Sveinn #0" = 6
+    "Gunnar #0" = 6
+    "Eirikr #0" = 5
+    "Hakon #0" = 5
+    "Ralfur #0" = 5
+    "Freyr #0" = 5
+    "Aelfur #0" = 5
+    "Geirr #0" = 5
+    "Viggo #0" = 5
+    "Jarl #0" = 5
+    "Njarr #0" = 5
+    "Thorkell #0" = 5
+    "Haraldr #0" = 5
+    "Eirikur #0" = 5
+    "Knutr #0" = 5
+    "Ivarr #0" = 5
+	"Radoslav #0" = 5
+	"Slavomir #0" = 5
+	"Dragomir #0" = 5
+	"Rostislav #0" = 5
+	"Vlastimir #0" = 5
+	"Stanislav #0" = 5
+	"Milivoj #0" = 5
+	"Bojan #0" = 5
+	"Velimir #0" = 5
+	"Zdravko #0" = 5
+	"Predrag #0" = 5
+	"Dusan #0" = 5
+	"Milenko #0" = 5
+	"Miroslav #0" = 5
+	"Dragoslav #0" = 5
+	"Milan #0" = 5
+	"Vasilije #0" = 5
+	"Vladislav #0" = 5
+	"Matej #0" = 5
+	"Bozidar #0" = 5
+	"Strahimir #0" = 5
+	"Radoslav #0" = 5
+	"Zvonimir #0" = 5
+	"Zlatko #0" = 5
+	"Radomir #0" = 5
+    "Sigurdr #0" = 3
+    "Ragnarr #0" = 3
+    "Steinn #0" = 3
+    "Vakarr #0" = 3
+    "Aelfir #0" = 3
+    "Oskar #0" = 3
+    "Brunn #0" = 3
+    "Thorvaldr #0" = 3
+    "Valdamarr #0" = 3
+    "Oddr #0" = 3
+    "Snorri #0" = 3
+    "Kari #0" = 3
+    "Hjalmar #0" = 3
+
+    "Freya #0" = -1
+    "Ingridr #0" = -1
+    "Rana #0" = -1
+    "Sigridr #0" = -1
+    "Hildr #0" = -1
+	"Zora #0" = -1
+	"Vlasta #0" = -1
+	"Miroslava #0" = -1
+	"Bozena #0" = -1
+	"Dragana #0" = -1
+}
+leader_names = {
+    Ragnar Thor Odin Freyr Bjorn Ivar Harald Erik Leif Gunnar
+    Sigurd Haldor Vidar Njord Einar Halfdan Frode Rolf Egil Sven
+    Ingvar Olaf Hjalmar Hakon Ulf Geir Valdemar Knut Asbjorn Torstein Hrafn Oddvar
+    Magnus Kjell Gudmund Eirikur Gorm Bjarte Tryggve Bjarne Erlend Ingolf
+	Dazhbog Svarog Perun Veles Mokosh Lada Radegast Morana Jarilo Belobog Svetovid Zorya Lel Jutrzenka Marzanna Chernobog
+	Triglav Rozhanitsy Rodzanice Stribog Zirnitra Yarilo Siebog Simargl Dolya Devana Radunitsa Yarila Khors Mat Zemlya Chernava
+	Vesna Dziewanna Domovoi Leshy Baba Yaga Vodyanoy Rusalka Kikimora Bereginya Bereginia Mavka Navkolitsi Chuma Vihor Vileni Porewit Porenut Dinari
+}
+ship_names = {
+    "Bjorn Ironside" "Freydis Eiriksson" "Gunnar Hamundarson" "Helgi Haddingjarl" "Ingvar the Far-Travelled" "Leif the Lucky" "Olaf Tryggvason"
+    "Ragnald the Mighty" "Sigurd the Volsung" "Sweyn Forkbeard" "Thorkell the Tall" "Valhalla" "Vidar the Silent" "Harald Bluetooth" "Gudrid Thorbjarnardottir"
+    "Lagertha" "Rollo the Walker" "Knut the Great" "Yngvi-Freyr" "Beowulf" "Geirmund Heljarskinn" "Starkad the Old" "Egil Skallagrimsson" "Vaga-Hrappr" "Hogni the White"
+    "Hrafnkel Frey's Friend" "Hjalmar the Viking" "Skagul" "Toste the Proud" "Jormungandr" "Njord the Seafarer" "Huginn and Muninn" "Balder the Beautiful" "Freyr the Fair"
+    "Heimdallr the Watcher" "Njord the Wealthy" "Odin the Allfather" "Thor the Thunderer" "Tyr the Brave" "Astrild" "Vindfamne" "Dellingr" "Sjofn" "Dagr" "Skathi"
+    "Sindri" "Sleipnir" "Slepnir" "Sigyn" "Skogul" "Sol" "Sigrun" "Snotra" "Syn" "Sigrid" "Hlin" "Bragi" "Eir" "Eirikr" "Fjorgyn" "Frigg" "Fjolsvinn" "Idunn"
+    "Jotunheim" "Lofn" "Froya" "Gerd" "Gudrun" "Hlif" "Hnoss" "Gjallarhorn" "Gnipahellir" "Hvergelmir" "Jotunheimr" "Surt" "Urdarbrunnr" "Yggdrasil" "Mjolnir"
+    "Draupnir" "Gungnir" "Gullinbursti" "Skidbladnir" "Hoddmimir's Holt" "Naglfar" "Dromi" "Logi" "Ratatoskr" "Andhrimnir" "Audhumla" "Fenrir" "Geri and Freki" "Hati Hati"
+    "Huginn and Muninn" "Mardoll" "Nidhogg" "Ratatoskr" "Hrimfaxi" "Skinfaxi" "Sleipnir" "Alfheim" "Muspelheim" "Midgard" "Vanaheimr" "Niflheimr" "Helheim" "Jotunheimr"
+    "Aelfheimr" "Nidavellir" "Svartalfheim" "Asgard" "Utgard" "Yggdrasil"
+	"Rusalka" "Veles' Breath" Perun's Fury "Mokosh's Pride" Svarog's Flame "Lada's Grace" Jarilo's Legacy "Morana's Shadow" "Zorya's Dawn" "Triglav's Might" "Yarilo's Breeze" "Dazhbog's Light" "Chernobog's Shadow"
+	"Stribog's Gale" "Radegast's Valor" "Vesna's Blossom" "Belobog's Radiance" "Lel's Song" "Baba Yaga's Roost" "Navkolitsi's Voyage" "Simargl's Fury" "Rozhanitsy's Fortune"
+	"Dolya's Destiny" "Jutrzenka's Glow" "Vileni's Whirl" "Bereginya's Blessing" "Svetovid's Gaze" "Yarila's Dance" "Vodyanoy's Tide" "Rarog's Thunder" "Kikimora's Veil" "Khors' Beam"
+	"Porewit's Oath" "Leshy's Whisper" "Marzanna's Shroud" "Zirnitra's Roar" "Bereginia's Embrace" "Vihor's Tempest" "Dinari's Quest" "Vilenica's Charm" "Mat's Legacy" "Dziewanna's Bloom"
+	"Chuma's Curse" "Ratibor's Triumph" "Perkun's Bolt" "Mavka's Melody" "Vepr's Fury" "Svarun's Spark" "Velez's Crest" "Boginya's Grace" "Domovoi's Haven" "Yarovit's Pride"
+}
+army_names = {
+    "Odins Krigare"
+    "Stora Armen"
+    "Arme av $PROVINCE$"
+}
+fleet_names = {
+    "Ostersjoflottan"
+    "Stora Flottan"
+    "Marin av $PROVINCE$"
+}

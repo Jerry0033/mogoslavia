@@ -1,0 +1,96 @@
+#Tatars
+AHA = "countries/Ahaciki.txt"
+BLK = "countries/Balkaria.txt"
+BGD = "countries/Bashgirdia.txt"
+#BSH = "countries/Bashkiria.txt"
+BHO = "countries/BlackHorde.txt"
+BOL = "countries/Bolgharia.txt"
+CVS = "countries/Cavas.txt"
+#CRI = "countries/Crimea.txt"
+KHZ = "countries/Khazaria.txt"
+KIP = "countries/Kipchakia.txt"
+KBN = "countries/Kubaneli.txt"
+WHO = "countries/WhiteHorde.txt"
+#Slavs
+ILM = "countries/Ilmeni.txt"
+GOD = "countries/Gorodoki.txt"
+KRU = "countries/Krupki.txt"
+PLV = "countries/Polovi.txt"
+DRE = "countries/Drevyli.txt"
+ULI = "countries/Ulichi.txt"
+#VOL
+#MOL
+#PNS
+#CHR
+
+#Konugardr formables
+RHO = "countries/Rhosia.txt"
+
+#Bosporan
+BSB = "countries/Bosbor.txt"
+HRP = "countries/Harpis.txt"
+CRS = "countries/Chersonesus.txt"
+OLB = "countries/Olbia.txt"
+BRY = "countries/Borysthenes.txt"
+PHG = "countries/Phanagoria.txt"
+#Norse
+KNU = "countries/Konugardr.txt"
+HLM = "countries/Holmgardr.txt"
+BJA = "countries/Bjarmaland.txt"
+NIF = "countries/Niflheim.txt"
+
+#Rusirheim
+RSH = "countries/Rusirheim.txt"
+ATR = "countries/Austrheim.txt"
+VES = "countries/Vesturheim.txt"
+SUD = "countries/Sudrheim.txt"
+FJA = "countries/Fjallrheim.txt"
+HE1 = "countries/Djupa.txt"
+HE2 = "countries/Vatna.txt"
+HE3 = "countries/Fjall.txt"
+HE4 = "countries/Mark.txt"
+HE5 = "countries/Lang.txt"
+HE6 = "countries/Gull.txt"
+HE7 = "countries/Litvatn.txt"
+HE8 = "countries/Dalr.txt"
+HE9 = "countries/Sigradur.txt"
+
+#Mogoslav
+MOG = "countries/Mogoslavia.txt"
+M01 = "countries/Khatgal.txt"
+M02 = "countries/Dzurh.txt"
+M03 = "countries/Rusnoknar.txt"
+M04 = "countries/Ciftinar.txt"
+M05 = "countries/Taciirnar.txt"
+M06 = "countries/Modynudnar.txt"
+NAC = "countries/Nachalnud.txt"
+
+#Finnic
+CDA = "countries/Chudia.txt"
+SGO = "countries/Shugozero.txt"
+SHI = "countries/Shimozero.txt"
+#BLO = "countries/Belozeroo.txt"
+
+#Volgaic
+BSK = "countries/Birski.txt"
+NGT = "countries/Nogotkovi.txt"
+OSL = "countries/Oslani.txt"
+MES = "countries/Mescheri.txt"
+MRY = "countries/Meryai.txt"
+VIR = "countries/Viranvedi.txt"
+ERZ = "countries/Erzya.txt"
+MOK = "countries/Moksha.txt"
+
+#Ugric
+BES = "countries/Besermiani.txt"
+UDM = "countries/Udmurtia.txt"
+VOI = "countries/Voisvozhi.txt"
+#PRM = "countries/Perm.txt"
+KOM = "countries/Komi.txt"
+NEN = "countries/Neneti.txt"
+
+#FinnishFormables
+VSI = "countries/Vesivesi.txt"
+VEP = "countries/Vepsia.txt"
+KLV = "countries/Kalevala.txt"
+HYP = "countries/Hyperborea.txt"

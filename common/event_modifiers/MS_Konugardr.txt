@@ -1,0 +1,61 @@
+knu_dniepr_heartland = {
+    local_development_cost_modifier = -0.2
+}
+
+knu_ruler_of_all_of_slavia = {
+    diplomatic_reputation = 1
+}
+
+knu_humiliated_germanics = {
+    land_morale = 0.1
+}
+
+knu_inner_prosperity = {
+    global_unrest = -2
+	global_prosperity_growth = 0.2
+}
+
+knu_civilizing_dobrozemia = {
+    local_development_cost_modifier = -0.1
+    local_tax_modifier = 0.1
+	local_manpower_modifier = 0.1
+	local_production_efficiency = 0.1
+}
+
+knu_a_worthy_city = {
+    local_development_cost = -0.2
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+	local_manpower_modifier = 0.25
+}
+
+knu_kievan_countryside = {
+    local_development_cost = -0.1
+	local_tax_modifier = 0.15
+	local_production_efficiency = 0.15
+	local_manpower_modifier = 0.15
+}
+
+knu_kievan_paper = {
+    local_production_efficiency = 0.25
+	trade_goods_size_modifier = 0.25
+}
+
+knu_religious_dominance = {
+    global_missionary_strength = 0.02
+	manpower_in_true_faith_provinces = 0.1
+}
+
+knu_the_last_varangian = {
+	diplomatic_reputation = 1
+	ae_impact = -0.25
+}
+
+knu_defender_of_the_slavs = {
+	tolerance_own = 2
+	prestige_decay = -0.01
+}
+
+knu_spread_the_faith = {
+    global_missionary_strength = 0.02
+}

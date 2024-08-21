@@ -1,0 +1,21 @@
+#4147 - Rostov (includes Uglich)
+base_tax = 2
+base_production = 2
+trade_goods = grain
+base_manpower = 2
+capital = "Rostov"
+is_city = yes
+discovered_by = eastern
+discovered_by = euro_pagan_tech
+discovered_by = western
+discovered_by = celtic_tech
+discovered_by = nomad_group
+discovered_by = west_mongol_group
+discovered_by = ottoman
+religion = suomenusko
+culture = modynud
+add_core = MOG
+add_core = M06
+owner = MOG
+controller = MOG
+

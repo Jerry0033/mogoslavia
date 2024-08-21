@@ -1,0 +1,9 @@
+government = tribal
+add_government_reform = feudal_tribe
+government_rank = 1
+technology_group = euro_pagan_tech
+religion = slavic_religion
+primary_culture = drevylian
+capital = 4115
+
+

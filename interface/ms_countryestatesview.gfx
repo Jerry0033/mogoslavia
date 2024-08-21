@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "privilege_conscript_hestridandi_captains"
+		texturefile = "gfx/interface/privileges/privilege_conscript_hestridandi_captains.dds"
+	}
+}

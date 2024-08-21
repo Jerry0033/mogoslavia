@@ -1,0 +1,1492 @@
+mog_sisters_conflict = {
+	slot = 2
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		tag = MOG
+		tag = NAC
+	}
+
+	mog_sisters_war = {
+		icon = mission_mog_sisters_war
+		position = 1
+		required_missions = {  }
+		provinces_to_highlight = {
+			OR = {
+				owned_by = M01
+				owned_by = M02
+			}
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = sisters_war_started_tt
+				has_country_flag = ms_sisters_refuse_rule
+			}
+		}
+		effect = { 
+			country_event = { id = ms_mog.8 }
+		}
+	}
+	mog_the_great_khatun = {
+		icon = mission_mog_the_great_khatun
+		position = 2
+		required_missions = { mog_sisters_war }
+		provinces_to_highlight = {
+			OR = {
+				owned_by = M01
+				owned_by = M02
+			}
+		}
+		trigger = {
+			M01 = {
+				exists = no
+			}
+			M02 = {
+				exists = no
+			}
+		}
+		effect = { 
+			add_stability = 1
+			add_adm_power = 100
+		}
+	}
+}
+
+mog_centralizing = {
+	slot = 1
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		tag = MOG
+		tag = NAC
+	}
+
+	mog_march_loyalty = {
+		icon = mission_tribal_allegiance
+		position = 2
+		required_missions = { mog_sisters_war }
+		provinces_to_highlight = {
+			OR = {
+				owned_by = M03
+				owned_by = M04
+			}
+		}
+		trigger = {
+			dip_power = 100
+			M03 = {
+				liberty_desire = 0
+				has_opinion = {
+					who = ROOT
+					value = 200
+				}
+			}
+			M04 = {
+				liberty_desire = 0
+				has_opinion = {
+					who = ROOT
+					value = 200
+				}
+			}
+		}
+		effect = {
+			add_dip_power = -100
+			vassalize = M03
+			vassalize = M04
+		}
+	}
+	mog_centralized_governance = {
+		icon = centralized_empire
+		position = 3
+		required_missions = { mog_march_loyalty mog_the_great_khatun }
+		province_id = {
+			OR = {
+				owned_by = M03
+				owned_by = M04
+				owned_by = M05
+			}
+		}
+		trigger = { 
+			M03 = {
+				exists = no
+			}
+			M04 = {
+				exists = no
+			}
+			M05 = {
+				exists = no
+			}
+		}
+		effect = { 
+			add_stability = 1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+		}
+	}
+	mog_where_the_mongols_failed = {
+		icon = mission_mog_where_the_mongols_failed
+		position = 6
+		required_missions = { mog_submit_even_more }
+		provinces_to_highlight = {
+			province_id = 148
+		}
+		trigger = { 
+			controls = 148
+		}
+		effect = { 
+			country_event = { id = ms_mog.10 }
+		}
+	}
+}
+
+mog_tribal_expansion = {
+	slot = 4
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		tag = MOG
+		tag = NAC
+	}
+
+	mog_show_our_presence = {
+		icon = mission_tribal_wargames
+		position = 1
+		required_missions = {  }
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = sisters_war_is_over_tt
+				OR = {
+					has_country_flag = ms_sisters_war_avoided
+					has_country_flag = ms_alaqa_triumphant
+				}
+			}
+			num_of_generals = 2
+			army_size_percentage = 0.85
+		}
+		effect = {
+			add_yearly_manpower = 2
+			add_country_modifier = {
+				name = mog_mogoslav_show_our_presence 
+				duration = 7300
+			}
+			zaporizhia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			mansur_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			lower_don_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			saratov_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			middle_don_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			1971 = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			5083 = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			yaroslavl_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			suzdal_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			vladimir_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			samara_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	mog_secure_northeast = {
+		icon = mission_hunting
+		position = 2
+		required_missions = { mog_show_our_presence }
+		provinces_to_highlight = {
+			OR = {
+				area = yaroslavl_area
+				area = suzdal_area
+				area = vladimir_area
+				area = samara_area
+				area = bayanchuud_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			yaroslavl_area = {
+				country_or_subject_holds = ROOT
+				type = all
+			}
+			suzdal_area = {
+				country_or_subject_holds = ROOT
+				type = all
+			}
+			vladimir_area = {
+				country_or_subject_holds = ROOT
+				type = all
+			}
+			samara_area = {
+				country_or_subject_holds = ROOT
+				type = all
+			}
+			bayanchuud_area = {
+				country_or_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = {
+			add_adm_power = 100
+		}
+	}
+	mog_mongol_teachings = {
+		icon = mission_mog_mongol_teachings
+		position = 3
+		required_missions = { mog_secure_northeast }
+		trigger = { 
+			yaroslavl_area = {
+				country_or_subject_holds = ROOT
+				type = all
+				local_autonomy = 25
+			}
+			suzdal_area = {
+				country_or_subject_holds = ROOT
+				type = all
+				local_autonomy = 25
+			}
+			vladimir_area = {
+				country_or_subject_holds = ROOT
+				type = all
+				local_autonomy = 25
+			}
+			samara_area = {
+				country_or_subject_holds = ROOT
+				type = all
+				local_autonomy = 25
+			}
+			bayanchuud_area = {
+				country_or_subject_holds = ROOT
+				type = all
+				local_autonomy = 25
+			}
+		}
+		effect = { 
+			add_accepted_culture_or_dip_power = { culture = meshchera value = 100 }
+			add_accepted_culture_or_dip_power = { culture = mordvin value = 100 }
+			add_country_modifier = {
+				name = mog_finnic_assimilation2
+				duration = -1
+			}
+		}
+	}
+	mog_mogoslav_domination = {
+		icon = mission_mog_mogoslav_domination
+		position = 4
+		required_missions = { mog_mongol_teachings mog_adopt_our_ways mog_cuman_assimilation }
+		trigger = { 
+			development_in_provinces = {
+				value = 500
+				OR = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+			}
+		}
+		effect = { 
+			crimea_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			ural_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	mog_challenge_the_hordes = {
+		icon = mission_raid_hosts
+		position = 5
+		required_missions = { mog_mogoslav_domination }
+		provinces_to_highlight = {
+			region = crimea_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			crimea_region = {
+				country_or_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = { 
+			central_asia_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			west_siberia_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			add_accepted_culture_or_dip_power = { culture = kipchak value = 100 }
+			add_accepted_culture_or_dip_power = { culture = pf_nogai value = 100 }
+			if = {
+				limit = {
+					has_country_modifier = mog_tatar_assimilation2
+				}
+				remove_country_modifier = mog_tatar_assimilation2
+				add_country_modifier = {
+					name = mog_tatar_assimilation4
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					has_country_modifier = mog_tatar_assimilation4
+				}
+				remove_country_modifier = mog_tatar_assimilation4
+				add_country_modifier = {
+					name = mog_tatar_assimilation6
+					duration = -1
+				}
+			}
+		}
+	}
+	mog_a_horde_defeated = {
+		icon = mission_mog_a_horde_defeated
+		position = 6
+		required_missions = { mog_challenge_the_hordes }
+		provinces_to_highlight = {
+			OR = {
+				region = central_asia_region
+				region = west_siberia_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 50
+				OR = {
+					region = central_asia_region
+					region = west_siberia_region
+				}
+			}
+		}
+		effect = { 
+			add_accepted_culture_or_dip_power = { culture = turkmeni value = 100 }
+			add_accepted_culture_or_dip_power = { culture = uzbehk value = 100 }
+			add_accepted_culture_or_dip_power = { culture = khazak value = 100 }
+			add_accepted_culture_or_dip_power = { culture = almatau value = 100 }
+			add_accepted_culture_or_dip_power = { culture = kirgiz value = 100 }
+			add_accepted_culture_or_dip_power = { culture = uyghur value = 100 }
+				add_country_modifier = {
+					name = mog_turkic_assimilation6
+					duration = -1
+				}
+			mongolia_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			east_siberia_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			manchuria_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	mog_unrivaled_dominance = {
+		icon = mission_oirat
+		position = 7
+		required_missions = { mog_a_horde_defeated mog_volga_domination }
+		provinces_to_highlight = {
+			OR = {
+				continent = europe
+				continent = asia
+			}
+			is_wasteland = no
+			is_sea = no
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 250
+				OR = {
+					continent = europe
+					continent = asia
+				}
+			}
+		}
+		effect = { 
+			custom_tooltip = mog_pax_mongolica_tt
+			hidden_effect = {
+				europe = {
+					add_permanent_claim = ROOT
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+						is_wasteland = no
+						is_sea = no
+					}
+				}
+				asia = {
+					add_permanent_claim = ROOT
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+						is_wasteland = no
+						is_sea = no
+					}
+				}
+				set_country_flag = mog_unrivaled_dominance_flag
+			}
+		}
+	}
+}
+
+mog_eastern_expansion = {
+	slot = 5
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		tag = MOG
+		tag = NAC
+	}
+
+	mog_secure_east = {
+		icon = mission_non-western_cavalry_raid
+		position = 2
+		required_missions = { mog_show_our_presence }
+		provinces_to_highlight = {
+			OR = {
+				area = saratov_area
+				province_id = 1971
+				province_id = 5079
+				province_id = 5083
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			saratov_area = {
+				country_or_subject_holds = ROOT
+				type = all
+			}
+			1971 = {
+				country_or_subject_holds = ROOT
+			}
+			5079 = {
+				country_or_subject_holds = ROOT
+			}
+			5083 = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 100
+		}
+	}
+	mog_adopt_our_ways = {
+		icon = mission_mog_chuvash_assimilation
+		position = 3
+		required_missions = { mog_secure_east }
+		trigger = { 
+			saratov_area = {
+				country_or_subject_holds = ROOT
+				type = all
+				local_autonomy = 25
+			}
+			1971 = {
+				country_or_subject_holds = ROOT
+				local_autonomy = 25
+			}
+			5079 = {
+				country_or_subject_holds = ROOT
+				local_autonomy = 25
+			}
+			5083 = {
+				country_or_subject_holds = ROOT
+				local_autonomy = 25
+			}
+		}
+		effect = { 
+			add_accepted_culture_or_dip_power = { culture = chuvash value = 100 }
+			if = {
+				limit = {
+					has_country_modifier = mog_tatar_assimilation1
+				}
+				remove_country_modifier = mog_tatar_assimilation1
+				add_country_modifier = {
+					name = mog_tatar_assimilation2
+					duration = -1
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = mog_tatar_assimilation1
+					duration = -1
+				}
+			}
+		}
+	}
+	mog_rid_bolgharia = {
+		icon = mission_ulug_ulus
+		position = 5
+		required_missions = { mog_mogoslav_domination }
+		provinces_to_highlight = {
+			OR = {
+				area = volga_area
+				province_id = 4264
+				province_id = 1082
+				province_id = 1972
+			}
+		}
+		trigger = { 
+			volga_area = {
+				country_or_subject_holds = ROOT
+				type = all
+			}
+			1082 = {
+				country_or_subject_holds = ROOT
+			}
+			1972 = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = { 
+			add_accepted_culture_or_dip_power = { culture = bolghar value = 100 }
+			add_accepted_culture_or_dip_power = { culture = bashkir value = 100 }
+			if = {
+				limit = {
+					has_country_modifier = mog_tatar_assimilation2
+				}
+				remove_country_modifier = mog_tatar_assimilation2
+				add_country_modifier = {
+					name = mog_tatar_assimilation4
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					has_country_modifier = mog_tatar_assimilation4
+				}
+				remove_country_modifier = mog_tatar_assimilation4
+				add_country_modifier = {
+					name = mog_tatar_assimilation6
+					duration = -1
+				}
+			}
+		}
+	}
+	mog_volga_domination = {
+		icon = mission_horde_trade
+		position = 6
+		required_missions = { mog_rid_bolgharia }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4267
+				province_id = 2418
+			}
+		}
+		trigger = { 
+			4267 = {
+				has_trade_building_trigger = yes
+				development = 15
+			}
+			2418 = {
+				has_trade_building_trigger = yes
+				development = 15
+			}
+		}
+		effect = { 
+			4267 = {
+				center_of_trade = 1
+			}
+			2418 = {
+				center_of_trade = 1
+			}
+		}
+	}
+}
+
+mog_southern_expansion = {
+	slot = 3
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		tag = MOG
+		tag = NAC
+	}
+
+	mog_secure_south = {
+		icon = mission_break_the_tatar_yoke
+		position = 2
+		required_missions = { mog_show_our_presence }
+		provinces_to_highlight = {
+			OR = {
+				area = mansur_area
+				area = lower_don_area
+				province_id = 1974
+				province_id = 5071
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			mansur_area = {
+				country_or_subject_holds = ROOT
+				type = all
+			}
+			lower_don_area = {
+				country_or_subject_holds = ROOT
+			}
+			1974 = {
+				country_or_subject_holds = ROOT
+			}
+			5071 = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 100
+		}
+	}
+	mog_cuman_assimilation = {
+		icon = mission_mog_cuman_assimilation
+		position = 3
+		required_missions = { mog_secure_south }
+		trigger = { 
+			mansur_area = {
+				country_or_subject_holds = ROOT
+				type = all
+				local_autonomy = 25
+			}
+			lower_don_area = {
+				country_or_subject_holds = ROOT
+				type = all
+				local_autonomy = 25
+			}
+			1974 = {
+				country_or_subject_holds = ROOT
+				local_autonomy = 25
+			}
+			5071 = {
+				country_or_subject_holds = ROOT
+				local_autonomy = 25
+			}
+		}
+		effect = { 
+			add_accepted_culture_or_dip_power = { culture = cuman value = 100 }
+			if = {
+				limit = {
+					has_country_modifier = mog_tatar_assimilation1
+				}
+				remove_country_modifier = mog_tatar_assimilation1
+				add_country_modifier = {
+					name = mog_tatar_assimilation2
+					duration = -1
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = mog_tatar_assimilation1
+					duration = -1
+				}
+			}
+		}
+	}
+	mog_our_taiga = {
+		icon = mission_mog_our_taiga
+		position = 5
+		required_missions = { mog_mogoslav_domination }
+		provinces_to_highlight = {
+			OR = {
+				area = vologda_area
+				area = galich_area
+				area = south_ezjva_area
+				area = kama_area
+				area = moscow_area
+				province_id = 5117
+				province_id = 1755
+				province_id = 5119
+				province_id = 5120
+			}
+		}
+		trigger = {
+			vologda_area = {
+				country_or_subject_holds = ROOT
+				type = all
+			}
+			galich_area = {
+				country_or_subject_holds = ROOT
+				type = all
+			}
+			south_ezjva_area = {
+				country_or_subject_holds = ROOT
+				type = all
+			}
+			kama_area = {
+				country_or_subject_holds = ROOT
+				type = all
+			}
+			moscow_area = {
+				country_or_subject_holds = ROOT
+				type = all
+			}
+			5117 = {
+				country_or_subject_holds = ROOT
+			}
+			1755 = {
+				country_or_subject_holds = ROOT
+			}
+			5119 = {
+				country_or_subject_holds = ROOT
+			}
+			5120 = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = { 
+			add_accepted_culture_or_dip_power = { culture = merya value = 100 }
+			add_accepted_culture_or_dip_power = { culture = mari value = 100 }
+			remove_country_modifier = mog_finnic_assimilation2
+			add_country_modifier = {
+				name = mog_finnic_assimilation4
+				duration = -1
+			}
+		}
+	}
+	mog_what_a_horse_cant_reach = {
+		icon = mission_extent_yasak_to_the_east
+		position = 6
+		required_missions = { mog_our_taiga }
+		provinces_to_highlight = {
+			OR = {
+				culture_group = finnic
+				culture_group = volgaic
+				culture_group = ugric
+			}
+			owned_by = ROOT
+		}
+		trigger = { 
+			development_in_provinces = {
+				value = 250
+				OR = {
+					culture_group = finnic
+					culture_group = volgaic
+					culture_group = ugric
+				}
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = mog_andral_zai
+				duration = -1
+			}
+		}
+	}
+	mog_pax_mongolica = {
+		icon = mission_beijing
+		position = 8
+		required_missions = { mog_unrivaled_dominance mog_a_new_identity }
+		trigger = { 
+			great_power_rank = 1
+			total_development = 2500
+		}
+		effect = { 
+			add_accepted_culture_or_dip_power = { culture = oirats value = 100 }
+			add_accepted_culture_or_dip_power = { culture = khalkha value = 100 }
+			add_accepted_culture_or_dip_power = { culture = mongol value = 100 }
+			add_accepted_culture_or_dip_power = { culture = chahar value = 100 }
+			add_country_modifier = {
+				name = mog_altaic_assimilation4
+				duration = -1
+			}
+			add_country_modifier = {
+				name = mog_pax_mongolica_modifier
+				duration = -1
+			}
+		}
+	}
+}
+
+mog_western_expansion = {
+	slot = 2
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		tag = MOG
+		tag = NAC
+	}
+
+	mog_make_them_submit = {
+		icon = mission_tribute_tax
+		position = 4
+		required_missions = { mog_centralized_governance mog_the_great_khatun }
+		provinces_to_highlight = {
+			OR = {
+				owned_by = PLV
+				owned_by = ULI
+				owned_by = KNU
+				owned_by = DRE
+				owned_by = KRU
+				owned_by = GOD
+				owned_by = HLM
+				owned_by = SGO
+				owned_by = SHI
+				owned_by = BLO
+			}
+		}
+		trigger = { 
+			total_development = 500
+		}
+		effect = { 
+			add_casus_belli = {
+				target = PLV
+				type = cb_force_tributary_mission
+				months = 120
+			}
+			add_casus_belli = {
+				target = ULI
+				type = cb_force_tributary_mission
+				months = 120
+			}
+			add_casus_belli = {
+				target = KNU
+				type = cb_force_tributary_mission
+				months = 120
+			}
+			add_casus_belli = {
+				target = DRE
+				type = cb_force_tributary_mission
+				months = 120
+			}
+			add_casus_belli = {
+				target = KRU
+				type = cb_force_tributary_mission
+				months = 120
+			}
+			add_casus_belli = {
+				target = GOD
+				type = cb_force_tributary_mission
+				months = 120
+			}
+			add_casus_belli = {
+				target = HLM
+				type = cb_force_tributary_mission
+				months = 120
+			}
+			add_casus_belli = {
+				target = SGO
+				type = cb_force_tributary_mission
+				months = 120
+			}
+			add_casus_belli = {
+				target = SHI
+				type = cb_force_tributary_mission
+				months = 120
+			}
+			add_casus_belli = {
+				target = BLO
+				type = cb_force_tributary_mission
+				months = 120
+			}
+		}
+	}
+	mog_submit_even_more = {
+		icon = mission_arabian_thalassocracy
+		position = 5
+		required_missions = { mog_make_them_submit }
+		provinces_to_highlight = {  
+			owner = {
+				is_subject_of = ROOT
+				is_subject_of_type = tributary_state
+				liberty_desire = 25
+			}
+		} 
+		trigger = { 
+			calc_true_if = {
+				amount = 5
+				all_subject_country = {
+					is_subject_of_type = tributary_state
+					NOT = { liberty_desire = 25 }
+				}
+			}
+		}
+		effect = { 
+			custom_tooltip = unlock_incorporate_trib_dip_action_tt
+			set_country_flag = unlock_incorporate_trib_dip_action_flag
+			custom_tooltip = empty_line_tt
+			add_casus_belli = {
+				target = MOL
+				type = cb_force_tributary_mission
+				months = 120
+			}
+			add_casus_belli = {
+				target = VOL
+				type = cb_force_tributary_mission
+				months = 120
+			}
+			add_casus_belli = {
+				target = CHR
+				type = cb_force_tributary_mission
+				months = 120
+			}
+			add_casus_belli = {
+				target = PNS
+				type = cb_force_tributary_mission
+				months = 120
+			}
+			add_casus_belli = {
+				target = LIT
+				type = cb_force_tributary_mission
+				months = 120
+			}
+			add_casus_belli = {
+				target = RYT
+				type = cb_force_tributary_mission
+				months = 120
+			}
+			add_casus_belli = {
+				target = GDJ
+				type = cb_force_tributary_mission
+				months = 120
+			}
+			add_casus_belli = {
+				target = VZA
+				type = cb_force_tributary_mission
+				months = 120
+			}
+			add_casus_belli = {
+				target = CDA
+				type = cb_force_tributary_mission
+				months = 120
+			}
+		}
+	}
+	mog_show_them_the_way = {
+		icon = mission_mog_show_them_the_way
+		position = 6
+		required_missions = { mog_submit_even_more }
+		provinces_to_highlight = {
+			OR = {
+				culture_group = pagan_eslavic
+				culture_group = pagan_slavic
+			}
+			owned_by = ROOT
+		}
+		trigger = { 
+			development_in_provinces = {
+				value = 250
+				OR = {
+					culture_group = pagan_eslavic
+					culture_group = pagan_slavic
+				}
+			}
+		}
+		effect = { 
+			add_accepted_culture_or_dip_power = { culture = ilmen value = 100 }
+			add_accepted_culture_or_dip_power = { culture = krivich value = 100 }
+			add_accepted_culture_or_dip_power = { culture = drevylian value = 100 }
+			add_accepted_culture_or_dip_power = { culture = ulich value = 100 }
+			add_accepted_culture_or_dip_power = { culture = polovtsy value = 100 }
+			add_accepted_culture_or_dip_power = { culture = tiverian value = 100 }
+			add_country_modifier = {
+				name = mog_slavic_assimilation6
+				duration = -1
+			}
+		}
+	}
+	mog_a_new_identity = {
+		icon = mission_mog_a_new_identity
+		position = 7
+		required_missions = { mog_where_the_mongols_failed mog_show_them_the_way }
+		provinces_to_highlight = {
+			OR = {
+				region = south_slavia_region
+				region = baltic_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			south_slavia_region = {
+				country_or_subject_holds = ROOT
+				type = all
+			}
+			baltic_region = {
+				country_or_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = { 
+			change_tag = NAC
+			add_country_modifier = {
+				name = mog_the_gentle_beast
+				duration = 18250
+			}
+		}
+	}
+}
+
+mog_tall1 = {
+	slot = 2
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		tag = MOG
+		tag = NAC
+	}
+
+	mog_a_worthy_capital = {
+		icon = mission_raid_on_genoa
+		position = 9
+		required_missions = {  }
+		trigger = {
+			capital_scope = {
+				development = 20
+				has_tax_building_trigger = yes
+				has_production_building_trigger = yes
+				has_building = courthouse
+			}
+		}
+		effect = {
+			capital_scope = {
+				add_province_modifier = {
+					name = mog_capital_city 
+					duration = -1
+				}
+			}
+		}
+	}
+	mog_clear_out_the_forests = {
+		icon = mission_mog_clear_out_the_forests
+		position = 10
+		required_missions = { mog_a_worthy_capital }
+		provinces_to_highlight = {
+			OR = {
+				has_terrain = woods
+				has_terrain = forest
+			}
+			owned_by = ROOT
+		}
+		trigger = {
+			development_in_provinces = {
+				value = 200
+				OR = {
+					has_terrain = woods
+					has_terrain = forest
+				}
+			}
+		}
+		effect = {
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_forest_expansion
+			}
+		}
+	}
+	mog_declining_horse_trade = {
+		icon = ned_cloth_trading
+		position = 11
+		required_missions = { mog_civilize_the_steppes mog_clear_out_the_forests }
+		provinces_to_highlight = {
+			OR = {
+				superregion = tartary_superregion
+				superregion = eastern_europe_superregion
+			}
+			OR = {
+				trade_goods = grain
+				trade_goods = livestock
+				trade_goods = fish
+				trade_goods = fur
+				trade_goods = wool
+				trade_goods = naval_supplies
+				trade_goods = horses
+			}
+			owned_by = ROOT
+		}
+		trigger = { 
+			advisor = natural_scientist
+			num_of_owned_provinces_with = {	
+				OR = {
+					trade_goods = grain
+					trade_goods = livestock
+					trade_goods = fish
+					trade_goods = fur
+					trade_goods = wool
+					trade_goods = naval_supplies
+					trade_goods = horses
+				}
+				base_production = 8
+				value = 5
+			}
+		}
+		effect = {
+			custom_tooltip = mog_prospecting_mission_tt
+			hidden_effect = {
+				random_owned_province = { 
+					limit = {
+						OR = {
+							trade_goods = grain
+							trade_goods = livestock
+							trade_goods = fish
+							trade_goods = fur
+							trade_goods = wool
+							trade_goods = naval_supplies
+							trade_goods = horses
+						}
+						is_state_core = ROOT
+						base_production = 8
+					}
+					change_trade_goods = iron
+				}
+				random_owned_province = { 
+					limit = {
+						OR = {
+							trade_goods = grain
+							trade_goods = livestock
+							trade_goods = fish
+							trade_goods = fur
+							trade_goods = wool
+							trade_goods = naval_supplies
+							trade_goods = horses
+						}
+						is_state_core = ROOT
+						base_production = 8
+					}
+					change_trade_goods = copper
+				}
+				random_owned_province = { 
+					limit = {
+						OR = {
+							trade_goods = grain
+							trade_goods = livestock
+							trade_goods = fish
+							trade_goods = fur
+							trade_goods = wool
+							trade_goods = naval_supplies
+							trade_goods = horses
+						}
+						is_state_core = ROOT
+						base_production = 8
+					}
+					change_trade_goods = glass
+				}
+				random_owned_province = { 
+					limit = {
+						OR = {
+							trade_goods = grain
+							trade_goods = livestock
+							trade_goods = fish
+							trade_goods = fur
+							trade_goods = wool
+							trade_goods = naval_supplies
+							trade_goods = horses
+						}
+						is_state_core = ROOT
+						base_production = 8
+					}
+					change_trade_goods = gems
+				}
+				random_owned_province = { 
+					limit = {
+						OR = {
+							trade_goods = grain
+							trade_goods = livestock
+							trade_goods = fish
+							trade_goods = fur
+							trade_goods = wool
+							trade_goods = naval_supplies
+							trade_goods = horses
+						}
+						is_state_core = ROOT
+						base_production = 8
+					}
+					change_trade_goods = cloth
+				}
+			}
+		}
+	}
+}
+
+mog_army1 = {
+	slot = 4
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		tag = MOG
+		tag = NAC
+	}
+
+	mog_a_standing_army = {
+		icon = mission_mog_a_standing_army
+		position = 9
+		required_missions = {  }
+		trigger = {
+			num_of_infantry = 40
+			has_mil_advisor_1 = yes
+		}
+		effect = {
+			create_general = {
+				tradition = 100
+			}
+		}
+	}
+	mog_training_for_life = {
+		icon = mission_build_up_to_force_limit
+		position = 10
+		required_missions = { mog_a_standing_army }
+		trigger = {
+			army_professionalism = 0.2
+			num_of_regiments_at_full_drill = 50
+			has_mil_advisor_2 = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = mog_lifelong_soldiers 
+				duration = -1
+			}
+		}
+	}
+	mog_stamp_out_raiders = {
+		icon = mission_mog_stamp_out_raiders
+		position = 11
+		required_missions = { mog_training_for_life mog_bred_for_war }
+		trigger = {
+			mil_tech = 10
+		}
+		effect = {
+			add_country_modifier = {
+				name = mog_safe_pastures 
+				duration = -1
+			}
+		}
+	}
+}
+
+mog_tall2 = {
+	slot = 1
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		tag = MOG
+		tag = NAC
+	}
+
+	mog_civilize_the_steppes = {
+		icon = mission_horde_caravans
+		position = 10
+		required_missions = {  }
+		provinces_to_highlight = {
+			OR = {
+				has_terrain = steppe
+			}
+			owned_by = ROOT
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 50
+				has_terrain = steppe
+				has_road_building_trigger = yes
+			}
+		}
+		effect = {
+			custom_tooltip = up_to_10_province_that_meet_trigger_tt
+			tooltip = {
+				add_base_tax = 1
+				mass_upgrade_road_building = yes
+			}
+			hidden_effect = {
+				for = {
+					amount = 10
+					effect = "
+						random_owned_province = {
+							limit = {
+								has_terrain = steppe
+								has_road_building_trigger = yes
+							}
+							add_base_tax = 1
+							upgrade_road_building = yes
+						}
+					"
+				}
+			}
+		}
+	}
+}
+
+mog_army2 = {
+	slot = 5
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		tag = MOG
+		tag = NAC
+	}
+
+	mog_bred_for_war = {
+		icon = mission_mog_bred_for_war
+		position = 10
+		required_missions = {  }
+		trigger = {
+			trade_goods_produced_amount = {
+				trade_goods = horses
+				amount = 10
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = mog_mogoslav_war_horses 
+				duration = -1
+			}
+		}
+	}
+}
+
+mog_government = {
+	slot = 3
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		tag = MOG
+		tag = NAC
+	}
+
+	mog_stamp_out_corruption = {
+		icon = mission_war_chest
+		position = 9
+		required_missions = {  }
+		trigger = {
+			NOT = {
+				corruption = 1
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = mog_anti_corruption_efforts
+				duration = 18250
+			}
+		}
+	}
+	mog_common_goals = {
+		icon = mission_chagatai
+		position = 10
+		required_missions = { mog_stamp_out_corruption }
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 100
+				has_owner_accepted_culture = yes
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = mog_common_goals_modifier
+				duration = -1
+			}
+		}
+	}
+	mog_reform_the_court = {
+		icon = mission_strengthen_basqaqs
+		position = 11
+		required_missions = { mog_common_goals }
+		trigger = {
+			reform_level = 5
+		}
+		effect = { 
+			change_government = monarchy
+			add_government_reform = ms_mogoslav_kingdom_monarchy
+		}
+	}
+	mog_a_dynasty_to_last = {
+		icon = mission_genghis_khan
+		position = 12
+		required_missions = { mog_reform_the_court }
+		trigger = { }
+		effect = { 
+			add_country_modifier = {
+				name = mog_prestigious_dynasty
+				duration = -1
+			}
+		}
+	}
+}
+

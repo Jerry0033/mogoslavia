@@ -1,0 +1,221 @@
+namespace = ms_bsb
+
+country_event = { # Fate of Chersonesus
+	id = ms_bsb.1
+	title = ms_bsb.1.t
+	desc = ms_bsb.1.d
+	picture = CONQUEST_eventPicture
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ms_bsb.1.a # Annex
+		ai_chance = {
+			factor = 1
+		}
+		2410 = {
+			cede_province = ROOT
+		}
+	}
+	option = {
+		name = ms_bsb.1.b # Vassalize
+		ai_chance = {
+			factor = 0
+		}
+		vassalize = CRS
+	}
+}
+
+country_event = { # The Taurican Tireme
+	id = ms_bsb.2
+	title = ms_bsb.2.t
+	desc = ms_bsb.2.d
+	picture = HARBOUR_eventPicture
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ms_bsb.2.a # The best of it's time!
+		ai_chance = {
+			factor = 1
+		}
+		add_country_modifier = {
+			name = bsb_taurican_tireme_modifier 
+			duration = 10950
+		}
+		add_sailors = 2000
+	}
+}
+
+country_event = { # The Navaarchis
+	id = ms_bsb.3
+	title = ms_bsb.3.t
+	desc = ms_bsb.3.d
+	picture = SHIP_SAILING_eventPicture
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ms_bsb.3.a # What a sight to behold, our enemies will tremble beneath it's might!
+		add_country_modifier = {
+			name = bsb_the_navaarchis_modifier
+			duration = -1 
+			desc = hsa_till_it_gets_sunk_desc 
+		}
+		add_navy_tradition = 25 
+	}
+}
+
+country_event = { # Taurican Stolos
+	id = ms_bsb.4
+	title = ms_bsb.4.t
+	desc = ms_bsb.4.d
+	picture = SHIP_SAILING_eventPicture
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ms_bsb.4.a # It's not big enough!
+		add_country_modifier = {
+            name = bsb_the_taurican_stolos_modifier
+            duration = -1
+        }
+	}
+}
+
+country_event = { # A Fleet To Fear
+	id = ms_bsb.5
+	title = ms_bsb.5.t
+	desc = ms_bsb.5.d
+	picture = SHIP_SAILING_eventPicture
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ms_bsb.5.a # The Sea Is Ours To Rule
+		remove_country_modifier = bsb_the_taurican_stolos_modifier
+		add_country_modifier = {
+            name = bsb_the_grand_taurican_stolos_modifier
+            duration = -1
+        }
+	}
+}
+
+country_event = { # The Grand Consulate
+	id = ms_bsb.6
+	title = ms_bsb.6.t
+	desc = ms_bsb.6.d
+	picture = GREAT_BUILDING_eventPicture
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ms_bsb.6.a # Ho laos thelei agalletai!
+		add_country_modifier = {
+            name = hsa_republican_modus_operandi_modifier
+            duration = 9125
+        }
+        change_innovativeness = 3 
+	}
+}
+
+province_event = { # Slave Hub
+	id = ms_bsb.7
+	title = ms_bsb.7.t
+	desc = ms_bsb.7.d
+	picture = ECONOMICALLY_TALLANTED_RULER_eventPicture
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	trigger= {
+		OR = {
+			region = south_slavia_region
+			region = crimea_region
+			region = russia_region
+		}
+		NOT = { trade_goods = slaves }
+		NOT = { has_province_flag = bsb_slave_hub_event }
+		owned_by = BSB
+		
+	}
+
+	option = {
+		name = ms_bsb.7.a # Subsidize their efforts
+		ai_chance = {
+			factor = 0
+		}
+		set_province_flag = bsb_slave_hub_event
+		add_treasury = -100
+		change_trade_goods = slaves
+		add_province_modifier = {
+			name = bsb_developing_slave_hub
+			duration = 9125 
+		}
+		
+	}
+	option = {
+		name = ms_bsb.7.b # Grant permission
+		ai_chance = {
+			factor = 1
+		}
+		set_province_flag = bsb_slave_hub_event
+		change_trade_goods = slaves
+	}
+	option = {
+		name = ms_bsb.7.b # Don't grant permission
+		ai_chance = {
+			factor = 1
+		}
+		set_province_flag = bsb_slave_hub_event
+		add_dip_power = -10
+	}
+}
+
+province_event = {
+	id = ms_bsb.8
+	title = ms_bsb.8.t
+	desc = ms_bsb.8.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	trigger = { 
+		owner = {
+			mission_completed = bsb_tend_to_the_towns
+		}
+		OR = {
+			area = crimea_area
+			area = mansur_area
+			area = azov_area
+			area = zaporizhia_area
+		}
+		NOT = { culture_group = bosporan_greek }
+		religion = hellenic
+		any_neighbor_province = {
+			culture_group = bosporan_greek
+		}
+	}
+	
+	option = {
+		name = ms_bsb.8.a
+		change_culture = taurican
+	}
+}

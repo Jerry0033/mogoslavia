@@ -1,0 +1,6 @@
+government = monarchy
+primary_culture = danaprisan
+religion = hellenic
+technology_group = eastern
+capital = 280
+government_rank = 2

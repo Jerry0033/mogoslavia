@@ -1,0 +1,26 @@
+# MS
+estate_hestridandi = {
+	modifier_definition = {
+		type = loyalty
+		key = cossacks_loyalty_modifier
+		trigger = {
+			has_estate = estate_hestridandi
+		}
+	}
+
+	modifier_definition = {
+		type = influence
+		key = cossacks_influence_modifier
+		trigger = {
+			has_estate = estate_hestridandi
+		}
+	}
+	
+	modifier_definition = {
+		type = privileges
+		key = cossacks_privilege_slots
+		trigger = {
+			has_estate = estate_hestridandi
+		}
+	}
+}

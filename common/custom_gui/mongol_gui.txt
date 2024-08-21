@@ -1,0 +1,1626 @@
+custom_button = {
+	name = mongol_toggle_button
+	tooltip = mongol_toggle_button_tt
+	potential = {
+		ILK = { exists = no }
+		has_saved_global_event_target = ilk_khan
+		any_known_country = {
+			OR = {
+				tag = event_target:ilk_khan
+				any_neighbor_country = {
+					tag = event_target:ilk_khan
+				}
+			}
+		}
+	}
+	trigger = { 
+		hidden_trigger = {
+			always = yes
+		}
+	}
+	effect = { 
+		if = {
+			limit = {
+				has_country_flag = mongol_window_open
+			}
+			clr_country_flag = mongol_window_open
+			if = {
+				limit = {
+					has_saved_global_event_target = mongol_window_open_1
+					event_target:mongol_window_open_1 = {
+						tag = ROOT
+					}
+				}
+				clear_global_event_target = mongol_window_open_1
+			}
+			else_if = {
+				limit = {
+					has_saved_global_event_target = mongol_window_open_2
+					event_target:mongol_window_open_2 = {
+						tag = ROOT
+					}
+				}
+				clear_global_event_target = mongol_window_open_2
+			}
+			else_if = {
+				limit = {
+					has_saved_global_event_target = mongol_window_open_3
+					event_target:mongol_window_open_3 = {
+						tag = ROOT
+					}
+				}
+				clear_global_event_target = mongol_window_open_3
+			}
+			else_if = {
+				limit = {
+					has_saved_global_event_target = mongol_window_open_4
+					event_target:mongol_window_open_4 = {
+						tag = ROOT
+					}
+				}
+				clear_global_event_target = mongol_window_open_4
+			}
+			else_if = {
+				limit = {
+					has_saved_global_event_target = mongol_window_open_5
+					event_target:mongol_window_open_5 = {
+						tag = ROOT
+					}
+				}
+				clear_global_event_target = mongol_window_open_5
+			}
+			else_if = {
+				limit = {
+					has_saved_global_event_target = mongol_window_open_6
+					event_target:mongol_window_open_6 = {
+						tag = ROOT
+					}
+				}
+				clear_global_event_target = mongol_window_open_6
+			}
+			else_if = {
+				limit = {
+					has_saved_global_event_target = mongol_window_open_7
+					event_target:mongol_window_open_7 = {
+						tag = ROOT
+					}
+				}
+				clear_global_event_target = mongol_window_open_7
+			}
+			else_if = {
+				limit = {
+					has_saved_global_event_target = mongol_window_open_8
+					event_target:mongol_window_open_8 = {
+						tag = ROOT
+					}
+				}
+				clear_global_event_target = mongol_window_open_8
+			}
+			else_if = {
+				limit = {
+					has_saved_global_event_target = mongol_window_open_9
+					event_target:mongol_window_open_9 = {
+						tag = ROOT
+					}
+				}
+				clear_global_event_target = mongol_window_open_9
+			}
+			else_if = {
+				limit = {
+					has_saved_global_event_target = mongol_window_open_10
+					event_target:mongol_window_open_10 = {
+						tag = ROOT
+					}
+				}
+				clear_global_event_target = mongol_window_open_10
+			}
+			
+		}
+		else = {
+			set_country_flag = mongol_window_open
+			play_sound = mongol_window_sound
+			if = {
+				limit = {
+					NOT = { has_saved_global_event_target = mongol_window_open_1 }
+				}
+				save_global_event_target_as = mongol_window_open_1
+			}
+			else_if = {
+				limit = {
+					NOT = { has_saved_global_event_target = mongol_window_open_2 }
+				}
+				save_global_event_target_as = mongol_window_open_2
+			}
+			else_if = {
+				limit = {
+					NOT = { has_saved_global_event_target = mongol_window_open_3 }
+				}
+				save_global_event_target_as = mongol_window_open_3
+			}
+			else_if = {
+				limit = {
+					NOT = { has_saved_global_event_target = mongol_window_open_4 }
+				}
+				save_global_event_target_as = mongol_window_open_4
+			}
+			else_if = {
+				limit = {
+					NOT = { has_saved_global_event_target = mongol_window_open_5 }
+				}
+				save_global_event_target_as = mongol_window_open_5
+			}
+			else_if = {
+				limit = {
+					NOT = { has_saved_global_event_target = mongol_window_open_6 }
+				}
+				save_global_event_target_as = mongol_window_open_6
+			}
+			else_if = {
+				limit = {
+					NOT = { has_saved_global_event_target = mongol_window_open_7 }
+				}
+				save_global_event_target_as = mongol_window_open_7
+			}
+			else_if = {
+				limit = {
+					NOT = { has_saved_global_event_target = mongol_window_open_8 }
+				}
+				save_global_event_target_as = mongol_window_open_8
+			}
+			else_if = {
+				limit = {
+					NOT = { has_saved_global_event_target = mongol_window_open_9 }
+				}
+				save_global_event_target_as = mongol_window_open_9
+			}
+			else_if = {
+				limit = {
+					NOT = { has_saved_global_event_target = mongol_window_open_10 }
+				}
+				save_global_event_target_as = mongol_window_open_10
+			}
+		}
+	}
+}
+
+custom_window = {
+	name = mongol_ilk_khan_window
+	potential = { 
+		has_country_flag = mongol_window_open
+	}
+}
+
+custom_shield = {
+	name = mongol_ilk_khan_shield
+	global_event_target = ilk_khan
+	open_country = yes
+	tooltip = current_ilk_khan_is
+	trigger = {
+		hidden_trigger = {
+			knows_country = event_target:ilk_khan
+		}
+	}
+}
+custom_shield = {
+	name = mongol_root_claim_shield_1
+	global_event_target = mongol_window_open_1
+	open_country = yes
+	tooltip = mongol_current_claim_for_ilk_khan_tooltip
+	potential = { 
+		has_saved_global_event_target = mongol_window_open_1
+		event_target:mongol_window_open_1 = {
+			tag = ROOT
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			has_saved_global_event_target = ilk_khan
+			NOT = {
+				event_target:ilk_khan = {
+					tag = ROOT
+				}
+			}
+		}
+		hidden_trigger = {
+			has_reform = steppe_horde
+			OR = {
+				culture_group = western_turkic 
+				culture_group = west_mongol
+			}
+		}
+	}
+}
+custom_shield = {
+	name = mongol_root_claim_shield_2
+	global_event_target = mongol_window_open_2
+	open_country = yes
+	tooltip = mongol_current_claim_for_ilk_khan_tooltip
+	potential = { 
+		has_saved_global_event_target = mongol_window_open_2
+		event_target:mongol_window_open_2 = {
+			tag = ROOT
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			has_saved_global_event_target = ilk_khan
+			NOT = {
+				event_target:ilk_khan = {
+					tag = ROOT
+				}
+			}
+		}
+		hidden_trigger = {
+			has_reform = steppe_horde
+			OR = {
+				culture_group = western_turkic 
+				culture_group = west_mongol
+			}
+		}
+	}
+}
+custom_shield = {
+	name = mongol_root_claim_shield_3
+	global_event_target = mongol_window_open_3
+	open_country = yes
+	tooltip = mongol_current_claim_for_ilk_khan_tooltip
+	potential = { 
+		has_saved_global_event_target = mongol_window_open_3
+		event_target:mongol_window_open_3 = {
+			tag = ROOT
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			has_saved_global_event_target = ilk_khan
+			NOT = {
+				event_target:ilk_khan = {
+					tag = ROOT
+				}
+			}
+		}
+		hidden_trigger = {
+			has_reform = steppe_horde
+			OR = {
+				culture_group = western_turkic 
+				culture_group = west_mongol
+			}
+		}
+	}
+}
+custom_shield = {
+	name = mongol_root_claim_shield_4
+	global_event_target = mongol_window_open_4
+	open_country = yes
+	tooltip = mongol_current_claim_for_ilk_khan_tooltip
+	potential = { 
+		has_saved_global_event_target = mongol_window_open_4
+		event_target:mongol_window_open_4 = {
+			tag = ROOT
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			has_saved_global_event_target = ilk_khan
+			NOT = {
+				event_target:ilk_khan = {
+					tag = ROOT
+				}
+			}
+		}
+		hidden_trigger = {
+			has_reform = steppe_horde
+			OR = {
+				culture_group = western_turkic 
+				culture_group = west_mongol
+			}
+		}
+	}
+}
+custom_shield = {
+	name = mongol_root_claim_shield_5
+	global_event_target = mongol_window_open_5
+	open_country = yes
+	tooltip = mongol_current_claim_for_ilk_khan_tooltip
+	potential = { 
+		has_saved_global_event_target = mongol_window_open_5
+		event_target:mongol_window_open_5 = {
+			tag = ROOT
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			has_saved_global_event_target = ilk_khan
+			NOT = {
+				event_target:ilk_khan = {
+					tag = ROOT
+				}
+			}
+		}
+		hidden_trigger = {
+			has_reform = steppe_horde
+			OR = {
+				culture_group = western_turkic 
+				culture_group = west_mongol
+			}
+		}
+	}
+}
+custom_shield = {
+	name = mongol_root_claim_shield_6
+	global_event_target = mongol_window_open_6
+	open_country = yes
+	tooltip = mongol_current_claim_for_ilk_khan_tooltip
+	potential = { 
+		has_saved_global_event_target = mongol_window_open_6
+		event_target:mongol_window_open_6 = {
+			tag = ROOT
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			has_saved_global_event_target = ilk_khan
+			NOT = {
+				event_target:ilk_khan = {
+					tag = ROOT
+				}
+			}
+		}
+		hidden_trigger = {
+			has_reform = steppe_horde
+			OR = {
+				culture_group = western_turkic 
+				culture_group = west_mongol
+			}
+		}
+	}
+}
+custom_shield = {
+	name = mongol_root_claim_shield_7
+	global_event_target = mongol_window_open_7
+	open_country = yes
+	tooltip = mongol_current_claim_for_ilk_khan_tooltip
+	potential = { 
+		has_saved_global_event_target = mongol_window_open_7
+		event_target:mongol_window_open_7 = {
+			tag = ROOT
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			has_saved_global_event_target = ilk_khan
+			NOT = {
+				event_target:ilk_khan = {
+					tag = ROOT
+				}
+			}
+		}
+		hidden_trigger = {
+			has_reform = steppe_horde
+			OR = {
+				culture_group = western_turkic 
+				culture_group = west_mongol
+			}
+		}
+	}
+}
+custom_shield = {
+	name = mongol_root_claim_shield_8
+	global_event_target = mongol_window_open_8
+	open_country = yes
+	tooltip = mongol_current_claim_for_ilk_khan_tooltip
+	potential = { 
+		has_saved_global_event_target = mongol_window_open_8
+		event_target:mongol_window_open_8 = {
+			tag = ROOT
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			has_saved_global_event_target = ilk_khan
+			NOT = {
+				event_target:ilk_khan = {
+					tag = ROOT
+				}
+			}
+		}
+		hidden_trigger = {
+			has_reform = steppe_horde
+			OR = {
+				culture_group = western_turkic 
+				culture_group = west_mongol
+			}
+		}
+	}
+}
+custom_shield = {
+	name = mongol_root_claim_shield_9
+	global_event_target = mongol_window_open_9
+	open_country = yes
+	tooltip = mongol_current_claim_for_ilk_khan_tooltip
+	potential = { 
+		has_saved_global_event_target = mongol_window_open_9
+		event_target:mongol_window_open_9 = {
+			tag = ROOT
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			has_saved_global_event_target = ilk_khan
+			NOT = {
+				event_target:ilk_khan = {
+					tag = ROOT
+				}
+			}
+		}
+		hidden_trigger = {
+			has_reform = steppe_horde
+			OR = {
+				culture_group = western_turkic 
+				culture_group = west_mongol
+			}
+		}
+	}
+}
+custom_shield = {
+	name = mongol_root_claim_shield_10
+	global_event_target = mongol_window_open_10
+	open_country = yes
+	tooltip = mongol_current_claim_for_ilk_khan_tooltip
+	potential = { 
+		has_saved_global_event_target = mongol_window_open_10
+		event_target:mongol_window_open_10 = {
+			tag = ROOT
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			has_saved_global_event_target = ilk_khan
+			NOT = {
+				event_target:ilk_khan = {
+					tag = ROOT
+				}
+			}
+		}
+		hidden_trigger = {
+			has_reform = steppe_horde
+			OR = {
+				culture_group = western_turkic 
+				culture_group = west_mongol
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = mongol_window_close
+	potential = { 
+	}
+	trigger = { 
+		hidden_trigger = {
+			always = yes
+		}
+	}
+	effect = { 
+		clr_country_flag = mongol_window_open
+		hidden_effect = {
+			set_variable = {
+				which = mongol_page
+				value = 0
+			}
+		}
+		play_sound = back_click
+		if = {
+			limit = {
+				has_saved_global_event_target = mongol_window_open_1
+				event_target:mongol_window_open_1 = {
+					tag = ROOT
+				}
+			}
+			clear_global_event_target = mongol_window_open_1
+		}
+		else_if = {
+			limit = {
+				has_saved_global_event_target = mongol_window_open_2
+				event_target:mongol_window_open_2 = {
+					tag = ROOT
+				}
+			}
+			clear_global_event_target = mongol_window_open_2
+		}
+		else_if = {
+			limit = {
+				has_saved_global_event_target = mongol_window_open_3
+				event_target:mongol_window_open_3 = {
+					tag = ROOT
+				}
+			}
+			clear_global_event_target = mongol_window_open_3
+		}
+		else_if = {
+			limit = {
+				has_saved_global_event_target = mongol_window_open_4
+				event_target:mongol_window_open_4 = {
+					tag = ROOT
+				}
+			}
+			clear_global_event_target = mongol_window_open_4
+		}
+		else_if = {
+			limit = {
+				has_saved_global_event_target = mongol_window_open_5
+				event_target:mongol_window_open_5 = {
+					tag = ROOT
+				}
+			}
+			clear_global_event_target = mongol_window_open_5
+		}
+		else_if = {
+			limit = {
+				has_saved_global_event_target = mongol_window_open_6
+				event_target:mongol_window_open_6 = {
+					tag = ROOT
+				}
+			}
+			clear_global_event_target = mongol_window_open_6
+		}
+		else_if = {
+			limit = {
+				has_saved_global_event_target = mongol_window_open_7
+				event_target:mongol_window_open_7 = {
+					tag = ROOT
+				}
+			}
+			clear_global_event_target = mongol_window_open_7
+		}
+		else_if = {
+			limit = {
+				has_saved_global_event_target = mongol_window_open_8
+				event_target:mongol_window_open_8 = {
+					tag = ROOT
+				}
+			}
+			clear_global_event_target = mongol_window_open_8
+		}
+		else_if = {
+			limit = {
+				has_saved_global_event_target = mongol_window_open_9
+				event_target:mongol_window_open_9 = {
+					tag = ROOT
+				}
+			}
+			clear_global_event_target = mongol_window_open_9
+		}
+		else_if = {
+			limit = {
+				has_saved_global_event_target = mongol_window_open_10
+				event_target:mongol_window_open_10 = {
+					tag = ROOT
+				}
+			}
+			clear_global_event_target = mongol_window_open_10
+		}
+	}
+}
+
+custom_text_box = {
+	name = mongol_window_close_title
+}
+
+custom_text_box = {
+	name = mongol_window_title
+}
+
+custom_icon = {
+	name = mongol_legitimacy_frame
+	# tooltip = mongol_legitimacy_frame_tooltip
+}
+
+custom_text_box = {
+	name = mongol_legitimacy_value
+	tooltip = mongol_legitimacy_value_tooltip
+}
+
+custom_text_box = {
+	name = mongol_legitimacy_growth_value
+	tooltip = mongol_legitimacy_growth_value_tooltip
+}
+
+custom_text_box = {
+	name = mongol_legitimacy_name
+	tooltip = mongol_legitimacy_name_tooltip
+}
+
+custom_window = {
+	name = root_claim_frame
+}
+
+custom_text_box = {
+	name = root_claim_value
+	tooltip = root_claim_tooltip
+}
+
+custom_icon = {
+	name = mongol_ilk_khan_benefits
+	tooltip = mongol_ilk_khan_benefits_tt
+}
+
+custom_icon = {
+	name = mongol_ilk_khan_decrees
+}
+custom_text_box = {
+	name = mongol_ilk_khan_decrees_title
+}
+
+custom_window = {
+	name = mongol_decree_window
+}
+custom_button = {
+	name = mongol_decree_1
+	tooltip = mongol_decree_1_tt
+	trigger = { 
+		stability = 1
+		check_variable = {
+			which = mongol_legitimacy
+			value = 100
+		}
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = mongol_decree_1_passed
+			}
+		}
+	}
+	effect = { 
+		add_stability = -1
+		custom_tooltip = empty_line_tt
+		subtract_variable = {
+			which = mongol_legitimacy
+			value = 25
+		}
+		match_mongol_legitimacy_and_claim = yes
+		custom_tooltip = empty_line_tt
+		custom_tooltip = every_west_mongol_nation_gets_common_currency_tt
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_eligible_for_ilk_khan = yes
+						AND = {
+							OR = {
+								is_subject_of_type = tributary_state
+								is_subject_of_type = incorporated_tributary
+							}
+							overlord = {
+								is_eligible_for_ilk_khan = yes
+							}
+						}
+					}
+				}
+				add_country_modifier = {
+					name = mongol_common_currency_modifier
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		set_global_flag = mongol_decree_1_passed
+	}
+	frame = {
+		number = 1
+		trigger = {
+			stability = 1
+			has_saved_global_event_target = ilk_khan
+			event_target:ilk_khan = {
+				tag = ROOT
+			}
+			check_variable = {
+				which = mongol_legitimacy
+				value = 100
+			}
+			NOT = {
+				has_global_flag = mongol_decree_1_passed
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			has_global_flag = mongol_decree_1_passed
+		}
+	}
+	frame = {
+		number = 3
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+custom_button = {
+	name = mongol_decree_2
+	tooltip = mongol_decree_2_tt
+	trigger = { 
+		stability = 1
+		check_variable = {
+			which = mongol_legitimacy
+			value = 100
+		}		
+		has_decree_passed = { decree = 1 }
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = mongol_decree_2_passed
+			}
+		}
+		hidden_trigger = {
+			is_ilk_khan = yes
+		}
+	}
+	effect = { 
+		add_stability = -1
+		custom_tooltip = empty_line_tt
+		subtract_variable = {
+			which = mongol_legitimacy
+			value = 25
+		}
+		match_mongol_legitimacy_and_claim = yes
+		custom_tooltip = empty_line_tt
+		custom_tooltip = ilk_khan_gets_banners_tt
+		hidden_effect = {
+			add_country_modifier = {
+				name = mongol_ilk_khan_banners_modifier
+				duration = -1
+				hidden = yes
+			}
+		}
+		custom_tooltip = empty_line_tt
+		custom_tooltip = every_west_mongol_nation_gets_infantry_bonuses
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_eligible_for_ilk_khan = yes
+						AND = {
+							OR = {
+								is_subject_of_type = tributary_state
+								is_subject_of_type = incorporated_tributary
+							}
+							overlord = {
+								is_eligible_for_ilk_khan = yes
+							}
+						}
+					}
+				}
+				add_country_modifier = {
+					name = mongols_modernize_the_military_modifier
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		set_global_flag = mongol_decree_2_passed
+	}
+	frame = {
+		number = 1
+		trigger = {
+			stability = 1
+			has_saved_global_event_target = ilk_khan
+			event_target:ilk_khan = {
+				tag = ROOT
+			}
+			check_variable = {
+				which = mongol_legitimacy
+				value = 100
+			}
+			has_global_flag = mongol_decree_1_passed
+			NOT = {
+				has_global_flag = mongol_decree_2_passed
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			has_global_flag = mongol_decree_2_passed
+		}
+	}
+	frame = {
+		number = 3
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+custom_button = {
+	name = mongol_decree_3
+	tooltip = mongol_decree_3_tt
+	trigger = {
+		stability = 1
+		check_variable = {
+			which = mongol_legitimacy
+			value = 100
+		}
+		has_decree_passed = { decree = 2 }
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = mongol_decree_3_passed
+			}
+		}
+		hidden_trigger = {
+			is_ilk_khan = yes
+		}
+	}
+	effect = {  
+		add_stability = -1
+		custom_tooltip = empty_line_tt
+		subtract_variable = {
+			which = mongol_legitimacy
+			value = 25
+		}
+		match_mongol_legitimacy_and_claim = yes
+		custom_tooltip = empty_line_tt
+		custom_tooltip = every_west_mongol_nation_gets_advisor_bonuses
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_eligible_for_ilk_khan = yes
+						AND = {
+							OR = {
+								is_subject_of_type = tributary_state
+								is_subject_of_type = incorporated_tributary
+							}
+							overlord = {
+								is_eligible_for_ilk_khan = yes
+							}
+						}
+					}
+				}
+				add_country_modifier = {
+					name = mongols_centralized_bureaucracy_modifier
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		set_global_flag = mongol_decree_3_passed
+	}
+	frame = {
+		number = 1
+		trigger = {
+			stability = 1
+			has_saved_global_event_target = ilk_khan
+			event_target:ilk_khan = {
+				tag = ROOT
+			}
+			check_variable = {
+				which = mongol_legitimacy
+				value = 100
+			}
+			hidden_trigger = {
+				has_global_flag = mongol_decree_2_passed
+				NOT = {
+					has_global_flag = mongol_decree_3_passed
+				}
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			has_global_flag = mongol_decree_3_passed
+		}
+	}
+	frame = {
+		number = 3
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+custom_button = {
+	name = mongol_decree_4
+	tooltip = mongol_decree_4_tt
+	trigger = { 
+		stability = 1
+		check_variable = {
+			which = mongol_legitimacy
+			value = 100
+		}
+		has_decree_passed = { decree = 3 }
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = mongol_decree_4_passed
+			}
+		}
+		hidden_trigger = {
+			is_ilk_khan = yes
+		}
+	}
+	effect = {  
+		add_stability = -1
+		custom_tooltip = empty_line_tt
+		subtract_variable = {
+			which = mongol_legitimacy
+			value = 25
+		}
+		match_mongol_legitimacy_and_claim = yes
+		custom_tooltip = empty_line_tt
+		custom_tooltip = ilk_khan_gets_diplo_rep_tt
+		hidden_effect = {
+			add_country_modifier = {
+				name = mongol_ilk_khan_diplo_rep_modifier
+				duration = -1
+				hidden = yes
+			}
+		}
+		custom_tooltip = empty_line_tt
+		custom_tooltip = every_west_mongol_nation_gets_subject_liberty_bonuses
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_eligible_for_ilk_khan = yes
+						AND = {
+							OR = {
+								is_subject_of_type = tributary_state
+								is_subject_of_type = incorporated_tributary
+							}
+							overlord = {
+								is_eligible_for_ilk_khan = yes
+							}
+						}
+					}
+				}
+				add_country_modifier = {
+					name = mongols_subject_management_modifier
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		set_global_flag = mongol_decree_4_passed
+	}
+	frame = {
+		number = 1
+		trigger = {
+			stability = 1
+			has_saved_global_event_target = ilk_khan
+			event_target:ilk_khan = {
+				tag = ROOT
+			}
+			check_variable = {
+				which = mongol_legitimacy
+				value = 100
+			}
+			hidden_trigger = {
+				has_global_flag = mongol_decree_3_passed
+				NOT = {
+					has_global_flag = mongol_decree_4_passed
+				}
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			has_global_flag = mongol_decree_4_passed
+		}
+	}
+	frame = {
+		number = 3
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+custom_button = {
+	name = mongol_decree_5
+	tooltip = mongol_decree_5_tt
+	trigger = {
+		stability = 1
+		check_variable = {
+			which = mongol_legitimacy
+			value = 100
+		}
+		has_decree_passed = { decree = 4 }
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = mongol_decree_5_passed
+			}
+		}
+		hidden_trigger = {
+			is_ilk_khan = yes
+		}
+	}
+	effect = { 
+		add_stability = -1
+		custom_tooltip = empty_line_tt
+		subtract_variable = {
+			which = mongol_legitimacy
+			value = 25
+		}
+		match_mongol_legitimacy_and_claim = yes
+		custom_tooltip = empty_line_tt
+		custom_tooltip = every_west_mongol_nation_gets_feudal_practices_bonuses
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_eligible_for_ilk_khan = yes
+						AND = {
+							OR = {
+								is_subject_of_type = tributary_state
+								is_subject_of_type = incorporated_tributary
+							}
+							overlord = {
+								is_eligible_for_ilk_khan = yes
+							}
+						}
+					}
+				}
+				add_country_modifier = {
+					name = mongols_feudal_practices_modifier
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		set_global_flag = mongol_decree_5_passed
+	}
+	frame = {
+		number = 1
+		trigger = {
+			has_saved_global_event_target = ilk_khan
+			event_target:ilk_khan = {
+				tag = ROOT
+			}
+			check_variable = {
+				which = mongol_legitimacy
+				value = 100
+			}
+			hidden_trigger = {
+				has_global_flag = mongol_decree_4_passed
+				NOT = {
+					has_global_flag = mongol_decree_5_passed
+				}
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			has_global_flag = mongol_decree_5_passed
+		}
+	}
+	frame = {
+		number = 3
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+custom_button = {
+	name = mongol_decree_6
+	tooltip = mongol_decree_6_tt
+	trigger = { 
+		stability = 1
+		check_variable = {
+			which = mongol_legitimacy
+			value = 100
+		}
+		has_decree_passed = { decree = 5 }
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = mongol_decree_6_passed
+			}
+		}
+		hidden_trigger = {
+			is_ilk_khan = yes
+		}
+	}
+	effect = { 
+		add_stability = -1
+		custom_tooltip = empty_line_tt
+		subtract_variable = {
+			which = mongol_legitimacy
+			value = 25
+		}
+		match_mongol_legitimacy_and_claim = yes
+		custom_tooltip = empty_line_tt
+		custom_tooltip = ilk_khan_gets_merchant_tt
+		hidden_effect = {
+			add_country_modifier = {
+				name = mongol_ilk_khan_merchant_modifier
+				duration = -1
+				hidden = yes
+			}
+		}
+		custom_tooltip = empty_line_tt
+		custom_tooltip = every_west_mongol_nation_gets_trade_efficiency_bonuses
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_eligible_for_ilk_khan = yes
+						AND = {
+							OR = {
+								is_subject_of_type = tributary_state
+								is_subject_of_type = incorporated_tributary
+							}
+							overlord = {
+								is_eligible_for_ilk_khan = yes
+							}
+						}
+					}
+				}
+				add_country_modifier = {
+					name = mongols_trade_efficiency_modifier
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		set_global_flag = mongol_decree_6_passed
+	}
+	frame = {
+		number = 1
+		trigger = {
+			has_saved_global_event_target = ilk_khan
+			event_target:ilk_khan = {
+				tag = ROOT
+			}
+			check_variable = {
+				which = mongol_legitimacy
+				value = 100
+			}
+			has_global_flag = mongol_decree_5_passed
+			NOT = {
+				has_global_flag = mongol_decree_6_passed
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			has_global_flag = mongol_decree_6_passed
+		}
+	}
+	frame = {
+		number = 3
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+custom_button = {
+	name = mongol_decree_7
+	tooltip = mongol_decree_7_tt
+	trigger = { 
+		stability = 1
+		check_variable = {
+			which = mongol_legitimacy
+			value = 100
+		}
+		has_decree_passed = { decree = 6 }
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = mongol_decree_7_passed
+			}
+		}
+		hidden_trigger = {
+			is_ilk_khan = yes
+		}
+	}
+	effect = { 
+		add_stability = -1
+		custom_tooltip = empty_line_tt
+		subtract_variable = {
+			which = mongol_legitimacy
+			value = 25
+		}
+		match_mongol_legitimacy_and_claim = yes
+		custom_tooltip = empty_line_tt
+		custom_tooltip = every_west_mongol_nation_gets_tech_cost_bonuses
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_eligible_for_ilk_khan = yes
+						AND = {
+							OR = {
+								is_subject_of_type = tributary_state
+								is_subject_of_type = incorporated_tributary
+							}
+							overlord = {
+								is_eligible_for_ilk_khan = yes
+							}
+						}
+					}
+				}
+				add_country_modifier = {
+					name = mongols_tech_cost_modifier
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		set_global_flag = mongol_decree_7_passed
+	}
+	frame = {
+		number = 1
+		trigger = {
+			has_saved_global_event_target = ilk_khan
+			event_target:ilk_khan = {
+				tag = ROOT
+			}
+			check_variable = {
+				which = mongol_legitimacy
+				value = 100
+			}
+			has_global_flag = mongol_decree_6_passed
+			NOT = {
+				has_global_flag = mongol_decree_7_passed
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			has_global_flag = mongol_decree_7_passed
+		}
+	}
+	frame = {
+		number = 3
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+custom_button = {
+	name = mongol_decree_8
+	tooltip = mongol_decree_8_tt
+	trigger = {
+		stability = 1
+		check_variable = {
+			which = mongol_legitimacy
+			value = 100
+		}
+		has_decree_passed = { decree = 7 }
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = mongol_decree_8_passed
+			}
+		}
+		hidden_trigger = {
+			is_ilk_khan = yes
+		}
+	}
+	effect = { 
+		add_stability = -1
+		custom_tooltip = empty_line_tt
+		subtract_variable = {
+			which = mongol_legitimacy
+			value = 25
+		}
+		match_mongol_legitimacy_and_claim = yes
+		custom_tooltip = empty_line_tt
+		custom_tooltip = ilk_khan_banner_buff_tt
+		hidden_effect = {
+			add_country_modifier = {
+				name = mongol_ilk_khan_banner_buff_modifier
+				duration = -1
+				hidden = yes
+			}
+		}
+		custom_tooltip = empty_line_tt
+		custom_tooltip = every_west_mongol_nation_gets_artillery_bonuses
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_eligible_for_ilk_khan = yes
+						AND = {
+							OR = {
+								is_subject_of_type = tributary_state
+								is_subject_of_type = incorporated_tributary
+							}
+							overlord = {
+								is_eligible_for_ilk_khan = yes
+							}
+						}
+					}
+				}
+				add_country_modifier = {
+					name = mongols_artillery_modifier
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		set_global_flag = mongol_decree_8_passed
+	}
+	frame = {
+		number = 1
+		trigger = {
+			has_saved_global_event_target = ilk_khan
+			event_target:ilk_khan = {
+				tag = ROOT
+			}
+			check_variable = {
+				which = mongol_legitimacy
+				value = 100
+			}
+			has_global_flag = mongol_decree_7_passed
+			NOT = {
+				has_global_flag = mongol_decree_8_passed
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			has_global_flag = mongol_decree_8_passed
+		}
+	}
+	frame = {
+		number = 3
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+custom_button = {
+	name = mongol_decree_9
+	tooltip = mongol_decree_9_tt
+	trigger = { 
+		stability = 1
+		check_variable = {
+			which = mongol_legitimacy
+			value = 100
+		}
+		has_decree_passed = { decree = 8 }
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = mongol_decree_9_passed
+			}
+		}
+		hidden_trigger = {
+			is_ilk_khan = yes
+		}
+	}
+	effect = { 
+		add_stability = -1
+		custom_tooltip = empty_line_tt
+		subtract_variable = {
+			which = mongol_legitimacy
+			value = 25
+		}
+		match_mongol_legitimacy_and_claim = yes
+		custom_tooltip = empty_line_tt
+		custom_tooltip = every_west_mongol_nation_gets_advisor_cost_bonuses
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_eligible_for_ilk_khan = yes
+						AND = {
+							OR = {
+								is_subject_of_type = tributary_state
+								is_subject_of_type = incorporated_tributary
+							}
+							overlord = {
+								is_eligible_for_ilk_khan = yes
+							}
+						}
+					}
+				}
+				add_country_modifier = {
+					name = mongols_advisor_cost_modifier
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		set_global_flag = mongol_decree_9_passed
+	}
+	frame = {
+		number = 1
+		trigger = {
+			has_saved_global_event_target = ilk_khan
+			event_target:ilk_khan = {
+				tag = ROOT
+			}
+			check_variable = {
+				which = mongol_legitimacy
+				value = 100
+			}
+			has_global_flag = mongol_decree_8_passed
+			NOT = {
+				has_global_flag = mongol_decree_9_passed
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			has_global_flag = mongol_decree_9_passed
+		}
+	}
+	frame = {
+		number = 3
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+custom_button = {
+	name = mongol_decree_10
+	tooltip = mongol_decree_10_tt
+	trigger = { 
+		stability = 1
+		check_variable = {
+			which = mongol_legitimacy
+			value = 100
+		}
+		has_decree_passed = { decree = 9 }
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = mongol_decree_10_passed
+			}
+		}
+		hidden_trigger = {
+			is_ilk_khan = yes
+		}
+	}
+	effect = { 
+		add_stability = -1
+		custom_tooltip = empty_line_tt
+		subtract_variable = {
+			which = mongol_legitimacy
+			value = 25
+		}
+		match_mongol_legitimacy_and_claim = yes
+		custom_tooltip = empty_line_tt
+		custom_tooltip = ilk_khan_razing_tt
+		hidden_effect = {
+			add_country_modifier = {
+				name = mongol_ilk_khan_raze_modifier
+				duration = -1
+				hidden = yes
+			}
+		}
+		custom_tooltip = empty_line_tt
+		custom_tooltip = ilk_khan_gains_ilkhanate_decision
+		custom_tooltip = empty_line_tt
+		custom_tooltip = every_west_mongol_nation_years_of_separatism_bonuses
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_eligible_for_ilk_khan = yes
+						AND = {
+							OR = {
+								is_subject_of_type = tributary_state
+								is_subject_of_type = incorporated_tributary
+							}
+							overlord = {
+								is_eligible_for_ilk_khan = yes
+							}
+						}
+					}
+				}
+				add_country_modifier = {
+					name = mongols_separatism_modifier
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		set_global_flag = mongol_decree_10_passed
+	}
+	frame = {
+		number = 1
+		trigger = {
+			has_saved_global_event_target = ilk_khan
+			event_target:ilk_khan = {
+				tag = ROOT
+			}
+			check_variable = {
+				which = mongol_legitimacy
+				value = 100
+			}
+			has_global_flag = mongol_decree_9_passed
+			NOT = {
+				has_global_flag = mongol_decree_10_passed
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			has_global_flag = mongol_decree_10_passed
+		}
+	}
+	frame = {
+		number = 3
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+custom_button = {
+	name = mongol_decree_passed_1
+	potential = { 
+		has_global_flag = mongol_decree_1_passed
+	}
+}
+custom_button = {
+	name = mongol_decree_passed_2
+	potential = { 
+		has_global_flag = mongol_decree_2_passed
+	}
+}
+custom_button = {
+	name = mongol_decree_passed_3
+	potential = { 
+		has_global_flag = mongol_decree_3_passed
+	}
+}
+custom_button = {
+	name = mongol_decree_passed_4
+	potential = { 
+		has_global_flag = mongol_decree_4_passed
+	}
+}
+custom_button = {
+	name = mongol_decree_passed_5
+	potential = { 
+		has_global_flag = mongol_decree_5_passed
+	}
+}
+custom_button = {
+	name = mongol_decree_passed_6
+	potential = { 
+		has_global_flag = mongol_decree_6_passed
+	}
+}
+custom_button = {
+	name = mongol_decree_passed_7
+	potential = { 
+		has_global_flag = mongol_decree_7_passed
+	}
+}
+custom_button = {
+	name = mongol_decree_passed_8
+	potential = { 
+		has_global_flag = mongol_decree_8_passed
+	}
+}
+custom_button = {
+	name = mongol_decree_passed_9
+	potential = { 
+		has_global_flag = mongol_decree_9_passed
+	}
+}
+custom_button = {
+	name = mongol_decree_passed_10
+	potential = { 
+		has_global_flag = mongol_decree_10_passed
+	}
+}
+
+custom_text_box = {
+	name = ilk_khan_name
+}
+custom_icon = {
+	name = ilk_khan_name_banner
+}

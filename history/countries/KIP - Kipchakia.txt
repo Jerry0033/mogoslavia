@@ -1,0 +1,19 @@
+government = tribal
+add_government_reform = ms_semi_nomadic_tribe
+government_rank = 1
+technology_group = west_mongol_group
+religion = tengri_pagan_reformed
+primary_culture = kipchak
+capital = 2416
+1444.11.11 = {
+	monarch = {
+		name = "Aral"
+		dynasty = "Birkan"
+		adm = 2
+		dip = 2
+		mil = 4
+		birth_date = 1411.09.04
+		death_date = 1445.01.01
+	}
+}
+

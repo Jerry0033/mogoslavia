@@ -1,0 +1,61 @@
+ms_hestridandi = {
+	copy_from = march
+	diplomacy_view_class = 1	# See description above
+
+	sprite = GFX_icon_hestridandi_subject
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_hestridandi_subject
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_hestridandi_subject
+
+	# Properties:
+	can_fight_independence_war = no
+	has_power_projection = no
+	takes_diplo_slot = no
+	gets_help_with_rebels = yes
+	separatists_become_subjects = no
+	allows_taking_land_without_independence = no
+	can_have_subjects_of_other_types = no
+	can_be_integrated = yes
+	can_be_annexed = no
+	can_use_claims = no
+	counts_for_borders = yes
+	forms_trade_companies = no
+	joins_overlords_wars = yes
+	joins_colonial_wars = no
+	can_concentrate_development = no
+	overlord_protects_external = yes
+	trust_on_start = 50
+	base_liberty_desire = 0
+	military_focus = 1.5
+	relative_power_class = 1
+	should_quit_wars_on_activation = yes
+	restoration_cb = cb_disloyal_vassal
+	# Subject Interactions:
+	scutage = no
+	divert_trade = no
+	# Subject Interactions
+	#(disable)
+	grant_core_claim = no
+	grant_province = no
+	place_relative_on_throne = no
+	enforce_religion = yes
+	can_send_missionary_to_subject = yes
+	enforce_culture = no
+	seize_territory = no
+	can_send_tribute = no
+	#(enable)
+	contribute_to_capital = no
+	conscript_general = yes
+	#(special)
+	subsidize_armies = yes
+	fortify_march = yes
+	send_officers = yes
+	# Modifiers
+	modifier_overlord = clear
+	modifier_subject = clear
+	modifier_overlord = {
+		modifier = ms_hestridandi_overlord_modifier
+	}
+	modifier_subject = {
+		modifier = ms_hestridandi_subject_modifier
+	}
+}

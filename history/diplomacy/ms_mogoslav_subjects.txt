@@ -1,0 +1,27 @@
+vassal = {
+	first = MOG
+	second = M01
+	start_date = 1444.1.1
+	end_date = 1572.1.1
+}
+
+vassal = {
+	first = MOG
+	second = M02
+	start_date = 1444.1.1
+	end_date = 1572.1.1
+}
+
+march = {
+	first = MOG
+	second = M03
+	start_date = 1444.1.1
+	end_date = 1572.1.1
+}
+
+march = {
+	first = MOG
+	second = M04
+	start_date = 1444.1.1
+	end_date = 1572.1.1
+}

@@ -1,0 +1,193 @@
+﻿l_english:
+
+ #---------------------------------------------------------
+ # Holmgardr 1
+ #---------------------------------------------------------
+
+ hlm_stabilize_the_ilmen_title:0 "Convert The Ilmen"
+ hlm_stabilize_the_ilmen_desc:0 ""
+ hlm_end_norseslavic_rivalry_title:0 "Perunu Is Actually Thor"
+ hlm_end_norseslavic_rivalry_desc:0 ""
+ hlm_rise_of_holmgardr_title:0 "Rise Of Holmgardr"
+ hlm_rise_of_holmgardr_desc:0 ""
+ hlm_the_city_needs_u_title:0 "The City Needs U"
+ hlm_the_city_needs_u_desc:0 ""
+ hlm_rurikid_supremacy_title:0 "Rurikid Supremacy"
+ hlm_rurikid_supremacy_desc:0 ""
+ hlm_expand_kievan_influence_title:0 "Expand Kievan Influence"
+ hlm_expand_kievan_influence_desc:0 ""
+
+ #---------------------------------------------------------
+ # Holmgardr 2
+ #---------------------------------------------------------
+
+ hlm_the_cultural_issue_title:0 "The Cultural Issue"
+ hlm_the_cultural_issue_desc:0 ""
+ hlm_indiscriminatory_court_title:0 "Multicultural Court"
+ hlm_indiscriminatory_court_desc:0 ""
+ hlm_we_are_one_title:0 "We Are One"
+ hlm_we_are_one_desc:0 ""
+ hlm_civilize_northern_slavs_title:0 "Civilize Northern Slavs"
+ hlm_civilize_northern_slavs_desc:0 ""
+ hlm_a_friend_down_south_title:0 "A Friend Down South"
+ hlm_a_friend_down_south_desc:0 ""
+ hlm_civilize_southern_slavs_title:0 "Civilize Southern Slavs"
+ hlm_civilize_southern_slavs_desc:0 ""
+ hlm_a_second_revolution_title:0 "A Second Revolution"
+ hlm_a_second_revolution_desc:0 ""
+
+ #---------------------------------------------------------
+ # Holmgardr 3
+ #---------------------------------------------------------
+
+ hlm_far_from_home_title:0 "Far From Home"
+ hlm_far_from_home_desc:0 ""
+ hlm_invite_norse_settlers_title:0 "Invite Norse Settlers"
+ hlm_invite_norse_settlers_desc:0 ""
+ hlm_the_mongol_yoke_title:0 "The Mongol Yoke"
+ hlm_the_mongol_yoke_desc:0 ""
+ hlm_free_the_slavs_title:0 "Free The Slavs"
+ hlm_free_the_slavs_desc:0 ""
+ hlm_expel_the_mongols_title:0 "Expel The Mongols"
+ hlm_expel_the_mongols_desc:0 ""
+ hlm_ruslander_unity_title:0 "Ruslander Unity"
+ hlm_ruslander_unity_desc:0 ""
+
+ #---------------------------------------------------------
+ # Holmgardr 4
+ #---------------------------------------------------------
+
+ hlm_the_eastern_bastion_title:0 "The Eastern Bastion"
+ hlm_the_eastern_bastion_desc:0 ""
+ hlm_founding_of_rurikov_title:0 "Founding Of Rurikov"
+ hlm_founding_of_rurikov_desc:0 ""
+ hlm_greater_holmgardr_title:0 "Greater Holmgardr"
+ hlm_greater_holmgardr_desc:0 ""
+ hlm_contact_the_homeland_title:0 "Contact The Homeland"
+ hlm_contact_the_homeland_desc:0 ""
+ hlm_window_of_opportunity_title:0 "Window Of Opportunity"
+ hlm_window_of_opportunity_desc:0 ""
+ hlm_vepsian_subjugation_title:0 "Vepsian Subjugation"
+ hlm_vepsian_subjugation_desc:0 ""
+ hlm_teach_the_fins_title:0 "Teach The Fins"
+ hlm_teach_the_fins_desc:0 ""
+
+ #---------------------------------------------------------
+ # Holmgardr 5
+ #---------------------------------------------------------
+
+ hlm_close_the_gap_title:0 "Close The Gap"
+ hlm_close_the_gap_desc:0 ""
+ hlm_no_match_for_us_title:0 "No Match For Us"
+ hlm_no_match_for_us_desc:0 ""
+ hlm_salty_ports_title:0 "Salty Ports"
+ hlm_salty_ports_desc:0 ""
+ hlm_the_salt_trade_title:0 "The Salt Trade"
+ hlm_the_salt_trade_desc:0 ""
+ hlm_avenge_karelia_title:0 "Avenge 1389"
+ hlm_avenge_karelia_desc:0 ""
+ hlm_end_karelian_domination_title:0 "End Karelian Domination"
+ hlm_end_karelian_domination_desc:0 ""
+
+ #---------------------------------------------------------
+ # Rusirheim 1
+ #---------------------------------------------------------
+
+ rsh_the_varangians_title:0 "The Varangians"
+ rsh_the_varangians_desc:0 ""
+ rsh_fate_of_the_greeks_title:0 "Fate Of The Greeks"
+ rsh_fate_of_the_greeks_desc:0 ""
+ rsh_a_greek_holdout_title:0 "A Greek Holdout"
+ rsh_a_greek_holdout_desc:0 ""
+ rsh_superior_ways_title:0 "Superior Ways"
+ rsh_superior_ways_desc:0 ""
+ rsh_knowledge_of_the_west_title:0 "Knowledge Of The West"
+ rsh_knowledge_of_the_west_desc:0 ""
+ rsh_use_our_connections_title:0 "Use Our Connections"
+ rsh_use_our_connections_desc:0 ""
+
+ #---------------------------------------------------------
+ # Rusirheim 2
+ #---------------------------------------------------------
+
+ rsh_dobrozemia_campaign_title:0 "Dobrozemia Campaign"
+ rsh_dobrozemia_campaign_desc:0 ""
+ rsh_severoslavia_campaign_title:0 "Severoslavia Campaign"
+ rsh_severoslavia_campaign_desc:0 ""
+ rsh_norseslavic_hegemony_title:0 "Norseslavic Hegemony"
+ rsh_norseslavic_hegemony_desc:0 ""
+ rsh_no_one_to_match_title:0 "No One To Match"
+ rsh_no_one_to_match_desc:0 ""
+ rsh_so_long_friend_title:0 "So Long Friend"
+ rsh_so_long_friend_desc:0 ""
+ rsh_last_man_standing_title:0 "Last Man Standing"
+ rsh_last_man_standing_desc:0 ""
+ rsh_land_of_furs_title:0 "Land Of Furs"
+ rsh_land_of_furs_desc:0 ""
+ rsh_fur_monopoly_title:0 "Fur Monopoly"
+ rsh_fur_monopoly_desc:0 ""
+
+ #---------------------------------------------------------
+ # Rusirheim 3
+ #---------------------------------------------------------
+
+ rsh_a_new_era_title:0 "A New Era"
+ rsh_a_new_era_desc:0 ""
+ rsh_the_great_city_title:0 "The Great City"
+ rsh_the_great_city_desc:0 ""
+ rsh_white_sea_campaign_title:0 "White Sea Campaign"
+ rsh_white_sea_campaign_desc:0 ""
+ rsh_bjarmian_integration_title:0 "Bjarmian Integration"
+ rsh_bjarmian_integration_desc:0 ""
+ rsh_ugric_assimilation_title:0 "Ugric Assimilation"
+ rsh_ugric_assimilation_desc:0 ""
+ rsh_no_holding_back_title:0 "No Holding Back"
+ rsh_no_holding_back_desc:0 ""
+ rsh_a_united_people_title:0 "A United People"
+ rsh_a_united_people_desc:0 ""
+ rsh_pax_russica_title:0 "Pax Russica"
+ rsh_pax_russica_desc:0 ""
+ rsh_ruslander_sjalfbyrgi_title:0 "Ruslander Sjalfbyrgi"
+ rsh_ruslander_sjalfbyrgi_desc:0 ""
+ rsh_prospecting_missions_title:0 "Prospecting Missions"
+ rsh_prospecting_missions_desc:0 ""
+ rsh_ruslander_iron_title:0 "Ruslander Iron"
+ rsh_ruslander_iron_desc:0 ""
+ rsh_economic_hegemon_title:0 "Economic Hegemon"
+ rsh_economic_hegemon_desc:0 ""
+
+ #---------------------------------------------------------
+ # Rusirheim 4
+ #---------------------------------------------------------
+
+ rsh_volga_campaign_title:0 "Volga Campaign"
+ rsh_volga_campaign_desc:0 ""
+ rsh_urbanize_the_tribes_title:0 "Urbanize The Tribes"
+ rsh_urbanize_the_tribes_desc:0 ""
+ rsh_volga_assimilation_title:0 "Volga Assimilation"
+ rsh_volga_assimilation_desc:0 ""
+ rsh_go_east_young_man_title:0 "Go East Young Man"
+ rsh_go_east_young_man_desc:0 ""
+ rsh_central_asian_campaign_title:0 "Central Asian Campaign"
+ rsh_central_asian_campaign_desc:0 ""
+ rsh_fund_weaveries_title:0 "Fund Weaveries"
+ rsh_fund_weaveries_desc:0 ""
+ rsh_the_silk_capital_title:0 "The Silk Capital"
+ rsh_the_silk_capital_desc:0 ""
+
+ #---------------------------------------------------------
+ # Rusirheim 5
+ #---------------------------------------------------------
+
+ rsh_the_hestridandi_title:0 "The Hestridandi"
+ rsh_the_hestridandi_desc:0 ""
+ rsh_tame_the_east_title:0 "Tame The East"
+ rsh_tame_the_east_desc:0 ""
+ rsh_tatar_expulsions_title:0 "Tatar Expulsions"
+ rsh_tatar_expulsions_desc:0 ""
+ rsh_pearl_of_the_east_title:0 "Pearl Of The East"
+ rsh_pearl_of_the_east_desc:0 ""
+ rsh_monopolize_trade_title:0 "Monopolize Trade"
+ rsh_monopolize_trade_desc:0 ""
+ rsh_never_again_title:0 "Never Again"
+ rsh_never_again_desc:0 "Never again do we want to suffer from a Famine. We will make sure there's always an abundancy of food. Better safe than sorry."

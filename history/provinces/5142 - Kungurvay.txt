@@ -1,0 +1,13 @@
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = fur
+capital = "Kungurvay"
+is_city = yes
+discovered_by = nomad_group
+discovered_by = west_mongol_group
+religion = tengri_pagan_reformed
+culture = permyak
+add_core = VOI
+owner = VOI
+controller = VOI

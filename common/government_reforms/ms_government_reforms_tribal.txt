@@ -1,0 +1,73 @@
+ms_mogoslav_kingdom = {
+	icon = "mogoslav_kingdom"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = yes
+	potential = {
+		OR = {
+			tag = MOG
+			tag = M01
+			tag = M02
+		}
+	}
+	modifiers = {
+		female_advisor_chance = 0.20
+        may_recruit_female_generals = yes
+        female_advisor_chance = 1
+        diplomatic_reputation = 1
+		reduced_liberty_desire = 10
+	}
+	custom_attributes = {
+		has_tributaries = yes
+        locked_government_type = yes
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+
+ms_semi_nomadic_tribe = {
+	icon = "semi_nomadic_tribe"
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			culture_group = western_turkic
+			culture_group = west_mongol
+		}
+	}
+	modifiers = {
+        army_tradition = 1
+        min_autonomy = 15
+	}
+	custom_attributes = {
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+
+ms_vece_varjagov = {
+	icon = "parliament_hall"
+	allow_normal_conversion = yes
+	potential = {
+		tag = HLM
+	}
+	modifiers = {
+		nobles_influence_modifier = -0.1
+		global_autonomy = -0.05
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+
+ms_multicultural_court_tribal_reform = {
+	icon = "neutral_ground"
+	potential = {
+		mission_completed = hlm_indiscriminatory_court
+	}
+	modifiers = {
+		all_estate_loyalty_equilibrium = 0.1
+		global_unrest = -2
+	}
+}

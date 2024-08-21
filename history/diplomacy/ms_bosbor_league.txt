@@ -1,0 +1,48 @@
+alliance = {
+	first = BSB
+	second = KHZ
+	start_date = 1444.1.1
+	end_date = 1820.1.1
+}
+alliance = {
+	first = PHG
+	second = KHZ
+	start_date = 1444.1.1
+	end_date = 1820.1.1
+}
+alliance = {
+	first = BSB
+	second = CRS
+	trade_league = 1
+	start_date = 1380.1.1
+	end_date = 1581.1.1
+}
+alliance = {
+	first = BSB
+	second = BRY
+	trade_league = 1
+	start_date = 1380.1.1
+	end_date = 1581.1.1
+}
+alliance = {
+	first = BSB
+	second = OLB
+	trade_league = 1
+	start_date = 1380.1.1
+	end_date = 1581.1.1
+}
+alliance = {
+	first = BSB
+	second = HRP
+	trade_league = 1
+	start_date = 1380.1.1
+	end_date = 1581.1.1
+}
+
+alliance = {
+	first = BSB
+	second = PHG
+	trade_league = 1
+	start_date = 1380.1.1
+	end_date = 1581.1.1
+}

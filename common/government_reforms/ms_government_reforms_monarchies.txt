@@ -1,0 +1,97 @@
+ms_ruslander_jarldom = {
+	icon = "tsardom"
+	allow_normal_conversion = yes
+	potential = {
+		culture_group = rus_norse
+		religion = norse_pagan_reformed
+	}
+    
+	modifiers = {
+		num_accepted_cultures = -5
+        manpower_in_accepted_culture_provinces = 0.33
+		governing_capacity = 250
+	}
+	claim_states = yes
+	government_abilities = {
+		ruslander_mechanic
+	}
+}
+
+ms_multicultural_court_monarchy_reform = {
+	icon = "neutral_ground"
+	potential = {
+		mission_completed = hlm_indiscriminatory_court
+	}
+	modifiers = {
+		all_estate_loyalty_equilibrium = 0.1
+		global_unrest = -2
+	}
+}
+
+ms_ruslander_huskarl_recruitment_reform = {
+	icon = "huskarl"
+	allow_normal_conversion = yes
+	potential = {
+		mission_completed = rsh_the_varangians
+	}
+	modifiers = {
+		has_carolean = yes
+		amount_of_carolean = 0.25
+	}
+}
+
+rsh_ruslander_sjalfbyrgi = {
+	icon = "sjalfbyrgi"
+	allow_normal_conversion = yes
+	potential = {
+		tag = RSH
+	}
+	modifiers = {
+		development_cost_modifier = -0.05
+		global_trade_goods_size_modifier = 0.10
+		build_cost = -0.10
+		build_time = -0.25
+		yearly_corruption = 0.10
+	}
+}
+
+rsh_westernized_administration_reform = {
+	icon = "ms_westernized_administration_reform"
+	allow_normal_conversion = yes
+	potential = {
+		mission_completed = rsh_use_our_connections
+	}
+	modifiers = {
+		technology_cost = -0.05
+		innovativeness_gain = 0.5
+		global_institution_spread = 0.25
+	}
+}
+
+ms_mogoslav_kingdom_monarchy = {
+	icon = "mogoslav_kingdom"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	allow_force_tributary = yes
+	potential = {
+		OR = {
+			tag = MOG
+			tag = M01
+			tag = M02
+		}
+	}
+	modifiers = {
+		female_advisor_chance = 0.20
+        may_recruit_female_generals = yes
+        female_advisor_chance = 1
+        diplomatic_reputation = 1
+		reduced_liberty_desire = 10
+	}
+	custom_attributes = {
+		has_tributaries = yes
+        locked_government_type = yes
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}

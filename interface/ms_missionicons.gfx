@@ -1,0 +1,327 @@
+spriteTypes = {
+	spriteType = {
+		name = "mission_hlm_we_are_one"
+		texturefile = "gfx//interface//missions//mission_hlm_we_are_one.dds"
+	}
+	spriteType = {
+		name = "mission_hlm_multicultural_court"
+		texturefile = "gfx//interface//missions//mission_hlm_multicultural_court.dds"
+	}
+	spriteType = {
+		name = "mission_hlm_ruslander_unity"
+		texturefile = "gfx//interface//missions//mission_hlm_ruslander_unity.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_the_silk_capital"
+		texturefile = "gfx//interface//missions//mission_rsh_the_silk_capital.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_ruslander_iron"
+		texturefile = "gfx//interface//missions//mission_rsh_ruslander_iron.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_the_land_of_furs"
+		texturefile = "gfx//interface//missions//mission_rsh_the_land_of_furs.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_fur_monopoly"
+		texturefile = "gfx//interface//missions//mission_rsh_fur_monopoly.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_prospecting_missions"
+		texturefile = "gfx//interface//missions//mission_rsh_prospecting_missions.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_use_our_connections"
+		texturefile = "gfx//interface//missions//mission_rsh_use_our_connections.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_last_man_standing"
+		texturefile = "gfx//interface//missions//mission_rsh_last_man_standing.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_tame_the_east"
+		texturefile = "gfx//interface//missions//mission_rsh_tame_the_east.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_a_greek_holdout"
+		texturefile = "gfx//interface//missions//mission_rsh_a_greek_holdout.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_fate_of_the_greeks"
+		texturefile = "gfx//interface//missions//mission_rsh_fate_of_the_greeks.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_a_new_era"
+		texturefile = "gfx//interface//missions//mission_rsh_a_new_era.dds"
+	}
+	spriteType = {
+		name = "mission_hlm_civilize_northern_slavs"
+		texturefile = "gfx//interface//missions//mission_hlm_civilize_northern_slavs.dds"
+	}
+	spriteType = {
+		name = "mission_hlm_invite_norse_settlers"
+		texturefile = "gfx//interface//missions//mission_hlm_invite_norse_settlers.dds"
+	}
+	spriteType = {
+		name = "mission_hlm_salty_ports"
+		texturefile = "gfx//interface//missions//mission_hlm_salty_ports.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_volga_assimilation"
+		texturefile = "gfx//interface//missions//mission_rsh_volga_assimilation.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_no_one_to_match"
+		texturefile = "gfx//interface//missions//mission_rsh_no_one_to_match.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_norseslavic_hegemony"
+		texturefile = "gfx//interface//missions//mission_rsh_norseslavic_hegemony.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_bjarmian_integration"
+		texturefile = "gfx//interface//missions//mission_rsh_bjarmian_integration.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_severoslavia_campaign"
+		texturefile = "gfx//interface//missions//mission_rsh_severoslavia_campaign.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_volga_campaign"
+		texturefile = "gfx//interface//missions//mission_rsh_volga_campaign.dds"
+	}
+	spriteType = {
+		name = "mission_hlm_civilize_southern_slavs"
+		texturefile = "gfx//interface//missions//mission_hlm_civilize_southern_slavs.dds"
+	}
+	spriteType = {
+		name = "mission_hlm_expel_the_mongols"
+		texturefile = "gfx//interface//missions//mission_hlm_expel_the_mongols.dds"
+	}
+	spriteType = {
+		name = "mission_hlm_expand_kievan_influence"
+		texturefile = "gfx//interface//missions//mission_hlm_expand_kievan_influence.dds"
+	}
+	spriteType = {
+		name = "mission_hlm_avenge_karelia"
+		texturefile = "gfx//interface//missions//mission_hlm_avenge_karelia.dds"
+	}
+	spriteType = {
+		name = "mission_hlm_the_city_needs_u"
+		texturefile = "gfx//interface//missions//mission_hlm_the_city_needs_u.dds"
+	}
+	spriteType = {
+		name = "mission_hlm_a_friend_down_south"
+		texturefile = "gfx//interface//missions//mission_hlm_a_friend_down_south.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_so_long_friend"
+		texturefile = "gfx//interface//missions//mission_rsh_so_long_friend.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_monopolize_trade"
+		texturefile = "gfx//interface//missions//mission_rsh_monopolize_trade.dds"
+	}
+	spriteType = {
+		name = "mission_hlm_window_of_opportunity"
+		texturefile = "gfx//interface//missions//mission_hlm_window_of_opportunity.dds"
+	}
+	spriteType = {
+		name = "mission_hlm_vepsian_subjugation"
+		texturefile = "gfx//interface//missions//mission_hlm_vepsian_subjugation.dds"
+	}
+	spriteType = {
+		name = "mission_hlm_rise_of_holmgardr"
+		texturefile = "gfx//interface//missions//mission_hlm_rise_of_holmgardr.dds"
+	}
+	spriteType = {
+		name = "mission_hlm_close_the_gap"
+		texturefile = "gfx//interface//missions//mission_hlm_close_the_gap.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_economic_hegemon"
+		texturefile = "gfx//interface//missions//mission_rsh_economic_hegemon.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_no_holding_back"
+		texturefile = "gfx//interface//missions//mission_rsh_no_holding_back.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_a_united_people"
+		texturefile = "gfx//interface//missions//mission_rsh_a_united_people.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_pax_russica"
+		texturefile = "gfx//interface//missions//mission_rsh_pax_russica.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_central_asian_campaign"
+		texturefile = "gfx//interface//missions//mission_rsh_central_asian_campaign.dds"
+	}
+	spriteType = {
+		name = "mission_hlm_free_the_slavs"
+		texturefile = "gfx//interface//missions//mission_hlm_free_the_slavs.dds"
+	}
+	spriteType = {
+		name = "mission_hlm_teach_the_fins"
+		texturefile = "gfx//interface//missions//mission_hlm_teach_the_fins.dds"
+	}
+	spriteType = {
+		name = "mission_hlm_end_karelian_domination"
+		texturefile = "gfx//interface//missions//mission_hlm_end_karelian_domination.dds"
+	}
+	spriteType = {
+		name = "mission_hlm_a_second_revolution"
+		texturefile = "gfx//interface//missions//mission_hlm_a_second_revolution.dds"
+	}
+	spriteType = {
+		name = "mission_hlm_far_from_home"
+		texturefile = "gfx//interface//missions//mission_hlm_far_from_home.dds"
+	}
+	spriteType = {
+		name = "mission_hlm_greater_holmgardr"
+		texturefile = "gfx//interface//missions//mission_hlm_greater_holmgardr.dds"
+	}
+	spriteType = {
+		name = "mission_rsh_the_great_city"
+		texturefile = "gfx//interface//missions//mission_rsh_the_great_city.dds"
+	}
+	spriteType = {
+		name = "mission_bja_baby_steps"
+		texturefile = "gfx//interface//missions//mission_bja_baby_steps.dds"
+	}
+	spriteType = {
+		name = "mission_bja_prepare_the_coats"
+		texturefile = "gfx//interface//missions//mission_bja_prepare_the_coats.dds"
+	}
+	spriteType = {
+		name = "mission_bja_prevention_measures"
+		texturefile = "gfx//interface//missions//mission_bja_prevention_measures.dds"
+	}
+	spriteType = {
+		name = "mission_bja_to_fight_the_cold"
+		texturefile = "gfx//interface//missions//mission_bja_to_fight_the_cold.dds"
+	}
+	spriteType = {
+		name = "mission_bja_to_protect_whats_ours"
+		texturefile = "gfx//interface//missions//mission_bja_to_protect_whats_ours.dds"
+	}
+	spriteType = {
+		name = "mission_bja_we_need_more_people"
+		texturefile = "gfx//interface//missions//mission_bja_we_need_more_people.dds"
+	}
+	spriteType = {
+		name = "mission_bja_explore_the_unknown"
+		texturefile = "gfx//interface//missions//mission_bja_explore_the_unknown.dds"
+	}
+	spriteType = {
+		name = "mission_bja_plan_out_the_expedition"
+		texturefile = "gfx//interface//missions//mission_bja_plan_out_the_expedition.dds"
+	}
+	spriteType = {
+		name = "mission_bja_bjarmian_self_sufficiency"
+		texturefile = "gfx//interface//missions//mission_bja_bjarmian_self_sufficiency.dds"
+	}
+	spriteType = {
+		name = "mission_bja_the_master_of_icy_seas"
+		texturefile = "gfx//interface//missions//mission_bja_the_master_of_icy_seas.dds"
+	}
+	spriteType = {
+		name = "mission_bja_finnic_submission"
+		texturefile = "gfx//interface//missions//mission_bja_finnic_submission.dds"
+	}
+	spriteType = {
+		name = "mission_bja_gather_the_men"
+		texturefile = "gfx//interface//missions//mission_bja_gather_the_men.dds"
+	}
+	spriteType = {
+		name = "mission_bja_prioritize_the_coast"
+		texturefile = "gfx//interface//missions//mission_bja_prioritize_the_coast.dds"
+	}
+	spriteType = {
+		name = "mission_bja_where_the_world_ends"
+		texturefile = "gfx//interface//missions//mission_bja_where_the_world_ends.dds"
+	}
+	spriteType = {
+		name = "mission_bja_coastal_dominance"
+		texturefile = "gfx//interface//missions//mission_bja_coastal_dominance.dds"
+	}
+	spriteType = {
+		name = "mission_bja_go_inwards"
+		texturefile = "gfx//interface//missions//mission_bja_go_inwards.dds"
+	}
+	spriteType = {
+		name = "mission_bja_our_vast_tundra"
+		texturefile = "gfx//interface//missions//mission_bja_our_vast_tundra.dds"
+	}
+	spriteType = {
+		name = "mission_bja_we_were_fooled"
+		texturefile = "gfx//interface//missions//mission_bja_we_were_fooled.dds"
+	}
+	spriteType = {
+		name = "mission_bja_our_own_little_niflheim"
+		texturefile = "gfx//interface//missions//mission_bja_our_own_little_niflheim.dds"
+	}
+	spriteType = {
+		name = "mission_mog_a_horde_defeated"
+		texturefile = "gfx//interface//missions//mission_mog_a_horde_defeated.dds"
+	}
+	spriteType = {
+		name = "mission_mog_a_new_identity"
+		texturefile = "gfx//interface//missions//mission_mog_a_new_identity.dds"
+	}
+	spriteType = {
+		name = "mission_mog_a_standing_army"
+		texturefile = "gfx//interface//missions//mission_mog_a_standing_army.dds"
+	}
+	spriteType = {
+		name = "mission_mog_bred_for_war"
+		texturefile = "gfx//interface//missions//mission_mog_bred_for_war.dds"
+	}
+	spriteType = {
+		name = "mission_mog_chuvash_assimilation"
+		texturefile = "gfx//interface//missions//mission_mog_chuvash_assimilation.dds"
+	}
+	spriteType = {
+		name = "mission_mog_clear_out_the_forests"
+		texturefile = "gfx//interface//missions//mission_mog_clear_out_the_forests.dds"
+	}
+	spriteType = {
+		name = "mission_mog_cuman_assimilation"
+		texturefile = "gfx//interface//missions//mission_mog_cuman_assimilation.dds"
+	}
+	spriteType = {
+		name = "mission_mog_mogoslav_domination"
+		texturefile = "gfx//interface//missions//mission_mog_mogoslav_domination.dds"
+	}
+	spriteType = {
+		name = "mission_mog_mongol_teachings"
+		texturefile = "gfx//interface//missions//mission_mog_mongol_teachings.dds"
+	}
+	spriteType = {
+		name = "mission_mog_our_taiga"
+		texturefile = "gfx//interface//missions//mission_mog_our_taiga.dds"
+	}
+	spriteType = {
+		name = "mission_mog_show_them_the_way"
+		texturefile = "gfx//interface//missions//mission_mog_show_them_the_way.dds"
+	}
+	spriteType = {
+		name = "mission_mog_sisters_war"
+		texturefile = "gfx//interface//missions//mission_mog_sisters_war.dds"
+	}
+	spriteType = {
+		name = "mission_mog_stamp_out_raiders"
+		texturefile = "gfx//interface//missions//mission_mog_stamp_out_raiders.dds"
+	}
+	spriteType = {
+		name = "mission_mog_the_great_khatun"
+		texturefile = "gfx//interface//missions//mission_mog_the_great_khatun.dds"
+	}
+	spriteType = {
+		name = "mission_mog_where_the_mongols_failed"
+		texturefile = "gfx//interface//missions//mission_mog_where_the_mongols_failed.dds"
+	}
+}
+

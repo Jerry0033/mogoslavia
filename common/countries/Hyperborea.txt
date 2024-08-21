@@ -1,0 +1,88 @@
+#Finland
+graphical_culture = westerngfx
+color = { 0 78 47 }
+revolutionary_colors = { 111 5 111 }
+historical_idea_groups = { 
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	economic_ideas
+	diplomatic_ideas
+	aristocracy_ideas
+	spy_ideas
+	religious_ideas
+}
+historical_units = { 
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	swedish_gallop
+	swedish_gustavian
+	swedish_caroline
+	swedish_arme_blanche
+	prussian_frederickian
+	prussian_uhlan
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+leader_names = { 
+	Adlercreutz Ahlqvist Berg Bj�rn Blom Cronstedt Dufva
+	Ehrensv�rd "von Essen" Glad Haataja Helander Helin Hiltunen Horn Ilkka Isotalo
+	J�rvel� J�rnberg Kes�l�inen Klingspor Kortelainen Krouvari Kyr� Liljencrantz L�nkinen Pentti
+	Pietil� Rehnski�ld Renner Rokka Rutanen Sakari Sj�gren St�lhandske Stoor Tapani
+	Termonen Turunen Wilander 
+}
+ship_names = { 
+	Agricola Aura Borg� "Birger Jarl" Helsingfors Hakkapeliitta Ilmarinen Kullervo Karelen Kymi
+	Lemmink�inen Lapland Nyland Oulu
+	"Per Brahe" Sampo "St. Henrik" Savolax Tavastehus Tavastland V�in�m�inen Vasa Viborg Vanda
+	Vuoksi �bo �sterbotten
+}
+monarch_names = { 
+	"Eerikki #0" = 6
+	"Niklas #0" = 6
+	"V�in�m�inen #0" = 6
+	"Aato #0" = 6
+	"Fredrik #0" = 6
+	"Jani #0" = 6
+	"Aleksanteri #0" = 5
+	"Edvard #0" = 5
+	"Jaakko #0" = 5
+	"Juha #0" = 5
+	"Aapeli #0" = 5
+	"Alpertti #0" = 5
+	"Antero #0" = 5
+	"Arvo #0" = 5
+	"Eino #0" = 5
+	"Erno #0" = 5
+	"Heikki #0" = 5
+	"Jooseppi #0" = 5
+	"Jyri #0" = 5
+	"Kaarle #0" = 5
+	"Kristian #0" = 5
+	"Lauri #0" = 5
+	"Mainio #0" = 5
+	"Mikael #0" = 5
+	"Onni #0" = 5
+	"Otso #0" = 4
+	"Paavo #0" = 4
+	"Petteri #0" = 4
+	"Ransu #0" = 4
+	"Reino #0" = 4
+	"Samuli #0" = 4
+	"Taavi #0" = 4
+	"Tauno #0" = 4
+	"Tuomas #0" = 4
+	"Valto #0" = 4
+	"Veli #0" = 4
+	"Vieno #0" = 4
+	"Vilhelmi #0" = 4
+	"Voitto #0" = 4
+	"Tarja #0" = -1
+	"Aina #0" = -1
+	"Jaana #0" = -1
+}

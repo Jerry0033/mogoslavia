@@ -1,0 +1,146 @@
+﻿l_english:
+
+#Groups
+ pagan_eslavic: "Eastern Slavic"
+ western_turkic: "Tatar"
+ bosporan_greek: "Bosporan Greek"
+ volgaic: "Volgaic"
+ ugric: "Ugric"
+ rus_norse: "Ruslander"
+ rhosian_greek: "Rhosian Greek"
+
+##GREEKS
+
+#Bosporan Greek
+ taurican: "Taurican"
+ olbian: "Olbian"
+ tanaisian: "Tanaisian"
+ loudaios: "Loudaios"
+
+#Rhosian Greek
+ danaprisan: "Danaprisan" #Dniepr
+ rhosian_taurican: "Taurican" #Crimea
+ pyretian: "Pyretian" #Moldavia
+ sylvan: "Sylvan" #Volhynia
+
+##SLAVS
+
+#Norse Slavic
+ rus_gardariki: "Gardariki"
+ rus_bjarmian: "Bjarmian"
+ rus_kievan: "Kievan"
+ rus_logeymenn: "Logeymenn"
+ rus_thorparar: "Thorparar"
+ rus_bondi: "Bondi"
+ rus_hesthamadr: "Hesthamadr"
+ rus_heidrar: "Heidrar"
+ rus_tjaldmenn: "Tjaldmenn"
+ rus_hermenn: "Hermenn"
+ rus_hrimthursar: "Hrimthursar"
+ rus_leysingr: "Leysingr"
+ rus_samfelagsmenn: "Samfelagsmenn"
+ rus_jotnar: "Jotnar"
+ rus_skogbuar: "Skogbuar"
+ rus_nagranni: "Nagranni"
+ rus_kvaenir: "Kvaenir"
+ rus_raudr: "Raudr"
+ rus_valkyrjur: "Valkyrjur"
+ rus_utlagar: "Utlagar"
+
+#Unified Slavic
+ slavic_ilmen: "Ilmen"
+ slavic_krivich: "Krivich"
+ slavic_dregovich: "Dregovich"
+ slavic_drevylian: "Drevylian"
+ slavic_volhynian: "Volhynian"
+ slavic_polovtsy: "Polovtsy"
+ slavic_tiverian: "Tiverian"
+ slavic_ulich: "Ulich"
+ slavic_radimich: "Radimich"
+ slavic_vyatih: "Vyatih"
+ slavic_severian: "Severian"
+ slavic_drakova: "Drakovan"
+ slavic_pomorian: "Pomorian"
+ slavic_mazovian: "Mazovian"
+ slavic_podlachian: "Podlachian"
+ slavic_drakova: "Drakovan"
+ slavic_polabian: "Polabian"
+ slavic_ceci: "Czeci"
+ slavic_irminovci: "Irminovci"
+
+#Western Slavic
+ dregovich: "Dregovich"
+ volhynian: "Volhynian"
+
+#Eastern Slavic
+ ilmen: "Ilmen"
+ krivich: "Krivich"
+ drevylian: "Drevylian"
+ polovtsy: "Polovtsy"
+ tiverian: "Tiverian"
+ ulich: "Ulich"
+ radimich: "Radimich"
+ vyatih: "Vyatih"
+ severian: "Severian"
+ east_dregovich: "Dregovich"
+ east_volhynian: "Volhynian"
+
+#Southern Slavic
+# dunajski: "Dunajksi"#danube
+# borovni: "borovni"#bulgaria
+# solunski: "dunajski"#macedonia
+# planinski: "Planinski"#serbia
+# drinski: "Drinski"#bosnia
+# slavonski: "Slavonski"#croatia
+# trakijski: "Trakijski"#thrace
+
+##FINNS
+
+#Unified Finnic
+
+#Finnic
+ vepsian: "Vepsian"
+ finnic_bjarmian: "Bjarmian"
+
+#Volgaic
+ mari: "Mari"
+ mordvin: "Mordvin"
+ merya: "Merya"
+ meshchera: "Meshchera"
+ volgaic_bjarmian: "Bjarmian"
+
+#Ugric
+ permyak: "Permyak"
+ komi: "Komi"
+ udmurt: "Udmurt"
+ nenet: "Nenet"
+ magyar: "Magyar"
+ pf_samoyed: "Samoyed"
+ pf_ostyak: "Ostyak"
+ pf_siberian: "Siberian"
+
+##ALTAIC
+
+#Tatar
+ bolghar: "Bolghar"
+ cuman: "Cuman"
+ kipchak: "Kipchak"
+ chuvash: "Chuvash"
+ khazar: "Khazar"
+ pf_bashkir: "Bashkir"
+ pf_nogai: "Nogai"
+ khazar: "Khazar"
+ balkar: "Balkar"
+
+#Mogoslav
+ yerlesik: "Yerlesik"
+ taciir: "Taciir"
+ ciftci: "Ciftci"
+ rusnok: "Rusnok"
+ modynud: "Modynud"
+ omnodslavyan: "Omnodslavyan"
+
+#Norse
+ kievan: "Kievan"
+ bjarmian: "Bjarmian"
+ gardariki: "Gardariki"

@@ -1,0 +1,355 @@
+﻿l_english:
+
+#Scripted Trigger
+ belongs_to_greek_group_tt: "Belongs to a Greek §YCulture Group§! "
+
+#Groups
+ old_celtic: "Celtic"
+ gallic: "Gallic"
+ celtiberian: "Celtiberian"
+ suebian: "Suebian"
+ euro_punic: "Barqanesh"
+ north_african: "Zaphon Afriq"
+ italo_punic: "Romqart"
+ old_germanic: "Nordgermanic"
+ germanic_carpathian: "Ostgermanic"
+ illyrian: "Illyrian"
+ pagan_slavic: "Western Slavic"
+ pagan_baltic: "Baltic"
+ west_mongol: "Mogoslav"
+ macedonian_greek: "Macedonian Greek"
+ anatolian_greek: "Anatolian Greek"
+ levantine_greek: "Seleucid Greek"
+ egyptian_greek: "Egyptian Greek"
+ pagan_arabic: "Arabic"
+ zoroastrian_persian: "Zarathushtrian"
+ caucasian_armenian: "Armenian"
+ kemetic: "Kemetic"
+ united_greek: "Greater Greek"
+
+## GREATER GREEK [[[
+
+#Macedonian
+ united_macedonian: "Macedonian"
+ united_dardanian: "Dardanian"
+ united_danubian: "Danubian"
+ united_kretan: "Kretan"
+ united_thracian: "Thracian"
+ united_epirote: "Epirote"
+ united_peloponnesian: "Peloponnesian"
+
+#Anatolian
+ united_delphian: "Delphian"
+ united_anatolian: "Anatolian"
+ united_cappadocian: "Cappadocian"
+ united_sophi: "Sophi"
+ united_pontic: "Pontic"
+
+#Seleucian
+ united_seleucid: "Seleucian"
+ united_judaean: "Judaean"
+ united_heliodori: "Helidori"
+ united_orichalcos: "Orichalcos"
+
+#Egyptian
+ united_alexandrian: "Alexandrian"
+ united_delta: "Neilos"
+ united_memphene: "Memphene"
+ united_ammoskopi: "Ammoskopi"
+ united_kyaneos: "Kyaneos"
+ united_oasisphylakes: "Oasisphylakes"
+
+## ]]]
+
+
+## VANILLA GROUPS [[[
+
+#Baridun
+ qataban: "Qatibani"
+ zaharan: "Zaharan"
+ majidi: "Majidi"
+ sabari: "Sabari"
+ qarifan: "Qarifan"
+ hadrawi: "Hadrawi"
+ tahsili: "Tahsili"
+ berqani: "Berqani"
+
+#Norse
+ angle: "Anglian"
+ norvegr: "Norvegr"
+ skalder: "Skalder"
+ karnutir: "Karnutir"
+
+## ]]]
+
+## PF GROUPS [[[
+
+#Celtic
+ old_irish: "Irish"
+ briton: "Briton"
+ old_welsh: "Welsh"
+ old_cornish: "Cornish"
+ old_highland_scottish: "Highlander"
+ pictish: "Pictish"
+
+#Gallic
+ senonian: "Senones"
+ parisian: "Parisii"
+ carnute: "Carnutes"
+ pictonian: "Pictones"
+ nervian: "Nervian"
+ lingonian: "Lingonian"
+ arverni: "Arverni"
+ frisii: "Frisii"
+
+#Celtiberian
+ vaccaei: "Vaccaei"
+ lusitani: "Lusitani"
+ turduli: "Turduli"
+ bastuli: "Bastuli"
+ bastetani: "Bastetani"
+ ilergetes: "Ilergetes"
+ ausetani: "Ausetani"
+ cessetani: "Cessetani"
+ varduli: "Varduli"
+ autrigones: "Autrigones"
+ cisalpi: "Cisalpi"
+
+#The JEWWWWWWWWS!
+ semitic: "Semitic"
+ merabite: "Merabite"
+ zeraphite: "Zeraphite"
+ eshelian: "Eshelian"
+ giladite: "Giladite"
+ tamaran: "Tamaran"
+ kedronite: "Kedronite"
+ lebshanite: "Lebshanite"
+ mishlite: "Mishlite"
+ dabphan: "Dabphan"
+ hagadite: "Hagadite"
+ ililan: "Ililan"
+ almephite: "Almephite"
+ khuzionite: "Khuzionite"
+ pashitan: "Pashitan"
+ bezelian: "Bezelian"
+
+#Suebian
+ tamezgaddas: "Tamezgaddas"
+ punic_culture: "Punic"
+ semnones: "Semnones"
+ alemanni: "Alemanni"
+ chatti: "Chatii"
+ cherusci: "Cherusci"
+ old_saxon: "Saxon"
+ marcomanni: "Marcomanni"
+ old_frisian: "Frisian"
+ old_lombard: "Lombard"
+ bructeri: "Bructeri"
+ kuban: "Kuban"
+ mongol_crimean: "Crimean"
+ don: "Don"
+ uralan: "Uralan"
+ volga: "Volga"
+ zephyr: "Zephyr"
+ rusnok: "Rusnok"
+ laumyras: "Laumyras"
+ kurunai: "Kurunai"
+ pinskai: "Pinskai"
+ pomerai: "Pomerai"
+ quadi: "Quadi"
+ eldrun: "Eldrun"
+ haldyr: "Haldyr"
+ fyrnir: "Fyrnir"
+ pomorian: "Pomorian"
+ mazovian: "Mazovian"
+ volhynian: "Volhynian"
+ podlachian: "Podlachian"
+ moldavian: "Dunavijan"
+ bukovinian: "Bukovinian"
+ slavic_galician: "Pinski"
+ drakova: "Drakovan"
+ polabian: "Polabian"
+ varangar: "Varangar"
+ haldorian: "Haldorian"
+ thornen: "Thornen"
+ sonnener: "Sonner"
+ viernubean: "Viernubean"
+ grunenwaldish: "Grunenwaldish"
+ sylpunican: "Slypunican"
+
+#Barqanesh
+ carventian: "Carventian"
+ celtipunian: "Celtipunian"
+ ilergi: "Ilergi"
+ ausontes: "Ausontes"
+ bellican: "Bellican"
+ tartessian: "Tartessian"
+ volcaran: "Volcaran"
+ basque_punic: "Eusqart"
+
+#Zaphon Afriq
+ numidian: "Numidian"
+ gaetulian: "Gaetulian"
+ maurian: "Maurian"
+ garamente: "Garamente"
+ leptisian: "Leptisian"
+ punic_culture: "Punic"
+
+#Romqart
+ punici: "Punici"
+ umbrii: "Umbri"
+ venetii: "Veneti"
+ corsi: "Corsi"
+ sardii: "Sardi"
+ siculi: "Siculi"
+ samnitii: "Samniti"
+ sabini: "Sabini"
+ etrusci: "Etrusci"
+ ligurii: "Liguri"
+ osci: "Osci"
+ lucanian: "Lucanian"
+
+#Nordgermanic
+ semnones: "Semnones"
+ alemanni: "Alemanni"
+ chatti: "Chatii"
+ cherusci: "Cherusci"
+ old_saxon: "Saxon"
+ marcomanni: "Marcomanni"
+ old_frisian: "Frisian"
+ old_lombard: "Lombard"
+ bructeri: "Bructeri"
+
+#Ostgermanic
+ quadi: "Quadi"
+ eldrun: "Eldrun"
+ haldyr: "Haldyr"
+ fyrnir: "Fyrnir"
+
+#Illyrian
+ lyros: "Lyros"
+ dalmarian: "Dalmarian"
+ hebren: "Hebren"
+
+#Slavic
+ pomorian: "Pomorian"
+ mazovian: "Mazovian"
+ podlachian: "Podlachian"
+ drakova: "Drakovan"
+ polabian: "Polabian"
+ ceci: "Czeci"
+ irminovci: "Irminovci"
+ rus_new: "Rus"
+#Baltic
+ laumyras: "Laumyras"
+ dainavas: "Dainavas"
+ kurunai: "Kurunai"
+
+#Baruuny
+ kuban: "Kuban"
+ mongol_crimean: "Crimean"
+ don: "Don"
+ uralan: "Uralan"
+ volga: "Volga"
+ zephyr: "Zephyr"
+
+#Macedonian Greek
+ macedonian: "Macedonian"
+ dardanian: "Dardanian"
+ danubian: "Danubian"
+ kretan: "Kretan"
+ thracian: "Thracian"
+ epirote: "Epirote"
+ peloponnesian: "Peloponnesian"
+
+#Anatolian Greek
+ delphian: "Delphian"
+ anatolian: "Anatolian"
+ cappadocian: "Cappadocian"
+ sophi: "Sophi"
+ pontic: "Pontic"
+
+#Seleucid Greek
+ seleucid: "Seleucian"
+ judaean: "Judaean"
+ heliodori: "Helidori"
+ orichalcos: "Orichalcos"
+
+#Egyptian Greek
+ alexandrian: "Alexandrian"
+ delta: "Neilos"
+ memphene: "Memphene"
+ ammoskopi: "Ammoskopi"
+ kyaneos: "Kyaneos"
+ oasisphylakes: "Oasisphylakes"
+
+#Arabic
+ lihyan: "Lihyan"
+ ghassanid: "Ghassanid"
+ kindah: "Kindah"
+ dilmun: "Dilmun"
+ omani: "Omani"
+
+#Zarathushtrian
+ sogdian: "Sogdian"
+ medinah: "Medinah"
+ bactrian: "Bactrian"
+ khurisani: "Khurisani"
+ parsic: "Parsic"
+ yazdic: "Yazdic"
+ isfahani: "Isfahani"
+
+#Armenian
+ olymporian: "Olymporian"
+ erythrian: "Erythrian"
+ araratian: "Araratian"
+ vanite: "Vanite"
+ tigran: "Tigran"
+
+#Kemetic
+ kemeti: "Kemetic"
+ tehenu: "Tehenu"
+ kushite: "Kushite"
+ irtyu: "Irtyu"
+
+#Colonial Zaphon Afriq
+ carthia: "Carthia"
+ mazice: "Mazice"
+
+#Colonial Barqanesh
+ iberon: "Iberon"
+ salumite: "Salumite"
+
+#Colonial Gallic
+ duratian: "Duratia"
+ lemovix: "Lemovix"
+
+#Colonial Old Celtic
+ eirelin: "Eirelin"
+ gaedhel: "Gaedhel"
+
+#Colonial New Celtic
+ new_eirelin: "Eirelin"
+ new_gaedhel: "Gaedhel"
+
+#Colonial Celtiberian
+ indigetes: "Indigetes"
+ sordones: "Sordones"
+
+#Colonial Norse
+ valkia: "Valkia"
+ jotunis: "Jotunis"
+
+#Colonial Egyptian Greek
+ grecia: "Grecia"
+ soteria: "Soteria"
+
+#Colonial United Greek
+ united_grecia: "Grecia"
+ united_soteria: "Soteria"
+
+#Colonial Persian
+ zoravic: "Zoravic"
+ mithric: "Mithric"
+
+## ]]]

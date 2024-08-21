@@ -1,0 +1,47 @@
+ms_hestridandi_overlord_modifier = {
+	global_tax_income = -30
+}
+
+ms_hestridandi_subject_modifier = {
+	global_tax_income = 30
+}
+
+equipped_huskarls_modifier_weaker = {
+	infantry_power = 0.05
+	is_carolean_modifier = yes
+}
+
+equipped_huskarls_modifier = {
+	infantry_power = 0.1
+	is_carolean_modifier = yes
+}
+
+send_out_dombok_modifier_weaker = {
+	build_cost = -0.05
+	build_time = -0.1
+}
+
+send_out_dombok_modifier = {
+	build_cost = -0.1
+	build_time = -0.2
+}
+
+prepared_huskarls_modifier_weaker = {
+	reinforce_speed = 0.1
+	reinforce_cost_modifier = -0.05
+	is_carolean_modifier = yes
+}
+
+prepared_huskarls_modifier = {
+	reinforce_speed = 0.2
+	reinforce_cost_modifier = -0.1
+	is_carolean_modifier = yes
+}
+
+blodorn_showcase_modifier_weaker = {
+	tolerance_own = 1
+}
+
+blodorn_showcase_modifier = {
+	tolerance_own = 2
+}

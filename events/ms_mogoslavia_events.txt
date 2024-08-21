@@ -1,0 +1,586 @@
+namespace = ms_mog
+
+
+country_event = { # Sisters war
+	id = ms_mog.1
+	title = ms_mog.1.t 
+	desc = ms_mog.1.d
+	picture = wihgfx_FEMALES_eventPicture
+	
+	fire_only_once = yes
+
+    immediate= {
+        set_country_flag = ms_sisters_refuse_rule
+		M01 = {
+			remove_alliance = M03
+			remove_alliance = M04
+		}
+		M02 = {
+			remove_alliance = M03
+			remove_alliance = M04
+		}
+    }
+	
+	trigger = {
+		tag = MOG
+		is_subject = no
+		dynasty = "Borjigin"
+		M01 = {
+			exists = yes
+			vassal_of = MOG
+			dynasty = "Borjigin"
+		}
+        M02 = {
+			exists = yes
+			vassal_of = MOG
+			dynasty = "Borjigin"
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.1
+			is_year = 1445
+		}
+		modifier = {
+			factor = 0.01
+			is_year = 1446
+		}
+		modifier = {
+			factor = 0.001
+			is_year = 1447
+		}
+	}
+	
+	option = {
+		name = ms_mog.1.a # Who do they think they are? I deserve this land! 
+		ai_chance = { 
+			factor = 1
+		}
+		add_stability = -1
+        M01 = {
+            declare_war_with_cb = {
+                who = MOG
+			    casus_belli = cb_independence_war
+            }
+        }
+        M02 = {
+            declare_war_with_cb = {
+                who = MOG
+			    casus_belli = cb_independence_war
+            }
+        }
+		russia_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					owner = {
+						OR = {
+							tag = M01
+							tag = M02
+						}
+					}
+				}
+			}
+        hidden_effect = {
+            set_country_flag = ms_sisters_war_happened
+            4251 = {
+			    change_controller = M01
+			}
+        }
+	}
+
+    option = {
+		name = ms_mog.1.b # Ugh, whatever, that land didn't matter to me anyway, Let them go 
+        ai_chance = { 
+			factor = 0
+		}
+        free_vassal = M01
+        free_vassal = M02
+        add_truce_with = M01
+        add_truce_with = M02
+        M01 = {
+            add_historical_rival = M02
+        }
+        M02 = {
+            add_historical_rival = M01
+        }
+        hidden_effect = {
+            set_country_flag = ms_sisters_war_avoided
+        }
+	}
+}
+
+country_event = {	# Alaqa overthrown
+	id = ms_mog.2
+	title = ms_mog.2.t 
+	desc = ms_mog.2.d
+	picture = east_slavic_BATTLE_eventPicture
+
+    immediate = {
+        release = M03
+        release = M04
+        if = {
+            limit = {
+                exists = M05
+            }
+            release = M05
+        }
+    }
+
+    fire_only_once = yes
+
+    trigger = {
+        has_country_flag = ms_sisters_war_happened
+        300 = {
+            OR = {
+                controlled_by = M01
+                controlled_by = M02
+                controlled_by = M03
+                controlled_by = M04
+                controlled_by = M05
+            }
+        }
+	}
+
+    mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "ms_mog.2.a" # There's nothing we can do
+        release_all_subjects = yes
+        M01 = {
+            every_province = {
+                limit = {
+                    OR = {
+                        area = kharkorin_area
+                        area = sloboda_ukraine_area
+                        area = oka_area
+                        province_id = 4251
+                        province_id = 4543
+                        province_id = 1945
+                        province_id = 297
+                        province_id = 5093
+                        province_id = 5010
+                    }
+                    owned_by = MOG
+                }
+                cede_province = M01
+                add_core = M01
+            }
+		}
+        M02 = {
+            every_province = {
+                limit = {
+                    OR = {
+                        area = ryazan_area
+                        area = bayanchuud_area
+                        area = tambov_area
+                        province_id = 295
+                        province_id = 1778
+                        province_id = 5102
+                        province_id = 5096
+                        province_id = 5097
+                        province_id = 467
+                    }
+                    owned_by = MOG
+                }
+                cede_province = M02
+                add_core = M02
+            }
+		}
+		hidden_effect = {
+			limit = {
+				OR = {
+					tag = M01
+					tag = M02
+					tag = M03
+					tag = M04
+				}
+			}
+			set_country_flag = ms_alaqa_overthrown
+		}
+	}
+}
+
+country_event = {	# Taciir rebellion
+	id = ms_mog.3
+	title = ms_mog.3.t 
+	desc = ms_mog.3.d
+	picture = east_slavic_BATTLE_eventPicture
+
+    fire_only_once = yes
+
+    immediate = {
+        release = M05
+        M05 = {
+            create_units_of_type = {
+			amount = 10
+			province = capital_scope
+			unit_type = cavalry
+		    }
+        }
+    }
+
+    trigger = {
+		tag = MOG
+		is_subject = no
+        has_country_flag = ms_sisters_refuse_rule
+	}
+    
+    mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.1
+			is_year = 1445
+		}
+		modifier = {
+			factor = 0.01
+			is_year = 1446
+		}
+		modifier = {
+			factor = 0.001
+			is_year = 1447
+		}
+	}
+
+    option = {
+		name = "ms_mog.3.b" # I will not allow this!
+        ai_chance = { 
+			factor = 25 
+		}
+        declare_war_with_cb = {
+				who = M05
+				casus_belli = cb_core
+                war_goal_province = 5097
+			}
+	}
+
+	option = {
+		name = "ms_mog.3.a" # I will deal with them later.
+        ai_chance = { 
+			factor = 75 
+		}
+        add_truce_with = M05
+	}
+}
+
+country_event = {	# Marches refuse to help
+	id = ms_mog.4
+	title = ms_mog.4.t 
+	desc = ms_mog.4.d
+	picture = east_slavic_BATTLE_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+		tag = MOG
+		is_subject = no
+        is_at_war = yes
+        has_country_flag = ms_sisters_war_happened
+	}
+
+    mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.1
+			is_year = 1446
+		}
+		modifier = {
+			factor = 0.01
+			is_year = 1447
+		}
+		modifier = {
+			factor = 0.001
+			is_year = 1448
+		}
+	}
+
+	option = {
+		name = "ms_mog.4.a" # So what?
+		ai_chance = { 
+			factor = 1
+		}
+        if = {
+            limit = {
+                M03 = { is_subject = yes }
+                }
+            M03 = {
+                add_liberty_desire = 50
+            }
+        }
+        if = {
+            limit = {
+                M04 = { is_subject = yes }
+                }
+            M04 = {
+                add_liberty_desire = 50
+            }
+        }
+	}
+    option = {
+		name = "ms_mog.4.b" # Send them gifts
+		ai_chance = { 
+			factor = 0
+		}
+        add_treasury = -100
+	}
+    option = {
+		name = "ms_mog.4.c" # Give their leaders court positions
+		ai_chance = { 
+			factor = 0
+		}
+        add_dip_power = -100
+	}
+}
+
+country_event = {	# Suomenusko rebels
+	id = ms_mog.5
+	title = ms_mog.5.t 
+	desc = ms_mog.5.d
+	picture = east_slavic_BATTLE_eventPicture
+
+    fire_only_once = yes
+
+	hidden = yes
+
+    immediate = {
+        5102 = {
+            spawn_rebels = {
+                type = religious_rebels
+                size = 3
+            }
+        }
+    }
+
+    trigger = {
+		tag = MOG
+        is_at_war = yes
+        has_country_flag = ms_sisters_war_happened
+	}
+
+    mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.1
+			is_year = 1446
+		}
+		modifier = {
+			factor = 0.01
+			is_year = 1447
+		}
+		modifier = {
+			factor = 0.001
+			is_year = 1448
+		}
+	}
+
+	option = {
+		name = "ms_mog.5.a" # But we were tolerating them!
+	}
+}
+
+country_event = {	# Rusnoknar becomes free
+	id = ms_mog.6
+	title = ms_mog.6.t 
+	desc = ms_mog.6.d
+	picture = east_slavic_BATTLE_eventPicture
+
+	hidden = yes
+
+	fire_only_once = yes
+
+    trigger = {
+		NOT = { exists = MOG }
+        tag = M03
+	}
+
+    mean_time_to_happen = {
+		days = 1
+        modifier = {
+			factor = 1
+			is_year = 1444
+		}
+	}
+
+	option = {
+		name = "ms_mog.6.a" # We don't trust those who are illegitimate.
+		break_alliance = M01
+		break_alliance = M02
+		M01 = {
+			free_vassal = M03
+		}
+		M02 = {
+			free_vassal = M03
+		}
+	}
+}
+country_event = {	# Ciftinar becomes free
+	id = ms_mog.7
+	title = ms_mog.7.t 
+	desc = ms_mog.7.d
+	picture = east_slavic_BATTLE_eventPicture
+
+	hidden = yes
+
+	fire_only_once = yes
+
+    trigger = {
+		NOT = { exists = MOG }
+        tag = M04
+	}
+
+    mean_time_to_happen = {
+		days = 1
+        modifier = {
+			factor = 1
+			is_year = 1444
+		}
+	}
+
+	option = {
+		name = "ms_mog.7.a" # We don't trust those who are illegitimate.
+		break_alliance = M01
+		break_alliance = M02
+		M01 = {
+			free_vassal = M04
+		}
+		M02 = {
+			free_vassal = M04
+		}
+	}
+}
+country_event = {	# Council Focus Event
+	id = ms_mog.8
+	title = ms_mog.8.t 
+	desc = ms_mog.8.d
+	picture = east_slavic_BATTLE_eventPicture
+	
+	fire_only_once = yes
+
+    is_triggered_only = yes
+
+	option = {
+		name = "ms_mog.8.a" # Focus on the Army
+		ai_chance = { 
+			factor = 25
+		}
+		add_manpower = 5
+	}
+	option = {
+		name = "ms_mog.8.b" # Focus on the Finances
+		ai_chance = { 
+			factor = 50
+		}
+		add_treasury = 100
+	}
+	option = {
+		name = "ms_mog.8.c" # Focus on the Realm
+		ai_chance = { 
+			factor = 25
+		}
+		add_stability = 1
+	}
+	option = {
+		name = "ms_mog.8.d" # Focus on the Subordinates
+		ai_chance = { 
+			factor = 25
+		}
+		if = {
+            limit = {
+                M03 = { is_subject = yes }
+                }
+            M03 = {
+                add_liberty_desire = -25
+            }
+        }
+        if = {
+            limit = {
+                M04 = { is_subject = yes }
+                }
+            M04 = {
+                add_liberty_desire = -25
+            }
+        }
+	}
+}
+
+country_event = {	# Alaqa Triumphant
+	id = ms_mog.9
+	title = ms_mog.9.t 
+	desc = ms_mog.9.d
+	picture = wihgfx_FEMALES_eventPicture
+
+	fire_only_once = yes
+
+    trigger = {
+		has_country_flag = ms_sisters_war_happened
+		OR = {
+			AND = {
+				M01 = {
+					exists = no
+				}
+				M02 = {
+					exists = no
+				}
+			}
+			AND = {
+				M01 = {
+					exists = yes
+					vassal_of = MOG
+				}
+				M02 = {
+					exists = yes
+					vassal_of = MOG
+				}
+			}
+		}
+	}
+
+    mean_time_to_happen = {
+		days = 1
+        modifier = {
+			factor = 1
+			is_year = 1444
+		}
+	}
+
+	option = {
+		name = "ms_mog.9.a" # They were no match anyways.
+		change_adm = 1
+		change_dip = 1
+		change_mil = 1
+		add_prestige = 50
+		hidden_effect = {
+            set_country_flag = ms_alaqa_triumphant
+        }
+	}
+}
+
+country_event = {	# Sack of Thessaloniki
+	id = ms_mog.10
+	title = ms_mog.10.t 
+	desc = ms_mog.10.d
+	picture = wihgfx_FEMALES_eventPicture
+
+	fire_only_once = yes
+
+    is_triggered_only = yes
+
+	option = {
+		name = "ms_mog.10.a" # Burn it to the ground.
+		148 = {
+			add_base_tax = -5
+			add_base_production = -5
+			add_base_manpower = -5
+			add_devastation = 100
+		}
+		add_treasury = 2500
+		add_prestige = 50
+		add_power_projection = {
+			type = 25_permanent_power_projection
+			amount = 25
+		}
+	}
+}

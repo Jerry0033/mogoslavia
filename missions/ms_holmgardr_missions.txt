@@ -1,0 +1,3146 @@
+holmgardr_1 = {
+	slot = 1
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		OR = {
+			tag = HLM
+			tag = RSH
+		}
+	}
+
+	hlm_stabilize_the_ilmen = {
+		icon = mission_conquer_romania
+		position = 2
+		required_missions = { hlm_the_cultural_issue }
+		provinces_to_highlight = {
+			OR = { 
+				province_id = 5058
+				province_id = 5057
+				province_id = 311
+				province_id = 5061
+				province_id = 5062
+			}
+		}
+		trigger = { 
+			5058 = {
+				is_state_core = ROOT
+				NOT = { local_autonomy = 15 }
+				NOT = { devastation = 15 }
+				religion = norse_pagan_reformed
+			}
+			5057 = {
+				is_state_core = ROOT
+				NOT = { local_autonomy = 15 }
+				NOT = { devastation = 15 }
+				religion = norse_pagan_reformed
+			}
+			311 = {
+				is_state_core = ROOT
+				NOT = { local_autonomy = 15 }
+				NOT = { devastation = 15 }
+				religion = norse_pagan_reformed
+			}
+			5061 = {
+				is_state_core = ROOT
+				NOT = { local_autonomy = 15 }
+				NOT = { devastation = 15 }
+				religion = norse_pagan_reformed
+			}
+			5062 = {
+				is_state_core = ROOT
+				NOT = { local_autonomy = 15 }
+				NOT = { devastation = 15 }
+				religion = norse_pagan_reformed
+			}
+		}
+		effect = { 
+			5058 = {
+				add_base_tax = 1
+				add_base_manpower = 1
+			}
+			5057 = {
+				add_base_tax = 1
+				add_base_manpower = 1
+			}
+			311 = {
+				add_base_tax = 1
+				add_base_manpower = 1
+			}
+			5061 = {
+				add_base_tax = 1
+				add_base_manpower = 1
+			}
+			5062 = {
+				add_base_tax = 1
+				add_base_manpower = 1
+			}
+		}
+	}
+	hlm_end_norseslavic_rivalry = {
+		icon = mission_norse_faith
+		position = 3
+		required_missions = { hlm_stabilize_the_ilmen }
+		provinces_to_highlight = {
+				owned_by = ROOT
+				culture = ilmen
+			}
+		trigger = { 
+			accepted_culture = ilmen
+			dip_power = 100
+		}
+		effect = { 
+			add_dip_power = -100
+			custom_tooltip = RSH_CULTURE_GARDARIKI
+			custom_tooltip = rsh_missionary_on_slavic_tt
+		}
+	}
+	hlm_rise_of_holmgardr = {
+		icon = mission_hlm_rise_of_holmgardr
+		position = 5
+		required_missions = { hlm_we_are_one }
+		provinces_to_highlight = {
+			culture_group = rus_norse
+		}
+		trigger = { 
+			development_in_provinces = {
+				value = 250
+				culture_group = rus_norse
+			}
+		}
+		effect = { 
+			add_prestige = 50
+			remove_accepted_culture = ilmen
+		}
+	}
+	hlm_the_city_needs_u = {
+		icon = mission_hlm_the_city_needs_u
+		position = 6
+		required_missions = { hlm_rise_of_holmgardr }
+		provinces_to_highlight = {
+			province_id = 310
+		}
+		
+		trigger = {
+			310 = {
+				development = 40
+				has_trade_building_trigger = yes
+				has_production_building_trigger = yes
+				has_tax_building_trigger = yes
+				has_courthouse_building_trigger = yes
+			}
+		}
+		
+		effect = {
+			310 = {
+				change_trade_goods = paper
+			}
+			310 = {
+				add_province_modifier = {
+					name = hlm_gem_of_the_east
+					duration = -1
+				}
+			}
+		}
+	}
+	hlm_expand_kievan_influence = {
+		icon = mission_hlm_expand_kievan_influence
+		position = 8
+		required_missions = { hlm_a_friend_down_south }
+		provinces_to_highlight = {
+			OR = {
+				area = west_dniepr_area
+				area = minsk_area
+				province_id = 4545
+				province_id = 1941
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			west_dniepr_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			minsk_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			4545 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1941 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = { 
+			south_slavia_region = {
+					add_permanent_claim = ROOT
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+				}
+		}
+	}
+	hlm_rurikid_supremacy = {
+		icon = mission_restore_faith_in_the_throne
+		position = 9
+		required_missions = { hlm_expand_kievan_influence }
+		provinces_to_highlight = {
+			region = south_slavia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			south_slavia_region = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = { 
+			custom_tooltip = hlm_inherit_knu_tt
+			if = {
+				limit = {
+					senior_union_with = KNU
+				}
+				inherit = KNU
+			}
+
+			add_country_modifier = {
+					name = hlm_rurikid_supremacy
+					duration = -1
+				}
+			280 = {
+				add_province_modifier = {
+					name = hlm_southern_capital
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+holmgardr_2 = {
+	slot = 2
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		OR = {
+			tag = HLM
+			tag = RSH
+		}
+	}
+
+	hlm_the_cultural_issue = {
+		icon = mission_consolidate_the_state
+		position = 1
+		required_missions = {  }
+		trigger = {
+			stability = 1
+		}
+		
+		effect = {
+			add_dip_power = -100
+			custom_tooltip = RSH_CULTURE_FORM
+			if = {
+				limit = {
+					tag = HLM
+				}
+				change_primary_culture = rus_gardariki
+			}
+			310 = {
+				change_culture = rus_gardariki
+				change_original_culture = rus_gardariki
+			}
+			5060 = {
+				change_culture = rus_gardariki
+				change_original_culture = rus_gardariki
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						tag = HLM
+					}
+					set_heir_culture = rus_gardariki
+					set_ruler_culture = rus_gardariki
+					set_consort_culture = rus_gardariki
+				}
+			}
+		}
+	}
+	hlm_indiscriminatory_court = {
+		icon = mission_hlm_multicultural_court
+		position = 2
+		required_missions = { hlm_the_cultural_issue }
+		trigger = {
+			government_reform_progress = 100
+		 }
+		effect = { 
+			custom_tooltip = hlm_multicultural_court_tt
+		}
+	}
+	hlm_we_are_one = {
+		icon = mission_hlm_we_are_one
+		position = 4
+		required_missions = { hlm_end_norseslavic_rivalry }
+		provinces_to_highlight = {
+			OR = {
+				area = novgorod_area
+				area = pskov_area
+				area = luka_area	
+			}
+			NOT = { culture_group = rus_norse }
+		}
+		trigger = {
+			novgorod_area = {
+				type = all
+				culture_group = rus_norse
+			}
+			pskov_area = {
+				type = all
+				culture_group = rus_norse
+			}
+			luka_area = {
+				type = all
+				culture_group = rus_norse
+			}
+		}
+		effect = { 
+			custom_tooltip = hlm_developmentmodifier_in_states_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = novgorod_area
+							area = pskov_area
+							area = luka_area	
+						}
+					}
+					add_province_modifier = {
+						name = hlm_we_are_one_people
+						duration = 5475
+					}
+				}
+			}
+		}
+	}
+	hlm_civilize_northern_slavs = {
+		icon = mission_hlm_civilize_northern_slavs
+		position = 5
+		required_missions = { hlm_we_are_one }
+		provinces_to_highlight = {
+			OR = {
+				area = novgorod_area
+				area = pskov_area
+				area = luka_area	
+			}
+			NOT = { development = 10 }
+		}
+		trigger = {
+			novgorod_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+				development = 10
+			}
+			pskov_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+				development = 10
+			}
+			luka_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+				development = 10
+			}
+		}
+		effect = { 
+			5056 = {
+				change_trade_goods = dyes
+				add_province_modifier = {
+					name = hlm_gorodoki_dyes
+					duration = -1
+				}
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+			}
+		}
+	}
+	hlm_a_friend_down_south = {
+		icon = mission_hlm_a_friend_down_south
+		position = 7
+		required_missions = { hlm_the_mongol_yoke }
+		provinces_to_highlight = {
+			province_id = 280
+		}
+		trigger = { 
+			OR = {
+				has_spy_network_in = {
+					who = KNU
+					value = 50
+				}
+				is_rival = KNU
+				KNU = {
+					exists = no
+				}
+				280 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						280 = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+					exists = KNU
+				}
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					months = 300
+					target = KNU
+				}
+			}
+			else = {
+				west_dniepr_area = {
+					add_permanent_claim = ROOT
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+				}
+				minsk_area = {
+					add_permanent_claim = ROOT
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+				}
+				pripyat_area = {
+					add_permanent_claim = ROOT
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+				}
+			}
+		}
+	}
+	hlm_a_second_revolution = {
+		icon = mission_hlm_a_second_revolution
+		position = 9
+		required_missions = { hlm_expand_kievan_influence }
+		provinces_to_highlight = {
+			province_id = 280
+		}
+		trigger = { 
+			280 = {
+				development = 25
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = { 
+			add_dip_power = -100
+			custom_tooltip = RSH_CULTURE_KIEVAN
+			hidden_effect = {
+				if = {
+					limit = {
+						exists = KNU
+					}
+					KNU = {
+						change_primary_culture = rus_kievan
+					}
+				}
+				280 = {
+					change_culture = rus_kievan
+					change_original_culture = rus_kievan
+				}
+				if = {
+					limit = {
+						4115 = {
+							culture = kievan
+						}
+					}
+					4115 = {
+						change_culture = rus_kievan
+						change_original_culture = rus_kievan
+					}
+				}
+			}
+		}
+	}
+	hlm_civilize_southern_slavs = {
+		icon = mission_hlm_civilize_southern_slavs
+		position = 10
+		required_missions = { hlm_a_second_revolution }
+		provinces_to_highlight = {
+			OR = {
+				area = minsk_area
+				area = west_dniepr_area
+				province_id = 4545
+				province_id = 1941
+			}
+			NOT = { development = 10 }
+		}
+		trigger = {
+			minsk_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+				development = 10
+			}
+			west_dniepr_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+				development = 10
+			}
+			4545 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 10
+			}
+			1941 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 10
+			}
+		}
+		effect = { 
+			5055 = {
+				add_province_modifier = {
+					name = hlm_krupki_cloths
+					duration = -1
+				}
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+			}
+		}
+	}
+}
+
+holmgardr_3 = {
+	slot = 3
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		OR = {
+			tag = HLM
+			tag = RSH
+		}
+	}
+
+	hlm_far_from_home = {
+		icon = mission_hlm_far_from_home
+		position = 2
+		required_missions = { }
+		trigger = { 
+			num_of_allies = 3
+		}
+		effect = { 
+			custom_tooltip = hlm_10_trust_tt
+			hidden_effect = {
+				every_ally = {
+						ROOT = {
+							add_trust = {
+								who = PREV
+								value = 10
+								mutual = yes
+							}
+							add_favors = {
+								who = PREV
+								amount = 10
+							}
+						}
+				}
+			}
+		}
+	}
+	hlm_greater_holmgardr = {
+		icon = mission_hlm_greater_holmgardr
+		position = 3
+		required_missions = { hlm_far_from_home }
+		trigger = { 
+			total_development = 500
+		}
+		effect = { 
+			custom_tooltip = hlm_can_form_early_rsh_tt
+			add_country_modifier = {
+				name = hlm_selfreliant_diplomacy
+				duration = 7300
+			}
+			hidden_effect = {
+			set_country_flag = hlm_early_rsh
+			}
+		}
+	}
+	hlm_the_mongol_yoke = {
+		icon = mission_break_the_tatar_yoke
+		position = 6
+		required_missions = {  }
+		provinces_to_highlight = {
+			province_id = 300
+		}
+		trigger = { 
+			OR = {
+				is_rival = MOG
+				NOT = {
+					MOG = {
+					total_development = 100
+					}
+				}
+				has_spy_network_in = {
+					who = MOG
+					value = 50
+				}
+			}
+		}
+		effect = { 
+			smolensk_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			tver_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			white_ruthenia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			bryansk_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	hlm_free_the_slavs = {
+		icon = mission_hlm_free_the_slavs
+		position = 8
+		required_missions = { hlm_the_mongol_yoke }
+		provinces_to_highlight = {
+			culture = rusnok
+		}
+		trigger = { 
+			smolensk_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			white_ruthenia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			4249 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			294 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4248 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5092 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4244 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = { 
+			custom_tooltip = hlm_rusnok_freed_slavs_tt
+			russia_region = {
+					add_permanent_claim = ROOT
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+				}
+			hidden_effect = {
+				smolensk_area = {
+					limit = {
+						culture_group = west_mongol
+					}
+					change_culture = vyatih
+					if = {
+						limit = {
+							NOT = {
+								religion = norse_pagan_reformed
+							}
+						}
+						change_religion = slavic_religion
+					}
+				}
+				4249 = {
+					limit = {
+						culture_group = west_mongol
+					}
+					change_culture = vyatih
+					if = {
+						limit = {
+							NOT = {
+								religion = norse_pagan_reformed
+							}
+						}
+						change_religion = slavic_religion
+					}
+				}
+				294 = {
+					limit = {
+						culture_group = west_mongol
+					}
+					change_culture = vyatih
+					if = {
+						limit = {
+							NOT = {
+								religion = norse_pagan_reformed
+							}
+						}
+						change_religion = slavic_religion
+					}
+				}
+				4248 = {
+					limit = {
+						culture_group = west_mongol
+					}
+					change_culture = vyatih
+					if = {
+						limit = {
+							NOT = {
+								religion = norse_pagan_reformed
+							}
+						}
+						change_religion = slavic_religion
+					}
+				}
+				4246 = {
+					limit = {
+						culture_group = west_mongol
+					}
+					change_culture = vyatih
+					if = {
+						limit = {
+							NOT = {
+								religion = norse_pagan_reformed
+							}
+						}
+						change_religion = slavic_religion
+					}
+				}
+				5092 = {
+					limit = {
+						culture_group = west_mongol
+					}
+					change_culture = vyatih
+					if = {
+						limit = {
+							NOT = {
+								religion = norse_pagan_reformed
+							}
+						}
+						change_religion = slavic_religion
+					}
+				}
+				292 = {
+					limit = {
+						culture_group = west_mongol
+					}
+					change_culture = radimich
+					if = {
+						limit = {
+							NOT = {
+								religion = norse_pagan_reformed
+							}
+						}
+						change_religion = slavic_religion
+					}
+				}
+				5090 = {
+					limit = {
+						culture_group = west_mongol
+					}
+					change_culture = radimich
+					if = {
+						limit = {
+							NOT = {
+								religion = norse_pagan_reformed
+							}
+						}
+						change_religion = slavic_religion
+					}
+				}
+				4244 = {
+					limit = {
+						culture_group = west_mongol
+					}
+					change_culture = radimich
+					if = {
+						limit = {
+							NOT = {
+								religion = norse_pagan_reformed
+							}
+						}
+						change_religion = slavic_religion
+					}
+				}
+			}
+		}
+	}
+	hlm_expel_the_mongols = {
+		icon = mission_hlm_expel_the_mongols
+		position = 10
+		required_missions = { hlm_free_the_slavs }
+		provinces_to_highlight = {
+			OR = {
+				area = east_dniepr_area
+				area = chernigov_area
+				area = kharkorin_area
+				area = sloboda_ukraine_area
+				area = oka_area
+				area = ryazan_area
+				province_id = 297
+				province_id = 5093
+				province_id = 4251
+				province_id = 295
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+		trigger = {
+			east_dniepr_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			chernigov_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			kharkorin_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			sloboda_ukraine_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			oka_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			ryazan_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			297 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5093 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4251 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			295 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = { 
+			custom_tooltip = RSH_CULTURE_LEYSINGR
+			hidden_effect = {
+				east_dniepr_area = {
+					limit = {
+						culture_group = west_mongol
+					}
+					change_culture = radimich
+					if = {
+						limit = {
+							NOT = {
+								religion = norse_pagan_reformed
+							}
+						}
+						change_religion = slavic_religion
+					}
+				}
+				289 = {
+					limit = {
+						culture_group = west_mongol
+					}
+					change_culture = radimich
+					if = {
+						limit = {
+							NOT = {
+								religion = norse_pagan_reformed
+							}
+						}
+						change_religion = slavic_religion
+					}
+				}
+				5091 = {
+					limit = {
+						culture_group = west_mongol
+					}
+					change_culture = radimich
+					if = {
+						limit = {
+							NOT = {
+								religion = norse_pagan_reformed
+							}
+						}
+						change_religion = slavic_religion
+					}
+				}
+			}
+		}
+	}
+	hlm_ruslander_unity = {
+		icon = mission_hlm_ruslander_unity
+		position = 11
+		required_missions = { hlm_expel_the_mongols hlm_civilize_southern_slavs hlm_teach_the_fins }
+		provinces_to_highlight = {
+			all_owned_province = {
+				culture_group = rus_norse
+			}
+		}
+		trigger = { 
+			development_in_provinces = {
+				value = 1000
+				culture_group = rus_norse
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = hlm_ruslander_unity
+				duration = -1
+			}
+		}
+	}
+}
+
+holmgardr_4 = {
+	slot = 4
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		OR = {
+			tag = HLM
+			tag = RSH
+		}
+	}
+
+	hlm_the_eastern_bastion = {
+		icon = fortress_of_belgrade
+		position = 1
+		required_missions = {  }
+		trigger = { 
+			army_size_percentage = 0.85
+		}
+		effect = { 
+			pskov_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			luka_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			karelia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	hlm_founding_of_rurikov = {
+		icon = secure_the_republic
+		position = 2
+		required_missions = { hlm_the_eastern_bastion }
+		provinces_to_highlight = {
+			province_id = 33
+		}
+		trigger = { 
+			culture_group = rus_norse
+			33 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = { 
+			33 = {
+				change_province_name = "Rurikov"
+				rename_capital = "Rurikov"
+				change_culture = rus_gardariki
+				change_religion = norse_pagan_reformed
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+				add_center_of_trade_level = 1
+			}
+		}
+	}
+	hlm_contact_the_homeland = {
+		icon = mission_conquer_sweden
+		position = 4
+		required_missions = { hlm_no_match_for_us }
+		provinces_to_highlight = {
+			province_id = 1926
+		}
+		trigger = {
+			1926 = {
+				trade_share = {
+					country = ROOT
+					share = 10
+				}
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = hlm_norse_connections
+				duration = 5475
+			}
+		}
+	}
+	hlm_invite_norse_settlers = {
+		icon = mission_hlm_invite_norse_settlers
+		position = 5
+		required_missions = { hlm_contact_the_homeland }
+		trigger = { 
+			prestige = 50
+			estonia_ingria_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			livonia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			curonia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = {
+			custom_tooltip = RSH_CULTURE_LOGEYMENN
+			custom_tooltip = hlm_invited_settlers_10_dev_tt
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_owner_culture = yes
+							OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+						}
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+						
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+						
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+						
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+						
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+						
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+						
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+						
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+						
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+			}
+		}
+	}
+	hlm_window_of_opportunity = {
+		icon = mission_hlm_window_of_opportunity
+		position = 7
+		required_missions = { hlm_the_mongol_yoke }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2749
+				province_id = 1959
+				province_id = 312
+			}
+		}
+		trigger = {
+			OR = {
+				has_spy_network_in = {
+					who = SGO
+					value = 25
+				}
+				has_spy_network_in = {
+					who = SHI
+					value = 25
+				}
+				has_spy_network_in = {
+					who = BLO
+					value = 25
+				}
+				NOT = {
+					exists = SGO
+					exists = SHI
+					exists = BLO
+				}
+			}
+		}
+		effect = {
+			north_vepsia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			south_vepsia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			beloozero_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	hlm_vepsian_subjugation = {
+		icon = mission_hlm_vepsian_subjugation
+		position = 9
+		required_missions = { hlm_avenge_karelia }
+		provinces_to_highlight = {
+			OR = {
+				area = north_vepsia_area
+				area = south_vepsia_area
+				area = beloozero_area
+			}
+			NOT = { is_state_core = ROOT }
+		}
+		trigger = { 
+			north_vepsia_area = {
+				is_state_core = ROOT
+				type = all
+			}
+			south_vepsia_area = {
+				is_state_core = ROOT
+				type = all
+			}
+			beloozero_area = {
+				is_state_core = ROOT
+				type = all
+			}
+		}
+		effect = { 
+			custom_tooltip = RSH_CULTURE_VEPSIAN
+		}
+	}
+	hlm_teach_the_fins = {
+		icon = mission_hlm_teach_the_fins
+		position = 10
+		required_missions = { hlm_vepsian_subjugation hlm_end_karelian_domination }
+		provinces_to_highlight = {
+			OR = {
+				area = finland_area
+				area = bothnia_area
+			}
+			NOT = { is_state_core = ROOT }
+		}
+		trigger = { 
+			finland_area = {
+				is_state_core = ROOT
+				type = all
+			}
+			bothnia_area = {
+				is_state_core = ROOT
+				type = all
+			}
+		}
+		effect = { 
+			custom_tooltip = RSH_CULTURE_FIN
+		}
+	}
+}
+
+holmgardr_5 = {
+	slot = 5
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		OR = {
+			tag = HLM
+			tag = RSH
+		}
+	}
+
+	hlm_close_the_gap = {
+		icon = mission_hlm_close_the_gap
+		position = 2
+		required_missions = { hlm_the_eastern_bastion }
+		provinces_to_highlight = {
+			OR = {
+				area = pskov_area
+				area = luka_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+		trigger = { 
+			pskov_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			luka_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = { 
+			estonia_ingria_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			livonia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			curonia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	hlm_no_match_for_us = {
+		icon = mission_the_livonians
+		position = 3
+		required_missions = { hlm_close_the_gap }
+		provinces_to_highlight = {
+			OR = {
+				area = estonia_ingria_area
+				area = livonia_area
+				area = curonia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			estonia_ingria_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			livonia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			curonia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		 }
+		effect = { 
+			samogitia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			lithuania_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			finland_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			bothnia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	hlm_salty_ports = {
+		icon = mission_hlm_salty_ports
+		position = 5
+		required_missions = { hlm_contact_the_homeland }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 36
+				province_id = 274
+			}
+		}
+		trigger = { 
+			36 = {
+				culture = rus_logeymenn
+			}
+			274 = {
+				culture = rus_logeymenn
+			}
+		}
+		effect = { 
+			36 = {
+				change_trade_goods = salt
+				add_base_production = 2
+			}
+			274 = {
+				change_trade_goods = salt
+				add_base_production = 2
+			}
+		}
+	}
+	hlm_the_salt_trade = {
+		icon = mission_advance_to_the_dnieper
+		position = 6
+		required_missions = { hlm_salty_ports }
+		trigger = { 
+			1926 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = { 
+			36 = {
+				add_province_modifier = {
+					name = hlm_baltic_salt_port 
+					duration = -1
+				}
+				add_base_production = 3
+			}
+			add_mercantilism = 5
+			add_country_modifier = {
+				name = hlm_flourishing_salt_trade
+				duration = 9125
+			}
+		}
+	}
+	
+	
+	hlm_avenge_karelia = {
+		icon = mission_hlm_avenge_karelia
+		position = 8
+		required_missions = { hlm_window_of_opportunity }
+		provinces_to_highlight = {
+			OR = {
+				area = north_vepsia_area
+				area = south_vepsia_area
+				area = beloozero_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			north_vepsia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			south_vepsia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			beloozero_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		 }
+		effect = { 
+			south_karelia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			north_karelia = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			pomor_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	hlm_end_karelian_domination = {
+		icon = mission_hlm_end_karelian_domination
+		position = 9
+		required_missions = { hlm_avenge_karelia }
+		provinces_to_highlight = {
+			OR = {
+				area = north_karelia
+				area = south_karelia_area
+				area = pomor_area
+			}
+			NOT = { is_state_core = ROOT }
+		}
+		trigger = { 
+			north_karelia = {
+				is_state_core = ROOT
+				type = all
+			}
+			south_karelia_area = {
+				is_state_core = ROOT
+				type = all
+			}
+			pomor_area = {
+				is_state_core = ROOT
+				type = all
+			}
+		}
+		effect = { 
+			custom_tooltip = RSH_CULTURE_KVAENIR
+		}
+	}
+}
+
+rusirheim_1 = {
+	slot = 1
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		tag = RSH
+	}
+
+	rsh_the_varangians = {
+		icon = mission_the_varangians
+		position = 13
+		required_missions = { rsh_a_new_era }
+		trigger = { 
+			army_professionalism = 0.25
+		}
+		effect = { 
+			custom_tooltip = rsh_ruslander_huskarl_recruitment_tt
+			hidden_effect = {
+				unlock_government_reform = {
+				government_reform = ms_ruslander_huskarl_recruitment_reform
+				}
+			}
+		}
+	}
+	rsh_a_greek_holdout = {
+		icon = mission_rsh_a_greek_holdout
+		position = 14
+		required_missions = { rsh_the_varangians }
+		provinces_to_highlight = {
+			region = south_slavia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			south_slavia_region = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = { 
+			crimea_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			add_country_modifier = {
+				name = rsh_turning_the_tide
+				duration = 7300
+			}
+		}
+	}
+	rsh_fate_of_the_greeks = {
+		icon = mission_rsh_fate_of_the_greeks
+		position = 15
+		required_missions = { rsh_a_greek_holdout }
+		provinces_to_highlight = {
+			culture_group = bosporan_greek
+		}
+		trigger = { 
+			owns_all_provinces = {
+				culture_group = bosporan_greek
+			}
+		}
+		effect = { 
+			country_event = { id = ms_rusirheim.9 }
+		}
+	}
+	rsh_superior_ways = {
+		icon = mission_unite_scandinavia
+		position = 19
+		required_missions = { rsh_so_long_friend }
+		provinces_to_highlight = {
+			OR = {
+				area = norrland_area
+				area = northern_norway
+				area = western_norway
+				area = eastern_norway
+				area = vastra_gotaland_area
+				area = svealand_area
+				area = ostra_svealand_area
+				area = gotaland_area
+				area = skaneland_area
+				area = denmark_area
+				area = jutland_area
+			}
+		}
+		trigger = { 
+			norrland_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			northern_norway = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			western_norway = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			eastern_norway = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			vastra_gotaland_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			svealand_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			ostra_svealand_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			gotaland_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			skaneland_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			denmark_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			jutland_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+
+		}
+		effect = { 
+			custom_tooltip = RSH_CULTURE_THORPARAR
+		}
+	}
+	rsh_knowledge_of_the_west = {
+		icon = mission_plc_edict_education
+		position = 22
+		required_missions = {  }
+		trigger = { 
+			OR = {
+				adm = 4
+				dip = 4
+				mil = 4
+			}
+		}
+		effect = { 
+			custom_tooltip = rsh_visiting_the_west_tt
+		}
+	}
+	rsh_use_our_connections = {
+		icon = mission_rsh_use_our_connections
+		position = 23
+		required_missions = { rsh_knowledge_of_the_west }
+		trigger = {
+			has_institution = printing_press
+		 }
+		effect = { 
+			custom_tooltip = rsh_western_administrators_tt
+			change_innovativeness = 10
+		}
+	}
+}
+
+rusirheim_2 = {
+	slot = 2
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		tag = RSH
+	}
+
+	rsh_severoslavia_campaign = {
+		icon = mission_rsh_severoslavia_campaign
+		position = 14
+		required_missions = {  }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 43
+				province_id = 263
+				province_id = 262
+				province_id = 260
+			}
+		}
+		trigger = { 
+			if = {
+				limit = {
+					OR = {
+						exists = KSB
+						exists = SIL
+						exists = KRA
+						exists = POL
+					}
+				}
+				OR = {
+					has_spy_network_in = {
+						who = KSB
+						value = 25
+					}
+					has_spy_network_in = {
+						who = SIL
+						value = 25
+					}
+					has_spy_network_in = {
+						who = KRA
+						value = 25
+					}
+					has_spy_network_in = {
+						who = POL
+						value = 25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					exists = SEV
+				}
+				has_spy_network_in = {
+					who = SEV
+					value = 25
+				}
+			}
+			else = {
+
+			}
+		}
+		effect = { 
+			poland_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	rsh_norseslavic_hegemony = {
+		icon = mission_rsh_norseslavic_hegemony
+		position = 15
+		required_missions = { rsh_severoslavia_campaign }
+		provinces_to_highlight = {
+			region = poland_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			poland_region = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = { 
+			custom_tooltip = RSH_CULTURE_VALKYRJUR
+
+		}
+	}
+	rsh_no_one_to_match = {
+		icon = mission_rsh_no_one_to_match
+		position = 16
+		required_missions = { rsh_norseslavic_hegemony }
+		provinces_to_highlight = {
+			region = poland_region
+			culture_group = pagan_slavic
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 30
+				culture = rus_valkyrjur
+			}
+			poland_region = {
+				type = all
+				NOT = { culture = pagan_slavic }
+			}
+		}
+		effect = { 
+			add_power_projection = {
+				type = 25_permanent_power_projection
+				amount = 25
+			}
+		}
+	}
+	rsh_so_long_friend = {
+		icon = mission_rsh_so_long_friend
+		position = 18
+		required_missions = { rsh_no_holding_back }
+		provinces_to_highlight = {
+			OR = {
+				region = poland_region
+				region = baltic_region
+			}	
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			poland_region = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			baltic_region = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = { 
+			scandinavia_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	rsh_last_man_standing = {
+		icon = mission_rsh_last_man_standing
+		position = 20
+		required_missions = { rsh_superior_ways }
+		provinces_to_highlight = {
+			region = scandinavia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { culture_group = rus_norse }
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 30
+				region = scandinavia_region
+				culture = rus_thorparar
+			}
+		}
+		effect = { 
+			north_german_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			south_german_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			low_countries_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			carpathia_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	rsh_land_of_furs = {
+		icon = mission_rsh_the_land_of_furs
+		position = 23
+		required_missions = { rsh_ruslander_sjalfbyrgi }
+		provinces_to_highlight = {
+			trade_goods = fur
+			has_production_building_trigger = no
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				trade_goods = fur
+				has_production_building_trigger = yes
+				value = 25
+			}
+		}
+		effect = { 
+			add_years_of_income = 1
+		}
+	}
+	rsh_fur_monopoly = {
+		icon = mission_rsh_fur_monopoly
+		position = 24
+		required_missions = { rsh_land_of_furs }
+		provinces_to_highlight = {
+			owned_by = ROOT
+			trade_goods = fur
+		}
+		trigger = { 
+			trade_goods_produced_amount = {
+				trade_goods = fur
+				amount = 100
+			}
+		}
+		effect = { 
+				change_price = {
+				trade_goods = fur
+				key = rsh_rusirheim_fur_monopoly
+				value = 0.1
+				duration = -1
+			}
+		}
+	}
+}
+
+rusirheim_3 = {
+	slot = 3
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		tag = RSH
+	}
+
+	rsh_a_new_era = {
+		icon = mission_rsh_a_new_era
+		position = 12
+		required_missions = {  }
+		trigger = { 
+			is_great_power = yes
+		}
+		effect = { 
+			add_country_modifier = {
+				name = rsh_a_ruslander_era
+				duration = 36500
+			}
+		}
+	}
+	rsh_the_great_city = {
+		icon = mission_rsh_the_great_city
+		position = 13
+		required_missions = { rsh_a_new_era }
+		provinces_to_highlight = {
+			province_id = 300
+		}
+		trigger = { 
+			300 = {
+				development = 30
+				culture_group = rus_norse
+				has_trade_building_trigger = yes
+				has_production_building_trigger = yes
+				has_tax_building_trigger = yes
+				has_courthouse_building_trigger = yes
+			}
+		}
+		effect = { 
+			set_capital = 300
+			add_prestige = 50
+			300 = {
+				change_province_name = "Asgard"
+				rename_capital = "Asgard"
+				add_province_modifier = {
+					name = rsh_asgard
+					duration = -1
+				}
+			}
+		}
+	}
+	rsh_white_sea_campaign = {
+		icon = mission_found_arkhangelsk
+		position = 14
+		required_missions = {  }
+		provinces_to_highlight = {
+			region = ruthenia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			ruthenia_region = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = { 
+			white_sea_region = {
+					add_permanent_claim = ROOT
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+						is_empty = no
+					}
+				}
+		}
+	}
+	rsh_bjarmian_integration = {
+		icon = mission_rsh_bjarmian_integration
+		position = 15
+		required_missions = { rsh_white_sea_campaign }
+		provinces_to_highlight = {
+			region = white_sea_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			is_empty = no
+		}
+		trigger = { 
+			owns_all_provinces = {
+				region = white_sea_region
+				is_empty = no
+			}
+		}
+		effect = { 
+			custom_tooltip = RSH_CULTURE_BJARMIAN
+		}
+	}
+	rsh_ugric_assimilation = {
+		icon = prosper_in_piedmont
+		position = 16
+		required_missions = { rsh_bjarmian_integration }
+		provinces_to_highlight = {
+			OR = {
+				region = white_sea_region
+				region = ural_region
+			}
+			is_empty = no
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			white_sea_region = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+				is_empty = no
+			}
+			ural_region = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+				is_empty = no
+			}
+		}
+		effect = { 
+			custom_tooltip = RSH_CULTURE_RAUDR
+		}
+	}
+	rsh_no_holding_back = {
+		icon = mission_rsh_no_holding_back
+		position = 17
+		required_missions = {  }
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 50
+				OR = {
+					region = ural_region
+					region = white_sea_region
+					region = crimea_region
+				}
+			}
+		}
+		effect = { 
+			central_asia_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			west_siberia_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	rsh_a_united_people = {
+		icon = mission_rsh_a_united_people
+		position = 19
+		required_missions = { rsh_no_holding_back }
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {	
+				culture_group = rus_norse 
+				value = 250
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = rsh_a_united_people
+				duration = -1
+			}
+		}
+	}
+	rsh_pax_russica = {
+		icon = mission_rsh_pax_russica
+		position = 21
+		required_missions = { rsh_last_man_standing rsh_a_united_people rsh_pearl_of_the_east }
+		trigger = { 
+			total_development = 2500
+			army_size = 200
+			great_power_rank = 1
+		}
+		effect = { 
+			custom_tooltip = rsh_pax_russica_tt
+			hidden_effect = {
+				europe = {
+					add_permanent_claim = ROOT
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+						is_wasteland = no
+						is_sea = no
+					}
+				}
+				asia = {
+					add_permanent_claim = ROOT
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+						is_wasteland = no
+						is_sea = no
+					}
+				}
+				set_country_flag = rsh_puppet_kingdoms
+			}
+			
+		}
+	}
+	rsh_ruslander_sjalfbyrgi = {
+		icon = mission_pol_develop_countryside
+		position = 22
+		required_missions = {  }
+		trigger = { 
+			has_reform = rsh_ruslander_sjalfbyrgi
+		}
+		effect = { 
+			add_country_modifier = {
+				name = rsh_institutionalizing_sjalfbyrgi
+				duration = 3650
+			}
+		}
+	}
+	rsh_prospecting_missions = {
+		icon = mission_rsh_prospecting_missions
+		position = 23
+		required_missions = { rsh_ruslander_sjalfbyrgi }
+		provinces_to_highlight = {
+			OR = {
+				superregion = tartary_superregion
+				superregion = eastern_europe_superregion
+			}
+			owned_by = ROOT
+		}
+		trigger = { 
+			advisor = natural_scientist
+			num_of_owned_provinces_with = {	
+				OR = {
+					trade_goods = grain
+					trade_goods = livestock
+					trade_goods = fish
+					trade_goods = fur
+					trade_goods = wool
+					trade_goods = naval_supplies
+					trade_goods = horses
+				}
+				base_production = 3
+				value = 5
+			}
+		}
+		effect = {
+			custom_tooltip = rsh_prospecting_mission_tt
+			hidden_effect = {
+				random_owned_province = { 
+					limit = {
+						OR = {
+							trade_goods = grain
+							trade_goods = livestock
+							trade_goods = fish
+							trade_goods = fur
+							trade_goods = wool
+							trade_goods = naval_supplies
+							trade_goods = horses
+						}
+						is_state_core = ROOT
+						base_production = 3
+					}
+					change_trade_goods = iron
+				}
+				random_owned_province = { 
+					limit = {
+						OR = {
+							trade_goods = grain
+							trade_goods = livestock
+							trade_goods = fish
+							trade_goods = fur
+							trade_goods = wool
+							trade_goods = naval_supplies
+							trade_goods = horses
+						}
+						is_state_core = ROOT
+						base_production = 3
+					}
+					change_trade_goods = iron
+				}
+				random_owned_province = { 
+					limit = {
+						OR = {
+							trade_goods = grain
+							trade_goods = livestock
+							trade_goods = fish
+							trade_goods = fur
+							trade_goods = wool
+							trade_goods = naval_supplies
+							trade_goods = horses
+						}
+						is_state_core = ROOT
+						base_production = 3
+					}
+					change_trade_goods = iron
+				}
+				random_owned_province = { 
+					limit = {
+						OR = {
+							trade_goods = grain
+							trade_goods = livestock
+							trade_goods = fish
+							trade_goods = fur
+							trade_goods = wool
+							trade_goods = naval_supplies
+							trade_goods = horses
+						}
+						is_state_core = ROOT
+						base_production = 3
+					}
+					change_trade_goods = copper
+				}
+				random_owned_province = { 
+					limit = {
+						OR = {
+							trade_goods = grain
+							trade_goods = livestock
+							trade_goods = fish
+							trade_goods = fur
+							trade_goods = wool
+							trade_goods = naval_supplies
+							trade_goods = horses
+						}
+						is_state_core = ROOT
+						base_production = 3
+					}
+					change_trade_goods = copper
+				}
+			}
+		}
+	}
+	rsh_ruslander_iron = {
+		icon = mission_rsh_ruslander_iron
+		position = 24
+		required_missions = { rsh_prospecting_missions }
+		provinces_to_highlight = {
+			owned_by = ROOT
+			trade_goods = iron
+			culture_group = rus_norse
+			OR = { 
+				NOT = { base_production = 5 } 
+				has_production_building_trigger = no 
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {	
+				culture_group = rus_norse 
+				trade_goods = iron
+				base_production = 5
+				has_production_building_trigger = yes
+				value = 10
+			}
+		}
+		effect = { 
+			custom_tooltip = hlm_random_development_iron_tt
+			hidden_effect = { 
+				random_owned_province = {
+					limit = {
+						culture_group = rus_norse
+						trade_goods = iron
+					}
+					add_base_production = 1 
+				}
+				random_owned_province = {
+					limit = {
+						culture_group = rus_norse
+						trade_goods = iron
+					}
+					add_base_production = 1 
+				}
+				random_owned_province = {
+					limit = {
+						culture_group = rus_norse
+						trade_goods = iron
+					}
+					add_base_production = 1 
+				}
+				random_owned_province = {
+					limit = {
+						culture_group = rus_norse
+						trade_goods = iron
+					}
+					add_base_production = 1 
+				}
+				random_owned_province = {
+					limit = {
+						culture_group = rus_norse
+						trade_goods = iron
+					}
+					add_base_production = 1 
+				}
+				random_owned_province = {
+					limit = {
+						culture_group = rus_norse
+						trade_goods = iron
+					}
+					add_base_production = 1 
+				}
+				random_owned_province = {
+					limit = {
+						culture_group = rus_norse
+						trade_goods = iron
+					}
+					add_base_production = 1 
+				}
+				random_owned_province = {
+					limit = {
+						culture_group = rus_norse
+						trade_goods = iron
+					}
+					add_base_production = 1 
+				}
+				random_owned_province = {
+					limit = {
+						culture_group = rus_norse
+						trade_goods = iron
+					}
+					add_base_production = 1 
+				}
+				random_owned_province = {
+					limit = {
+						culture_group = rus_norse
+						trade_goods = iron
+					}
+					add_base_production = 1 
+				}
+			}
+		}
+	}
+	rsh_economic_hegemon = {
+		icon = mission_rsh_economic_hegemon
+		position = 25
+		required_missions = { rsh_fur_monopoly rsh_ruslander_iron rsh_the_silk_capital }
+		trigger = { 
+			monthly_income = 500
+		}
+		effect = { 
+			add_country_modifier = {
+				name = rsh_economic_hegemony
+				duration = 18250
+			}
+		}
+	}
+}
+
+rusirheim_4 = {
+	slot = 4
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		tag = RSH
+	}
+
+	rsh_volga_campaign = {
+		icon = mission_rsh_volga_campaign
+		position = 14
+		required_missions = {  }
+		provinces_to_highlight = {
+			region = russia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			russia_region = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = { 
+			ural_region = {
+					add_permanent_claim = ROOT
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+				}
+		}
+	}
+	
+	rsh_volga_assimilation = {
+		icon = mission_rsh_volga_assimilation
+		position = 15
+		required_missions = { rsh_volga_campaign }
+		provinces_to_highlight = {
+			culture_group = volgaic
+		}
+		trigger = {
+			OR = {
+				owns_all_provinces = {
+					culture_group = volgaic
+				}
+				custom_trigger_tooltip = {
+					tooltip = rsh_no_volgaics_tt
+					NOT = {
+						exists = BSK
+						exists = NGT
+						exists = OSL
+						exists = MES
+						exists = MRY
+						exists = VIR
+						exists = ERZ
+						exists = MOK
+						exists = VSI
+					}
+				}
+			}
+		}
+		effect = { 
+			custom_tooltip = RSH_CULTURE_SKOGBUAR
+		}
+	}
+	rsh_urbanize_the_tribes = {
+		icon = mission_pol_tend_east
+		position = 16
+		required_missions = { rsh_volga_assimilation }
+		provinces_to_highlight = {
+			culture_group = volgaic
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 30
+				culture = rus_skogbuar
+			}
+		}
+		effect = { 
+			custom_tooltip = rsh_20_dev_skogbuar_tt
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						culture = rus_skogbuar
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture = rus_skogbuar
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture = rus_skogbuar
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture = rus_skogbuar
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture = rus_skogbuar
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture = rus_skogbuar
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture = rus_skogbuar
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture = rus_skogbuar
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture = rus_skogbuar
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture = rus_skogbuar
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture = rus_skogbuar
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture = rus_skogbuar
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture = rus_skogbuar
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture = rus_skogbuar
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture = rus_skogbuar
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture = rus_skogbuar
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture = rus_skogbuar
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture = rus_skogbuar
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture = rus_skogbuar
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						culture = rus_skogbuar
+					}
+					random_list = {
+								40 = { add_base_tax = 1 } 
+								30 = { add_base_production = 1 } 
+								30 = { add_base_manpower = 1 } 
+					}
+				}
+			}
+		}
+	}
+	rsh_go_east_young_man = {
+		icon = mission_extent_yasak_to_the_east
+		position = 18
+		required_missions = { rsh_no_holding_back }
+		trigger = { 
+			development_in_provinces = {
+				value = 1000
+				culture_group = rus_norse
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = rsh_land_of_promise
+				duration = -1
+			}
+		}
+	}
+	rsh_pearl_of_the_east = {
+		icon = mission_amur_acquisition
+		position = 20
+		required_missions = { rsh_central_asian_campaign }
+		provinces_to_highlight = {
+			region = manchuria_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			manchuria_region = {
+				owned_by = ROOT
+				type = all
+			}
+		}
+		effect = { 
+			custom_tooltip = RSH_CULTURE_SAMFELAGSMENN
+		}
+	}
+	rsh_fund_weaveries = {
+		icon = ned_cloth_trading
+		position = 23
+		required_missions = { rsh_ruslander_sjalfbyrgi }
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			trade_goods = wool
+			NOT = { base_production = 6 }
+		} 
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 5
+				trade_goods = wool
+				base_production = 6
+			}
+		} 
+		effect = {  
+			swap_trade_good_for_max_provinces = {
+				max = 5
+				original = wool
+				new = cloth
+				tooltip = hlm_funded_weaveries_tt
+				trigger = "
+					base_production = 6
+				"
+			}
+		}
+	}
+	rsh_the_silk_capital = {
+		icon = mission_rsh_the_silk_capital
+		position = 24
+		required_missions = { rsh_fund_weaveries }
+		provinces_to_highlight = {
+			province_id = 464
+		}
+		
+		trigger = {
+			464 = {
+				base_production = 10
+				has_production_building_trigger = yes
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		effect = {
+			464 = {
+				change_trade_goods = silk
+			}
+			464 = {
+				add_province_modifier = {
+					name = rsh_rusir_silk
+					duration = -1
+				}
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+			}
+		}
+	}
+}
+
+rusirheim_5 = {
+	slot = 5
+	generic = no
+	has_country_shield = yes
+	ai = yes
+	potential = {
+		tag = RSH
+	}
+
+	rsh_the_hestridandi = {
+		icon = mission_recruit_the_cossacks
+		position = 13
+		required_missions = { rsh_a_new_era }
+		trigger = { 
+			estate_loyalty = {
+				estate = estate_hestridandi
+				loyalty = 70
+			}
+		}
+		effect = { 
+			custom_tooltip = rsh_establishment_of_hestridandi_tt
+			crimea_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			hidden_effect = {
+				set_country_flag = can_establish_hestridandi
+			}
+		}
+	}
+	rsh_tame_the_east = {
+		icon = mission_rsh_tame_the_east
+		position = 14
+		required_missions = { rsh_the_hestridandi }
+		provinces_to_highlight = {
+			OR = {
+				region = crimea_region
+				region = ural_region
+			}
+			culture_group = western_turkic
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			crimea_region = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+				culture_group = western_turkic
+			}
+			ural_region = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+				culture_group = western_turkic
+			}
+		}
+		effect = { 
+			custom_tooltip = RSH_CULTURE_TATAR
+		}
+	}
+	rsh_tatar_expulsions = {
+		icon = mission_tatar_tribes
+		position = 15
+		required_missions = { rsh_tame_the_east }
+		provinces_to_highlight = {
+			OR = {
+				region = crimea_region
+				region = ural_region
+			}
+			culture_group = western_turkic
+		}
+		trigger = { 
+			ural_region = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+				NOT = { culture_group = western_turkic }
+			}
+			crimea_region = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+				NOT = { culture_group = western_turkic }
+			}
+		}
+		effect = { 
+			custom_tooltip = rsh_resettle_the_steppe_tt
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+						OR = {
+							region = crimea_region
+							region = ural_region
+						}
+						has_terrain = steppe
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+						OR = {
+							region = crimea_region
+							region = ural_region
+						}
+						has_terrain = steppe
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+						OR = {
+							region = crimea_region
+							region = ural_region
+						}
+						has_terrain = steppe
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+						OR = {
+							region = crimea_region
+							region = ural_region
+						}
+						has_terrain = steppe
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+						OR = {
+							region = crimea_region
+							region = ural_region
+						}
+						has_terrain = steppe
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+						OR = {
+							region = crimea_region
+							region = ural_region
+						}
+						has_terrain = steppe
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+						OR = {
+							region = crimea_region
+							region = ural_region
+						}
+						has_terrain = steppe
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+						OR = {
+							region = crimea_region
+							region = ural_region
+						}
+						has_terrain = steppe
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+						OR = {
+							region = crimea_region
+							region = ural_region
+						}
+						has_terrain = steppe
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
+						OR = {
+							region = crimea_region
+							region = ural_region
+						}
+						has_terrain = steppe
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+		}
+	}
+	rsh_central_asian_campaign = {
+		icon = mission_rsh_central_asian_campaign
+		position = 19
+		required_missions = { rsh_go_east_young_man }
+		provinces_to_highlight = {
+			region = central_asia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 40
+				region = central_asia_region
+			}
+		}
+		effect = { 
+			mongolia_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			manchuria_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			custom_tooltip = rsh_setting_up_hestridandi_tt
+		}
+	}
+	rsh_monopolize_trade = {
+		icon = mission_rsh_monopolize_trade
+		position = 22
+		required_missions = {  }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 310
+				province_id = 280
+				province_id = 300
+				province_id = 1652
+				province_id = 1082
+				province_id = 1322
+				province_id = 464
+			}
+		}
+		trigger = { 
+			310 = {
+				is_strongest_trade_power = ROOT
+			}
+			280 = {
+				is_strongest_trade_power = ROOT
+			}
+			300 = {
+				is_strongest_trade_power = ROOT
+			}
+			1652 = {
+				is_strongest_trade_power = ROOT
+			}
+			1082 = {
+				is_strongest_trade_power = ROOT
+			}
+			1322 = {
+				is_strongest_trade_power = ROOT
+			}
+			464 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = rsh_monopolized_trade
+				duration = 18250
+			}
+		}
+	}
+	rsh_never_again = {
+		icon = mission_peasantry
+		position = 23
+		required_missions = { rsh_monopolize_trade }
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				trade_goods = grain
+				trade_goods = livestock
+				trade_goods = fish
+			}
+		}
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					trade_goods = grain
+					trade_goods = livestock
+					trade_goods = fish
+				}
+				value = 100
+			}
+		}
+		effect = { 
+			custom_tooltip = rsh_never_again_tt
+		}
+	}
+}
+

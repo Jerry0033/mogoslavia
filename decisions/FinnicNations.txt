@@ -1,0 +1,249 @@
+country_decisions = {
+	form_vesivesi = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_vesivesi_flag }
+			OR = {
+				primary_culture = mordvin
+				primary_culture = meschera
+				primary_culture = mari
+				primary_culture = merya
+			}
+		}
+		provinces_to_highlight = {
+			culture_group = volgaic
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		allow = {
+			is_nomad = no
+			is_subject = no
+			is_at_war = no
+			
+			adm_tech = 10
+			owns_all_provinces = {
+				culture_group = volgaic
+			}
+		}
+		effect = {
+			change_tag = VSI
+			custom_tooltip = empty_line_tt
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			restore_country_name_effect = yes
+			custom_tooltip = empty_line_tt
+			set_government_rank = 2
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+			set_country_flag = formed_vesivesi_flag
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	form_kalevala = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_kalevala_flag }
+			OR = {
+				primary_culture = finnish
+				primary_culture = karelian
+				primary_culture = sapmi
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 27
+				province_id = 33
+				province_id = 315
+				province_id = 1776
+				province_id = 5106
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		allow = {
+			is_nomad = no
+			is_subject = no
+			is_at_war = no
+			
+			adm_tech = 10
+			owns_core_province = 27
+			owns_core_province = 33
+			owns_core_province = 315
+			owns_core_province = 1776
+			owns_core_province = 5106
+		}
+		effect = {
+			change_tag = KLV
+			custom_tooltip = empty_line_tt
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			restore_country_name_effect = yes
+			custom_tooltip = empty_line_tt
+			ruthenia_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			set_government_rank = 2
+			if = {
+				limit = {
+					is_revolutionary = no
+				}
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+			set_country_flag = formed_kalevala_flag
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	form_vepsia = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_vepsia_flag }
+			primary_culture = vepsian
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = north_vepsia_area
+				area = south_vepsia_area
+				area = beloozero_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		allow = {
+			is_nomad = no
+			is_subject = no
+			is_at_war = no
+			south_vepsia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			north_vepsia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			beloozero_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = {
+			change_tag = VEP
+			custom_tooltip = empty_line_tt
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			restore_country_name_effect = yes
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+			set_country_flag = formed_vepsia_flag
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	form_hyperborea = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_hyperborea_flag }
+			OR = {
+				tag = VSI
+				tag = KLV
+				tag = VEP
+			}
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { culture_group = finnic }
+			NOT = { culture_group = volgaic }		
+		}
+		allow = {
+			is_nomad = no
+			is_subject = no
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 30
+				OR = {
+					culture_group = finnic
+					culture_group = volgaic
+				}
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = HYP
+			custom_tooltip = empty_line_tt
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			restore_country_name_effect = yes
+			custom_tooltip = empty_line_tt
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture_group = finnic
+						culture_group = volgaic
+					}
+				}
+				change_culture = ROOT
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+			set_country_flag = formed_hyperborea_flag
+			add_prestige = 50
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

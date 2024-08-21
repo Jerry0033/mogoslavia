@@ -1,0 +1,26 @@
+spriteTypes = {
+	spriteType = {
+		name = "government_reform_semi_nomadic_tribe"
+		texturefile = "gfx//interface//government_reforms//semi_nomadic_tribe.dds"
+	}
+	spriteType = {
+		name = "government_reform_mogoslav_kingdom"
+		texturefile = "gfx//interface//government_reforms//mogoslav_kingdom.dds"
+	}
+	spriteType = {
+		name = "government_reform_norseslavic_army"
+		texturefile = "gfx//interface//government_reforms//norseslavic_army.dds"
+	}
+	spriteType = {
+		name = "government_reform_sjalfbyrgi"
+		texturefile = "gfx//interface//government_reforms//sjalfbyrgi.dds"
+	}
+	spriteType = {
+		name = "government_reform_rsh_hestridandi"
+		texturefile = "gfx//interface//government_reforms//rsh_hestridandi.dds"
+	}
+	spriteType = {
+		name = "government_reform_ms_westernized_administration_reform"
+		texturefile = "gfx//interface//government_reforms//ms_westernized_administration_reform.dds"
+	}
+}

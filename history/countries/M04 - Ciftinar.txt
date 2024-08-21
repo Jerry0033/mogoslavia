@@ -1,0 +1,21 @@
+government = tribal
+add_government_reform = ms_semi_nomadic_tribe
+government_rank = 1
+technology_group = west_mongol_group
+religion = tengri_pagan_reformed
+capital = 4542
+primary_culture = ciftci
+historical_rival = M01
+historical_rival = M02
+1444.11.11 = { 
+	monarch = { 
+		name = "Boroghul"
+		dynasty = "Tuganiin"
+		adm = 2
+		dip = 2
+		mil = 4
+		birth_date = 1411.01.07
+		death_date = 1445.01.01
+	}
+}
+

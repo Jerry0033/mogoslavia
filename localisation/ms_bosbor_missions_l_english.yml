@@ -1,0 +1,133 @@
+﻿l_english:
+
+ bsb_barbarian_threat_title:0 "The barbarian threat"
+ bsb_barbarian_threat_desc:0 "The barbarians have become disunited again after the death of the last Mongol khan. This is our change to put a stop on the constant raiding and pilaging. We must take this opportunity and destroy the barbarian threat once and for all."
+
+ bsb_centralize_taurica_title:0 "Centralize Taurica"
+ bsb_centralize_taurica_desc:0 "Taurica will be our main staging ground to destroy the barbarians. This is why we must unite this region first before we attack the them."
+
+ bsb_prepare_staging_grounds_title:0 "Prepare the staging grounds"
+ bsb_prepare_staging_grounds_desc:0 "The staging grounds must have sufficant resources to support our troops and they need to be able to supply them while they invade the barbarians. This is why we must develop the infrastructure in these regions"
+
+ bsb_northern_campaign_title:0 "The Northern Campaign"
+ bsb_northern_campaign_desc:0 "The Northern Campaign will be the most important campaign that we will be doing. The Polovi and the Cumanie tribes will be our main targets. It will give Taurica a buffer zone against future attacks from outside forces."
+
+ bsb_mongoslav_menace_title:0 "Fortify against Mongoslav"
+ bsb_mongoslav_menace_desc:0 "A new threat has arisen from the north. The Mogoslav khanate has united the northern tribes. At this moment we are not strong enough to chalange this threat. This is why we must take a defensive stance at our border and monitor it for any mogoslav incursion"
+
+ bsb_our_final_strugle_title:0 "Our Final Strugle"
+ bsb_our_final_strugle_desc:0 "The time has come to decide who will be forgotten and who will be remembered in the history books. Our final strugle will begin now against the mogoslav horde."
+
+ bsb_burn_tula_title:0 "Burn Orosordus"
+ bsb_burn_tula_desc:0 "We have been victorious in our strugle. We will burn Orosordus, the capital of the mogoslavs, to the ground and take there riches back home and show our fellow Greeks that we were victorious."
+
+ bsb_the_question_title:0 "Governance in the north"
+ bsb_the_question_desc:0 "With our recent conquests the question of governance of the new terotories has come to our attention. The senate has been divided on how to handle this. The Tanai faction wants direct control from the central gouverment in the new tertories. While the Liberty factions wants a less direct way of governing in these regions. The fate of this region will be in the hands of the Council"
+
+ bsb_empire_title:0 "Our own Empire"
+ bsb_empire_desc:0 "With the recent wars we fought we have gained massive amounts of wealth and prestige. We also carved a place in the sun for our own and expanded our trading empire far and wide. With this amount of influence we will expand futher and may even become greater than the empire of Alexander."
+
+ bsb_consoledate_anatolia_title:0 "Consoledate Anatolia"
+ bsb_consoledate_anatolia_desc:0 "We must consoledate the Anatolian region before we expand further. It will be our frontline against the Persians and Egyptians."
+
+ bsb_phonaxian_states_title:0 "Conquer Phonaxia"
+ bsb_phonaxian_states_desc:0 "The fractured Phonaxian states will be easy pickings for our empire to conquer. their wealthy provinces will fill our covers for future campaigns"
+
+ bsb_secure_granary_title:0 "Secure the great granary"
+ bsb_secure_granary_desc:0 "The Egyptian Nile delta has been the most furtile region since anciant times and has been considerd the bread basket of the Mediterranean. With this region secured our food suplies will never be in danger again."
+
+ bsb_recover_war_title:0 "Challenge the Macedonians"
+ bsb_recover_war_desc:0 "We have been in conflict with the Macedonians since the existance of our nation began. At first they helped us rebel against our tyranical king but soon enough they showed there true desires. To wanted to make us a puppet state under their wing but we fought against this idea. We will never stand for this and we will fight for our freedom even if it will destroy our nation."
+
+ bsb_pontic_coast_title:0 "Recover the Pontic Coast"
+ bsb_pontic_coast_desc:0 "We will recover the Pontic Coast and free these people from Macedonian tyranny."
+
+ bsb_protect_pontus_title:0 "Protect Pontus"
+ bsb_protect_pontus_desc:0 "The state of Pontus has been fighting the Macedonians for years. We will not allow them to fall and we will support them in every way possible."
+
+ bsb_bospborus_sea_title:0 "Get acces to the Aegan Sea"
+ bsb_bospborus_sea_desc:0 "We will conquer the Bosphorus straits and get acces to the Aegan Sea without paying any toll to any other foreign power."
+
+ bsb_macedonian_heartlands_title:0 "Macedonian heartland"
+ bsb_macedonian_heartlands_desc:0 "With the major defeats of the Macedonians their homeland is wide open. We shall march into the Macedonian heartland and end them ones and for all."
+
+ bsb_revenge_macadonian_title:0 "Revenge for 1436"
+ bsb_revenge_macadonian_desc:0 "With the Macedonians destroyed we have avenged the costly Macedonian war of 1436. We shall take there riches back home and leave this region barren so the Macedonian will never come back and threaten us."
+
+ bsb_learn_counter_title:0 "Counter the step nomads"
+ bsb_learn_counter_desc:0 "The step nomdas mostly fight on horse back. We must find a way to counter this way of fighting if we want to beat them on the battlefield."
+
+ bsb_olbian_marines_title:0 "Create the Olbian Marines"
+ bsb_olbian_marines_desc:0 "The Olbain Marines will be a unit of soldiers who are specialized in attacking cities from the sea. They will be our most prized and elite unit in our army"
+
+ bsb_guns_title:0 "Modern artillery warfare"
+ bsb_guns_desc:0 "The artillery gun has changed modern warfare immensely. We need to learn how to use it most effectively in our army to win from our enemies"
+
+ bsb_western_cities_title:0 "The western cities"
+ bsb_western_cities_desc:0 "We must stand united with the western cities before we will begin with our great campaigns. They will play crucial rolles in the wars that will come."
+
+ bsb_the_bank_title:0 "The bank of Cheronesus"
+ bsb_the_bank_desc:0 "The merchants of Cheronesus have begon lending and investing money with other merchants. This has been very profitable for them and brought immense wealth to the region. If we give them gouverment support they will also bring us immense wealth."
+
+ bsb_western_campaign_title:0 "The Western Campaign"
+ bsb_western_campaign_desc:0 "The tiverian tribes may have taken over our gods put there stil barbarians who need to be civilized. We shall help them in this process"
+
+ bsb_lower_danube_title:0 "Secure the lower Danube"
+ bsb_lower_danube_desc:0 "The lower Danube is a very fertile region that can be easily developed. It's also our acces point into the trade of eastern Germania"
+
+ bsb_assimalte_slavs_title:0 "Assimalte the Slavs"
+ bsb_assimalte_slavs_desc:0 "The Slavs under our reign have taken over our customs and religion. You might not even call them slavs anymore. Many memebers of the senate have talked about the idea of giving them citizenship and giving them a seat in our senate."
+
+ bsb_challenge_italians_title:0 "Challenge the Italians"
+ bsb_challenge_italians_desc:0 "The Italians have been gaining alot of strenght and wealth. If we want to keep our position in the Mediterranean we must put a end to this before they grow even stronger."
+
+ bsb_republicanism_rome_title:0 "Republicanism back in Rome"
+ bsb_republicanism_rome_desc:0 "With our victory over the Italians, the old Republican traditions have returned back to Rome. Because of this the Italians have accepted us not as conquerors but as liberators bringing back liberty and demorcracy "
+
+ bsb_align_khazars_title:0 "Align the Khazars"
+ bsb_align_khazars_desc:0 "The Khazars have always been great allies of us and a way for us to gain acces into the markets of the steps. We must strengten this relationship with them before we begin our campaigns."
+
+ bsb_eastern_campaign_title:0 "The Eastern Campaign"
+ bsb_eastern_campaign_desc:0 "The Eastern Campaign will the most important campaign for our objective. In the east the most barbaric tribes live. If we defeat these tribes our homeland will never be threatened by barbarians again."
+
+ bsb_destroy_gengis_title:0 "Destroy the last Gengis"
+ bsb_destroy_gengis_desc:0 "With this victory we have snuffed out the last major remnants of the Empire of Gengis Khan and put a stop to the nomadic raids ones and for all."
+
+ bsb_city_tanais_title:0 "Resetle the city of Tanais"
+ bsb_city_tanais_desc:0 "The old city of Tanais was destroyed in the great Mongol invasion. But because of our recent victories the location were the old city and the area around it have been fairly safe. Because of this thousands of Greek setlers have arrived here to make it there new home. If we give them government support it may increase the wealth in this area."
+
+ bsb_bring_civilization_title:0 "Civilize the nomads"
+ bsb_bring_civilization_desc:0 "The conquerded nomadic tribes that stayed behind after our campaigns are begining to take over some of our costums. With the help of the Khazars as a middle man we can teach these tribes how to be civilized and assimilate them into our society."
+
+ bsb_protect_armenia_title:0 "Protect Armenia"
+ bsb_protect_armenia_desc:0 "The Armenian people have always been opressed by the empires around them. This is why it's our duty to free them from there opressers and give them protection and liberty."
+
+ bsb_persian_trade_title:0 "Monopolies Persian trade"
+ bsb_persian_trade_desc:0 "The lucrative trade from the Persian area have always peaked our interesse. With the disunited state of there empire we have gained a opportune time to take that wealth from them."
+
+ bsb_develop_theodosia_title:0 "Develop Theodosia"
+ bsb_develop_theodosia_desc:0 "The great city of Theodosia has always been a hub for commercie in this area. With to prostpect of wealth the city has grown immensely. Because of this we need to expand and develop our city to accompany all of these people."
+
+ bsb_allow_norse_title:0 "Allow Norse settlers"
+ bsb_allow_norse_desc:0 "We have relied on Norse warriors for years now. Some of these warriors bring there families with them and settle in our cities. If we make our country more accepting for these warriors it will be a great benefit for our campaigns."
+
+ bsb_naval_academy_title:0 "Naval academy of Theodosia"
+ bsb_naval_academy_desc:0 "The naval academy of Theodosia was build in 1389 as a respons to the other powers around us who are threatening us. Over the years it has grown a lot, but the need for professional admirals has grown to. We need to subsidise and expand the academy if we want to keep ruling the waves."
+
+ bsb_printing_press_title:0 "Encourage the printing press"
+ bsb_printing_press_desc:0 "The new invention of the printing press has spread around the greek world like fire. We can use this invention to further our goals to become wealther."
+
+ bsb_caucasian_mountians_title:0 "The Caucasian Resources"
+ bsb_caucasian_mountians_desc:0 "The Caucasian Mountains have always been full of resources. The only thing was that the tribes around it didn't know how to mine these resources. With our expertise and their manpower we can become immensely wealthy from these mountains."
+
+ bsb_the_center_title:0 "Center of the Greek world"
+ bsb_the_center_desc:0 "With all the riches that we have gained from our recent conquests, our capital has become the centor of the Greek world. Theodosia has become the city of the world's desire"
+
+ bsb_rebuild_trade_fleet_title:0 "Rebuild the trade fleet"
+ bsb_rebuild_trade_fleet_desc:0 "Our ones great trading fleet has been in decay for years now. It's time to modernise and expand this fleet to bring the riches of the world to our ports and cities."
+
+ bsb_bosborian_trade_title:0 "Revitalize Bosporian trade"
+ bsb_bosborian_trade_desc:0 "With the expansion of our trading fleet the trade in the Bospor region has risen immensely. If we don't take action and expand our trade, we will lose this wealth in the future. "
+
+ bsb_riches_east_title:0 "Riches of the east"
+ bsb_riches_east_desc:0 "With all the trade that is flowing into our cities we have tasted how good the goods of the east are. The upper class in our sociaty is demanding that we import more from the east and think about ways to make some of these goods ourselves."

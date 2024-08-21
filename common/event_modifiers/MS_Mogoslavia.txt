@@ -1,0 +1,69 @@
+mog_mogoslav_show_our_presence = {
+    land_morale = 0.1
+}
+mog_lifelong_soldiers = {
+    drill_decay_modifier = -0.25
+}
+mog_safe_pastures = {
+    province_trade_power_modifier = 0.1
+}
+mog_mogoslav_war_horses  = {
+    cavalry_power = 0.1
+}
+mog_capital_city  = {
+    local_development_cost = -0.2
+	local_tax_modifier = 0.1
+	local_production_efficiency = 0.1
+	local_manpower_modifier = 0.1
+}
+
+mog_common_goals_modifier = {
+    manpower_in_accepted_culture_provinces = 0.1
+}
+
+mog_finnic_assimilation2 = {
+    num_accepted_cultures = 2
+}
+mog_finnic_assimilation4 = {
+    num_accepted_cultures = 4
+}
+
+mog_tatar_assimilation1 = {
+    num_accepted_cultures = 1
+}
+mog_tatar_assimilation2 = {
+    num_accepted_cultures = 2
+}
+mog_tatar_assimilation4 = {
+    num_accepted_cultures = 4
+}
+mog_tatar_assimilation6 = {
+    num_accepted_cultures = 6
+}
+mog_turkic_assimilation6 = {
+    num_accepted_cultures = 6
+}
+mog_altaic_assimilation4 = {
+    num_accepted_cultures = 4
+}
+mog_slavic_assimilation6 = {
+    num_accepted_cultures = 6
+}
+mog_andral_zai = {
+    may_establish_frontier = yes
+}
+mog_pax_mongolica_modifier = {
+    administrative_efficiency = 0.1
+}
+mog_prestigious_dynasty = {
+    no_stability_loss_on_monarch_death = yes
+    prestige = 1
+    legitimacy = 1
+	diplomatic_reputation = 1
+}
+mog_anti_corruption_efforts = {
+    yearly_corruption = -0.10
+}
+mog_the_gentle_beast = {
+    ae_impact = -0.25
+}

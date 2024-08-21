@@ -1,0 +1,19 @@
+government = tribal
+add_government_reform = steppe_horde
+government_rank = 1
+technology_group = west_mongol_group
+religion = tengri_pagan_reformed
+primary_culture = pf_bashkir
+capital = 2444
+1444.11.11 = {
+	monarch = {
+		name = "Celal"
+		dynasty = "Kaptan"
+		adm = 6
+		dip = 1
+		mil = 5
+		birth_date = 1411.09.04
+		death_date = 1445.01.01
+	}
+}
+

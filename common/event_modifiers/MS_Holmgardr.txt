@@ -1,0 +1,46 @@
+hlm_selfreliant_diplomacy = {
+    diplomatic_reputation = 1
+    improve_relation_modifier = 0.2
+}
+hlm_norse_connections = {
+    global_trade_power = 0.15
+}
+hlm_flourishing_salt_trade = {
+    trade_efficiency = 0.1
+}
+hlm_we_are_one_people = {
+    local_development_cost_modifier = -0.2
+}
+hlm_baltic_salt_port = {
+    trade_goods_size_modifier = 0.25
+    province_trade_power_modifier = 0.1
+}
+hlm_gem_of_the_east = {
+    local_tax_modifier = 0.25
+	local_manpower_modifier = 0.25
+	local_production_efficiency = 0.25
+}
+hlm_gorodoki_dyes = {
+    local_production_efficiency = 0.25
+	trade_goods_size_modifier = 0.25
+}
+hlm_rurikid_supremacy = {
+    diplomatic_reputation = 1
+}
+hlm_krupki_cloths = {
+    local_production_efficiency = 0.25
+	trade_goods_size_modifier = 0.25
+}
+hlm_southern_capital = {
+    local_development_cost = -0.2
+	local_tax_modifier = 0.1
+	local_production_efficiency = 0.1
+	local_manpower_modifier = 0.1
+    local_governing_cost = -0.5
+}
+hlm_ruslander_unity = {
+    manpower_in_true_faith_provinces = 0.1
+}
+rsh_norseslavic_melting_pot = {
+    local_missionary_strength = 0.02
+}

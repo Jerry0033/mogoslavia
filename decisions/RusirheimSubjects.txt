@@ -1,0 +1,1054 @@
+country_decisions = {
+	establish_djupa_hestridandi = {
+    	major = yes
+		potential = {
+			NOT = {
+				has_country_flag = djupa_hestridandi
+			}
+			culture_group = rus_norse
+			religion = norse_pagan_reformed
+			has_country_flag = can_establish_hestridandi
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 287
+				province_id = 5074
+				province_id = 2414
+				province_id = 5075
+				province_id = 2447
+				province_id = 2195
+				province_id = 5082
+				province_id = 463
+			}
+		}
+		allow = {
+            owns = 287
+			owns = 5074
+			owns = 2414
+			owns = 5075
+			owns = 2447
+			owns = 2195
+			owns = 5082
+			owns = 463
+			is_at_war = no
+		}
+		effect = {
+            set_country_flag = djupa_hestridandi
+			HE1 = {
+				add_core = 287
+			}
+			release = HE1
+			HE1 = {
+				change_government = republic
+				add_government_reform = ms_rsh_hestridandi
+			}
+			287 = { cede_province = HE1 }
+			5074 = { cede_province = HE1 }
+			2414 = { cede_province = HE1 }
+			5075 = { cede_province = HE1 }
+			2447 = { cede_province = HE1 }
+			2195 = { cede_province = HE1 }
+			5082 = { cede_province = HE1 }
+			463 = { cede_province = HE1 }
+			create_subject = {
+                subject_type = ms_hestridandi
+                subject = HE1 
+            }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vatna_hestridandi = {
+    	major = yes
+		potential = {
+			NOT = {
+				has_country_flag = vatna_hestridandi
+			}
+			tag = RSH
+			culture_group = rus_norse
+			religion = norse_pagan_reformed
+			has_country_flag = can_establish_hestridandi
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 464
+				province_id = 5076
+				province_id = 468
+				province_id = 2416
+				province_id = 2417
+				province_id = 466
+				province_id = 5077
+				province_id = 5078
+			}
+		}
+		allow = {
+            owns = 464
+			owns = 5076
+			owns = 468
+			owns = 2416
+			owns = 2417
+			owns = 466
+			owns = 5077
+			owns = 5078
+			is_at_war = no
+		}
+		effect = {
+            set_country_flag = vatna_hestridandi
+			HE2 = {
+				add_core = 464
+			}
+	    	release = HE2
+            HE2 = {
+				change_government = republic
+				add_government_reform = ms_rsh_hestridandi
+			}
+			464 = { cede_province = HE2 }
+			5076 = { cede_province = HE2 }
+			468 = { cede_province = HE2 }
+			2416 = { cede_province = HE2 }
+			2417 = { cede_province = HE2 }
+			466 = { cede_province = HE2 }
+			5077 = { cede_province = HE2 }
+			5078 = { cede_province = HE2 }
+			create_subject = {
+                subject_type = ms_hestridandi
+                subject = HE2 
+            }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_fjall_hestridandi = {
+    	major = yes
+		potential = {
+			NOT = {
+				has_country_flag = fjall_hestridandi
+			}
+			tag = RSH
+			culture_group = rus_norse
+			religion = norse_pagan_reformed
+			has_country_flag = can_establish_hestridandi
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2208
+				province_id = 5081
+				province_id = 2197
+				province_id = 5080
+				province_id = 2201
+				province_id = 2198
+				province_id = 2199
+				province_id = 4306
+				province_id = 425
+			}
+		}
+		allow = {
+            owns = 2208
+			owns = 5081
+			owns = 2197
+			owns = 5080
+			owns = 2201
+			owns = 2198
+			owns = 2199
+			owns = 4306
+			owns = 425
+			is_at_war = no
+		}
+		effect = {
+            set_country_flag = fjall_hestridandi
+			HE3 = {
+				add_core = 2208
+			}
+	    	release = HE3
+            HE3 = {
+				change_government = republic
+				add_government_reform = ms_rsh_hestridandi
+			}
+			2208 = { cede_province = HE3 }
+			5081 = { cede_province = HE3 }
+			2197 = { cede_province = HE3 }
+			5080 = { cede_province = HE3 }
+			2201 = { cede_province = HE3 }
+			2198 = { cede_province = HE3 }
+			2199 = { cede_province = HE3 }
+			4306 = { cede_province = HE3 }
+			425 = { cede_province = HE3 }
+			create_subject = {
+                subject_type = ms_hestridandi
+                subject = HE3
+            }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_mark_hestridandi = {
+    	major = yes
+		potential = {
+			NOT = {
+				has_country_flag = mark_hestridandi
+			}
+			tag = RSH
+			culture_group = rus_norse
+			religion = norse_pagan_reformed
+			has_country_flag = can_establish_hestridandi
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2367
+				province_id = 469
+				province_id = 2365
+				province_id = 474
+				province_id = 2366
+				province_id = 470
+				province_id = 465
+				province_id = 472
+				province_id = 471
+			}
+		}
+		allow = {
+            owns = 2367
+            owns = 469
+            owns = 2365
+            owns = 474
+            owns = 2366
+            owns = 470
+			owns = 465
+			owns = 472
+			owns = 471
+			is_at_war = no
+		}
+		effect = {
+            set_country_flag = mark_hestridandi
+			HE4 = {
+				add_core = 2367
+			}
+	    	release = HE4
+            HE4 = {
+				change_government = republic
+				add_government_reform = ms_rsh_hestridandi
+			}
+			2367 = { cede_province = HE4 }
+			469 = { cede_province = HE4 }
+			2365 = { cede_province = HE4 }
+			474 = { cede_province = HE4 }
+			2366 = { cede_province = HE4 }
+			470 = { cede_province = HE4 }
+			465 = { cede_province = HE4 }
+			472 = { cede_province = HE4 }
+			471 = { cede_province = HE4 }
+			create_subject = {
+                subject_type = ms_hestridandi
+                subject = HE4
+            }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_lang_hestridandi = {
+    	major = yes
+		potential = {
+			NOT = {
+				has_country_flag = lang_hestridandi
+			}
+			tag = RSH
+			culture_group = rus_norse
+			religion = norse_pagan_reformed
+			has_country_flag = can_establish_hestridandi
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1973
+				province_id = 439
+				province_id = 443
+				province_id = 2370
+				province_id = 2349
+				province_id = 438
+				province_id = 437
+				province_id = 2362
+				province_id = 440
+				province_id = 441
+				province_id = 455
+			}
+		}
+		allow = {
+            owns = 1973
+            owns = 439
+            owns = 443
+            owns = 2370
+            owns = 2349
+            owns = 438
+			owns = 437
+            owns = 2362
+            owns = 440
+			owns = 441
+			owns = 455
+			is_at_war = no
+		}
+		effect = {
+            set_country_flag = lang_hestridandi
+			HE5 = {
+				add_core = 1973
+			}
+	    	release = HE5
+            HE5 = {
+				change_government = republic
+				add_government_reform = ms_rsh_hestridandi
+			}
+			1973 = { cede_province = HE5 }
+			439 = { cede_province = HE5 }
+			443 = { cede_province = HE5 }
+			2370 = { cede_province = HE5 }
+			2349 = { cede_province = HE5 }
+			438 = { cede_province = HE5 }
+			437 = { cede_province = HE5 }
+			2362 = { cede_province = HE5 }
+			440 = { cede_province = HE5 }
+			441 = { cede_province = HE5 }
+			455 = { cede_province = HE5 }
+			create_subject = {
+                subject_type = ms_hestridandi
+                subject = HE5
+            }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_gull_hestridandi = {
+    	major = yes
+		potential = {
+			NOT = {
+				has_country_flag = gull_hestridandi
+			}
+			tag = RSH
+			culture_group = rus_norse
+			religion = norse_pagan_reformed
+			has_country_flag = can_establish_hestridandi
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1967
+				province_id = 1969
+				province_id = 2363
+				province_id = 2356
+				province_id = 442
+				province_id = 453
+				province_id = 454
+				province_id = 4344
+				province_id = 4343
+				province_id = 457
+				province_id = 1968
+				province_id = 458
+				province_id = 460
+				province_id = 2364
+			}
+		}
+		allow = {
+            owns = 1967
+            owns = 1969
+            owns = 2363
+            owns = 2356
+            owns = 442
+			owns = 453
+            owns = 454
+            owns = 4344
+            owns = 4343
+            owns = 457
+            owns = 1968
+			owns = 458
+            owns = 460
+            owns = 2364
+			is_at_war = no
+		}
+		effect = {
+            set_country_flag = gull_hestridandi
+			HE6 = {
+				add_core = 1967
+			}
+	    	release = HE6
+            HE6 = {
+				change_government = republic
+				add_government_reform = ms_rsh_hestridandi
+			}
+			1967 = { cede_province = HE6 }
+			1969 = { cede_province = HE6 }
+			2363 = { cede_province = HE6 }
+			2356 = { cede_province = HE6 }
+			442 = { cede_province = HE6 }
+			453 = { cede_province = HE6 }
+			454 = { cede_province = HE6 }
+			4344 = { cede_province = HE6 }
+			457 = { cede_province = HE6 }
+			1968 = { cede_province = HE6 }
+			458 = { cede_province = HE6 }
+			460 = { cede_province = HE6 }
+			2364 = { cede_province = HE6 }
+			4343 = { cede_province = HE6 }
+			create_subject = {
+                subject_type = ms_hestridandi
+                subject = HE6
+            }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_lifvatn_hestridandi = {
+    	major = yes
+		potential = {
+			NOT = {
+				has_country_flag = lifvatn_hestridandi
+			}
+			tag = RSH
+			culture_group = rus_norse
+			religion = norse_pagan_reformed
+			has_country_flag = can_establish_hestridandi
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 476
+				province_id = 2351
+				province_id = 2353
+				province_id = 2352
+				province_id = 1970
+				province_id = 456
+				province_id = 2361
+				province_id = 2359
+				province_id = 477
+				province_id = 4685
+				province_id = 478
+				province_id = 2360
+				province_id = 2355
+				province_id = 2358
+			}
+		}
+		allow = {
+            owns = 476
+            owns = 2351
+            owns = 2353
+            owns = 2352
+            owns = 1970
+            owns = 456
+			owns = 2361
+            owns = 2359
+			owns = 477
+            owns = 4685
+			owns = 478
+			owns = 2360
+			owns = 2355
+			owns = 2358
+			is_at_war = no
+		}
+		effect = {
+            set_country_flag = lifvatn_hestridandi
+			HE7 = {
+				add_core = 476
+			}
+	    	release = HE7
+            HE7 = {
+				change_government = republic
+				add_government_reform = ms_rsh_hestridandi
+			}
+			476 = { cede_province = HE7 }
+			2351 = { cede_province = HE7 }
+			2353 = { cede_province = HE7 }
+			2352 = { cede_province = HE7 }
+			1970 = { cede_province = HE7 }
+			456 = { cede_province = HE7 }
+			2361 = { cede_province = HE7 }
+			2359 = { cede_province = HE7 }
+			477 = { cede_province = HE7 }
+			4685 = { cede_province = HE7 }
+			478 = { cede_province = HE7 }
+			2360 = { cede_province = HE7 }
+			2355 = { cede_province = HE7 }
+			2358 = { cede_province = HE7 }
+			create_subject = {
+                subject_type = ms_hestridandi
+                subject = HE7
+            }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_dalr_hestridandi = {
+    	major = yes
+		potential = {
+			NOT = {
+				has_country_flag = dalr_hestridandi
+			}
+			tag = RSH
+			culture_group = rus_norse
+			religion = norse_pagan_reformed
+			has_country_flag = can_establish_hestridandi
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 461
+				province_id = 459
+				province_id = 2368
+				province_id = 2126
+				province_id = 2125
+				province_id = 2118
+				province_id = 4684
+				province_id = 2119
+				province_id = 2120
+				province_id = 714
+				province_id = 4681
+				province_id = 4208
+				province_id = 715
+				province_id = 4683
+				province_id = 713
+			}
+		}
+		allow = {
+            owns = 461
+            owns = 459
+            owns = 2368
+            owns = 2126
+            owns = 2125
+            owns = 2118
+			owns = 4684
+            owns = 2119
+            owns = 2120
+            owns = 714
+            owns = 4681
+            owns = 4208
+			owns = 715
+			owns = 4683
+			owns = 713
+			is_at_war = no
+		}
+		effect = {
+            set_country_flag = dalr_hestridandi
+			HE8 = {
+				add_core = 461
+			}
+	    	release = HE8
+            HE8 = {
+				change_government = republic
+				add_government_reform = ms_rsh_hestridandi
+			}
+			461 = { cede_province = HE8 }
+			459 = { cede_province = HE8 }
+			2368 = { cede_province = HE8 }
+			2126 = { cede_province = HE8 }
+			2125 = { cede_province = HE8 }
+			2118= { cede_province = HE8 }
+			4684 = { cede_province = HE8 }
+			2119 = { cede_province = HE8 }
+			2120 = { cede_province = HE8 }
+			714 = { cede_province = HE8 }
+			4681 = { cede_province = HE8 }
+			4208 = { cede_province = HE8 }
+			715 = { cede_province = HE8 }
+			4683 = { cede_province = HE8 }
+			713 = { cede_province = HE8 }
+			create_subject = {
+                subject_type = ms_hestridandi
+                subject = HE8
+            }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_sigradur_hestridandi = {
+    	major = yes
+		potential = {
+			NOT = {
+				has_country_flag = sigradur_hestridandi
+			}
+			tag = RSH
+			culture_group = rus_norse
+			religion = norse_pagan_reformed
+			has_country_flag = can_establish_hestridandi
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4678
+				province_id = 4222
+				province_id = 718
+				province_id = 4682
+				province_id = 4680
+				province_id = 719
+				province_id = 2117
+				province_id = 2193
+				province_id = 2190
+				province_id = 2189
+				province_id = 4668
+				province_id = 4220
+				province_id = 2116
+				province_id = 4221
+				province_id = 4677
+				province_id = 720
+				province_id = 4669
+				province_id = 717
+				province_id = 721
+			}
+		}
+		allow = {
+            owns = 4678
+			owns = 4222
+			owns = 718
+			owns = 4682
+			owns = 4680
+			owns = 719
+			owns = 2117
+			owns = 2193
+			owns = 2190
+			owns = 2189
+			owns = 4668
+			owns = 4220
+			owns = 2116
+			owns = 4677
+			owns = 720
+			owns = 4669
+			owns = 717
+			owns = 721
+			is_at_war = no
+		}
+		effect = {
+            set_country_flag = sigradur_hestridandi
+			HE9 = {
+				add_core = 4678
+			}
+	    	release = HE9
+            HE9 = {
+				change_government = republic
+				add_government_reform = ms_rsh_hestridandi
+			}
+			4678 = { cede_province = HE9 }
+			4222 = { cede_province = HE9 }
+			718 = { cede_province = HE9 }
+			4682 = { cede_province = HE9 }
+			4680 = { cede_province = HE9 }
+			719 = { cede_province = HE9 }
+			2117 = { cede_province = HE9 }
+			2193 = { cede_province = HE9 }
+			2190 = { cede_province = HE9 }
+			2189 = { cede_province = HE9 }
+			4668 = { cede_province = HE9 }
+			4220 = { cede_province = HE9 }
+			2116 = { cede_province = HE9 }
+			4221 = { cede_province = HE9 }
+			4677 = { cede_province = HE9 }
+			720 = { cede_province = HE9 }
+			4669 = { cede_province = HE9 }
+			717 = { cede_province = HE9 }
+			721 = { cede_province = HE9 }
+			create_subject = {
+                subject_type = ms_hestridandi
+                subject = HE9
+            }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_austrheim = {
+    	major = yes
+		potential = {
+			tag = RSH
+			has_country_flag = rsh_puppet_kingdoms
+			culture_group = rus_norse
+			religion = norse_pagan_reformed
+			NOT = { has_country_flag = austrheim_established }
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = north_china_region
+				region = south_china_region
+				region = xinan_region
+				region = tibet_region
+				area = kashgaria_area
+				area = tarim_basin_area
+				area = shanshan_area
+			}
+		}
+		allow = {
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					region = north_china_region
+					region = south_china_region
+					region = xinan_region
+					region = tibet_region
+					area = kashgaria_area
+					area = tarim_basin_area
+					area = shanshan_area
+					area = turpan_kumul_area
+					area = ordos_area
+					area = inner_mongolia_area
+				}
+			}
+            owns = 1816
+			is_at_war = no
+		}
+		effect = {
+            set_country_flag = austrheim_established
+			ATR = {
+				add_core = 1816
+			}
+			release = ATR
+			ATR = {
+				change_government = monarchy
+				add_government_reform = ms_ruslander_jarldom
+			}
+			every_owned_province = {
+				limit = {
+					OR = {
+						region = north_china_region
+						region = south_china_region
+						region = xinan_region
+						region = tibet_region
+						area = kashgaria_area
+						area = tarim_basin_area
+						area = shanshan_area
+						area = turpan_kumul_area
+						area = ordos_area
+						area = inner_mongolia_area
+					}
+				}
+				cede_province = ATR
+			}
+			create_subject = {
+                subject_type = personal_union
+                subject = ATR
+            }
+			ATR = {
+				north_china_region = {
+					add_permanent_claim = ATR
+					limit = {
+						NOT = { is_core = ATR }
+						NOT = { is_permanent_claim = ATR }
+					}
+				}
+				south_china_region = {
+					add_permanent_claim = ATR
+					limit = {
+						NOT = { is_core = ATR }
+						NOT = { is_permanent_claim = ATR }
+					}
+				}
+				xinan_region = {
+					add_permanent_claim = ATR
+					limit = {
+						NOT = { is_core = ATR }
+						NOT = { is_permanent_claim = ATR }
+					}
+				}
+				tibet_region = {
+					add_permanent_claim = ATR
+					limit = {
+						NOT = { is_core = ATR }
+						NOT = { is_permanent_claim = ATR }
+					}
+				}
+				kashgaria_area = {
+					add_permanent_claim = ATR
+					limit = {
+						NOT = { is_core = ATR }
+						NOT = { is_permanent_claim = ATR }
+					}
+				}
+				tarim_basin_area = {
+					add_permanent_claim = ATR
+					limit = {
+						NOT = { is_core = ATR }
+						NOT = { is_permanent_claim = ATR }
+					}
+				}
+				shanshan_area = {
+					add_permanent_claim = ATR
+					limit = {
+						NOT = { is_core = ATR }
+						NOT = { is_permanent_claim = ATR }
+					}
+				}
+				turpan_kumul_area = {
+					add_permanent_claim = ATR
+					limit = {
+						NOT = { is_core = ATR }
+						NOT = { is_permanent_claim = ATR }
+					}
+				}
+				ordos_area = {
+					add_permanent_claim = ATR
+					limit = {
+						NOT = { is_core = ATR }
+						NOT = { is_permanent_claim = ATR }
+					}
+				}
+				inner_mongolia_area = {
+					add_permanent_claim = ATR
+					limit = {
+						NOT = { is_core = ATR }
+						NOT = { is_permanent_claim = ATR }
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vesturheim = {
+    	major = yes
+		potential = {
+			tag = RSH
+			has_country_flag = rsh_puppet_kingdoms
+			culture_group = rus_norse
+			religion = norse_pagan_reformed
+			NOT = { has_country_flag = vesturheim_established }
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = france_region
+				region = north_italy_region
+				region = italy_region
+				region = iberia_region
+			}
+		}
+		allow = {
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					region = france_region
+					region = north_italy_region
+					region = italy_region
+					region = iberia_region
+				}
+			}
+            owns = 186
+			is_at_war = no
+		}
+		effect = {
+            set_country_flag = vesturheim_established
+	    	
+			VES = {
+				add_core = 186
+			}
+			release = VES
+			VES = {
+				change_government = monarchy
+				add_government_reform = ms_ruslander_jarldom
+			}
+			every_owned_province = {
+				limit = {
+					OR = {
+						region = france_region
+						region = north_italy_region
+						region = italy_region
+						region = iberia_region
+					}
+				}
+				cede_province = VES
+			}
+			create_subject = {
+                subject_type = personal_union
+                subject = VES
+            }
+			VES = {
+				france_region = {
+					add_permanent_claim = VES
+					limit = {
+						NOT = { is_core = VES }
+						NOT = { is_permanent_claim = VES }
+					}
+				}
+				north_italy_region = {
+					add_permanent_claim = VES
+					limit = {
+						NOT = { is_core = VES }
+						NOT = { is_permanent_claim = VES }
+					}
+				}
+				italy_region = {
+					add_permanent_claim = VES
+					limit = {
+						NOT = { is_core = VES }
+						NOT = { is_permanent_claim = VES }
+					}
+				}
+				iberia_region = {
+					add_permanent_claim = VES
+					limit = {
+						NOT = { is_core = VES }
+						NOT = { is_permanent_claim = VES }
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_sudrheim = {
+    	major = yes
+		potential = {
+			tag = RSH
+			has_country_flag = rsh_puppet_kingdoms
+			culture_group = rus_norse
+			religion = norse_pagan_reformed
+			NOT = { has_country_flag = sudrheim_established }
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = balkan_region
+				region = illyria_region
+				region = anatolia_region
+			}
+		}
+		allow = {
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					region = balkan_region
+					region = illyria_region
+					region = anatolia_region
+				}
+			}
+            owns = 151
+			is_at_war = no
+		}
+		effect = {
+            set_country_flag = sudrheim_established
+	    	
+			SUD = {
+				add_core = 151
+			}
+			release = SUD
+			SUD = {
+				change_government = monarchy
+				add_government_reform = ms_ruslander_jarldom
+			}
+			every_owned_province = {
+				limit = {
+					OR = {
+						region = balkan_region
+						region = illyria_region
+						region = anatolia_region
+					}
+				}
+				cede_province = SUD
+			}
+			create_subject = {
+                subject_type = personal_union
+                subject = SUD
+            }
+			SUD = {
+				balkan_region = {
+					add_permanent_claim = SUD
+					limit = {
+						NOT = { is_core = SUD }
+						NOT = { is_permanent_claim = SUD }
+					}
+				}
+				illyria_region = {
+					add_permanent_claim = SUD
+					limit = {
+						NOT = { is_core = SUD }
+						NOT = { is_permanent_claim = SUD }
+					}
+				}
+				anatolia_region = {
+					add_permanent_claim = SUD
+					limit = {
+						NOT = { is_core = SUD }
+						NOT = { is_permanent_claim = SUD }
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_fjallrheim = {
+    	major = yes
+		potential = {
+			tag = RSH
+			has_country_flag = rsh_puppet_kingdoms
+			culture_group = rus_norse
+			religion = norse_pagan_reformed
+			NOT = { has_country_flag = fjallrheim_established }
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = persia_region
+				region = khorasan_region
+				region = mesopotamia_region
+			}
+		}
+		allow = {
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					region = persia_region
+					region = khorasan_region
+					region = mesopotamia_region
+				}
+			}
+            owns = 4341
+			is_at_war = no
+		}
+		effect = {
+            set_country_flag = fjallrheim_established
+	    	
+			FJA = {
+				add_core = 4341
+			}
+			release = FJA
+			FJA = {
+				change_government = monarchy
+				add_government_reform = ms_ruslander_jarldom
+			}
+			every_owned_province = {
+				limit = {
+					OR = {
+						region = persia_region
+						region = khorasan_region
+						region = mesopotamia_region
+					}
+				}
+				cede_province = FJA
+			}
+			create_subject = {
+                subject_type = personal_union
+                subject = FJA
+            }
+			FJA = {
+				persia_region = {
+					add_permanent_claim = FJA
+					limit = {
+						NOT = { is_core = FJA }
+						NOT = { is_permanent_claim = FJA }
+					}
+				}
+				khorasan_region = {
+					add_permanent_claim = FJA
+					limit = {
+						NOT = { is_core = FJA }
+						NOT = { is_permanent_claim = FJA }
+					}
+				}
+				mesopotamia_region = {
+					add_permanent_claim = FJA
+					limit = {
+						NOT = { is_core = FJA }
+						NOT = { is_permanent_claim = FJA }
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

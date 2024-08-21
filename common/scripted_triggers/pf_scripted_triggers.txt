@@ -1,0 +1,591 @@
+has_colonial_nation_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = $tooltip$
+		#you have to type a tooltip because PDX scripted effects sucks
+		#ex: "Own or have a colonial subject own at least �Y PROVINCES �! provinces in �Y COLONIAL_REGION �!"
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = $provinces$
+			owner = {
+				OR = {
+					tag = ROOT
+					is_colonial_nation_of = ROOT
+				}
+			}
+			colonial_region = $colonial_region$
+		}
+	}
+}
+
+pf_has_any_norse_deity_active = {
+	custom_trigger_tooltip = {
+		tooltip = PF_HAS_ANY_NORSE_DEITY
+		OR = {
+			has_personal_deity = odin
+			has_personal_deity = freya
+			has_personal_deity = tor
+			has_personal_deity = tyr
+			has_personal_deity = njord
+			has_personal_deity = snotra
+			has_personal_deity = odin_lag_upgraded
+			has_personal_deity = freya_lag_upgraded
+			has_personal_deity = tor_lag_upgraded
+			has_personal_deity = tyr_lag_upgraded
+			has_personal_deity = njord_lag_upgraded
+			has_personal_deity = snotra_lag_upgraded
+		}
+	}
+}
+
+## scope = { country }
+has_atleast_x_trading_bonuses = {
+	calc_true_if = {
+		desc = PF_HAS_ATLEAST_X_TRADING_BONUSES
+		amount = $amount$
+		trading_bonus = {
+			trade_goods = grain
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = wine
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = wool
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = cloth
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = fish
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = fur
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = salt
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = copper
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = gold
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = iron
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = slaves
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = ivory
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = tea
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = chinaware
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = spices
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = coffee
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = cotton
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = sugar
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = tobacco
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = cocoa
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = silk
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = dyes
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = livestock
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = incense
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = glass
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = paper
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = gems
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = coal
+			value = yes
+		}
+		trading_bonus = {
+			trade_goods = cloves
+			value = yes
+		}
+	}
+}
+
+pf_belongs_to_greek_culture_group = {
+	custom_trigger_tooltip = {
+		tooltip = belongs_to_greek_group_tt
+		OR = {
+			culture_group = macedonian_greek
+			culture_group = anatolian_greek
+			culture_group = levantine_greek
+			culture_group = egyptian_greek
+			culture_group = united_greek
+			culture_group = bosporan_greek
+			culture_group = rhosian_greek
+		}
+	}
+}
+
+province_is_part_of_raid_war = {
+	custom_trigger_tooltip = {
+		tooltip = province_is_part_of_raid_war_tt
+		controller = {
+			is_in_war = {
+				casus_belli = cb_raid
+				attacker_leader = THIS
+			}
+			ROOT = {
+				NOT = {
+					owned_by = PREV
+				}
+			}
+		}
+	}
+}
+
+country_is_part_of_raid_war = {
+	custom_trigger_tooltip = {
+		tooltip = country_is_part_of_raid_war_tt
+		is_in_war = {
+			casus_belli = cb_raid
+			attacker_leader = THIS
+		}
+	}
+}
+
+pf_rabim_qahal_adirim_control = {
+	NOT = {
+		has_government_power = {
+			mechanic_type = car_rabim_qahal
+			power_type = adirim_vs_suffet
+			value = 0
+		}
+	}
+}
+
+pf_rabim_qahal_adirim_dominant = {
+	NOT = {
+		has_government_power = {
+			mechanic_type = car_rabim_qahal
+			power_type = adirim_vs_suffet
+			value = -50
+		}
+	}
+}
+
+pf_rabim_qahal_suffet_control = {
+	has_government_power = {
+		mechanic_type = car_rabim_qahal
+		power_type = adirim_vs_suffet
+		value = 0
+	}
+}
+
+pf_rabim_qahal_suffet_dominant = {
+	has_government_power = {
+		mechanic_type = car_rabim_qahal
+		power_type = adirim_vs_suffet
+		value = 50
+	}
+}
+
+pf_western_tech_group = {
+	OR = {
+		technology_group = western
+		technology_group = celtic_tech
+	}
+}
+
+pf_eastern_tech_group = {
+	OR = {
+		technology_group = eastern
+		technology_group = euro_pagan_tech
+	}
+}
+
+has_religious_tension = {
+	custom_trigger_tooltip = {
+		tooltip = has_religious_tension_tt
+		OR = {
+			118 = {
+				check_variable = {
+					which = religious_tension
+					value = $amount$
+				}
+			}
+			AND = {
+				always = no
+				is_year = $amount$
+			}
+		}
+	}
+}
+is_native_american_culture = {
+	custom_trigger_tooltip = {
+		tooltip = is_any_native_american_culture_tt
+		OR = {
+			culture_group = central_algonquian
+			culture_group = plains_algonquian
+			culture_group = eastern_algonquian
+			culture_group = iroquoian
+			culture_group = siouan
+			culture_group = caddoan
+			culture_group = muskogean
+			culture_group = sonoran
+			culture_group = apachean
+			culture_group = na_dene
+			culture_group = penutian
+			culture_group = eskaleut
+			culture_group = carribean
+			culture_group = araucanian
+			culture_group = mataco
+			culture_group = chibchan
+			culture_group = maranon
+			culture_group = je
+			culture_group = je_tupi
+			culture_group = andean_group
+			culture_group = otomanguean
+			culture_group = maya
+			culture_group = aridoamerican
+			culture_group = central_american
+		}
+	}
+}
+
+country_has_any_artefact = {
+	custom_trigger_tooltip = {
+		tooltip = pf_country_has_any_artefact_tt
+		any_owned_province = {
+			OR = {
+				has_province_modifier = pf_hannibals_skull_artefact
+				has_province_modifier = pf_treaty_of_roma_artefact
+				has_province_modifier = pf_senatorial_ring_artefact
+			}
+		}
+	}
+}
+
+is_sea_trade_node_province = {
+	OR = {
+		province_id = 1516
+		province_id = 1507
+		province_id = 1500
+		province_id = 1531
+		province_id = 1490
+		province_id = 1466
+		province_id = 1460
+		province_id = 1448
+		province_id = 1293
+		province_id = 1276
+		province_id = 1285
+		province_id = 1266
+		province_id = 1926
+		province_id = 1295
+		province_id = 1298
+		province_id = 1304
+		province_id = 1319
+		province_id = 1346
+		province_id = 4346
+		province_id = 1340
+		province_id = 1361
+		province_id = 1357
+		province_id = 1411
+		province_id = 1411
+		province_id = 1371
+		province_id = 1371
+		province_id = 4233
+		province_id = 4233
+		province_id = 1376
+	}
+}
+
+#Valid amount is 100
+christian_zeal_amount = {
+	custom_trigger_tooltip = {
+		tooltip = christian_zeal_at_least_$amount$
+		REB = {
+			check_variable = {
+				which = christian_zeal
+				value = $amount$
+			}
+		}
+	}
+}
+
+pf_is_in_the_mediterranean = {
+	has_port = yes
+	OR = {
+		region = north_italy_region
+		region = italy_region
+		region = illyria_region
+		region = maghreb_region
+		area = provence_area
+		area = languedoc_area
+		area = catalonia_area
+		area = valencia_area
+		area = baleares_area
+		area = toledo_area
+		area = upper_andalucia_area
+		area = northern_morocco_area
+		area = algiers_area
+		area = cyrenaica_area
+		area = delta_area
+		area = bahari_area
+		area = palestine_area
+		area = syria_area
+		area = aleppo_area
+		area = cukurova_area
+		area = aydin_area
+		area = aegean_archipelago_area
+		area = hudavendigar_area
+		area = thrace_area
+		area = macedonia_area
+		area = northern_greece_area
+		area = morea_area
+		area = albania_area
+	}
+}
+
+is_eligible_for_ilk_khan = {
+	OR = {
+		culture_group = north_mongol
+		culture_group = south_mongol
+	}
+	has_reform = steppe_horde
+	is_subject = no
+}
+
+has_road_building_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_road_building_trigger_tt
+		OR = {
+			has_building = dirt_road
+			has_building = gravel_road
+			has_building = cobblestone_road
+			has_building = macadam_road
+			has_building = turnpike_road
+		}
+	}
+}
+
+has_most_current_road_building_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_most_current_road_building_trigger_tt
+		if = {
+			limit = {
+				adm_tech = 16
+			}
+			has_building = turnpike_road
+		}
+		else_if = {
+			limit = { 
+				adm_tech = 12
+				NOT = { adm_tech = 16 }
+			}
+			has_building = macadam_road
+		}
+		else_if = {
+			limit = { 
+				adm_tech = 10
+				NOT = { adm_tech = 12 }
+			}
+			has_building = cobblestone_road
+		}
+		else_if = {
+			limit = { 
+				adm_tech = 10
+				NOT = { adm_tech = 12 }
+			}
+			has_building = cobblestone_road
+		}
+		else_if = {
+			limit = { 
+				adm_tech = 6
+				NOT = { adm_tech = 10 }
+			}
+			has_building = gravel_road
+		}
+		else = {
+			has_building = dirt_road
+		}
+	}
+}
+
+is_ilk_khan = {
+	custom_trigger_tooltip = {
+		tooltip = has_title_of_ilk_khan_tt
+		OR = {
+			AND = {
+				has_saved_global_event_target = ilk_khan
+				tag = event_target:ilk_khan
+			}
+			tag = ILK
+		}
+	}
+}
+
+is_ilk_khan_province = {
+	custom_trigger_tooltip = {
+		tooltip = has_title_of_ilk_khan_province_tt
+		owner = {
+			OR = {
+				AND = {
+					has_saved_global_event_target = ilk_khan
+					tag = event_target:ilk_khan
+				}
+				tag = ILK
+			}
+		}
+	}
+}
+
+is_NOT_ilk_khan = {
+	custom_trigger_tooltip = {
+		tooltip = does_NOT_have_title_of_ilk_khan_tt
+		has_saved_global_event_target = ilk_khan
+		NOT = { tag = event_target:ilk_khan }
+	}
+}
+
+ilk_khan_dismantled = {
+	custom_trigger_tooltip = {
+		tooltip = ilk_khan_has_been_dismantled_tt
+		NOT = { has_saved_global_event_target = ilk_khan }
+	}
+}
+
+has_decree_passed = {
+	custom_trigger_tooltip = {
+		tooltip = has_passed_decree_$decree$
+		has_global_flag = mongol_decree_$decree$_passed
+	}
+}
+
+is_hyperborean = {
+	OR = {
+		tag = KRL
+		tag = FIN
+		tag = SMI
+		tag = HYP
+	}
+}
+
+belongs_to_nomad_tech_group = {
+	OR = {
+		technology_group = nomad_group
+		technology_group = west_mongol_group
+	}
+}
+
+is_lesser_khan = {
+	OR = {
+		tag = ZLT
+		tag = SUT
+		tag = AQM
+		tag = TKH
+		tag = KGS
+		tag = DON
+		tag = KIE
+		tag = NOG
+		tag = ULK
+		tag = JRG
+		tag = KZR
+		tag = OGR
+		tag = MRT
+		tag = CZY
+		tag = VRT
+		tag = YTK
+	}
+}
+
+is_tributary_subject = {
+	OR = {
+		is_subject_of_type = tributary_state
+		is_subject_of_type = incorporated_tributary
+	}
+}
+
+developed_provinces_amount_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = developed_provinces_at_least_$amount$_times # Supports 50, 100, 150, 200, 250, 300, 350, 400, 450, 500
+		check_variable = {
+			which = num_of_times_developed
+			value = $amount$
+		}
+	}
+}
+
+pf_is_in_the_black_sea = {
+	custom_trigger_tooltip = {
+		tooltip = scy_is_in_black_sea
+		has_port = yes
+		OR = {
+			region = crimea_region
+			province_id = 5006
+			province_id = 330
+			province_id = 2304
+			province_id = 328
+			province_id = 325
+			province_id = 2299
+			province_id = 316
+			province_id = 151
+			province_id = 1764
+			province_id = 159
+			province_id = 4706
+			province_id = 1756
+			province_id = 2196
+			province_id = 462
+			province_id = 1856
+			province_id = 2195
+		}
+	}
+}

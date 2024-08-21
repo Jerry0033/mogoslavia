@@ -1,0 +1,62 @@
+spriteTypes = {
+	#### All of these is related to "game/common/government_mechanics"
+
+	### 00 HESTRIDANDI ###
+	spriteType = {
+		name = "GFX_cossacks_bg"
+		texturefile = "gfx//interface//government_mechanics//cossacks//cossacks_bg.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_cossacks_ability_ADM"
+		texturefile = "gfx//interface//government_mechanics//cossacks//cossacks_ability_adm.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_cossacks_ability_DIP"
+		texturefile = "gfx//interface//government_mechanics//cossacks//cossacks_ability_dip.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_cossacks_ability_MIL"
+		texturefile = "gfx//interface//government_mechanics//cossacks//cossacks_ability_mil.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	### 04 RUSLANDER ###
+	spriteType = {
+		name = "GFX_ruslander_ability_ADM"
+		texturefile = "gfx//interface//government_mechanics/ruslander/send_dombok_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ruslander_ability_DIP"
+		texturefile = "gfx//interface//government_mechanics/ruslander/showcase_blodorn_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ruslander_ability_MIL"
+		texturefile = "gfx//interface//government_mechanics/ruslander/reward_huskarls_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	# BACKGROUND
+
+	spriteType = {
+		name = "GFX_ruslander_jarldom_bg"
+		texturefile = "gfx/interface/ruslander_jarldom_bg.dds"
+		noOfFrames = 1
+	}
+}

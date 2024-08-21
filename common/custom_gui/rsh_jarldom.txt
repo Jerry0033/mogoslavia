@@ -1,0 +1,9 @@
+custom_icon = {
+    name = ruslander_jarldom_bg #Must match a scripted iconType in a .gui file
+    potential = { tag = RSH } #Determines when the icon is visible
+    tooltip = "" #Can use customizable localisation
+    frame = {  #Can define multiple frame clauses
+        number = 1 #Which frame to use. Check dds files with multiple icons like icon_religion.dds
+        trigger = { tag = RSH } #First matched frame clause will be used.
+    }
+}

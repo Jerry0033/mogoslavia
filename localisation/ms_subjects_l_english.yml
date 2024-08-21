@@ -1,0 +1,12 @@
+﻿l_english:
+ 
+#Hestridandi
+ ms_hestridandi: "Hestridandi" 
+ ms_hestridandi_title: "Hestridandi"
+ ms_hestridandi_title_plural: "Hestridandi"
+ ms_hestridandi_overlord: "Hestridandi Overlord"
+ ms_hestridandi_subject: "Hestridandi Subject"
+ ms_hestridandi_long_desc: "A Hestridandi is a special subject type unique to Ruslander cultured nations. In exchange for wages, a Hestridandi protects it's overlord's borderlands."
+ ms_hestridandi_is_our: "$NAME|Y$ is a Hestridandi of us"
+ is_ms_hestridandi: "Is Hestridandi"
+ ms_hestridandi_no_overlord_dow: "You cannot declare war on your own Hestridandi!"

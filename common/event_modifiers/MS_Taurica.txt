@@ -1,0 +1,125 @@
+bsb_slave_capital = {
+    trade_goods_size = 0.2
+	trade_goods_size_modifier = 0.25
+    province_trade_power_value = 10
+}
+bsb_recruiting_from_poleis_modifier3 = {
+    global_manpower_modifier = 0.20
+	global_regiment_cost = -0.1
+}
+bsb_recruiting_from_poleis_modifier2 = {
+    global_manpower_modifier = 0.15
+	global_regiment_cost = -0.05
+}
+bsb_recruiting_from_poleis_modifier = {
+    global_manpower_modifier = 0.15
+}
+bsb_bosporan_marines = {
+    discipline = 0.05
+	is_marine_modifier = yes 
+}
+bsb_taurican_protection = {
+    global_trade_power = 0.1
+}
+bsb_diplomat_modifier = {
+    diplomats = 1
+	improve_relation_modifier = 0.33
+}
+bsb_naval_reformer_modifier = {
+    naval_morale = 0.2
+}
+bsb_spymaster_modifier = {
+    diplomats = 1
+    spy_offence = 0.33
+	global_spy_defence = 0.33
+}
+bsb_statesman_modifier = {
+    diplomats = 1
+    diplomatic_reputation = 2
+}
+bsb_trader_modifier = {
+    trade_efficiency = 0.2
+}
+bsb_taurican_dominance = {
+    trade_range_modifier = 0.25
+	placed_merchant_power = 10
+    placed_merchant_power_modifier = 0.1
+}
+bsb_strong_mercantile_union_modifier = {
+	transfer_trade_power_reasons = 100
+	development_cost = -0.1
+}
+bsb_omospondian_diets_modifier = {
+	republican_tradition = 0.2
+	reelection_cost = -0.1
+	legitimacy = 0.5 
+	devotion = 0.5 
+}
+bsb_geros_andras_modifier = {
+	global_prov_trade_power_modifier = 0.15
+	trade_value_modifier = 0.1
+}
+bsb_kerkinitis_paper_markets = {
+    province_trade_power_modifier = 0.25
+	local_production_efficiency = 0.5
+}
+bsb_peninsula_of_riches_modifier = {
+    local_development_cost = -0.1
+	local_tax_modifier = 0.1
+	local_production_efficiency = 0.1
+	local_manpower_modifier = 0.1
+}
+bsb_the_grand_consulate_modifier = {
+	republican_tradition = 0.25 
+}
+bsb_omospondia_poleis6_modifier = {
+	diplomatic_upkeep = 6 
+}
+bsb_omospondia_poleis5_modifier = {
+	diplomatic_upkeep = 5 
+}
+bsb_omospondia_poleis4_modifier = {
+	diplomatic_upkeep = 4 
+}
+bsb_omospondia_poleis3_modifier = {
+	diplomatic_upkeep = 3 
+}
+bsb_omospondia_poleis2_modifier = {
+	diplomatic_upkeep = 2 
+}
+bsb_omospondia_poleis1_modifier = {
+	diplomatic_upkeep = 1 
+}
+bsb_developing_slave_hub = {
+    local_development_cost = -0.1
+    trade_goods_size = 0.2
+	trade_goods_size_modifier = 0.25
+}
+bsb_centralized_the_omospondia_modifier = {
+	diplomatic_upkeep = 4 
+}
+bsb_emporoi_investments = {
+    local_development_cost = -0.1
+	trade_goods_size_modifier = 0.25
+}
+bsb_controlling_the_routes = {
+    trade_steering = 0.25
+}
+bsb_bosporan_marine_focus = {
+    allowed_marine_fraction = 0.10
+}
+bsb_taurican_tireme_modifier = {
+	global_ship_cost = -0.25 
+	leader_naval_manuever = 1
+}
+bsb_the_navaarchis_modifier = {
+	flagship_durability = 0.5
+	cannons_for_hunting_pirates_in_fleet = 1
+	number_of_cannons_flagship_modifier = 0.5
+}
+bsb_the_taurican_stolos_modifier = {
+    navy_tradition = 0.05
+}
+bsb_the_grand_taurican_stolos_modifier = {
+    navy_tradition = 0.1
+}

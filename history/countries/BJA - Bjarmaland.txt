@@ -1,0 +1,33 @@
+government = tribal
+set_country_flag = unlock_norse_jarldom_flag
+add_government_reform = pf_norse_jarldom
+government_rank = 1
+technology_group = ottoman
+unit_type = ottoman
+primary_culture = bjarmian
+religion = norse_pagan_reformed
+capital = 1955
+1444.11.11 = {
+	monarch = {
+		name = "Arnfinn"
+		dynasty = "Grimolfsson"
+		adm = 3
+		dip = 3
+		mil = 5
+		birth_date = 1391.06.12
+		death_date = 1445.01.01
+	}
+}
+
+1444.11.11 = {
+	heir = {
+		name = "Knut"
+		dynasty = "Grimolfsson"
+		birth_date = 1412.05.11
+		death_date = 1445.01.01
+		claim = 95
+		adm = 5
+		dip = 4
+		mil = 4
+	}
+}

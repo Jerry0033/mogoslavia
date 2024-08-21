@@ -1,0 +1,19 @@
+government = tribal
+add_government_reform = hyp_ugric_tribes
+government_rank = 1
+technology_group = euro_pagan_tech
+religion = suomenusko
+primary_culture = meshchera
+capital = 5114
+1444.11.11 = { 
+	monarch = { 
+		name = "Onegin"
+		dynasty = "Kuvas"
+		adm = 3
+		dip = 2
+		mil = 4
+		birth_date = 1393.05.01
+		death_date = 1445.01.01
+	}
+}
+

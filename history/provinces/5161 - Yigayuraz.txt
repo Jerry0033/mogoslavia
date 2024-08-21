@@ -1,0 +1,10 @@
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = unknown
+capital = "Yigayuraz"
+native_size = 10
+native_ferocity = 3
+native_hostileness = 1
+religion = suomenusko
+culture = komi

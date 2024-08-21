@@ -1,0 +1,307 @@
+# For specific combinations of culture, religion and other such triggers
+# Will pick the first valid one it finds in list
+
+#Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
+
+eslavic_rulers = {
+	rank = {
+		1 = KNYAZHESTVO
+		2 = KOROLEVSTVO  # Kingdom
+		3 = VELIKOZEML'YE  # Grand Land
+	}
+
+	ruler_male = {
+		1 = KNYAZ  # Prince
+		2 = KOROL  # King
+		3 = VELIKOKNYAZ  # Grand Prince
+	}
+
+	ruler_female = {
+		1 = KNYAGINA  # Princess
+		2 = KOROLEVA  # Queen
+		3 = VELIKOKNYAGINA  # Grand Princess
+	}
+
+	consort_female = {
+		1 = KNYAGINA  # Princess
+		2 = KOROLEVA  # Queen
+		3 = VELIKOKNYAGINA  # Grand Princess
+	}
+
+	consort_male = {
+		1 = KNYAZ  # Prince
+		2 = KOROL  # King
+		3 = VELIKOKNYAZ  # Grand Prince
+	}
+
+	heir_male = {
+		1 = KNYAZHICH  # Prince's son
+		2 = KNYAZHICH  # Prince's son
+		3 = KNYAZHICH  # Prince's son
+	}
+	heir_female = {
+		1 = KNYAZHINA  # Prince's daughter
+		2 = KNYAZHINA  # Prince's daughter
+		3 = KNYAZHINA  # Prince's daughter
+	}
+
+	trigger = {
+		culture_group = pagan_eslavic
+		OR = {
+			government = monarchy
+			government = tribal
+		}
+	}
+
+}
+
+eslavic_theocratic_rulers = {
+	rank = {
+		1 = VOLKHVATSTVO  # Pagan priesthood
+		2 = VELIKOE_VOLKHVATSTVO  # Grand pagan priesthood
+		3 = VERKHOVNOE_VOLKHVATSTVO  # Supreme pagan priesthood
+	}
+
+	ruler_male = {
+		1 = VOLKHV  # Pagan priest
+		2 = VELIKIY_VOLKHV  # Grand pagan priest
+		3 = VERKHOVNYY_VOLKHV  # Supreme pagan priest
+	}
+
+	ruler_female = {
+		1 = VOLKHVA  # Pagan priestess
+		2 = VELIKAYA_VOLKHVA  # Grand pagan priestess
+		3 = VERKHOVNAYA_VOLKHVA  # Supreme pagan priestess
+	}
+
+	heir_male = {
+		1 = KNYAZHICH  # Prince's son
+		2 = KNYAZHICH  # Prince's son
+		3 = KNYAZHICH  # Prince's son
+	}
+	heir_female = {
+		1 = KNYAZHINA  # Prince's daughter
+		2 = KNYAZHINA  # Prince's daughter
+		3 = KNYAZHINA  # Prince's daughter
+	}
+
+	trigger = {
+		culture_group = pagan_eslavic
+		government = theocracy
+	}
+
+}
+
+eslavic_republic_rulers = {
+	rank = {
+		1 = VOEVODSTVO
+        2 = VELIKOE_VOEVODSTVO  # Grand Duchy
+        3 = RZECZPOSPOLITA_GOV
+	}
+
+	ruler_male = {
+        1 = VOEVODA
+        2 = KNYAZ  # Grand Prince
+        3 = KNYAZ  # Grand Prince
+	}
+
+	ruler_female = {
+        1 = VOEVODA
+        2 = KOROLEVA  # Queen
+        3 = KOROLEVA  # Queen
+	}
+
+	trigger = {
+		culture_group = pagan_eslavic
+		government = republic
+	}
+}
+
+ruslander_rulers = {
+	rank = {
+		1 = KNYAZTHING
+		2 = KOROLTHING
+		3 = VELIKOSTORRAD
+	}
+
+	ruler_male = {
+		1 = KNYAZL
+		2 = KORUNG
+		3 = KHONUGR
+	}
+
+	consort_female = {
+		1 = KNYAZLONA
+		2 = KORUNGNING
+		3 = KHONUGRNING
+	}
+	ruler_female = {
+		1 = KNYAZLONA
+		2 = KORUNGNING
+		3 = KHONUGRNING
+	}
+
+	heir_male = {
+		1 = KNYAZLSSON
+		2 = KORUNGSSON
+		3 = KHONUGRSSON
+	}
+	heir_female = {
+		1 = KNYAZLSDOTTIR
+		2 = KORUNGSDOTTIR
+		3 = KHONUGRSDOTTIR
+	}
+
+	trigger = {
+		religion = norse_pagan_reformed
+		culture_group = rus_norse
+		government = monarchy
+	}
+}
+
+ruslander_republican_rulers = {
+	rank = {
+		1 = BORGARTHING
+		2 = THING
+		3 = THINGVELDI
+	}
+
+	ruler_male = {
+		1 = FREEMAN
+		2 = ELDER
+		3 = HIGH_ELDER
+	}
+
+	ruler_female = {
+		1 = FREEMAN
+		2 = ELDER
+		3 = HIGH_ELDER
+	}
+
+	heir_male = {
+		1 = FOLKETING_CANDIDATE
+		2 = FOLKETING_CANDIDATE
+		3 = FOLKETING_CANDIDATE
+	}
+	heir_female = {
+		1 = FOLKETING_CANDIDATE
+		2 = FOLKETING_CANDIDATE
+		3 = FOLKETING_CANDIDATE
+	}
+
+	trigger = {
+		culture_group = rus_norse
+		government = republic
+		not = { has_reform = rsh_hestridandi }
+	}
+}
+
+ruslander_theocratic_rulers = {
+	rank = {
+		1 = GODAR
+		2 = MIKIL_GODAR
+		3 = OVERSTI_GODAR
+	}
+
+	ruler_male = {
+		1 = GODI
+		2 = MIKIL_GODI
+		3 = OVERSTI_GODI
+	}
+
+	ruler_female = {
+		1 = VOLVA
+		2 = MIKIL_VOLVA 
+		3 = OVERSTI_VOLVA 
+	}
+
+	heir_male = {
+		1 = LAELINGUR
+		2 = LAELINGUR
+		3 = LAELINGUR
+	}
+	heir_female = {
+		1 = LAEREKONA
+		2 = LAEREKONA
+		3 = LAEREKONA
+	}
+
+	trigger = {
+		culture_group = rus_norse
+		government = theocracy
+	}
+
+}
+
+ruslander_hestridandi_rulers = {
+	rank = {
+		1 = HESTRIDANDI
+		2 = MIKIL_HESTRIDANDI
+		3 = OVERSTI_HESTRIDANDI
+	}
+
+	ruler_male = {
+		1 = FORINGI
+		2 = MIKIL_FORINGI
+		3 = OVERSTI_FORINGI
+	}
+
+	ruler_female = {
+		1 = FORINGKONA
+		2 = MIKIL_FORINGKONA
+		3 = OVERSTI_FORINGKONA
+	}
+	trigger = {
+		has_reform = rsh_hestridandi
+	}
+}
+
+easter_finnic_tribal_names = {
+	rank = {
+		1 = KYLA            #-- Kyla (Village)
+		2 = HEIMO           #-- Heimo (Clan)
+		3 = LIITTO          #-- Liitto (Union)
+	}
+
+	ruler_male = {
+		1 = PAAJUMALA       #-- Paajumala (Chief)
+		2 = VANHIN          #-- Vanhin (Elder)
+		3 = KUNINGAS        #-- Kuningas (King)
+	}
+
+	ruler_female = {
+		1 = PAAJUMALATAR    #-- Paajumalatar (Chieftess)
+		2 = VANHINNATAR     #-- Vanhinnatar (Elderess)
+		3 = KUNINGATAR      #-- Kuningatar (Queen)
+	}
+
+	consort_female = {
+		1 = PAAJUMALATAR    #-- Paajumalatar (Wife of the Chief)
+		2 = VANHINNATAR     #-- Vanhinnatar (Wife of the Elder)
+		3 = KUNINGATAR      #-- Kuningatar (Wife of the King)
+	}
+
+	consort_male = {
+		1 = PAAJUMALA       #-- Paajumala (Husband of the Chieftess)
+		2 = VANHIN          #-- Vanhin (Husband of the Elderess)
+		3 = KUNINGAS        #-- Kuningas (Husband of the Queen)
+	}
+
+	heir_male = {
+		1 = PERILLINEN      #-- Perillinen (Son of the Chief)
+		2 = PERILLINEN      #-- Perillinen (Heir)
+		3 = PERILLINEN          #-- Soturi (Warrior)
+	}
+
+	heir_female = {
+		1 = PERILLINEN      #-- Perillinen (Daughter of the Chief)
+		2 = PERILLINEN      #-- Perillinen (Heiress)
+		3 = PERILLINEN      #-- Kilpineito (Shieldmaiden)
+	}
+	trigger = {
+		OR = {
+			culture_group = volgaic
+			culture_group = ugric
+		}
+	}
+}

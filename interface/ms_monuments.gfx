@@ -1,0 +1,50 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_great_project_nevanvirta"
+		texturefile = "gfx//interface//monuments//great_project_nevanvirta.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_tihvin_hiisi_sites"
+		texturefile = "gfx//interface//monuments//great_project_tihvin_hiisi_sites.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_ozhemkiy_kallio_formations"
+		texturefile = "gfx//interface//monuments//great_project_ozhemkiy_kallio_formations.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_perem_rock_paintings"
+		texturefile = "gfx//interface//monuments//great_project_perem_rock_paintings.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_karhumaki_suot"
+		texturefile = "gfx//interface//monuments//great_project_karhumaki_suot.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_konugardr_aarborg"
+		texturefile = "gfx//interface//monuments//great_project_konugardr_aarborg.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_borg_of_rurik"
+		texturefile = "gfx//interface//monuments//great_project_borg_of_rurik.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_great_khad_synagogue"
+		texturefile = "gfx//interface//monuments//great_project_great_khad_synagogue.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_krepost_of_tighina"
+		texturefile = "gfx//interface//monuments//great_project_krepost_of_tighina.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_lake_seliger"
+		texturefile = "gfx//interface//monuments//great_project_lake_seliger.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_kharkiv_iron_mine"
+		texturefile = "gfx//interface//monuments//great_project_kharkiv_iron_mine.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_stables_of_koprubasi"
+		texturefile = "gfx//interface//monuments//great_project_stables_of_koprubasi.dds"
+	}
+}

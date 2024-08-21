@@ -1,0 +1,238 @@
+#Hestridandi
+country_decisions = {
+	estate_hestridandi_expand_hestridandi_registry = {
+		color = { 195 160 20 }
+		potential = {
+			has_enabled_estate_action = {
+				estate_action = EXPAND_HESTRIDANDI_REGISTRY_HESTRIDANDI
+			}
+			has_estate = estate_hestridandi
+		}
+		allow = {
+			has_not_any_estate_disaster_active = yes
+			estate_action_off_cooldown = {
+				estate_action = EXPAND_HESTRIDANDI_REGISTRY_HESTRIDANDI
+				days = 7300
+			}
+			any_owned_province = {
+				has_terrain = steppe
+			}
+		}
+		effect = {
+			set_estate_action_cooldown = {
+				estate_action = EXPAND_HESTRIDANDI_REGISTRY_HESTRIDANDI
+			}
+			estate_action = {
+				estate_action = EXPAND_HESTRIDANDI_REGISTRY_HESTRIDANDI
+			}
+			increase_estate_action_counter = {
+				estate = estate_hestridandi
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				estate_influence = {
+					estate = estate_hestridandi
+					influence = 60
+				}				
+			}
+			modifier = {
+				factor = 0
+				estate_loyalty = {
+					estate = estate_hestridandi
+					loyalty = 30
+				}				
+			}
+		}
+	}
+	estate_hestridandi_hestridandi_conquistador = {
+		color = { 195 160 20 }
+		potential = {
+			has_enabled_estate_action = {
+				estate_action = HESTRIDANDI_CONQUISTADOR_HESTRIDANDI
+			}
+			has_estate = estate_hestridandi
+		}
+		allow = {
+			has_not_any_estate_disaster_active = yes
+			estate_loyalty = {
+				estate = estate_hestridandi
+				loyalty = 50
+			}
+			estate_influence = {
+				estate = estate_hestridandi
+				influence = 40
+			}
+			estate_action_off_shared_cooldown = {
+				estate_action = GENERAL_FROM_ESTATES
+				days = 3650
+			}
+		}
+		effect = {
+			set_estate_action_cooldown = {
+				estate_action = GENERAL_FROM_ESTATES
+			}
+			estate_action = {
+				estate_action = HESTRIDANDI_CONQUISTADOR_HESTRIDANDI
+			}
+			increase_estate_action_counter = {
+				estate = estate_hestridandi
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	estate_hestridandi_recruit_minister = {
+		color = { 195 160 20 }
+		potential = {
+			has_enabled_estate_action = {
+				estate_action = RECRUIT_MINISTER_HESTRIDANDI
+			}
+			has_estate = estate_hestridandi
+		}
+		allow = {
+			has_not_any_estate_disaster_active = yes
+			estate_influence = {
+				estate = estate_hestridandi
+				influence = 40
+			}
+			estate_action_off_cooldown = {
+				estate_action = RECRUIT_MINISTER_HESTRIDANDI
+				days = 10950
+			}
+		}
+		effect = {
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_MINISTER_HESTRIDANDI
+			}
+			estate_action = {
+				estate_action = RECRUIT_MINISTER_HESTRIDANDI
+			}
+			increase_estate_action_counter = {
+				estate = estate_hestridandi
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	estate_hestridandi_supply_arms_hestridandi = {
+		color = { 195 160 20 }
+		potential = {
+			has_enabled_estate_action = {
+				estate_action = SUPPLY_ARMS_HESTRIDANDI
+			}
+			has_estate = estate_hestridandi
+		}
+		allow = {
+			has_not_any_estate_disaster_active = yes
+			estate_action_off_cooldown = {
+				estate_action = SUPPLY_ARMS_HESTRIDANDI
+				days = 7300
+			}
+		}
+		effect = {
+			set_estate_action_cooldown = {
+				estate_action = SUPPLY_ARMS_HESTRIDANDI
+			}
+			estate_action = {
+				estate_action = SUPPLY_ARMS_HESTRIDANDI
+			}
+			increase_estate_action_counter = {
+				estate = estate_hestridandi
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				estate_influence = {
+					estate = estate_hestridandi
+					influence = 60
+				}
+			}
+		}
+	}
+	estate_hestridandi_permit_self_governance = {
+		color = { 195 160 20 }
+		potential = {
+			has_enabled_estate_action = {
+				estate_action = PERMIT_SELF_GOVERNANCE_HESTRIDANDI
+			}
+			has_estate = estate_hestridandi
+		}
+		allow = {
+			has_not_any_estate_disaster_active = yes
+			estate_action_off_cooldown = {
+				estate_action = PERMIT_SELF_GOVERNANCE_HESTRIDANDI
+				days = 7300
+			}
+		}
+		effect = {
+			set_estate_action_cooldown = {
+				estate_action = PERMIT_SELF_GOVERNANCE_HESTRIDANDI
+			}
+			estate_action = {
+				estate_action = PERMIT_SELF_GOVERNANCE_HESTRIDANDI
+			}
+			increase_estate_action_counter = {
+				estate = estate_hestridandi
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				estate_loyalty = {
+					estate = estate_hestridandi
+					loyalty = 40
+				}
+			}
+		}
+	}
+	estate_hestridandi_conscript_hestridandi_elite = {
+		color = { 195 160 20 }
+		potential = {
+			has_enabled_estate_action = {
+				estate_action = CONSCRIPT_HESTRIDANDI_ELITE_HESTRIDANDI
+			}
+			has_estate = estate_hestridandi
+		}
+		allow = {
+			has_not_any_estate_disaster_active = yes
+			any_owned_province = {
+				has_terrain = steppe
+			}
+			estate_action_off_cooldown = {
+				estate_action = CONSCRIPT_HESTRIDANDI_ELITE_HESTRIDANDI
+				days = 7300
+			}
+		}
+		effect = {
+			set_estate_action_cooldown = {
+				estate_action = CONSCRIPT_HESTRIDANDI_ELITE_HESTRIDANDI
+			}
+			estate_action = {
+				estate_action = CONSCRIPT_HESTRIDANDI_ELITE_HESTRIDANDI
+			}
+			increase_estate_action_counter = {
+				estate = estate_hestridandi
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					estate_loyalty = {
+						estate = estate_hestridandi
+						loyalty = 60
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+government = republic
+add_government_reform = oligarchy_reform
+government_rank = 1
+primary_culture = olbian
+religion = hellenic
+technology_group = eastern
+capital = 5066
+1444.11.11 = {
+	monarch = {
+		name = "Nikos"
+		dynasty = "Salloulis"
+		adm = 2
+		dip = 2
+		mil = 3
+		birth_date = 1411.01.06
+		death_date = 1445.01.01
+	}
+}
+

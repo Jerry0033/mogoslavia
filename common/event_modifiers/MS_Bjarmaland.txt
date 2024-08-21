@@ -1,0 +1,89 @@
+bja_expeditions_tier_1 = {
+    global_colonial_growth = -50
+    colony_cost_modifier = -1
+    range = -10
+    colonists = 3
+    auto_explore_adjacent_to_colony = yes
+}
+bja_expeditions_tier_2 = {
+    global_colonial_growth = -40
+    colony_cost_modifier = -1
+    range = -10
+    colonists = 3
+    auto_explore_adjacent_to_colony = yes
+}
+bja_expeditions_tier_3 = {
+    global_colonial_growth = -30
+    colony_cost_modifier = -1
+    range = -10
+    colonists = 3
+    auto_explore_adjacent_to_colony = yes
+}
+bja_expeditions_tier_4 = {
+    global_colonial_growth = -20
+    colony_cost_modifier = -1
+    range = -10
+    colonists = 3
+    auto_explore_adjacent_to_colony = yes
+}
+bja_expeditions_tier_5 = {
+    global_colonial_growth = -10
+    colony_cost_modifier = -1
+    range = -10
+    colonists = 3
+    auto_explore_adjacent_to_colony = yes
+}
+bja_expeditions_tier_6 = {
+    colony_cost_modifier = -1
+    range = -10
+    colonists = 3
+    auto_explore_adjacent_to_colony = yes
+}
+bja_expeditions_tier_7 = {
+    global_colonial_growth = 10
+    colony_cost_modifier = -1
+    range = -10
+    colonists = 3
+    auto_explore_adjacent_to_colony = yes
+}
+bja_expeditions_tier_8 = {
+    global_colonial_growth = 20
+    colony_cost_modifier = -1
+    range = -10
+    colonists = 3
+    auto_explore_adjacent_to_colony = yes
+}
+bja_expeditions_tier_9 = {
+    global_colonial_growth = 30
+    colony_cost_modifier = -1
+    range = -10
+    colonists = 3
+    auto_explore_adjacent_to_colony = yes
+}
+bja_expeditions_tier_10 = {
+    global_colonial_growth = 40
+    colony_cost_modifier = -1
+    range = -10
+    colonists = 3
+    auto_explore_adjacent_to_colony = yes
+}
+bja_expeditions_tier_11 = {
+    global_colonial_growth = 50
+    colonists = 1
+}
+bja_center_of_the_white_sea = {
+    trade_goods_size_modifier = 0.25
+    province_trade_power_modifier = 0.1
+}
+bja_fortified_stronghold = {
+    defensiveness = 0.25
+	fort_maintenance_modifier = -0.25
+	hostile_attrition = 1
+}
+bja_the_rush_eastward = {
+    global_colonial_growth = 50
+}
+bja_this_cant_be_it = {
+    colonists = 1
+    range = 0.5
+}

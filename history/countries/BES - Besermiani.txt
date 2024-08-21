@@ -1,0 +1,19 @@
+government = tribal
+add_government_reform = hyp_ugric_tribes
+government_rank = 1
+technology_group = euro_pagan_tech
+religion = suomenusko
+primary_culture = udmurt
+capital = 5131
+1444.11.11 = { 
+	monarch = { 
+		name = "Dordi"
+		dynasty = "Koylon"
+		adm = 3
+		dip = 3
+		mil = 6
+		birth_date = 1404.05.01
+		death_date = 1445.01.01
+	}
+}
+

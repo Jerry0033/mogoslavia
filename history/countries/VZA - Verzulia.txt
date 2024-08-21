@@ -1,0 +1,29 @@
+government = tribal
+add_government_reform = vza_baltic_march
+government_rank = 1
+technology_group = euro_pagan_tech
+religion = romuva
+capital = 274
+primary_culture = laumyras
+1444.11.11 = { 
+	monarch = { 
+		name = "Zemgus"
+		dynasty = "Daina"
+		adm = 3
+		dip = 3
+		mil = 2
+		birth_date = 1411.02.24
+		death_date = 1445.01.01
+	}
+}
+1444.11.11 = { 
+	heir = { 
+		name = "Sarunas"
+		dynasty = "Daina"
+		adm = 3
+		dip = 3
+		mil = 1
+		birth_date = 1436.09.21
+		death_date = 1445.01.01
+	}
+}

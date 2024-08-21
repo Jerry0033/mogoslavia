@@ -1,0 +1,23 @@
+#East Karelia
+capital = "Kem"
+is_city = yes
+base_tax = 1
+base_production = 2
+base_manpower = 2
+trade_goods = salt
+discovered_by = western
+discovered_by = celtic_tech
+discovered_by = eastern
+discovered_by = euro_pagan_tech
+discovered_by = ottoman
+discovered_by = nomad_group
+discovered_by = west_mongol_group
+extra_cost = 8
+center_of_trade = 1
+add_core = KRL
+owner = KRL
+controller = KRL
+religion = suomenusko
+culture = karelian
+
+

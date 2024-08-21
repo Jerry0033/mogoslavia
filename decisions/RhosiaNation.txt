@@ -1,0 +1,95 @@
+country_decisions = {
+	form_rhosia = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_rhosia_flag }
+			OR = {
+				culture_group = rhosian_greek
+				has_country_flag = bsb_path_of_rhosia
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 280				# Konugardr
+				province_id = 283				# Zaporozhia
+				province_id = 2424				# Peremyshl
+				province_id = 5049				# Kisjinov
+				province_id = 285				# Theodosia
+			}
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = adm_tech_10_or_unlock_via_mission_tt
+				OR = {
+					adm_tech = 10
+					has_country_flag = knu_early_rhosia
+				}
+			}
+			is_nomad = no
+			is_subject = no
+			is_at_war = no
+			culture_group = rhosian_greek
+			owns_core_province = 280				# Konugardr
+			owns_core_province = 283				# Zaporozhia
+			owns_core_province = 2424				# Peremyshl
+			owns_core_province = 5049				# Kisjinov
+			owns_core_province = 285				# Theodosia
+		}
+		effect = {
+			change_tag = RHO
+			custom_tooltip = empty_line_tt
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			swap_non_generic_missions = yes
+			custom_tooltip = empty_line_tt
+			remove_non_electors_emperors_from_empire_effect = yes
+			russia_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			crimea_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						government = monarchy
+					}
+					is_revolutionary = no
+				}
+				change_government_to_monarchy = yes
+			}
+			set_government_rank = 2
+			if = {
+				limit = {
+					is_revolutionary = no
+				}
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+			set_country_flag = formed_rhosia_flag
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

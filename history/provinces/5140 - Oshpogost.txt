@@ -1,0 +1,14 @@
+base_tax = 2
+base_production = 1
+base_manpower = 2
+trade_goods = fur
+capital = "Oshpogost"
+is_city = yes
+discovered_by = nomad_group
+discovered_by = west_mongol_group
+discovered_by = euro_pagan_tech
+religion = suomenusko
+culture = permyak
+add_core = PRM
+owner = PRM
+controller = PRM

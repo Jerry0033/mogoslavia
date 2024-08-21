@@ -1,0 +1,1170 @@
+konugardr_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = KNU
+	}
+
+	knu_western_campaign = {
+		icon = mission_build_up_to_force_limit
+		position = 2
+		required_missions = { knu_take_our_chances }
+		provinces_to_highlight = {
+			OR = {
+				area = red_ruthenia_area
+				area = volhynia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			red_ruthenia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			volhynia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = { 
+			sandomierz_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			malopolska_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			central_poland_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			mazovia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	knu_rid_kashubian_influence = {
+		icon = mission_build_up_to_force_limit
+		position = 3
+		required_missions = { knu_western_campaign }
+		provinces_to_highlight = {
+			OR = {
+				culture = dregovich
+				culture = volhynian
+			}
+		}
+		trigger = { 
+			owns_all_provinces = {
+				OR = {
+					culture = dregovich
+					culture = volhynian
+				}
+			}
+		}
+		effect = { 
+			custom_tooltip = knu_getting_rid_of_kashubians_tt
+			hidden_effect = {
+				country_event = { id = ms_knu.2 }
+			}
+		}
+	}
+	knu_slavic_submission = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		required_missions = { knu_rid_kashubian_influence }
+		provinces_to_highlight = {
+			region = poland_region
+		}
+		trigger = { 
+			poland_region = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = knu_ruler_of_all_of_slavia
+				duration = -1
+			}
+			poland_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			transylvania_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+}
+
+konugardr_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = KNU
+	}
+
+	knu_take_our_chances = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {  }
+		trigger = { 
+			army_size_percentage = 0.85
+		}
+		effect = { 
+			south_slavia_region = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	knu_southern_campaign = {
+		icon = mission_build_up_to_force_limit
+		position = 2
+		required_missions = { knu_take_our_chances }
+		provinces_to_highlight = {
+			OR = {
+				area = podolia_volhynia_area
+				area = mayakia_area
+				area = yedisan_area
+				area = moldavia_area
+				area = tiveria_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 15
+				OR = {
+					area = podolia_volhynia_area
+					area = mayakia_area
+					area = yedisan_area
+					area = moldavia_area
+					area = tiveria_area
+				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		effect = { 
+			crimea_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			mansur_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			zaporizhia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			azov_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			circassia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	knu_taurica_is_ours = {
+		icon = mission_build_up_to_force_limit
+		position = 3
+		required_missions = { knu_southern_campaign }
+		provinces_to_highlight = {
+			area = crimea_area
+		}
+		trigger = { 
+			crimea_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = { 
+			country_event = { id = ms_knu.3 }
+		}
+	}
+	knu_kick_out_the_germanics = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		required_missions = { knu_rid_kashubian_influence }
+		provinces_to_highlight = {
+			OR = {
+				area = transylvania_area
+				area = alfold_area
+				area = transdanubia_area
+				area = slovakia_area
+				area = moravia_area
+			}
+		}
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 15
+				OR = {
+					area = transylvania_area
+					area = alfold_area
+					area = transdanubia_area
+					area = slovakia_area
+					area = moravia
+				}
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = knu_humiliated_germanics
+				duration = 18250
+			}
+		}
+	}
+	knu_regional_powerhouse = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		required_missions = { knu_slavic_submission knu_kick_out_the_germanics knu_settle_the_river }
+		trigger = { 
+			total_development = 1000
+		}
+		effect = { 
+			add_country_modifier = {
+				name = knu_inner_prosperity
+				duration = -1
+			}
+		}
+	}
+}
+
+konugardr_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = KNU
+	}
+
+	knu_beat_them_while_we_can = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {  }
+		provinces_to_highlight = {
+			province_id = 300
+		}
+		trigger = { 
+			OR = {
+				is_rival = MOG
+				NOT = {
+					MOG = {
+					total_development = 100
+					}
+				}
+				has_spy_network_in = {
+					who = MOG
+					value = 50
+				}
+			}
+		}
+		effect = { 
+			east_dniepr_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			chernigov_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			white_ruthenia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			bryansk_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	knu_northern_campaign = {
+		icon = mission_build_up_to_force_limit
+		position = 2
+		required_missions = { knu_take_our_chances }
+		provinces_to_highlight = {
+			OR = {
+				area = minsk_area
+				area = pripyat_area
+				area = podlasie_area
+			}
+		}
+		trigger = { 
+			minsk_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			pripyat_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			podlasie_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = { 
+			lithuania_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			samogitia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			luka_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			novgorod_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			pskov_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	knu_a_varangian_after_all = {
+		icon = mission_build_up_to_force_limit
+		position = 3
+		required_missions = { knu_northern_campaign }
+		provinces_to_highlight = {
+			OR = {
+				area = luka_area
+				area = novgorod_area
+				area = pskov_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			luka_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			novgorod_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			pskov_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = { 
+			karelia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			south_vepsia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			north_vepsia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	knu_settle_the_river = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		required_missions = { knu_a_varangian_after_all }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5055
+				province_id = 5054
+				province_id = 4115
+				province_id = 280
+				province_id = 5053
+				province_id = 1944
+				province_id = 5052
+			}
+		}
+		trigger = { 
+			all_owned_province = {
+				OR = {
+					province_id = 5055
+					province_id = 5054
+					province_id = 4115
+					province_id = 280
+					province_id = 5053
+					province_id = 1944
+					province_id = 5052	
+				}
+			development = 10
+			owned_by = ROOT
+			}
+		}
+		effect = { 
+			custom_tooltip = knu_settling_the_river_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 5055
+							province_id = 5054
+							province_id = 4115
+							province_id = 280
+							province_id = 5053
+							province_id = 1944
+							province_id = 5052
+						}
+						development = 10
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					add_province_modifier = {
+						name = knu_dniepr_heartland
+						duration = 18250
+					}
+				}
+			}
+		}
+	}
+}
+
+konugardr_4_top = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = KNU
+	}
+
+	knu_a_question_of_faith = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {  }
+		trigger = { 
+			stability = 1
+		}
+		effect = { 
+			country_event = { id = ms_knu.1 }
+		}
+	}
+}
+
+konugardr_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = KNU
+		NOT = {
+			has_country_flag = knu_chose_slavic_missions
+			has_country_flag = knu_chose_norse_missions
+			has_country_flag = knu_chose_hellenic_missions
+			has_country_flag = knu_chose_tengri_missions
+		}
+	}
+
+	knu_branch_expand_faith = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { knu_a_question_of_faith }
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = cel_always_false
+				has_country_flag = cel_always_false
+			}
+		}
+		effect = { }
+	}
+}
+
+konugardr_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = KNU
+		NOT = {
+			has_country_flag = knu_chose_slavic_missions
+			has_country_flag = knu_chose_norse_missions
+			has_country_flag = knu_chose_hellenic_missions
+			has_country_flag = knu_chose_tengri_missions
+		}
+	}
+
+	knu_branch_culture_swap = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { knu_a_question_of_faith }
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = cel_always_false
+				has_country_flag = cel_always_false
+			}
+		}
+		effect = { }
+	}
+	knu_branch_formable = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { knu_branch_culture_swap }
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = cel_always_false
+				has_country_flag = cel_always_false
+			}
+		}
+		effect = { }
+	}
+}
+
+konugardr_slavic_1 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = KNU
+		has_country_flag = knu_chose_slavic_missions
+	}
+
+	knu_slavic_expand_faith = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { knu_a_question_of_faith }
+		provinces_to_highlight = {
+			NOT = { 
+				religion = slavic_religion
+			}
+			owned_by = KNU
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 25
+				religion = slavic_religion
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = knu_religious_dominance
+				duration = -1
+			}
+		}
+	}
+}
+
+konugardr_slavic_2 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = KNU
+		has_country_flag = knu_chose_slavic_missions
+	}
+
+	knu_slavic_culture_swap = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { knu_a_question_of_faith }
+		provinces_to_highlight = {
+				culture_group = pagan_eslavic
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 25
+				culture_group = pagan_eslavic
+			}
+		}
+		effect = { 
+			every_owned_province = {
+				limit = {
+					culture = kievan
+				}
+				change_culture = drevylian
+			}
+			change_technology_group = euro_pagan_tech
+			set_country_flag = knu_slavic_path
+		}
+	}
+	knu_slavic_formable = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { knu_slavic_culture_swap }
+		trigger = { 
+
+		}
+		effect = { 
+			set_country_flag = can_form_jugoslavia_earlier_flag
+			add_country_modifier = {
+				name = knu_defender_of_the_slavs
+				duration = -1
+			}
+		}
+	}
+}
+
+konugardr_norse_1 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = KNU
+		has_country_flag = knu_chose_norse_missions
+	}
+
+	knu_norse_expand_faith = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { knu_a_question_of_faith }
+		provinces_to_highlight = {
+			NOT = { 
+				religion = norse_pagan_reformed
+			}
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 25
+				religion = norse_pagan_reformed
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = knu_religious_dominance
+				duration = -1
+			}
+		}
+	}
+}
+
+konugardr_norse_2 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = KNU
+		has_country_flag = knu_chose_norse_missions
+	}
+
+	knu_norse_culture_swap = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { knu_a_question_of_faith }
+		provinces_to_highlight = {
+			
+		}
+		trigger = { 
+			accepted_culture = drevylian
+			dip_power = 100
+		}
+		effect = { 
+			add_dip_power = -100
+			every_owned_province = {
+				limit = {
+					culture = kievan
+				}
+				change_culture = rus_kievan
+			}
+			change_primary_culture = rus_kievan
+			custom_tooltip = KNU_CULTURE_FORM
+			hidden_effect = {
+				set_country_flag = knu_better_rusirheim
+			}
+		}
+	}
+	knu_norse_formable = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { knu_norse_culture_swap }
+		provinces_to_highlight = {
+			owned_by = HLM
+		}
+		trigger = { 
+			NOT = {
+				exists = HLM
+			}
+		}
+		effect = { 
+			custom_tooltip = hlm_can_form_early_rsh_tt
+			add_country_modifier = {
+				name = knu_the_last_varangian
+				duration = 7300
+			}
+			hidden_effect = {
+			set_country_flag = hlm_early_rsh
+			}
+		}
+	}
+}
+
+konugardr_hellenic_1 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = KNU
+		has_country_flag = knu_chose_hellenic_missions
+	}
+
+	knu_hellenic_expand_faith = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { knu_a_question_of_faith }
+		provinces_to_highlight = {
+			NOT = { 
+				religion = hellenic
+			}
+			owned_by = KNU
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 25
+				religion = hellenic
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = knu_religious_dominance
+				duration = -1
+			}
+		}
+	}
+}
+
+konugardr_hellenic_2 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = KNU
+		has_country_flag = knu_chose_hellenic_missions
+	}
+
+	knu_hellenic_culture_swap = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { knu_a_question_of_faith }
+		provinces_to_highlight = {
+			NOT = {
+				OR = {
+					culture = kievan
+					culture_group = bosporan_greek
+				}
+			}
+			NOT = {
+				owned_by = KNU
+			}
+			OR = {
+					region = south_slavia_region
+					region = russia_region
+					region = crimea_region
+			}
+		   
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 15
+				OR = {
+					culture = kievan
+					culture_group = bosporan_greek
+				}
+				OR = {
+					region = south_slavia_region
+					region = russia_region
+					region = crimea_region
+				}
+			}
+		}
+		effect = { 
+			every_owned_province = {
+				limit = {
+					culture = kievan
+					OR = {
+						region = south_slavia_region
+						region = russia_region
+						region = crimea_region
+					}
+				}
+				change_culture = danaprisan
+			}
+			every_owned_province = {
+				limit = {
+					culture_group = bosporan_greek
+					OR = {
+						region = south_slavia_region
+						region = russia_region
+						region = crimea_region
+					}
+				}
+				change_culture = rhosian_taurican
+			}
+			change_primary_culture = danaprisan
+			change_technology_group = eastern
+		}
+	}
+	knu_hellenic_formable = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { knu_hellenic_culture_swap }
+		provinces_to_highlight = {
+			NOT = {
+				culture_group = rhosian_greek
+			}
+			OR = {
+					region = south_slavia_region
+					region = russia_region
+					region = crimea_region
+			}
+			owned_by = KNU
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 50
+				culture_group = rhosian_greek
+				OR = {
+					region = south_slavia_region
+					region = russia_region
+					region = crimea_region
+				}
+			}
+		}
+		effect = { 
+			custom_tooltip = knu_can_form_early_rhosia_tt
+			hidden_effect = {
+			set_country_flag = knu_early_rhosia
+			}
+		}
+	}
+}
+
+konugardr_tengri_1 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = KNU
+		has_country_flag = knu_chose_tengri_missions
+	}
+
+	knu_tengri_expand_faith = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { knu_a_question_of_faith }
+		provinces_to_highlight = {
+			NOT = { 
+				religion = tengri_pagan_reformed
+			}
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 25
+				religion = tengri_pagan_reformed
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = knu_religious_dominance
+				duration = -1
+			}
+		}
+	}
+}
+
+konugardr_tengri_2 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = KNU
+		has_country_flag = knu_chose_tengri_missions
+	}
+
+	knu_tengri_culture_swap = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { knu_a_question_of_faith }
+		provinces_to_highlight = {
+			culture_group = west_mongol
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 10
+				culture_group = west_mongol
+			}
+		}
+		effect = { 
+			every_owned_province = {
+				limit = {
+				culture = kievan
+				}
+				change_culture = omnodslavyan
+			}
+			change_primary_culture = omnodslavyan
+			change_technology_group = nomad_group
+		}
+	}
+	knu_tengri_formable = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { knu_tengri_culture_swap }
+		trigger = { 
+		}
+		effect = { }
+	}
+}
+
+konugardr_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = KNU
+	}
+	knu_end_the_romuvans = {
+		icon = mission_build_up_to_force_limit
+		position = 3
+		required_missions = { knu_northern_campaign }
+		provinces_to_highlight = {
+			OR = {
+				area = lithuania_area
+				area = samogitia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			lithuania_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			samogitia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = { 
+			estonia_ingria_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			curonia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			livonia_area = {
+				add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+		}
+	}
+	knu_spread_the_wealth = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		required_missions = { knu_the_capital_of_the_east }
+		provinces_to_highlight = {
+			region = south_slavia_region
+		}
+		trigger = { 
+			development_in_provinces = {
+				value = 500
+				region = south_slavia_region
+			}
+		}
+		effect = { 
+			custom_tooltip = knu_spreading_the_wealth_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = south_slavia_region
+						owned_by = ROOT
+					}
+					add_province_modifier = {
+						name = knu_civilizing_dobrozemia
+						duration = 9125
+					}
+				}
+			}
+		}
+	}
+}
+
+konugardr_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = KNU
+	}
+
+	knu_the_capital_of_the_east = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		required_missions = {  }
+		provinces_to_highlight = {
+			province_id = 280
+		}
+		trigger = { 
+			280 = {
+				development = 25
+				has_trade_building_trigger = yes
+				has_production_building_trigger = yes
+				has_tax_building_trigger = yes
+			}
+		}
+		effect = { 
+			280 = {
+				add_province_modifier = {
+					name = knu_a_worthy_city
+					duration = -1
+				}
+				add_base_tax = 1
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+		}
+	}
+	knu_a_worthy_city = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		required_missions = { knu_the_capital_of_the_east }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 280
+				
+			}
+		}
+		trigger = { 
+			280 = {
+				development = 50
+				has_trade_building_trigger = yes
+				has_production_building_trigger = yes
+				has_tax_building_trigger = yes
+				has_courthouse_building_trigger = yes
+			}
+		}
+		effect = { 
+			280 = {
+				change_trade_goods = paper
+				add_province_modifier = {
+					name = knu_kievan_paper
+					duration = -1
+				}
+			}
+			custom_tooltip = knu_development_surrounding_kiev_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_neighbor_of = 280
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					add_province_modifier = {
+						name = knu_kievan_countryside
+						duration = -1
+					}
+				}
+			}
+		}
+		
+	}
+}

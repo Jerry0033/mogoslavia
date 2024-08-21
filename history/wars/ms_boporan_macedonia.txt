@@ -1,0 +1,31 @@
+name: "Bosporan war of independence"
+war_goal = {
+	type = defend_capital_independence
+	casus_belli = cb_independence_war
+	tag = BSB
+}
+1441.1.1 = {
+	add_attacker = MAC
+    add_attacker = CAI
+	add_defender = BSB
+	add_defender = CRS
+    add_defender = BRY
+	add_defender = OLB
+    add_defender = HRP
+    add_defender = PHG
+    add_defender = KHZ
+	add_defender = MOL
+}
+
+1444.8.10 = {
+	rem_attacker = MAC
+    rem_attacker = CAI
+	rem_defender = BSB
+	rem_defender = CRS
+    rem_defender = BRY
+	rem_defender = OLB
+    rem_defender = HRP
+    rem_defender = PHG
+    rem_defender = KHZ
+	rem_defender = MOL
+}

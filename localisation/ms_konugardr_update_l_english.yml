@@ -1,0 +1,15 @@
+﻿l_english:
+ # Culture Spread
+KNU_CULTURE_FORM:0 "\nWe reform our culture into a new §YNorse-Slavic§! culture group. This Culture will §Gnaturally spread§! amongst our §YDrevylian§! and §YUlich§! §BNorse§! provinces"
+ # Missions
+knu_spreading_the_wealth_tt:0 "All provinces in The §YDobrozemia§! Region will get a §G10%§! modifier to their local §YTax, Production, Manpower and Development Cost§!. This modifier will last §Y25 years§!"
+knu_getting_rid_of_kashubians_tt:0 "The §YDregovich§! and §YVolhynian§! cultures will swap to the §GEastern Slavic§! Culture Group!"
+knu_development_surrounding_kiev_tt:0 "All provinces surrounding Kiev §Ywill get the same modifier but halved§! and an additional §G3 development§!"
+knu_can_form_early_rhosia_tt:0 "Removes the §YAdministrative Technology§! requirement for the decision §YDawn Of Rhosia§!"
+knu_can_form_early_jugoslavia_tt:0 "Removes the §YAdministrative Technology§! requirement for the decision §YForm Jugoslavia§!"
+knu_settling_the_river_tt:0 "All highlighted provinces gain §Y1 Tax, Production and Manpower Development§!, and a §G-20.0% Local Development Cost Modifier§! for §Y50 years§!"
+ # Events
+knu_unlock_norse_missions_tt:0 "Unlock the §BNorse§! branching missions"
+knu_unlock_slavic_missions_tt:0 "Unlock the §GSlavic§! branching missions"
+knu_unlock_tengri_missions_tt:0 "Unlock the §RTengri§! branching missions"
+knu_unlock_hellenic_missions_tt:0 "Unlock the §PHellenic§! branching missions"

@@ -1,0 +1,99 @@
+estate_action_EXPAND_HESTRIDANDI_REGISTRY_HESTRIDANDI = {
+	add_prestige = -5
+	add_estate_loyalty = {
+		estate = estate_cossacks
+		loyalty = 10
+	}
+	add_estate_influence_modifier = {
+		estate = estate_cossacks
+		desc = EST_VAL_HESTRIDANDI_REGISTER_EXPANDED
+		influence = 10
+		duration = 7300
+	}
+}
+
+estate_action_HESTRIDANDI_CONQUISTADOR_HESTRIDANDI = {
+	create_leader_scaling_with_tradition = {
+		leader = conquistador
+		type = army
+	}
+	#add_estate_influence_modifier = {
+	#	estate = estate_cossacks
+	#	desc = EST_VAL_HESTRIDANDI_CONQUISTADOR
+	#	influence = 20
+	#	duration = 10950
+	#}
+	add_estate_loyalty = {
+		estate = estate_cossacks
+		loyalty = -10
+	}
+}
+
+estate_action_RECRUIT_MINISTER_HESTRIDANDI = {
+	generate_estate_advisor = {
+		estate = estate_cossacks
+		type = army_reformer
+	}
+	add_estate_loyalty = {
+		estate = estate_cossacks
+		loyalty = -10
+	}
+	#add_estate_influence_modifier = {
+	#	estate = estate_cossacks
+	#	desc = EST_VAL_HESTRIDANDI_MINISTER
+	#	influence = 20
+	#	duration = 10950
+	#}
+	if = {
+		limit = {
+			has_estate = estate_nobles
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -15 #Taking offense to a cossack being used in government
+		}
+	}
+}
+estate_action_SUPPLY_ARMS_HESTRIDANDI = {
+	add_mil_power = -15
+	add_country_modifier = {
+		name = armed_hestridandi
+		duration = 7300
+	}
+	add_estate_loyalty = {
+		estate = estate_hestridandi
+		loyalty = 5
+	}
+	add_estate_influence_modifier = {
+		estate = estate_hestridandi
+		desc = EST_VAL_SUPPLY_ARMS
+		influence = 15
+		duration = 7300
+	}
+}
+
+estate_action_CONSCRIPT_HESTRIDANDI_ELITE_HESTRIDANDI = {
+	estate_action_tradition = {
+		type = army
+		estate = estate_hestridandi
+	}
+	add_estate_loyalty = {
+		estate = estate_hestridandi
+		loyalty = -15
+	}
+}
+estate_action_PERMIT_SELF_GOVERNANCE_HESTRIDANDI = {
+	add_estate_loyalty = {
+		estate = estate_hestridandi
+		loyalty = 5
+	}
+	add_estate_influence_modifier = {
+		estate = estate_hestridandi
+		desc = EST_VAL_SELF_GOVERNANCE
+		influence = 15
+		duration = 7300
+	}
+	auto_complete_estate_agenda = {
+		estate = estate_hestridandi
+	}
+}
